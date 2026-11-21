@@ -21,6 +21,7 @@ Des « bibliothèques » à joindre à une IA générative pour lui faire produi
 | `planches` | Planches et exemples prêts à imprimer (PDF) |
 | `icones` | Banque d'icônes en noir et blanc (licence CC0, voir le fichier de licence du dossier) |
 | `apercus` | Images d'aperçu affichées par le guide en ligne (chargées à la demande) |
+| `outils` | `verifier.py` : contrôle que chaque fichier annoncé par le guide existe et que les éditions concordent ; `guide_local.py` : construit la version du guide pour un dossier partagé (un seul fichier, aperçus intégrés) |
 
 ## Versions
 
