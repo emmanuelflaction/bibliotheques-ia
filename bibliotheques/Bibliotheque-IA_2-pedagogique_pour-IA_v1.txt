@@ -2732,6 +2732,48 @@ Tricot, A., et al. (2003). Utilité, utilisabilité, acceptabilité : interprét
 
 Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ, 2023 ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
 
+## Composer un écosystème de ressources
+
+Cette section sert quand l'enseignant·e demande une séquence composée de plusieurs ressources reliées (rubrique « Composer une séquence » du guide), et non une ressource isolée.
+
+**Définition de travail**
+
+Un écosystème de ressources est un ensemble de ressources hétérogènes, choisies et articulées par l'enseignant·e autour d'un objectif d'apprentissage. Chaque ressource y remplit une fonction pédagogique distincte, et la valeur de l'ensemble tient davantage aux relations entre les ressources qu'à chacune prise isolément.
+
+Statut : proposition de l'auteur, à valider. Le terme n'a pas de définition stabilisée dans la recherche en éducation. Il s'appuie sur deux notions établies : le système de ressources de l'enseignant·e (Trouche et al., 2020) et l'écologie d'apprentissage de l'élève (Barron, 2006). Le mot désigne ailleurs les plateformes et outils numériques d'une institution : ici, il s'agit des ressources d'une séquence, dans une classe.
+
+**Cinq critères**
+
+- Diversité fonctionnelle : l'ensemble couvre plusieurs fonctions, et non plusieurs ressources qui ne font que présenter.
+- Complémentarité : chaque ressource fait ce que les autres ne font pas ; une redondance est acceptable si elle est voulue (même notion, deux modalités, pour différencier).
+- Circulation : ce que produit une ressource alimente la suivante ; c'est le critère qui distingue un écosystème d'une collection.
+- Régulation : l'enseignant·e ajuste l'ensemble d'après ce qu'il ou elle observe (retirer, remplacer, adapter).
+- Ancrage : l'ensemble puise dans l'existant (moyens d'enseignement romands, médiathèque, banques de ressources), pas seulement dans ses propres productions.
+
+**Huit fonctions proposées dans le guide**
+
+Présenter une information ; faire s'exercer ; enseigner pas à pas, avec un retour ; motiver par le jeu ; faire explorer ; faire manipuler et observer ; faire construire ; faire échanger entre élèves. Ces fonctions sont adaptées de De Vries (2001), qui les a définies pour les logiciels d'apprentissage ; leur transposition aux ressources imprimées est une proposition. Pour une analyse plus fine, utiliser les fonctions F01 à F43 de la Partie 1.
+
+**Conduite attendue de l'IA devant une demande de séquence**
+
+- Montrer d'abord le plan d'ensemble : les ressources, la fonction de chacune, ce qui passe de l'une à l'autre ; attendre l'accord.
+- Signaler toute redondance involontaire et toute fonction qui manque au regard de l'objectif.
+- Ne pas produire les ressources que l'enseignant·e possède déjà : les intégrer au plan et s'y raccorder.
+- Produire ensuite les ressources une à une ; chacune reprend ce que la précédente a produit (résultats, formulations des élèves, erreurs repérées).
+- Rappeler que la régulation revient à l'enseignant·e : proposer ce qu'il ou elle peut observer, et ce qui peut être retiré ou remplacé.
+
+**Où la métaphore trompe**
+
+Un écosystème naturel n'est conçu par personne et se régule seul ; un ensemble de ressources est conçu et régulé par l'enseignant·e. « Système de ressources » est plus exact ; « écosystème » est plus parlant.
+
+**Références de cette section**
+
+Barron, B. (2006). Interest and self-sustained learning as catalysts of development: A learning ecology perspective. *Human Development*, 49, 193-224.
+
+Trouche, L., Gueudet, G., Pepin, B., & Aldon, G. (2020). *L'approche documentaire du didactique*. https://hal.archives-ouvertes.fr/hal-02512596/file/DAD-TGP_Encyclopedie_Francais-v1.pdf
+
+Statut : les huit fonctions de De Vries (2001) ont été vérifiées dans l'article le 21.11.2026 ; les références Barron (2006) et Trouche et al. (2020) sont reprises d'une note de l'auteur, sans nouvelle vérification ; la définition, les critères et la conduite attendue sont des propositions.
+
 ## Références scientifiques (APA 7)
 
 **Taxonomies et processus cognitifs**

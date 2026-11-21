@@ -6,6 +6,8 @@
 - Bibliothèque IA 1 : règles MP-J-07 et MP-D-02 complétées, astuces pratiques et variante coopérative dans la partie enseignant·e.
 - Bibliothèque IA 2 : section « Repères pour les jeux, la coopération et la différenciation ».
 - Mention de la licence CC BY-NC-SA 4.0 dans les deux bibliothèques.
+- Nouveau nom du guide : « Composer un écosystème de ressources ». Nouvelle rubrique « Composer une séquence » : plusieurs ressources reliées, chacune avec sa fonction, et une demande d'ensemble pour l'IA.
+- Page « Qu'est-ce qu'un écosystème de ressources ? » dans les Conseils, et section correspondante dans la Bibliothèque IA 2 (définition de travail, cinq critères, conduite attendue de l'IA).
 - Étoiles de difficulté : admises sur demande (un choix dans la demande du guide ; règles MP-D-01 et MP-J-06 de la Bibliothèque IA 1).
 - Guide : plus aucun code dans les textes affichés ; la demande à l'IA se termine par une ligne « Repère pour l'IA ».
 - Pictogrammes de consigne : un choix dans la demande du guide et une option dans la Bibliothèque IA 1 les font placer devant chaque consigne (codes IC-CON).

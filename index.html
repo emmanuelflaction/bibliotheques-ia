@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guide de la boîte à outils</title>
+<title>Composer un écosystème de ressources</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -186,11 +186,22 @@ body { border-top: 0; }
 .grille .ligne[data-v="partie"] { border-color: #e9a100; background: color-mix(in srgb, #e9a100 13%, var(--papier)); }
 .grille .ligne[data-v="non"] { border-color: #e4572e; background: color-mix(in srgb, #e4572e 11%, var(--papier)); }
 @media (max-width: 560px) { .grille .ligne { grid-template-columns: 1fr; } }
+.etapes-seq { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; max-width: 46em; counter-reset: es; }
+.etapes-seq > li:not(.fleche) { counter-increment: es; background: var(--papier); border: 2px solid var(--trait); border-left: 8px solid var(--c, var(--accent)); border-radius: 16px; padding: 18px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr)); gap: 14px; }
+.etapes-seq > li:not(.fleche) > .tete { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 700; font-size: 1.1rem; }
+.etapes-seq > li:not(.fleche) > .tete::before { content: 'Ressource ' counter(es); }
+.etapes-seq .mini { background: none; border: 2px solid var(--trait); border-radius: 10px; padding: 8px 14px; cursor: pointer; font-weight: 400; }
+.fleche { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: center; padding: 10px 0 10px 22px; }
+.fleche::before { content: '↓'; font-size: 1.9rem; font-weight: 700; color: var(--accent); text-align: center; }
+.criteres { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; max-width: 46em; }
+.criteres li { display: grid; grid-template-columns: 11em 1fr; gap: 14px; align-items: start; background: var(--papier); border: 2px solid var(--trait); border-radius: 14px; padding: 12px 16px; }
+.criteres .etat { font-weight: 700; } .criteres li[data-e="oui"] { border-color: #4c9f38; } .criteres li[data-e="non"] { border-color: #e9a100; }
+@media (max-width: 560px) { .criteres li { grid-template-columns: 1fr; gap: 4px; } }
 </style>
 </head>
 <body>
 <nav class="menu" aria-label="Rubriques"><div class="dans">
-  <button class="marque" type="button" data-go='{"page":"accueil"}'><span class="logo" aria-hidden="true"><i style="background:#e4572e"></i><i style="background:#e9a100"></i><i style="background:#2a9d8f"></i><i style="background:#6fa8ff"></i></span>Guide de la boîte à outils</button>
+  <button class="marque" type="button" data-go='{"page":"accueil"}'><span class="logo" aria-hidden="true"><i style="background:#e4572e"></i><i style="background:#e9a100"></i><i style="background:#2a9d8f"></i><i style="background:#6fa8ff"></i></span>Composer un écosystème de ressources</button>
   <ul id="menu"></ul></div></nav>
 <div class="page">
   <main id="vue" class="vue" tabindex="-1"></main>
@@ -210,8 +221,9 @@ const RUB = [
   {id: 'accueil', n: 'Accueil'},
   {id: 'jeux', n: 'Jeux', c: '#2a9d8f', v: 'J5-b', d: 'Dominos, plateaux, cartes, roues, puzzles : sept familles de jeux à imprimer.'},
   {id: 'exercices', n: 'Exercices', c: '#8e5bd0', v: 'G23', d: 'Entourer, relier, compléter, classer, lignes d’écriture, maisons des nombres…'},
-  {id: 'formes', n: 'Formes de fiches', c: '#c2571a', v: 'GF-A', d: 'Entraînement, évaluation, devoir, ateliers, synthèse, billet de sortie…'},
-  {id: 'supports', n: 'Supports et affiches', c: '#0a7f96', v: 'G26', d: 'Calendrier, horaire, journal de classe, affiches, sous-main, aides de table.'},
+  {id: 'formes', n: 'Formes de fiches', m: 'Fiches', c: '#c2571a', v: 'GF-A', d: 'Entraînement, évaluation, devoir, ateliers, synthèse, billet de sortie…'},
+  {id: 'supports', n: 'Supports et affiches', m: 'Supports', c: '#0a7f96', v: 'G26', d: 'Calendrier, horaire, journal de classe, affiches, sous-main, aides de table.'},
+  {id: 'sequence', n: 'Composer une séquence', m: 'Séquence', c: '#e4572e', d: 'Relier plusieurs ressources autour d’un objectif : chacune a sa fonction, et ce que produit l’une sert à la suivante.'},
   {id: 'icones', n: 'Icônes', c: '#4c9f38', d: 'Pictogrammes de consignes, mains, dés, émotions, à insérer dans vos fiches.'},
   {id: 'conseils', n: 'Conseils', c: '#d6457f', d: 'Règles du jeu, coopération, différenciation, vérifications avant de tester en classe.'},
   {id: 'mode', n: 'Mode d’emploi', c: '#5d6f7b', d: 'Préparer l’IA, vérifier, imprimer, ou travailler sans IA.'},
@@ -219,6 +231,35 @@ const RUB = [
 ];
 const rub = id => RUB.find(r => r.id === id);
 const GRILLE = {"Utile : fait-il apprendre ce qui est visé ?": ["L’objectif d’apprentissage est formulé en une phrase et relié au plan d’études.", "Chaque carte ou chaque case fait travailler cet objectif, sans tâche décorative.", "Le temps passé à apprendre est plus long que le temps passé à attendre ou à gérer le matériel.", "Tous les élèves du groupe répondent, pas seulement celui dont c’est le tour.", "L’erreur est exploitée : vérification, explication, nouvelle tentative.", "Je dispose d’un moyen de savoir ce que les élèves ont appris (fiche de suivi, questions avant et après).", "Les contenus ont été relus : réponses exactes, questions sans ambiguïté, orthographe."], "Utilisable : peut-on s’en servir sans difficulté ?": ["Une marche à suivre écrite accompagne le jeu : but, matériel, tour de jeu, erreur, fin de partie.", "Un élève peut expliquer la règle à un camarade après une partie modèle.", "Les textes sont lisibles à la distance d’utilisation ; la mise en page est la même sur toutes les cartes.", "Les images sont de style homogène et sans détail inutile.", "La réponse n’est pas visible par celui qui doit la trouver ; un corrigé est disponible.", "Le matériel est solide, facile à distribuer et à ranger, et le dé ne s’échappe pas.", "La taille des groupes et la durée d’une partie sont définies.", "Des niveaux ou des variantes permettent à chacun de réussir et de progresser."], "Acceptable : a-t-on envie et la possibilité de l’utiliser ?": ["Les élèves ont envie d’y rejouer ; je leur ai demandé leur avis.", "La règle favorise l’entraide et ne met personne en échec devant les autres.", "Aucun élève n’est désigné comme « différent » par le matériel qu’il reçoit.", "Le niveau sonore et l’organisation sont compatibles avec la classe et les classes voisines.", "Le temps de préparation est raisonnable par rapport au nombre d’utilisations prévues.", "Un·e collègue pourrait reprendre le jeu sans mes explications.", "Les images sont libres de droits ou leurs sources sont citées ; aucune donnée d’élève n’apparaît."]};
+const FONCTIONS = [['presenter', 'Présenter une information'], ['exercer', 'Faire s’exercer'], ['enseigner', 'Enseigner pas à pas, avec un retour'], ['motiver', 'Motiver par le jeu'], ['explorer', 'Faire explorer'], ['manipuler', 'Faire manipuler et observer'], ['construire', 'Faire construire'], ['echanger', 'Faire échanger entre élèves']];
+const fonction = k => (FONCTIONS.find(f => f[0] === k) || ['', ''])[1];
+const EXEMPLE_SEQ = {objectif: 'Comparer des fractions simples', etapes: [
+  {c: '', nom: 'Bandes de papier à plier', fn: 'manipuler', vers: 'Les découvertes des élèves sont reprises dans la présentation.'},
+  {c: '', nom: 'Présentation de trois minutes', fn: 'presenter', vers: 'Les élèves appliquent ce qui vient d’être montré.'},
+  {c: 'GF-A', nom: '', fn: 'exercer', vers: 'Les résultats répartissent les élèves : jeu pour les uns, atelier avec le matériel pour les autres.'},
+  {c: 'J1', nom: '', fn: 'motiver', vers: 'Les formulations entendues pendant le jeu servent à rédiger la synthèse.'},
+  {c: 'GF-P', nom: '', fn: 'presenter', vers: 'La synthèse est résumée sur l’affiche.'},
+  {c: 'GF-V', nom: '', fn: 'presenter', vers: ''}]};
+let Q = {objectif: '', etapes: [{c: '', nom: '', fn: '', vers: ''}, {c: '', nom: '', fn: '', vers: ''}]};
+try { const q = JSON.parse(localStorage.getItem('guide-sequence') || 'null'); if (q && Array.isArray(q.etapes) && q.etapes.length) Q = q; } catch (x) {}
+const gardeQ = () => { try { localStorage.setItem('guide-sequence', JSON.stringify(Q)); } catch (x) {} };
+const nomEtape = e => e.c && item(e.c) ? item(e.c).nom : (e.nom || '').trim();
+function criteres() {
+  const es = Q.etapes.filter(e => nomEtape(e)), fs = new Set(es.map(e => e.fn).filter(Boolean)), liens = es.slice(0, -1);
+  const paires = es.filter((e, i) => e.fn && es.findIndex(x => x.fn && x.fn === e.fn && nomEtape(x).toLowerCase() === nomEtape(e).toLowerCase()) !== i);
+  return [
+    ['Diversité', es.length < 2 ? '' : fs.size >= 3 ? 'oui' : 'non', es.length < 2 ? 'Ajoutez au moins deux ressources.' : `${fs.size} fonction${fs.size > 1 ? 's' : ''} sur ${es.length} ressources. Visez au moins trois fonctions différentes.`],
+    ['Complémentarité', es.length < 2 ? '' : paires.length ? 'non' : 'oui', paires.length ? 'Deux ressources identiques ont la même fonction : est-ce voulu, par exemple pour différencier ?' : 'Chaque ressource fait ce que les autres ne font pas. Une redondance reste possible si elle est voulue.'],
+    ['Circulation', es.length < 2 ? '' : liens.every(e => (e.vers || '').trim()) ? 'oui' : 'non', 'Ce que produit une ressource sert à la suivante. C’est ce qui distingue un écosystème d’une collection.'],
+    ['Régulation', '', 'À prévoir vous-même : ce que vous observerez, et ce que vous retirerez, remplacerez ou adapterez.'],
+    ['Ancrage', es.length < 2 ? '' : es.some(e => !e.c) ? 'oui' : 'non', 'La séquence puise aussi dans l’existant : moyens d’enseignement, matériel de la classe, médiathèque.']];
+}
+function demandeSeq() {
+  const v = (x, vide) => x && x.trim() ? x.trim() : vide, es = Q.etapes.filter(e => nomEtape(e));
+  const l = es.map((e, i) => `${i + 1}. ${nomEtape(e)}${e.c ? '' : ' (ressource que j\'ai déjà, à ne pas produire)'}\n   Fonction : ${v(fonction(e.fn), '[à compléter]').toLowerCase()}.${i < es.length - 1 ? `\n   Ce qui passe à la ressource suivante : ${v(e.vers, '[à compléter]')}` : ''}`).join('\n');
+  const refs = es.filter(e => e.c).map(e => item(e.c).ref).join(', ');
+  return `Je prépare une séquence pour ma classe, composée de plusieurs ressources reliées entre elles.\nDegré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nObjectif d'apprentissage : ${v(Q.objectif, '[à compléter]')}\n\nRessources, dans l'ordre :\n${l || '[à compléter]'}\n\nMontre-moi d'abord le plan d'ensemble : les ressources, leur fonction et ce qui passe de l'une à l'autre. Signale toute redondance involontaire et toute fonction qui manque, puis attends mon accord.\nProduis ensuite, une à une, les ressources à imprimer et leur corrigé. Chacune reprend ce que la précédente a produit.\nTermine en me disant ce que tu n'as pas pu vérifier.${refs ? `\n\nRepères pour l'IA : ${refs} dans la bibliothèque jointe.` : ''}`;
+}
 const DEGRES = ['1P', '2P', '3P', '4P', '5P', '6P', '7P', '8P', '9S', '10S', '11S'];
 const tranche = d => { const i = DEGRES.indexOf(d); return i < 0 ? -1 : i < 4 ? 0 : i < 8 ? 1 : 2; };
 const item = c => D.items.find(i => i.c === c);
@@ -230,7 +271,7 @@ const couleur = it => it.rub === 'jeux' ? COUL[it.cat] : rub(it.rub).c;
 const aDoc = it => it.fo.length && it.fo[0].f;
 const rubriqueCourante = () => { const p = S.page;
   if (p === 'fiche') { const it = item(S.code); return it ? it.rub : 'accueil'; }
-  return ({cat: 'jeux', preparer: 'mode', verifier: 'mode', imprimer: 'mode', sansia: 'mode', hesite: 'accueil', c_regles: 'conseils', c_cooperer: 'conseils', c_differencier: 'conseils', c_grille: 'conseils'})[p] || p; };
+  return ({cat: 'jeux', preparer: 'mode', verifier: 'mode', imprimer: 'mode', sansia: 'mode', hesite: 'accueil', c_regles: 'conseils', c_cooperer: 'conseils', c_differencier: 'conseils', c_grille: 'conseils', c_ecosysteme: 'conseils'})[p] || p; };
 
 function naviguer(o) {
   Object.assign(S, o);
@@ -247,7 +288,7 @@ function parent() {
 }
 function menu() {
   const cur = rubriqueCourante();
-  $('#menu').innerHTML = RUB.map(r => `<li><button type="button" ${cur === r.id ? 'aria-current="page"' : ''} ${go({page: r.id, code: null})}>${r.n}</button></li>`).join('');
+  $('#menu').innerHTML = RUB.map(r => `<li><button type="button" ${cur === r.id ? 'aria-current="page"' : ''} ${go({page: r.id, code: null})}>${r.m || r.n}</button></li>`).join('');
 }
 const retour = () => `<div><button class="retour" type="button" ${go(parent())}>← Retour</button></div>`;
 const jeunes = () => tranche(P.degre) === 0 && !(S.page === 'fiche' && item(S.code) && item(S.code).fam === 'jeu');
@@ -291,12 +332,12 @@ const lienFichier = (d, f, page, texte) => D.local
 
 const VUES = {
   accueil: () => `
-    <div class="hero"><div class="txt"><h1>Créer une ressource pour votre classe</h1>
-      <p class="chapo">Des jeux, des fiches et des supports à imprimer, de la 1P à la 11S. Choisissez un modèle : une IA le remplit avec vos contenus, ou vous l’imprimez tel quel.</p>
+    <div class="hero"><div class="txt"><h1>Composer un écosystème de ressources pour votre classe</h1>
+      <p class="chapo">Des jeux, des fiches et des supports à imprimer, de la 1P à la 11S. Choisissez un modèle : une IA le remplit avec vos contenus, ou vous l’imprimez tel quel. Reliez ensuite plusieurs ressources en une séquence.</p>
       <div class="confettis" aria-hidden="true">${COUL.concat('#0a7f96').map(c => `<i style="background:${c}"></i>`).join('')}</div></div>
       <div class="pile" aria-hidden="true">${['J18', 'GF-L', 'J28'].map(c => `<img src="${vign(c)}" alt="">`).join('')}</div></div>
     <h2>Que cherchez-vous ?</h2>
-    <div class="rubriques">${RUB.slice(1).map(r => { const n = r.id === 'icones' ? D.icones.reduce((a, g) => a + g.l.length, 0) + ' icônes' : r.id === 'mode' || r.id === 'apropos' || r.id === 'conseils' ? '' : D.items.filter(i => i.rub === r.id).length + ' modèles';
+    <div class="rubriques">${RUB.slice(1).map(r => { const n = r.id === 'icones' ? D.icones.reduce((a, g) => a + g.l.length, 0) + ' icônes' : r.id === 'mode' || r.id === 'apropos' || r.id === 'conseils' || r.id === 'sequence' ? '' : D.items.filter(i => i.rub === r.id).length + ' modèles';
       const v = r.id === 'icones' ? `<span class="ics" aria-hidden="true">${D.icones[3].l.slice(0, 4).map(i => `<img src="${i.u}" alt="">`).join('')}</span>` : r.v ? `<img class="vg" src="${vign(r.v)}" alt="">` : '';
       return `<button class="rubrique" style="--c:${r.c}" type="button" ${go({page: r.id})}><span class="tx"><span class="n">${r.n}</span><span class="d">${r.d}</span>${n ? `<span class="nb">${n}</span>` : ''}</span>${v}</button>`; }).join('')}
       <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'hesite', code: null})}><span class="tx"><span class="n">Je ne sais pas encore</span><span class="d">Décrivez votre besoin : l’IA vous propose deux ou trois possibilités.</span></span></button></div>`,
@@ -351,7 +392,7 @@ const VUES = {
       ${D.web ? `<p>Toutes les versions des bibliothèques et des modèles sont conservées sur GitHub.</p><div class="rang"><a class="btn second" href="${D.depot}" target="_blank" rel="noopener">Ouvrir le dépôt GitHub</a></div>` : ''}
       <p class="note">N’envoyez ni nom ni photo d’élève.</p></div>
     <div class="bloc" style="max-width:42em"><h2>Nouveautés</h2>
-      ${[['21 novembre 2026', 'Étoiles de difficulté en option dans la demande. Pictogrammes de consigne : un choix dans la demande les fait placer devant chaque consigne. Rubrique « Conseils » : règles du jeu, coopération, différenciation, grille avant le test en classe. Toutes les planches en couleur, treize exemples de jeux remplis de vrais contenus. Ce guide en ligne. Exemples en couleur des 27 formes de fiches et des 13 affiches. Couleur en option pour les jeux et pour les modèles Word. Lignes simples ou lignes d’écriture romandes, au choix, de la 1P à la 4P. Nouveaux supports : calendrier, horaire, livret à onglets, journal de classe, bande dessinée, exposé, maisons des nombres, quadrillage.'],
+      ${[['21 novembre 2026', 'Nouveau nom : « Composer un écosystème de ressources ». Nouvelle rubrique « Composer une séquence », qui relie plusieurs ressources et prépare une demande d’ensemble. Étoiles de difficulté en option dans la demande. Pictogrammes de consigne : un choix dans la demande les fait placer devant chaque consigne. Rubrique « Conseils » : règles du jeu, coopération, différenciation, grille avant le test en classe. Toutes les planches en couleur, treize exemples de jeux remplis de vrais contenus. Ce guide en ligne. Exemples en couleur des 27 formes de fiches et des 13 affiches. Couleur en option pour les jeux et pour les modèles Word. Lignes simples ou lignes d’écriture romandes, au choix, de la 1P à la 4P. Nouveaux supports : calendrier, horaire, livret à onglets, journal de classe, bande dessinée, exposé, maisons des nombres, quadrillage.'],
          ['20 novembre 2026', 'Dix-huit nouveaux jeux, dont les puzzles, le mot mystère, la cocotte, l’horloge, le petit bac, les petits chevaux et le sudoku. Lignes d’écriture romandes, syllabes et sons. Panoramas composés de vraies pages.'],
          ['19 novembre 2026', 'Grille d’alignement, serpents et échelles, bataille navale, roue de tirage. Quatre plateaux de parcours, dés à monter, dos de cartes à motif. Modèles Word à remplir.'],
          ['2 novembre 2026', 'Mise à jour de la version 1.'], ['31 octobre 2026', 'Version 1 des bibliothèques.']]
@@ -359,11 +400,12 @@ const VUES = {
 
   conseils: () => `
     <h1 class="titre" style="--c:${rub('conseils').c}">Conseils</h1>
-    <p class="chapo">Quatre repères pour qu’un jeu ou une fiche fasse vraiment apprendre.</p>
+    <p class="chapo">Cinq repères pour qu’un jeu, une fiche ou une séquence fasse vraiment apprendre.</p>
     <div class="rubriques">
       <button class="rubrique" style="--c:#2a9d8f" type="button" ${go({page: 'c_regles'})}><span class="tx"><span class="n">Des règles du jeu qui font travailler tous les élèves</span><span class="d">La marche à suivre en cinq questions, et des astuces pratiques.</span></span></button>
       <button class="rubrique" style="--c:#3a7bd5" type="button" ${go({page: 'c_cooperer'})}><span class="tx"><span class="n">Passer de la compétition à la coopération</span><span class="d">Changer la condition de victoire.</span></span></button>
       <button class="rubrique" style="--c:#8e5bd0" type="button" ${go({page: 'c_differencier'})}><span class="tx"><span class="n">Différencier sans faire trois versions</span><span class="d">Sept leviers autour d’une fiche unique.</span></span></button>
+      <button class="rubrique" style="--c:#e4572e" type="button" ${go({page: 'c_ecosysteme'})}><span class="tx"><span class="n">Qu’est-ce qu’un écosystème de ressources ?</span><span class="d">Une définition, cinq critères, huit fonctions.</span></span></button>
       <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'c_grille'})}><span class="tx"><span class="n">Mon jeu est-il utile, utilisable, acceptable ?</span><span class="d">Une grille à remplir avant le test en classe, puis après.</span></span></button>
     </div>`,
 
@@ -436,6 +478,51 @@ const VUES = {
     ${Object.entries(GRILLE).map(([t, l], g) => `<section class="groupe"><h2>${t}</h2><div class="grille">${l.map((x, i) => `<div class="ligne" data-v=""><label for="g${g}_${i}" style="font-weight:400">${x}</label><select id="g${g}_${i}" data-grille><option value="">Choisir…</option><option value="oui">Oui</option><option value="partie">En partie</option><option value="non">Non</option></select></div>`).join('')}</div></section>`).join('')}
     <p class="statut" id="bilan" role="status"></p>
     <p class="source">Les trois questions viennent du triptyque utilité, utilisabilité, acceptabilité (Tricot et al., 2003). Vos réponses restent sur cette page et ne sont pas enregistrées.</p>`,
+
+  sequence: () => `
+    <h1 class="titre" style="--c:${rub('sequence').c}">Composer une séquence</h1>
+    <p class="chapo">Un écosystème de ressources, ce sont plusieurs ressources reliées autour d’un objectif : chacune a sa fonction, et ce que produit l’une sert à la suivante.</p>
+    <div class="rang"><button class="btn second" type="button" id="seqExemple">Voir un exemple : les fractions</button><button class="btn second" type="button" id="seqVide">Recommencer à vide</button><button class="btn second" type="button" ${go({page: 'c_ecosysteme'})}>Qu’est-ce qu’un écosystème de ressources ?</button></div>
+    <section class="groupe"><h2>1. L’objectif</h2><div class="bloc" style="max-width:46em">
+      <label for="sDegre">Degré<select id="sDegre"><option value="">Choisir…</option>${DEGRES.map(d => `<option ${P.degre === d ? 'selected' : ''}>${d}</option>`).join('')}</select></label>
+      <label for="sDisc">Discipline<input id="sDisc" value="${esc(P.disc)}" placeholder="par exemple : mathématiques" autocomplete="off"></label>
+      <label for="sObj">Objectif d’apprentissage, en une phrase<input id="sObj" value="${esc(Q.objectif)}" placeholder="par exemple : comparer des fractions simples" autocomplete="off"></label></div></section>
+    <section class="groupe"><h2>2. Les ressources, dans l’ordre</h2>
+      <ol class="etapes-seq">${Q.etapes.map((e, i) => `<li style="--c:${COUL[i % COUL.length]}"><div class="tete">${Q.etapes.length > 2 ? `<button class="mini" type="button" data-seq-ote="${i}">Retirer</button>` : ''}</div>
+        <label for="sR${i}">Ressource<select id="sR${i}" data-seq="${i}" data-k="c"><option value="">Une ressource que j’ai déjà</option>${[['jeux', 'Jeux'], ['exercices', 'Exercices'], ['formes', 'Formes de fiches'], ['supports', 'Supports et affiches']].map(([id, n]) => `<optgroup label="${n}">${D.items.filter(x => x.rub === id).map(x => `<option value="${x.c}" ${e.c === x.c ? 'selected' : ''}>${esc(x.nom)}</option>`).join('')}</optgroup>`).join('')}</select></label>
+        ${e.c ? '' : `<label for="sN${i}">Laquelle ?<input id="sN${i}" data-seq="${i}" data-k="nom" value="${esc(e.nom)}" placeholder="par exemple : matériel de la classe, page du manuel" autocomplete="off"></label>`}
+        <label for="sF${i}">Sa fonction<select id="sF${i}" data-seq="${i}" data-k="fn"><option value="">Choisir…</option>${FONCTIONS.map(([k, n]) => `<option value="${k}" ${e.fn === k ? 'selected' : ''}>${n}</option>`).join('')}</select></label></li>
+        ${i < Q.etapes.length - 1 ? `<li class="fleche"><label for="sV${i}">Ce qui passe à la ressource suivante<input id="sV${i}" data-seq="${i}" data-k="vers" value="${esc(e.vers)}" placeholder="par exemple : les résultats répartissent les élèves" autocomplete="off"></label></li>` : ''}`).join('')}</ol>
+      <div class="rang"><button class="btn second" type="button" id="seqAjoute">Ajouter une ressource</button></div></section>
+    <section class="groupe"><h2>3. Est-ce un écosystème ?</h2><ul class="criteres" id="seqCriteres"></ul></section>
+    <section class="groupe"><h2>4. Votre demande à l’IA</h2><div class="bloc" style="max-width:46em">
+      <label for="promptSeq">Texte à coller dans la conversation<textarea id="promptSeq" readonly></textarea></label>
+      <div class="rang"><button class="btn" type="button" id="copierSeq">Copier la demande</button><span class="statut" id="statutSeq" role="status"></span></div></div>
+      <p class="note">Sans IA : ouvrez chaque modèle depuis sa rubrique, et gardez cette page comme plan de la séquence.</p></section>`,
+
+  c_ecosysteme: () => `
+    <h1 class="titre" style="--c:#e4572e">Qu’est-ce qu’un écosystème de ressources ?</h1>
+    <p class="chapo">Un ensemble de ressources différentes, choisies et reliées par l’enseignant·e autour d’un objectif d’apprentissage. Chaque ressource y remplit une fonction distincte, et la valeur de l’ensemble tient davantage aux liens entre les ressources qu’à chacune prise isolément.</p>
+    <p class="note">Cette définition est une proposition de travail. Le terme n’a pas de définition stabilisée dans la recherche ; il s’appuie sur deux notions établies : le système de ressources de l’enseignant·e (Gueudet et Trouche) et l’écologie d’apprentissage de l’élève (Barron, 2006).</p>
+    <h2>Cinq critères pour le vérifier</h2>
+    <ol class="pas">
+      <li><div class="c"><h3>Diversité</h3><p>L’ensemble couvre plusieurs fonctions, et non quatre ressources qui ne font que présenter.</p></div></li>
+      <li><div class="c"><h3>Complémentarité</h3><p>Chaque ressource fait ce que les autres ne font pas. Une redondance est acceptable si elle est voulue, par exemple la même notion sous deux formes pour différencier.</p></div></li>
+      <li><div class="c"><h3>Circulation</h3><p>Ce que produit une ressource sert à la suivante. C’est le critère qui distingue un écosystème d’une collection.</p></div></li>
+      <li><div class="c"><h3>Régulation</h3><p>L’enseignant·e ajuste l’ensemble d’après ce qu’il ou elle observe : retirer, remplacer, adapter.</p></div></li>
+      <li><div class="c"><h3>Ancrage</h3><p>L’ensemble puise dans l’existant (moyens d’enseignement, médiathèque, banques de ressources), pas seulement dans ses propres productions.</p></div></li>
+    </ol>
+    <h2>Huit fonctions possibles</h2>
+    <ul class="puces">${FONCTIONS.map(f => `<li>${f[1]}</li>`).join('')}</ul>
+    <p class="source">Fonctions adaptées de De Vries (2001), qui les a définies pour les logiciels d’apprentissage ; elles sont transposées ici aux ressources imprimées.</p>
+    <h2>Ce que le mot apporte, et où il trompe</h2>
+    <ul class="puces">
+      <li>Il dit l’interdépendance et la diversité : chaque ressource occupe une place, sa fonction.</li>
+      <li>Un écosystème naturel n’est conçu par personne et se règle seul. Un ensemble de ressources est conçu et ajusté par l’enseignant·e.</li>
+      <li>Le mot désigne ailleurs les plateformes et les outils numériques d’une institution. Ici, il s’agit des ressources d’une séquence, dans une classe.</li>
+    </ul>
+    <div class="rang"><button class="btn" type="button" ${go({page: 'sequence'})}>Composer une séquence</button></div>
+    <p class="source">Barron, B. (2006). Interest and self-sustained learning as catalysts of development: A learning ecology perspective. Human Development, 49, 193-224. De Vries, E. (2001). Les logiciels d’apprentissage : panoplie ou éventail ? Revue française de pédagogie, 137, 105-116. Trouche, L., Gueudet, G., Pepin, B. et Aldon, G. (2020). L’approche documentaire du didactique.</p>`,
 
   preparer: () => `
     <h1 class="titre">Préparez votre IA</h1>
@@ -548,6 +635,21 @@ function brancher() {
       try { await navigator.clipboard.writeText(pr.value); ok = true; } catch (e) { pr.focus(); pr.select(); try { ok = document.execCommand('copy'); } catch (x) {} }
       $('#statut').textContent = ok ? 'Copié. Collez ce texte dans votre conversation.' : 'Le texte est sélectionné : copiez-le avec Ctrl + C ou ⌘ + C.';
     };
+  }
+  const ps = $('#promptSeq');
+  if (ps) {
+    const maj = () => { ps.value = demandeSeq(); $('#seqCriteres').innerHTML = criteres().map(([n, e, t]) => `<li data-e="${e}"><span class="etat">${n}${e === 'oui' ? ' : oui' : e === 'non' ? ' : à revoir' : ''}</span><span>${t}</span></li>`).join(''); };
+    maj();
+    document.querySelectorAll('[data-seq]').forEach(el => el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', () => { const e = Q.etapes[+el.dataset.seq]; e[el.dataset.k] = el.value; if (el.dataset.k === 'c') { if (el.value) e.nom = ''; gardeQ(); rendre(); return; } gardeQ(); maj(); }));
+    document.querySelectorAll('[data-seq-ote]').forEach(b => b.onclick = () => { Q.etapes.splice(+b.dataset.seqOte, 1); gardeQ(); rendre(); });
+    $('#seqAjoute').onclick = () => { Q.etapes.push({c: '', nom: '', fn: '', vers: ''}); gardeQ(); rendre(); };
+    $('#seqExemple').onclick = () => { Q = JSON.parse(JSON.stringify(EXEMPLE_SEQ)); if (!P.degre) P.degre = '6P'; if (!P.disc) P.disc = 'mathématiques'; gardeQ(); rendre(); };
+    $('#seqVide').onclick = () => { Q = {objectif: '', etapes: [{c: '', nom: '', fn: '', vers: ''}, {c: '', nom: '', fn: '', vers: ''}]}; gardeQ(); rendre(); };
+    $('#sObj').addEventListener('input', e => { Q.objectif = e.target.value; gardeQ(); maj(); });
+    [['#sDegre', 'degre', 'change'], ['#sDisc', 'disc', 'input']].forEach(([s, k, ev]) => $(s).addEventListener(ev, e => { P[k] = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} maj(); }));
+    $('#copierSeq').onclick = async () => { let ok = false;
+      try { await navigator.clipboard.writeText(ps.value); ok = true; } catch (e) { ps.focus(); ps.select(); try { ok = document.execCommand('copy'); } catch (x) {} }
+      $('#statutSeq').textContent = ok ? 'Copié. Collez ce texte dans votre conversation.' : 'Le texte est sélectionné : copiez-le avec Ctrl + C ou ⌘ + C.'; };
   }
   const z = $('#zoom'); if (z) z.onclick = () => { $('#grand-img').src = z.querySelector('img').src; const d = $('#grand'); d.showModal ? d.showModal() : d.setAttribute('open', ''); };
   document.querySelectorAll('[data-grille]').forEach(s => s.onchange = () => { s.closest('.ligne').dataset.v = s.value;

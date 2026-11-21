@@ -6,7 +6,8 @@ Des « bibliothèques » à joindre à une IA générative pour lui faire produi
 
 ## Pour commencer
 
-- **Le guide en ligne** : https://emmanuelflaction.github.io/bibliotheques-ia/
+- **Le guide en ligne, « Composer un écosystème de ressources »** : https://emmanuelflaction.github.io/bibliotheques-ia/
+- **Composer une séquence** : une rubrique du guide relie plusieurs ressources autour d'un objectif (une fonction par ressource, et ce qui passe de l'une à l'autre), puis rédige une demande d'ensemble pour l'IA.
 - **Ce qu'il contient** : le guide (fichier `index.html`) présente tous les modèles (jeux, exercices, formes de fiches, supports et affiches, icônes) et rédige la demande à coller dans la conversation avec l'IA.
 - **Avec une IA** : joignez `bibliotheques/Bibliotheque-IA_1-technique_pour-IA_v1.md` à votre conversation (ou la version `.txt` ou `.docx` si votre outil refuse le `.md`), puis collez la demande proposée par le guide.
 - **Sans IA** : les dossiers `modeles` et `planches` contiennent des documents à remplir ou à imprimer tels quels.
