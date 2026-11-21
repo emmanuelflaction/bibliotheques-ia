@@ -2,7 +2,7 @@
 
 Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, aux cycles 1 et 2 — Suisse romande.
 
-Version v1 du 31 octobre 2026, mise à jour le 2 novembre 2026 : Référentiel pédagogique IA 7.2, révision du 2 novembre 2026 (page pleine MP-O-14 et planche A5 R15 ; objectif sans étiquette ; contrôles V20 et V21), suite du 2 novembre 2026 (MP-J-10 pièces mobiles et cases d'accueil ; SP6 par tests opératoires ; GF-B3 en zones de tracé ; J10 refondu en carte à pinces multi-questions avec règle élève ; intitulés des zones laissées à la classe ; points mineurs des gabarits) ; 3 novembre 2026 : G21 Imagier et scène à légender (TR16), fonctions scene_numerotee, lignes_numerotees, bande_etiquettes, verifier_imagier. Types de ressources alignés sur le Catalogue Ressources au primaire (71 types, TR01 à TR71 ; renumérotation du 3 novembre 2026 : l'imagier prend TR16, les types TR16 à TR70 du 2 novembre deviennent TR17 à TR71) ; éléments de réalisation complétés pour chaque type. 19 novembre 2026 : planches à découper — toute la surface utile de la page (MP-J-11) et repères de coupe pour le massicot (MP-J-12) ; gabarit J2 redimensionné ; J5 refondu en quatre plateaux de parcours dessinés, sans tableau (serpent, escargot, chemin, circuit ; fonction plateau_parcours) ; gabarits J1, J3, J4, J6 à J8 et J12 à J16 redimensionnés pour la page entière ; fonctions planche_pdf et reperes_de_coupe ; MP-J-13 : l'IA montre le panorama des jeux et attend le choix (fonction panorama_jeux) ; variantes des jeux par tranche d'âge (1P-4P, 5P-8P, 9S-11S) et miniatures des formats (fonction miniatures_tranche) ; MP-J-14 : carte tirée à dos neutre, solutions sur une feuille numérotée ; carte à pinces sur toute la page (6, 10 ou 12 questions) ; dé à monter grand ou petit (fonction de_a_monter) ; dos à motif des cartes tirées (fonction dos_a_motif : motif encadré à 3 mm du bord, mention personnelle possible ; l'IA demande dos à motif ou blanc, avec ou sans mention) ; quatre gabarits de jeu ajoutés : J17 grille d'alignement, J18 serpents et échelles, J19 bataille navale, J20 roue de tirage ; panorama des exercices G1 à G21 (fonction panorama_exercices) ; modèles Word à remplir et planches prêtes à imprimer signalés au § 3.8 ; instruction système complétée (présentation des possibilités, questions sur le dos des cartes) ; 20.11.2026 : panorama des jeux et pages par tranche d'âge composés uniquement de miniatures tirées des documents réels ; un document réel pour chaque gabarit J1 à J20 (modèles J3, J8, J9, J12, J13, J15, J16 ; planche J11) ; plan_projectif corrigé pour n = 4 ; sept gabarits ajoutés : J21 puzzles à deux pièces, J22 puzzle à bandes, J23 mot mystère, J24 cocotte en papier, J25 horloge à aiguilles, J26 mémo-fiches en éventail, J27 bandes graphiques ; puis J28 plateau à camemberts, J29 cherche et trouve de mots, J30 mots interdits, J31 petit bac et G22 lignes d'écriture au lignage romand ; puis J32 cartes à terminaisons, J33 petits chevaux, J34 Qui est-ce ?, J35 bataille, J36 tuiles-lettres, J37 sudoku, J38 mot caché (la fleur, à la place du pendu), G23 syllabes et sons, cartes-questions de J28 et livret d'écriture A5 ; 21.11.2026 : G24 maisons des nombres, G25 reproduction sur quadrillage, G26 à G31 supports de classe et mises en page de projets (calendrier, étiquettes de l'horaire, livret à onglets, journal, bande dessinée, exposé) ; le guide pour l'enseignant·e est remplacé par une page web ; lignes d'écriture au choix en 1P à 4P : lignes simples ou lignes romandes (R1c, `bande_lignage`) ; couleur en option pour les dessins R11 (`definir_couleur`) ; règle du jeu en cinq questions, variante coopérative, astuces pratiques et différenciation autour d'une fiche unique (MP-J-07, MP-D-02, § 4.3) ; option « pictogrammes de consigne » (§ publics, codes IC-CON) ; étoiles de difficulté admises sur demande (MP-D-01, MP-J-06). Licence : CC BY-NC-SA 4.0. Emmanuel Flaction – emmanuel.flaction@hepl.ch
+Version v1 du 31 octobre 2026, mise à jour le 2 novembre 2026 : Référentiel pédagogique IA 7.2, révision du 2 novembre 2026 (page pleine MP-O-14 et planche A5 R15 ; objectif sans étiquette ; contrôles V20 et V21), suite du 2 novembre 2026 (MP-J-10 pièces mobiles et cases d'accueil ; SP6 par tests opératoires ; GF-B3 en zones de tracé ; J10 refondu en carte à pinces multi-questions avec règle élève ; intitulés des zones laissées à la classe ; points mineurs des gabarits) ; 3 novembre 2026 : G21 Imagier et scène à légender (TR16), fonctions scene_numerotee, lignes_numerotees, bande_etiquettes, verifier_imagier. Types de ressources alignés sur le Catalogue Ressources au primaire (71 types, TR01 à TR71 ; renumérotation du 3 novembre 2026 : l'imagier prend TR16, les types TR16 à TR70 du 2 novembre deviennent TR17 à TR71) ; éléments de réalisation complétés pour chaque type. 19 novembre 2026 : planches à découper — toute la surface utile de la page (MP-J-11) et repères de coupe pour le massicot (MP-J-12) ; gabarit J2 redimensionné ; J5 refondu en quatre plateaux de parcours dessinés, sans tableau (serpent, escargot, chemin, circuit ; fonction plateau_parcours) ; gabarits J1, J3, J4, J6 à J8 et J12 à J16 redimensionnés pour la page entière ; fonctions planche_pdf et reperes_de_coupe ; MP-J-13 : l'IA montre le panorama des jeux et attend le choix (fonction panorama_jeux) ; variantes des jeux par tranche d'âge (1P-4P, 5P-8P, 9S-11S) et miniatures des formats (fonction miniatures_tranche) ; MP-J-14 : carte tirée à dos neutre, solutions sur une feuille numérotée ; carte à pinces sur toute la page (6, 10 ou 12 questions) ; dé à monter grand ou petit (fonction de_a_monter) ; dos à motif des cartes tirées (fonction dos_a_motif : motif encadré à 3 mm du bord, mention personnelle possible ; l'IA demande dos à motif ou blanc, avec ou sans mention) ; quatre gabarits de jeu ajoutés : J17 grille d'alignement, J18 serpents et échelles, J19 bataille navale, J20 roue de tirage ; panorama des exercices G1 à G21 (fonction panorama_exercices) ; modèles Word à remplir et planches prêtes à imprimer signalés au § 3.8 ; instruction système complétée (présentation des possibilités, questions sur le dos des cartes) ; 20.11.2026 : panorama des jeux et pages par tranche d'âge composés uniquement de miniatures tirées des documents réels ; un document réel pour chaque gabarit J1 à J20 (modèles J3, J8, J9, J12, J13, J15, J16 ; planche J11) ; plan_projectif corrigé pour n = 4 ; sept gabarits ajoutés : J21 puzzles à deux pièces, J22 puzzle à bandes, J23 mot mystère, J24 cocotte en papier, J25 horloge à aiguilles, J26 mémo-fiches en éventail, J27 bandes graphiques ; puis J28 plateau à camemberts, J29 cherche et trouve de mots, J30 mots interdits, J31 petit bac et G22 lignes d'écriture au lignage romand ; puis J32 cartes à terminaisons, J33 petits chevaux, J34 Qui est-ce ?, J35 bataille, J36 tuiles-lettres, J37 sudoku, J38 mot caché (la fleur, à la place du pendu), G23 syllabes et sons, cartes-questions de J28 et livret d'écriture A5 ; 21.11.2026 : G24 maisons des nombres, G25 reproduction sur quadrillage, G26 à G31 supports de classe et mises en page de projets (calendrier, étiquettes de l'horaire, livret à onglets, journal, bande dessinée, exposé) ; le guide pour l'enseignant·e est remplacé par une page web ; lignes d'écriture au choix en 1P à 4P : lignes simples ou lignes romandes (R1c, `bande_lignage`) ; couleur en option pour les dessins R11 (`definir_couleur`) ; règle du jeu en cinq questions, variante coopérative, astuces pratiques et différenciation autour d'une fiche unique (MP-J-07, MP-D-02, § 4.3) ; option « pictogrammes de consigne » (§ publics, codes IC-CON) ; étoiles de difficulté admises sur demande (MP-D-01, MP-J-06) ; J18 : numéros sur pastille ; J29 : mots mieux répartis ; J5 : « Départ » et « Arrivée » d'au moins 11 pt ; jeunes élèves : pas de ligne Prénom ni Date (MP-O-03, `definir_jeunes`). Licence : CC BY-NC-SA 4.0. Emmanuel Flaction – emmanuel.flaction@hepl.ch
 
 > **Les trois bibliothèques IA (v1).** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 3 — guide pour l'enseignant·e : version complète (Livres I et II) à lire et à imprimer. Les renvois « Livre I » et « Livre II » du texte désignent donc les bibliothèques 1 et 2. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
 
@@ -2048,7 +2048,7 @@ Une réduction progressive est possible au cours du cycle.
 |---|---|---|
 | MP-O-01 | Structure stable : numéro → consigne → données → zone de réponse ; identique dans toute la fiche. | DOIT |
 | MP-O-02 | Numérotation stable (1, 2, 3… ou A, B, C…) ; ne pas mélanger plusieurs systèmes à un même niveau. Usage courant : exercices 1, 2, 3 et items a), b), c). | DOIT |
-| MP-O-03 | Zone d'identification **tout en haut de la page**, en première ligne : Prénom (ou Nom, selon la préférence de l'enseignant·e) et Date ; puis titre centré, puis objectif en langage élève, sans étiquette (MP-O-12, R7). | DOIT |
+| MP-O-03 | Zone d'identification **tout en haut de la page**, en première ligne : Prénom (ou Nom, selon la préférence de l'enseignant·e) et Date ; puis titre centré, puis objectif en langage élève, sans étiquette (MP-O-12, R7). **Exception pour les jeunes élèves** (1P-2P, et tout élève qui n'écrit pas encore sur une ligne) : aucune ligne « Prénom » ni « Date » ; ces élèves apprennent à écrire leur prénom, en grand, et ne peuvent pas le loger sur une ligne. À la place, la mention « Prénom au dos de la feuille » (l'élève l'écrit en grand au dos, ou y colle son étiquette-prénom) ; la date est notée par l'adulte. Recettes : `entete(..., jeunes=True)` pour Word, `definir_jeunes(True)` pour les fiches dessinées. En 3P-4P, demander à l'enseignant·e s'il faut garder la ligne. | DOIT |
 | MP-O-04 | Au maximum 3-5 exercices courts par page, ou 1-2 exercices longs. | DOIT |
 | MP-O-05 | Maintenir des espaces de respiration visuelle ; éviter la surcharge. | DOIT |
 | MP-O-06 | Ne jamais séparer une consigne et son exercice par un saut de page ; ne jamais couper un tableau ou une activité entre deux pages. | DOIT |
@@ -2158,7 +2158,7 @@ Une réduction progressive est possible au cours du cycle.
 | MP-D-01 à MP-D-04 | Différenciation sans étiquette évaluative, dispositifs, budget par version, attribution (voir § 3.6). | DOIT / DEVRAIT |
 | MP-V-01 | Contrôle sur le rendu imprimé (V1-V10 et V20 ; V11 à V19 selon le cas ; V21) avant livraison, ou déclaration « Rendu non contrôlé » avec la liste des contrôles. | DOIT |
 | MP-V-02 | Rapport de conformité livré avec la fiche. | DOIT |
-| MP-O-12 | En-tête obligatoire dans cet ordre : Prénom et Date tout en haut (première ligne) ; titre centré avec un espace avant et après (≥ 12 pt) ; objectif en langage élève (une phrase à la première personne, sans étiquette « Mon objectif : » ; révision du 2.11.2026). Recette R7. | DOIT |
+| MP-O-12 | En-tête obligatoire dans cet ordre : Prénom et Date tout en haut (première ligne) ; titre centré avec un espace avant et après (≥ 12 pt) ; objectif en langage élève (une phrase à la première personne, sans étiquette « Mon objectif : » ; révision du 2.11.2026). Recette R7. Jeunes élèves : pas de ligne Prénom et Date (MP-O-03). | DOIT |
 | MP-I-05 | Image générée par IA destinée à l'élève : aucun texte produit par le générateur dans l'image (souvent fautif ou inexistant) ; le texte est ajouté dans le document, puis relu (V10). Ni logo, ni marque, ni personne réelle reconnaissable. | DOIT |
 | MP-CC-11 | Aucune forme écrite fautive ou inexistante dans un support destiné à l'élève (consignes, exemples, items, distracteurs, banques de mots, phrases à corriger) ; alternatives au § 3.7 ; relecture orthographique avant livraison (V10). | DOIT |
 | MP-V-03 | Statut des informations : vérifié dans la session (avec la source) / non vérifié / inférence de conception. | DEVRAIT |
@@ -2569,16 +2569,19 @@ def cases_bilan(doc, criteres, choix=('je sais faire', 'presque', "j'ai besoin d
     return t
 
 # ---------- R7 : en-tête de la fiche (MP-O-12) ----------
-def entete(doc, titre, objectif, largeur_cm=LARGEUR_UTILE_CM):
+def entete(doc, titre, objectif, largeur_cm=LARGEUR_UTILE_CM, jeunes=False):
     """R7 : 1) Prénom et Date tout en haut (tabulations à points de suite, mesurées depuis la marge) ;
     2) titre centré, espace avant et après ; 3) objectif formulé pour l'élève : la phrase seule, sans étiquette
-    (« J'écris un verbe au passé composé avec ses deux parties. »), majuscule initiale, point final."""
+    (« J'écris un verbe au passé composé avec ses deux parties. »), majuscule initiale, point final.
+    jeunes=True (1P-2P, élèves qui n'écrivent pas encore sur une ligne) : pas de ligne Prénom et Date, mais la
+    mention « Prénom au dos de la feuille » (MP-O-03)."""
     p = doc.add_paragraph(style='Fiche-Identité')
+    if jeunes: ecrire(p, 'Prénom au dos de la feuille')
     ts = p.paragraph_format.tab_stops
     ts.add_tab_stop(Cm(largeur_cm * 0.58), WD_TAB_ALIGNMENT.LEFT, WD_TAB_LEADER.LINES)
     ts.add_tab_stop(Cm(largeur_cm * 0.62), WD_TAB_ALIGNMENT.LEFT)
     ts.add_tab_stop(Cm(largeur_cm), WD_TAB_ALIGNMENT.RIGHT, WD_TAB_LEADER.LINES)
-    ecrire(p, 'Prénom : \t\tDate : \t')
+    if not jeunes: ecrire(p, 'Prénom : \t\tDate : \t')
     t = doc.add_paragraph(style='Fiche-Titre'); ecrire(t, titre)
     objectif = objectif.strip()
     for etiquette in ('Mon objectif\u00a0:', 'Mon objectif :', 'Mon objectif:', 'Objectif\u00a0:', 'Objectif :', 'Objectif:'):
@@ -2752,6 +2755,17 @@ def definir_couleur(nom=None):
     (fonds gris, symboles de catégorie, dos des cartes). À remettre à None après la production."""
     assert nom is None or nom in TEINTES, 'teinte inconnue : ' + str(nom)
     COULEUR[0] = nom
+
+JEUNES = [False]
+
+def definir_jeunes(oui=True):
+    """oui=True : fiches dessinées pour des élèves qui n'écrivent pas encore sur une ligne (1P-2P surtout) : la ligne
+    « Prénom » devient la mention « Prénom au dos de la feuille » et aucune ligne de date n'est tracée (MP-O-03).
+    À remettre à False après la production."""
+    JEUNES[0] = bool(oui)
+
+def _prenom():
+    return 'Prénom au dos de la feuille' if JEUNES[0] else 'Prénom : ____________________'
 
 def _teinter(fond):
     """Un gris devient une teinte de même clarté ; le blanc, le noir et les couleurs données restent inchangés."""
@@ -3426,7 +3440,7 @@ def _mot_ou_numero(d, x, y, i, n, boucle, taille_pt, speciale=False):
     """Départ et Arrivée en mots, les autres cases numérotées de 1 à n - 2 (circuit : de 1 à n - 1).
     Case spéciale : numéro entouré, en plus du fond gris (jamais la teinte seule, MP-C-05)."""
     mot = 'Départ' if i == 0 else ('Arrivée' if i == n - 1 and not boucle else str(i))
-    t = taille_pt if mot.isdigit() else taille_pt * 0.55
+    t = taille_pt if mot.isdigit() else max(taille_pt * 0.55, 11)             # jamais moins de 11 pt
     d.texte(x, y + t * 0.125, mot, t, police='Arial-B')
     if speciale:
         d.cercle(x, y, taille_pt * 0.32, ep=0.8)
@@ -4149,7 +4163,8 @@ def serpents_echelles(base, colonnes=6, rangees=8, liens=None, graine=1, titre='
         d.ligne([(cx - l / 2, cy - h / 2), (cx + l / 2, cy - h / 2), (cx + l / 2, cy + h / 2), (cx - l / 2, cy + h / 2)], ep=0.35,
                 ferme=True, fond=(0.93, 0.93, 0.93) if (r + round((cx - x0) / l - 0.5)) % 2 else (1, 1, 1))
     for a, b in liens:
-        (xa, ya), (xb, yb) = centre(a), centre(b); lg = math.hypot(xb - xa, yb - ya); ux, uy = (xb - xa) / lg, (yb - ya) / lg
+        (xa, ya), (xb, yb) = centre(a), centre(b); xa += l * 0.1; xb += l * 0.1; ya += h * 0.14; yb += h * 0.14   # sous les numéros
+        lg = math.hypot(xb - xa, yb - ya); ux, uy = (xb - xa) / lg, (yb - ya) / lg
         if b > a:                                                           # échelle : deux montants, des barreaux
             e = min(l, h) * 0.13
             for s in (-1, 1): d.ligne([(xa - s * uy * e, ya + s * ux * e), (xb - s * uy * e, yb + s * ux * e)], ep=0.9)
@@ -4167,7 +4182,10 @@ def serpents_echelles(base, colonnes=6, rangees=8, liens=None, graine=1, titre='
             d.ligne([(xa - ux * 3.6, ya - uy * 3.6), (xa - ux * 6, ya - uy * 6), (xa - ux * 7.2 - uy * 1, ya - uy * 7.2 + ux * 1)], ep=0.4)
             d.ligne([(xa - ux * 6, ya - uy * 6), (xa - ux * 7.2 + uy * 1, ya - uy * 7.2 - ux * 1)], ep=0.4)
     for k in range(1, n + 1):                                               # numéros par-dessus, dans le coin de la case
-        cx, cy = centre(k); mot = 'Départ' if k == 1 else ('Arrivée' if k == n else str(k)); t = taille_pt if mot.isdigit() else taille_pt * 0.7
+        cx, cy = centre(k); mot = 'Départ' if k == 1 else ('Arrivée' if k == n else str(k)); t = taille_pt if mot.isdigit() else max(taille_pt * 0.7, 9)
+        r, lm = divmod(k - 1, colonnes), d.largeur_texte(mot, t, 'Arial-B'); xg, yh = cx - l / 2 + 0.5, cy - h / 2 + 0.5
+        d.ligne([(xg, yh), (xg + lm + 2.6, yh), (xg + lm + 2.6, yh + t * 0.36 + 2.4), (xg, yh + t * 0.36 + 2.4)], ep=0, ferme=True,
+                fond=(0.93, 0.93, 0.93) if (r[0] + round((cx - x0) / l - 0.5)) % 2 else (1, 1, 1))   # pastille : le numéro reste lisible
         d.texte(cx - l / 2 + 1.8, cy - h / 2 + 1.5 + t * 0.36, mot, t, ancre='s', police='Arial-B')
     d.ligne([(x0, y0 + haut), (x0 + L, y0 + haut), (x0 + L, y0 + H), (x0, y0 + H)], ep=1.4, ferme=True)
     return (None if dessin else d.sauver(base)), n, round(min(l, h), 1)
@@ -4505,14 +4523,19 @@ def planche_lynx(base, mots, graine=1, taille_pt=15, titre='Cherche et trouve', 
     _cadre_arrondi(d, x0, y0 + haut, L, H - haut, r=8, ep=1.2); poses = []; rc = taille_pt * 0.19
     for mot in sorted(mots, key=len, reverse=True):
         lg = d.largeur_texte(mot, taille_pt, 'Arial-B')
+        candidats = []                                                      # (écart au mot le plus proche, x, y, rot, points)
         for essai in range(4000):
             rot = alea.choice((-35, -25, -15, -8, 0, 8, 15, 25, 35, 0, 0, 90, -90)); a = math.radians(rot)
             x, y = alea.uniform(x0 + 6, x0 + L - 6), alea.uniform(y0 + haut + 6, y0 + H - 6)
             pts = [(x + (t - lg / 2) * math.cos(a), y + (t - lg / 2) * math.sin(a)) for t in [lg * k / max(1, int(lg / rc)) for k in range(max(1, int(lg / rc)) + 1)]]
             if any(not (x0 + 5 < px < x0 + L - 5 and y0 + haut + 5 < py < y0 + H - 5) for px, py in pts): continue
-            if any(math.hypot(px - qx, py - qy) < 2 * rc + 3.5 for autres in poses for qx, qy in autres for px, py in pts): continue
-            poses.append(pts); d.texte(x + rc * 0.6 * math.sin(a) * -1, y + rc * 0.6 * math.cos(a), mot, taille_pt, police='Arial-B', rot=rot); break
-        else: raise AssertionError(f'plus de place pour {mot!r} : réduire le corps ou le nombre de mots')
+            ecart = min((math.hypot(px - qx, py - qy) for autres in poses for qx, qy in autres for px, py in pts), default=1e9)
+            if ecart < 2 * rc + 3.5: continue
+            candidats.append((ecart, x, y, rot, pts))
+            if len(candidats) == 40: break
+        if not candidats: raise AssertionError(f'plus de place pour {mot!r} : réduire le corps ou le nombre de mots')
+        _, x, y, rot, pts = max(candidats, key=lambda c: c[0]); a = math.radians(rot)   # le plus loin des autres : mots bien répartis
+        poses.append(pts); d.texte(x + rc * 0.6 * math.sin(a) * -1, y + rc * 0.6 * math.cos(a), mot, taille_pt, police='Arial-B', rot=rot)
     return (None if dessin else d.sauver(base)), len(mots), taille_pt
 
 def cartes_mots_interdits(base, cartes, colonnes=3, rangees=3, taille_pt=16, mention='', dessin=None):
@@ -4558,7 +4581,8 @@ def lignage_romand(base, module_mm=7.0, couleurs=True, entete=True, dessin=None)
     Renvoie (chemin du PDF, nombre de lignes d'écriture, module en mm)."""
     x0, y0, L, H = SURFACE_MM; d = dessin or Dessin(); m = module_mm; assert 2 <= m <= 10, 'module de 2 à 10 mm'
     haut = 12.0 if entete else 0.0; esp = max(5.0, 1.6 * m); n = int((H - haut + esp) / (3 * m + esp)); esp = (H - haut - n * 3 * m) / max(n - 1, 1)
-    if entete: d.texte(x0, y0 + 6, 'Prénom : ____________________', 12, ancre='s'); d.texte(x0 + L - d.largeur_texte('Date : ______________', 12), y0 + 6, 'Date : ______________', 12, ancre='s')
+    if entete and JEUNES[0]: d.texte(x0, y0 + 6, _prenom(), 12, ancre='s')
+    elif entete: d.texte(x0, y0 + 6, 'Prénom : ____________________', 12, ancre='s'); d.texte(x0 + L - d.largeur_texte('Date : ______________', 12), y0 + 6, 'Date : ______________', 12, ancre='s')
     for i in range(n):
         y = y0 + haut + i * (3 * m + esp)
         if couleurs:
@@ -4752,7 +4776,7 @@ def fiche_syllabes_sons(base, mots, colonnes=4, titre='Syllabes et sons', taille
     Renvoie (chemin du PDF, nombre de mots, largeur et hauteur d'une case en mm)."""
     x0, y0, L, H = SURFACE_MM; d = dessin or Dessin(); n = len(mots); r = -(-n // colonnes)
     haut = _bandeau(d, titre, 'Colle l’image du mot. Dessine un carré par syllabe, puis un jeton par son.')
-    d.texte(x0, y0 + haut + 5, 'Prénom : ____________________', 12, ancre='s'); yg = y0 + haut + 10; l, h = L / colonnes, (y0 + H - yg) / r
+    d.texte(x0, y0 + haut + 5, _prenom(), 12, ancre='s'); yg = y0 + haut + 10; l, h = L / colonnes, (y0 + H - yg) / r
     for i, mot in enumerate(mots):
         x, y = x0 + (i % colonnes) * l, yg + (i // colonnes) * h; hi = h - 34
         d.ligne([(x, y), (x + l, y), (x + l, y + h), (x, y + h)], ep=0.7, ferme=True)
@@ -4802,7 +4826,7 @@ def maison_des_nombres(base, nombres=(5, 6, 7, 8), titre='Les maisons des nombre
     Renvoie (chemin du PDF, nombre de maisons, hauteur d'un étage en mm)."""
     x0, y0, L, H = SURFACE_MM; d = dessin or Dessin(); n = len(nombres); assert 2 <= n <= 6, 'de 2 à 6 maisons'
     haut = _bandeau(d, titre, 'À chaque étage, écris deux nombres : ensemble, ils font le nombre du toit.')
-    d.texte(x0, y0 + haut + 5, 'Prénom : ____________________', 12, ancre='s'); col = 2 if n <= 4 else 3; ran = -(-n // col)
+    d.texte(x0, y0 + haut + 5, _prenom(), 12, ancre='s'); col = 2 if n <= 4 else 3; ran = -(-n // col)
     lz, hz = L / col, (H - haut - 10) / ran; et = 0
     for i, nb in enumerate(nombres):
         x, y = x0 + (i % col) * lz + 6, y0 + haut + 10 + (i // col) * hz + 3; l, h = lz - 12, hz - 8; ht = min(30.0, h * 0.26); etages = nb + 1 if nb <= 6 else (nb + 2) // 2
@@ -4824,7 +4848,7 @@ def reproduction_quadrillage(base, figure='maison', cases=(8, 7), points=False, 
     Renvoie (chemin du PDF, nombre de segments à tracer, côté d'un carreau en mm)."""
     x0, y0, L, H = SURFACE_MM; d = dessin or Dessin(); fig = FIGURES[figure] if isinstance(figure, str) else figure; c, r = cases
     haut = _bandeau(d, titre, 'Observe le modèle. Trace la même figure sur le quadrillage du bas, à la règle.')
-    d.texte(x0, y0 + haut + 5, 'Prénom : ____________________', 12, ancre='s'); hz = (H - haut - 14) / 2; pas = min((L - 10) / c, (hz - 12) / r, 14.0)
+    d.texte(x0, y0 + haut + 5, _prenom(), 12, ancre='s'); hz = (H - haut - 14) / 2; pas = min((L - 10) / c, (hz - 12) / r, 14.0)
     for k, nom in enumerate(('Le modèle', 'À toi')):
         gx, gy = x0 + (L - c * pas) / 2, y0 + haut + 14 + k * hz + 6; d.texte(x0, gy - 2, nom, 12, ancre='s', police='Arial-B')
         if k == 1 and points:

@@ -6,6 +6,9 @@
 - Bibliothèque IA 1 : règles MP-J-07 et MP-D-02 complétées, astuces pratiques et variante coopérative dans la partie enseignant·e.
 - Bibliothèque IA 2 : section « Repères pour les jeux, la coopération et la différenciation ».
 - Mention de la licence CC BY-NC-SA 4.0 dans les deux bibliothèques.
+- Jeunes élèves (1P-2P) : plus de ligne « Prénom » ni « Date » ; mention « Prénom au dos de la feuille » (règle MP-O-03, recettes `entete(..., jeunes=True)` et `definir_jeunes`). Fiches G22 (7 mm), G23 et G24 corrigées.
+- Exemples de jeux plus variés : conjugaison au présent, participes passés, pluriel des noms, contraires, synonymes, nature des mots, pays et capitales.
+- Aspect retravaillé : numéros lisibles sur « Serpents et échelles », mots mieux répartis dans « Cherche et trouve », carte à pinces centrée, cartons de loto mieux délimités, « Départ » et « Arrivée » plus grands sur les plateaux.
 - Nouveau nom du guide : « Composer un écosystème de ressources ». Nouvelle rubrique « Composer une séquence » : plusieurs ressources reliées, chacune avec sa fonction, et une demande d'ensemble pour l'IA.
 - Page « Qu'est-ce qu'un écosystème de ressources ? » dans les Conseils, et section correspondante dans la Bibliothèque IA 2 (définition de travail, cinq critères, conduite attendue de l'IA).
 - Étoiles de difficulté : admises sur demande (un choix dans la demande du guide ; règles MP-D-01 et MP-J-06 de la Bibliothèque IA 1).
