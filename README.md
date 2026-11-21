@@ -31,4 +31,4 @@ Signalez une erreur, proposez un modèle ou racontez un essai en classe : emmanu
 
 ## Droits
 
-© 2026 Emmanuel Flaction. La licence de réutilisation des bibliothèques et des modèles sera précisée ici. La banque d'icônes du dossier `icones` est sous licence CC0 1.0.
+© 2026 Emmanuel Flaction. Contenu en accès libre sous licence [CC BY-SA 4.0](LICENCE.md) : vous pouvez l'utiliser et l'adapter en citant l'auteur et en partageant vos adaptations sous la même licence. La banque d'icônes du dossier `icones` est sous licence CC0 1.0.
