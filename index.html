@@ -52,6 +52,7 @@ p { margin: 0; }
 .choix button.premier { border-color: var(--accent); }
 .choix .t { font-size: 1.7rem; font-weight: 700; line-height: 1.15; }
 .choix .va { margin-top: 8px; color: var(--accent); font-weight: 700; }
+.choix .ligne3 { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 24px; padding-bottom: 14px; border-bottom: 1px solid var(--trait); }
 .pastille { align-self: flex-start; background: var(--surligneur); color: var(--surligneur-encre); border-radius: 999px; padding: 3px 14px; font-size: .85rem; font-weight: 700; }
 /* tuiles de catégories et cartes */
 .tuiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 24px; }
@@ -668,16 +669,16 @@ const VUES = {
     <p>Avant de coller ce texte, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
 
   ameliorer: () => `
-    <h1 class="titre" style="--c:#c2571a">Améliorer une ressource que vous utilisez déjà</h1>
+    <h1 class="titre" style="--c:#c2571a">Améliorer une fiche / ressource que vous utilisez déjà</h1>
     <div class="bloc fort" style="max-width:46em"><h2>Analyser une fiche / ressource</h2>
       <p>Demandez à l’IA de réaliser une analyse de votre document en le joignant à la conversation (fichier ou photo, sans donnée d’élève).</p>
       <p>En utilisant le prompt ci-dessous, l’IA vous remet un bref rapport (ce qu’elle comprend de votre fiche, ce qui fonctionne et les possibilités d’amélioration).</p>
       <p>Vérifiez si l’IA a bien compris votre document et corrigez-la si besoin ; dites-lui aussi ce que vous observez avec vos élèves.</p>
       ${boite('prompt', '', 'Copier le texte', '11.5em')}</div>
-    <div class="bloc fort" style="max-width:46em"><h2>Transformer votre fiche / ressource (facultatif)</h2>
+    <div class="bloc fort" style="max-width:46em"><h2>Transformer une fiche / ressource que vous utilisez déjà</h2>
       <p>Si vous souhaitez faire évoluer la fiche, vous pouvez coller ce prompt à la suite dans la même conversation (cochez la possibilité retenue).</p>
       <p>Relisez toujours très attentivement le résultat avant de l’utiliser en classe !</p>
-      <fieldset class="choix"><legend>Possibilité(s) retenue(s)</legend>${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Possibilité ${n}</label>`).join('')}</fieldset>
+      <fieldset class="choix"><legend>Possibilité(s) retenue(s)</legend><div class="ligne3">${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Possibilité ${n}</label>`).join('')}</div>${AMEL.map(([k, t], i) => `<label for="am${i}" class="case"><input type="checkbox" id="am${i}" data-amel="${k}" ${P.amel.includes(k) ? 'checked' : ''}>${t}</label>`).join('')}</fieldset>
       ${boite('prompt2', '2', 'Copier le texte', '4.5em')}</div>
     <p class="note">Avant votre première demande, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
 
@@ -715,9 +716,10 @@ const VUES = {
 };
 
 function demandeAmel2() {
-  const pr = [...P.prop].sort();
+  const pr = [...P.prop].sort(), ch = AMEL.filter(a => P.amel.includes(a[0])).map(a => a[2]);
   const sel = pr.length === 1 ? `la possibilité ${pr[0]}` : pr.length ? `les possibilités ${pr.slice(0, -1).join(', ')} et ${pr[pr.length - 1]}` : `la possibilité [numéro à compléter]`;
-  return `Transforme la fiche selon ${sel} de ton rapport, avec son corrigé, et dis-moi ce que tu as changé.`;
+  if (!ch.length) return `Transforme la fiche selon ${sel} de ton rapport, avec son corrigé, et dis-moi ce que tu as changé.`;
+  return `${pr.length ? `Transforme la fiche selon ${sel} de ton rapport.\nAutres modifications : ` : 'Transforme la fiche ainsi : '}${ch.join(' ; ')}.\nJoins son corrigé et dis-moi ce que tu as changé.`;
 }
 function demande() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, it = S.page === 'fiche' ? item(S.code) : null;
