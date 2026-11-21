@@ -2688,7 +2688,7 @@ Un jeu remis sans mode d'emploi laisse chaque groupe inventer ses règles. Une m
 
 **De la compétition à la coopération**
 
-Dans un jeu de l'oie classique, le premier arrivé gagne : la compétition vient de la règle, pas des élèves. Pour obtenir de la coopération, il faut changer la condition de victoire. Le principe central est l'interdépendance positive : chacun ne réussit que si les autres réussissent aussi ; elle va de pair avec la responsabilité individuelle (Johnson & Johnson, 2009). Le guide du CTREQ y ajoute trois autres conditions : la promotion des interactions, les habiletés sociales et coopératives, et le retour du groupe sur son fonctionnement.
+Dans un jeu de l'oie classique, le premier arrivé gagne : la compétition vient de la règle, pas des élèves. Pour obtenir de la coopération, il faut changer la condition de victoire. Le principe central est l'interdépendance positive : chacun ne réussit que si les autres réussissent aussi ; elle va de pair avec la responsabilité individuelle (Johnson & Johnson, 2009). La fiche pratique du CTREQ (2023) y ajoute trois autres conditions : la promotion des interactions, les habiletés sociales et coopératives, et le retour du groupe sur son fonctionnement.
 
 - Un seul pion pour le groupe, contre le sablier ou contre un pion adverse qui avance tout seul.
 - Un but commun chiffré : tous les pions arrivés en moins de dix tours, ou vingt cartes réussies.
@@ -2722,7 +2722,7 @@ Une fiche identique pour tous, avec des aides en libre accès, ne désigne perso
 
 **Références de cette section**
 
-Centre de transfert pour la réussite éducative du Québec (CTREQ). (s. d., mis en ligne en 2023). *L'approche coopérative en 4 étapes : les premiers pas vers la rétroaction par les pairs*. https://www.ctreq.qc.ca/wp-content/uploads/2023/10/CTREQ-D232-Preparation-a-la-REPAIR-Guide-14x85-44329-V9.pdf
+Centre de transfert pour la réussite éducative du Québec. (2023, août). *Approche coopérative : les premiers pas vers la rétroaction par les pairs* [Fiche pratique]. https://www.ctreq.qc.ca/wp-content/uploads/2023/10/CTREQ-D232-Preparation-a-la-REPAIR-Guide-14x85-44329-V9.pdf#page=1
 
 Forget, A. (2018). *Penser la différenciation pédagogique* (Carnets des sciences de l'éducation). Université de Genève. https://unige.ch/fapse/editions/index.php/download_file/view/544/492
 
@@ -2730,7 +2730,7 @@ Maitre, J.-P. (2020). *La théorie de la charge cognitive*. Centre de soutien à
 
 Tricot, A., et al. (2003). Utilité, utilisabilité, acceptabilité : interpréter les relations entre trois dimensions de l'évaluation des EIAH. Dans *Environnements informatiques pour l'apprentissage humain* (Strasbourg).
 
-Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
+Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ, 2023 ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
 
 ## Références scientifiques (APA 7)
 
