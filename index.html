@@ -205,7 +205,7 @@ body { border-top: 0; }
   <ul id="menu"></ul></div></nav>
 <div class="page">
   <main id="vue" class="vue" tabindex="-1"></main>
-  <footer>Bibliothèques IA et guide&nbsp;: Emmanuel Flaction, HEP Vaud (UER MI). Licence CC&nbsp;BY-NC-SA&nbsp;4.0.</footer>
+  <footer>Bibliothèques IA et guide&nbsp;: Emmanuel Flaction, HEP Vaud (UER MI).</footer>
 </div>
 <dialog id="grand"><button class="btn second" type="button" id="fermer">Fermer</button><img id="grand-img" alt=""></dialog>
 <script>
@@ -386,7 +386,7 @@ const VUES = {
       <div class="rang"><a class="btn second" href="https://creativecommons.org/licenses/by-nc-sa/4.0/fr/legalcode" target="_blank" rel="noopener">Lire le texte de la licence</a></div></div>
     <div class="bloc" style="max-width:42em"><h2>Participer</h2>
       <p>Vous avez essayé un modèle en classe ? Votre retour améliore les bibliothèques.</p>
-      <ul class="courriels">${[['Signalez une erreur ou un modèle difficile à utiliser.', 'Bibliothèques IA : une erreur à signaler'], ['Proposez un jeu, un exercice ou un support qui manque.', 'Bibliothèques IA : une proposition'], ['Racontez un essai : le degré, la notion, ce qui a bien marché, ce qui a gêné.', 'Bibliothèques IA : un essai en classe']]
+      <ul class="courriels">${[['Signalez une erreur, un modèle difficile à utiliser, ou un document peu soigné dont l’aspect gagnerait à être retravaillé.', 'Bibliothèques IA : une erreur ou un aspect à améliorer'], ['Proposez un jeu, un exercice ou un support qui manque.', 'Bibliothèques IA : une proposition'], ['Racontez un essai : le degré, la notion, ce qui a bien marché, ce qui a gêné.', 'Bibliothèques IA : un essai en classe']]
         .map(([t, s]) => `<li><a href="mailto:emmanuel.flaction@hepl.ch?subject=${encodeURIComponent(s)}">${t}</a></li>`).join('')}</ul>
       <div class="chemin"><b>Adresse</b>emmanuel.flaction@hepl.ch</div>
       ${D.web ? `<p>Toutes les versions des bibliothèques et des modèles sont conservées sur GitHub.</p><div class="rang"><a class="btn second" href="${D.depot}" target="_blank" rel="noopener">Ouvrir le dépôt GitHub</a></div>` : ''}
