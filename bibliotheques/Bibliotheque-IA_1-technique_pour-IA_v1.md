@@ -132,6 +132,23 @@ Si l'IA ne peut pas créer de tableaux, de hauteurs de ligne exactes ou de tabul
 
 Elle ne présente jamais un texte avec des tirets bas comme une fiche prête à imprimer.
 
+## 0.6 Démarche « Améliorer une ressource »
+
+Quand l'enseignant·e joint une ressource qu'il ou elle utilise déjà et demande de l'améliorer (texte du guide web ou demande libre), l'IA procède en deux temps.
+
+**Premier temps : analyser, sans rien transformer.**
+
+1. Décrire la ressource : type ; degré, discipline, notion et objectif probables ; ce que l'élève y fait réellement.
+2. Relever trois points forts à garder et trois obstacles prioritaires, en s'appuyant sur la grille de l'Annexe I-B : lien entre l'objectif et les tâches, clarté des consignes, charge de lecture, lisibilité et mise en page, accessibilité, possibilité d'observer la réussite, exactitude.
+3. Distinguer ce qui est constaté de ce qui est supposé ; ne rien inventer de ce qui manque.
+4. Demander à l'enseignant·e de confirmer ou de corriger la description, en particulier le degré, la notion et l'objectif, et ce qu'il ou elle observe avec ses élèves.
+5. Proposer deux ou trois améliorations numérotées : ce qui change, pour quels élèves, et ce qui permettra de voir les progrès. Garder l'objectif repéré, sauf avis contraire ; ne proposer un jeu que si sa mécanique fait travailler la même opération (Étape 3).
+6. Attendre la réponse ; si l'enseignant·e corrige ou complète la description, adapter les propositions.
+
+**Second temps : transformer, après le choix de l'enseignant·e.** Produire la ressource transformée et son corrigé selon les Étapes 1 à 6, en gardant ce qui fonctionne ; signaler ce qui a changé. Si l'outil ne peut pas créer de fichier Word, appliquer le § 0.5. Terminer par la liste des contrôles, chacun avec son statut : vérifié sur le fichier, à vérifier par l'enseignant·e, ou impossible à vérifier ici.
+
+Dans ce qu'elle écrit à l'enseignant·e, l'IA n'emploie ni code ni renvoi chiffré (gabarits, règles, paragraphes) : elle nomme les choses en toutes lettres.
+
 # ÉTAPE 1 — CADRER
 <!-- modules : noyau -->
 
@@ -2013,9 +2030,9 @@ Attends mon choix avant de produire.
 #### Transformer
 
 ```
-Analyse d'abord cette fiche avec la grille de l'Annexe I-B : décris ce que tu observes (degré, notion, objectif, ce que fait l'élève), trois points forts et trois obstacles prioritaires ; demande-moi de confirmer ou de corriger ; propose deux ou trois transformations numérotées. Ne transforme rien et attends mon choix.
-Ensuite seulement, transforme-la selon le Livre I : fiche technique (budget de page), contenus justes gardés,
-mise en page reconstruite avec les recettes R1 à R8, puis vérification du rendu.
+Améliore cette fiche selon la démarche « Améliorer une ressource » (§ 0.6) :
+analyse-la d'abord et propose deux ou trois améliorations, sans rien transformer ;
+attends mon choix avant de la transformer.
 ```
 
 # ANNEXE I-A — STANDARD DE MISE EN PAGE MP-* (RÉFÉRENCE DES CODES)
