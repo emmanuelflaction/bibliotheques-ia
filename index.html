@@ -751,7 +751,7 @@ function brancher() {
     const se = $('#etoiles'); if (se) se.addEventListener('change', e => { P.etoiles = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
     const so = $('#outil'); if (so) so.addEventListener('change', e => { P.outil = e.target.value; garderP(); pr.value = demande(); });
     [['#besoin', 'besoin'], ['#indices', 'indices'], ['#contraintes', 'contraintes'], ['#ress', 'ress']].forEach(([sel, k]) => { const el = $(sel); if (el) el.addEventListener('input', e => { P[k] = e.target.value; garderP(); pr.value = demande(); }); });
-    const p2 = $('#prompt2'), maj2 = () => { if (p2) p2.value = demandeAmel2(); };
+    const p2 = $('#prompt2'), maj2 = () => { if (p2) { p2.value = demandeAmel2(); p2.style.height = 'auto'; p2.style.height = (p2.scrollHeight + 4) + 'px'; } };
     maj2();
     document.querySelectorAll('[data-amel]').forEach(c => c.addEventListener('change', () => { P.amel = [...document.querySelectorAll('[data-amel]:checked')].map(x => x.dataset.amel); garderP(); maj2(); }));
     document.querySelectorAll('[data-prop]').forEach(c => c.addEventListener('change', () => { P.prop = [...document.querySelectorAll('[data-prop]:checked')].map(x => +x.dataset.prop); garderP(); maj2(); }));
