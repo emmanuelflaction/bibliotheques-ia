@@ -23,6 +23,8 @@ Des « bibliothèques » à joindre à une IA générative pour lui faire produi
 | `apercus` | Images d'aperçu affichées par le guide en ligne (chargées à la demande) |
 | `outils` | `verifier.py` : contrôle que chaque fichier annoncé par le guide existe et que les éditions concordent ; `guide_local.py` : construit la version du guide pour un dossier partagé (un seul fichier, aperçus intégrés) ; `modules.py` : tire les modules de la Bibliothèque IA 1 intégrale, d'après les balises placées sous ses titres |
 
+**Publication.** Le site est servi par GitHub Pages depuis la branche `gh-pages`, copie de `main` : après chaque dépôt sur `main`, la pousser aussi vers `gh-pages` (`git push origin main:gh-pages`).
+
 ## Versions
 
 Une seule **édition**, identifiée par sa date, vaut pour l'ensemble : bibliothèques, guide web, modèles et planches. L'édition actuelle est celle du **21 novembre 2026**. Elle figure en tête de chaque bibliothèque et au pied du guide ; deux éléments de même édition sont conçus pour fonctionner ensemble. Les noms de fichiers (« _v1 ») ne changent pas, pour que les liens restent valables. Le détail des changements est dans [NOUVEAUTES.md](NOUVEAUTES.md) ; toutes les éditions antérieures restent dans l'historique du dépôt.
