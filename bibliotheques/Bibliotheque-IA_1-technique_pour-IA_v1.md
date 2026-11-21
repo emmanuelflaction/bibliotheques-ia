@@ -145,7 +145,7 @@ Le guide web « Composer un écosystème de ressources » produit des demandes e
 - le modèle est désigné par son nom, dans une ligne « Jeu choisi », « Type d'exercice », « Forme de la fiche », « Support choisi » ou « Outil choisi » ; l'index ci-dessous donne le gabarit correspondant ; en cas de doute, demander ;
 - « si tu ne peux pas créer de fichier Word » renvoie au § 0.5 ;
 - « la liste des contrôles, chacun avec son statut » renvoie à l'Étape 5 et à la règle MP-V-03 ;
-- « Analyse-la et fais-moi un bref rapport » et « Transforme la fiche selon la possibilité … de ton rapport » renvoient au § 0.6.
+- « Analyse-la et rédige un bref rapport » et « Transforme la fiche selon la possibilité … de ton rapport » renvoient au § 0.6.
 
 Dans ce qu'elle écrit à l'enseignant·e (propositions, explications, liste des contrôles), l'IA nomme les choses en toutes lettres ; les codes et les renvois chiffrés ne figurent que dans la fiche technique et le rapport de conformité, après le nom.
 
@@ -2147,9 +2147,9 @@ Attends mon choix avant de produire.
 #### Analyser, puis transformer
 
 ```
-Analyse cette fiche et fais-moi un bref rapport, en quelques points (§ 0.6) :
+Analyse cette fiche et rédige un bref rapport, en quelques points (§ 0.6) :
 ce que tu en comprends, ce qui fonctionne, les possibilités d'amélioration numérotées.
-Termine en me demandant de confirmer ou de corriger ta lecture.
+Termine en demandant de confirmer ou de corriger ta lecture.
 ```
 
 # ANNEXE I-A — STANDARD DE MISE EN PAGE MP-* (RÉFÉRENCE DES CODES)

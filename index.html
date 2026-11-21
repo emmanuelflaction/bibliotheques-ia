@@ -284,11 +284,11 @@ function criteres() {
 function demandeSeq() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, es = Q.etapes.filter(e => nomEtape(e));
   const l = es.map((e, i) => `${i + 1}. ${nomEtape(e)}${e.c ? '' : ' (ressource que j\'ai déjà, à ne pas produire)'}${placeTxt(e.place)}\n   Fonction : ${v(fonction(e.fn), '[à compléter]').toLowerCase()}.${(e.obs || '').trim() ? `\n   Ce que j'observe et comment j'ajuste : ${e.obs.trim()}` : ''}${i < es.length - 1 ? `\n   Ce qui passe à la ressource suivante : ${v(e.vers, '[à compléter]')}` : ''}`).join('\n');
-  return `Je prépare une séquence pour ma classe, composée de plusieurs ressources reliées entre elles.\nDegré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nObjectif d'apprentissage : ${v(Q.objectif, '[à compléter]')}\nCe qui montrera la réussite : ${v(Q.indices || '', 'propose-le-moi')}\n\nRessources :\n${l || '[à compléter]'}\n\nPremier temps : montre-moi le plan d'ensemble. Pour chaque ressource : sa fonction, ce qu'elle apporte que les autres n'apportent pas, ce qu'elle reprend et ce qu'elle transmet, ce que j'observerai et comment ajuster. Signale toute redondance involontaire et toute fonction qui manque, puis attends mon accord.\nSecond temps : produis, une à une, les ressources à imprimer et leur corrigé, sans refaire celles que j'ai déjà. Chacune reprend ce que la précédente a produit.\n${joints()}${outilL()}\n${finV()}`;
+  return `Je prépare une séquence pour ma classe, composée de plusieurs ressources reliées entre elles.\nDegré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nObjectif d'apprentissage : ${v(Q.objectif, '[à compléter]')}\nCe qui montrera la réussite : ${v(Q.indices || '', 'à proposer')}\n\nRessources :\n${l || '[à compléter]'}\n\nPremier temps : présente le plan d'ensemble. Pour chaque ressource : sa fonction, ce qu'elle apporte que les autres n'apportent pas, ce qu'elle reprend et ce qu'elle transmet, ce que j'observerai et comment ajuster. Signale toute redondance involontaire et toute fonction qui manque, puis attends mon accord.\nSecond temps : produis, une à une, les ressources à imprimer et leur corrigé, sans refaire celles que j'ai déjà. Chacune reprend ce que la précédente a produit.\n${joints()}${outilL()}\n${finV()}`;
 }
 function exempleDemande() { const q = Q, p = Object.assign({}, P); Q = JSON.parse(JSON.stringify(EXEMPLE_SEQ)); P.degre = '6P'; P.disc = 'mathématiques'; P.outil = ''; const t = demandeSeq(); Q = q; Object.assign(P, p); return t; }
-const joints = () => `Appuie-toi sur la Bibliothèque IA 1 jointe, et sur la Bibliothèque IA 2 ou ma Bibliothèque IA 4 si je les ai jointes. Si la Bibliothèque IA 1 manque, dis-le avant de commencer.`;
-const outilL = () => P.outil === 'non' ? `\nMon outil ne peut pas créer de fichier Word : livre le contenu et les réglages de mise en page comme le prévoit la Bibliothèque IA 1 dans ce cas, en précisant que la mise en page reste à faire.` : P.outil === 'oui' ? '' : `\nSi tu ne peux pas créer un vrai fichier Word, dis-le avant de commencer et suis ce que prévoit la Bibliothèque IA 1 dans ce cas.`;
+const joints = () => `Appuie-toi sur la Bibliothèque IA 1 jointe, et sur la Bibliothèque IA 2 ou ma Bibliothèque IA 4 si je les ai jointes. Si la Bibliothèque IA 1 manque, signale-le avant de commencer.`;
+const outilL = () => P.outil === 'non' ? `\nMon outil ne peut pas créer de fichier Word : livre le contenu et les réglages de mise en page comme le prévoit la Bibliothèque IA 1 dans ce cas, en précisant que la mise en page reste à faire.` : P.outil === 'oui' ? '' : `\nSi tu ne peux pas créer un vrai fichier Word, signale-le avant de commencer et suis ce que prévoit la Bibliothèque IA 1 dans ce cas.`;
 const finV = () => `Termine par la liste des contrôles, chacun avec son statut : vérifié sur le fichier, à vérifier par moi, ou impossible à vérifier ici. Distingue ce que je t'ai indiqué, ce que tu supposes et ce qui reste à vérifier, par exemple la progression de la notion dans le PER.`;
 const AMEL = [['consignes', 'Clarifier les consignes', 'clarifier les consignes (une action par consigne, un exemple si utile)'], ['lecture', 'Adapter le niveau de lecture', 'adapter le niveau de lecture (vocabulaire, longueur des phrases) sans changer la notion'], ['differencier', 'Différencier sans multiplier les documents', 'différencier sans multiplier les documents : une ressource commune avec des aides ou des parcours, sans étiquette qui désigne des élèves'], ['aides', 'Ajouter des aides graduées ou un exemple résolu', 'ajouter des aides graduées ou un exemple résolu, en libre accès'], ['autocorrection', 'Ajouter une autocorrection', 'ajouter une autocorrection'], ['retroaction', 'Prévoir une rétroaction et un nouvel essai', 'prévoir une rétroaction utile et la possibilité d\'un nouvel essai'], ['jeu', 'En faire un jeu ou une activité de manipulation', 'en faire un jeu ou une activité de manipulation, seulement si la mécanique fait travailler la même opération'], ['lisibilite', 'Améliorer la lisibilité et l’accessibilité', 'améliorer la lisibilité et l\'accessibilité (mise en page, taille du texte, zones de réponse)'], ['prolongement', 'Ajouter un prolongement ou un réinvestissement', 'ajouter un prolongement ou une activité de réinvestissement']];
 function dispo(it) {
@@ -335,7 +335,7 @@ const jeunes = () => tranche(P.degre) === 0 && !(S.page === 'fiche' && item(S.co
 const avecConsignes = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme'; };
 const avecEtoiles = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme' || it.fam === 'jeu'; };
 const enCouleur = () => { const it = S.page === 'fiche' ? item(S.code) : null; return it && (it.fam === 'jeu' || it.fam === 'support') && it.fo.length && !it.fo.some(f => f.w); };
-const boite = (id, sfx, lib, haut) => `<label for="${id}">Texte à coller dans la conversation<textarea id="${id}" readonly${haut ? ` style="min-height:${haut}"` : ''}></textarea></label>
+const boite = (id, sfx, lib, haut) => `<label for="${id}">Prompt à coller dans la conversation<textarea id="${id}" readonly${haut ? ` style="min-height:${haut}"` : ''}></textarea></label>
   <div class="rang"><button class="btn" type="button" id="copier${sfx}">${lib}</button><span class="statut" id="statut${sfx}" role="status"></span></div>`;
 async function copierTexte(t, st, msg) {
   let ok = false;
@@ -353,7 +353,7 @@ const champs = (ex1, ex2) => `
   <label for="notion">Notion à travailler<input id="notion" value="${esc(P.notion)}" placeholder="par exemple : ${ex2}" autocomplete="off"></label>
   <div class="note" id="notePicto" ${avecConsignes() && P.picto === 'oui' ? '' : 'hidden'}><p>Joignez aussi à la conversation la banque d’icônes : le fichier « Banque_icones_IC_pour-IA.md » et les images (zip). Ce choix reste enregistré pour vos prochaines demandes.</p>${fichiers(D05, [['Banque_icones_IC_pour-IA.md', 'Fichier à joindre à l’IA'], ['Banque_icones_IC_png.zip', 'Toutes les icônes (zip)']])}</div>
   <label for="outil">Votre outil d’IA crée-t-il des fichiers Word ?<select id="outil">${[['', 'Je ne sais pas'], ['oui', 'Oui'], ['non', 'Non : il répond seulement par du texte']].map(([v, t]) => `<option value="${v}" ${P.outil === v ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
-  ${boite('prompt', '', 'Copier le texte')}`;
+  ${boite('prompt', '', 'Copier le prompt')}`;
 function carte(it) {
   const c = couleur(it);
   if (!it.fo.length) return `<button class="carte texte" style="--c:${c}" type="button" ${go({page: 'fiche', code: it.c})}><span class="tx"><span class="n">${esc(it.nom)}</span><span class="d">${esc(it.sert)}</span></span></button>`;
@@ -555,7 +555,7 @@ const VUES = {
       <div class="rang"><button class="btn second" type="button" id="seqAjoute">Ajouter une ressource</button></div></section>
     <section class="groupe"><h2>3. Est-ce un écosystème ?</h2><ul class="criteres" id="seqCriteres"></ul></section>
     <section class="groupe"><h2>4. Votre demande à l’IA</h2><div class="bloc" style="max-width:46em">
-      ${boite('promptSeq', 'Seq', 'Copier le texte')}</div>
+      ${boite('promptSeq', 'Seq', 'Copier le prompt')}</div>
       <p class="note">Sans IA : ouvrez chaque modèle depuis sa rubrique, et gardez cette page comme plan de la séquence.</p></section>`,
 
   c_exemple: () => `
@@ -674,12 +674,12 @@ const VUES = {
       <p>Demandez à l’IA de réaliser une analyse de votre document en le joignant à la conversation (fichier ou photo, sans donnée d’élève).</p>
       <p>En utilisant le prompt ci-dessous, l’IA vous remet un bref rapport (ce qu’elle comprend de votre fiche, ce qui fonctionne et les possibilités d’amélioration).</p>
       <p>Vérifiez si l’IA a bien compris votre document et corrigez-la si besoin ; dites-lui aussi ce que vous observez avec vos élèves.</p>
-      ${boite('prompt', '', 'Copier le texte', '11.5em')}</div>
+      ${boite('prompt', '', 'Copier le prompt', '11.5em')}</div>
     <div class="bloc fort" style="max-width:46em"><h2>Transformer une fiche / ressource que vous utilisez déjà</h2>
       <p>Si vous souhaitez faire évoluer la fiche, vous pouvez coller ce prompt à la suite dans la même conversation (cochez la possibilité retenue).</p>
       <p>Relisez toujours très attentivement le résultat avant de l’utiliser en classe !</p>
       <fieldset class="choix"><legend>Possibilité(s) retenue(s)</legend><div class="ligne3">${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Possibilité ${n}</label>`).join('')}</div>${AMEL.map(([k, t], i) => `<label for="am${i}" class="case"><input type="checkbox" id="am${i}" data-amel="${k}" ${P.amel.includes(k) ? 'checked' : ''}>${t}</label>`).join('')}</fieldset>
-      ${boite('prompt2', '2', 'Copier le texte', '8.5em')}</div>
+      ${boite('prompt2', '2', 'Copier le prompt', '8.5em')}</div>
     <p class="note">Avant votre première demande, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
 
   verifier: () => `
@@ -718,8 +718,8 @@ const VUES = {
 function demandeAmel2() {
   const pr = [...P.prop].sort(), ch = AMEL.filter(a => P.amel.includes(a[0])).map(a => a[2]);
   const sel = pr.length === 1 ? `la possibilité ${pr[0]}` : pr.length ? `les possibilités ${pr.slice(0, -1).join(', ')} et ${pr[pr.length - 1]}` : `la possibilité [numéro à compléter]`;
-  if (!ch.length) return `Transforme la fiche selon ${sel} de ton rapport, avec son corrigé, et dis-moi ce que tu as changé.`;
-  return `${pr.length ? `Transforme la fiche selon ${sel} de ton rapport.\nAutres modifications : ` : 'Transforme la fiche ainsi : '}${ch.join(' ; ')}.\nJoins son corrigé et dis-moi ce que tu as changé.`;
+  if (!ch.length) return `Transforme la fiche selon ${sel} de ton rapport, avec son corrigé, et indique ce que tu as changé.`;
+  return `${pr.length ? `Transforme la fiche selon ${sel} de ton rapport.\nAutres modifications : ` : 'Transforme la fiche ainsi : '}${ch.join(' ; ')}.\nJoins son corrigé et indique ce que tu as changé.`;
 }
 function demande() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, it = S.page === 'fiche' ? item(S.code) : null;
@@ -728,15 +728,15 @@ function demande() {
   const tete = `Degré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nNotion à travailler : ${v(P.notion, '[à compléter]')}\n${pn}${lg}${avecConsignes() && P.picto === 'oui' ? 'Consignes : place devant chaque consigne le pictogramme de la banque d\'icônes qui correspond à son verbe, le même pour le même verbe. Je joins la banque d\'icônes.\n' : ''}${avecEtoiles() && P.etoiles === 'oui' ? 'Difficulté : repère chaque exercice ou chaque carte par une à trois étoiles, de la tâche la plus simple à la plus difficile.\n' : ''}${enCouleur() && P.teinte ? `Impression : en couleur, teinte « ${P.teinte} » (option couleur de la bibliothèque).\n` : ''}`;
   const fin = `${joints()}${outilL()}\n${finV()}`;
   if (S.page === 'ameliorer') {
-    return `Voici une fiche que j'utilise avec mes élèves (fichier joint).\nAnalyse-la et fais-moi un bref rapport, en quelques points :\n– ce que tu en comprends (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document) ;\n– ce qui fonctionne ;\n– les possibilités d'amélioration, numérotées.\nTermine en me demandant de confirmer ou de corriger ta lecture.\nSuis la Bibliothèque IA 1 jointe.`;
+    return `Voici une fiche que j'utilise avec mes élèves (fichier joint).\nAnalyse-la et rédige un bref rapport, en quelques points :\n– ce que tu en comprends (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document) ;\n– ce qui fonctionne ;\n– les possibilités d'amélioration, numérotées.\nTermine en demandant de confirmer ou de corriger ta lecture.\nSuis la Bibliothèque IA 1 jointe.`;
   }
-  if (!it) return `Je veux créer une ressource pour ma classe.\n${tete}Ce que mes élèves doivent apprendre : ${v(P.besoin, '[à compléter]')}\nCe qui montrera qu'ils ont réussi : ${v(P.indices, 'propose-le-moi')}\n${(P.contraintes || '').trim() ? `Contraintes : ${P.contraintes.trim()}\n` : ''}\nAvant de produire quoi que ce soit :\n1. Reformule l'objectif et ce qui permettra d'observer la réussite. Ne me pose une question que si une information indispensable manque.\n2. Compare deux ou trois formats possibles (fiche, jeu, support, activité avec le matériel de la classe), en quelques phrases chacun : ce que l'élève y fait réellement, en quoi cela sert l'objectif, ses limites. Ne retiens un jeu que si sa mécanique fait travailler l'opération visée. Si tu disposes des panoramas des jeux et des exercices, montre-les.\n3. Recommande un format et attends mon choix.\nProduis ensuite la ressource et son corrigé selon la Bibliothèque IA 1.\n${fin}`;
+  if (!it) return `Je veux créer une ressource pour ma classe.\n${tete}Ce que mes élèves doivent apprendre : ${v(P.besoin, '[à compléter]')}\nCe qui montrera qu'ils ont réussi : ${v(P.indices, 'à proposer')}\n${(P.contraintes || '').trim() ? `Contraintes : ${P.contraintes.trim()}\n` : ''}\nAvant de produire quoi que ce soit :\n1. Reformule l'objectif et ce qui permettra d'observer la réussite. Ne pose une question que si une information indispensable manque.\n2. Compare deux ou trois formats possibles (fiche, jeu, support, activité avec le matériel de la classe), en quelques phrases chacun : ce que l'élève y fait réellement, en quoi cela sert l'objectif, ses limites. Ne retiens un jeu que si sa mécanique fait travailler l'opération visée. Si tu disposes des panoramas des jeux et des exercices, montre-les.\n3. Recommande un format et attends mon choix.\nProduis ensuite la ressource et son corrigé selon la Bibliothèque IA 1.\n${fin}`;
   const ref = `${it.nom}`;
-  if (it.fam === 'exo') return `Je prépare une fiche d'exercices à imprimer pour ma classe.\n${tete}Type d'exercice : ${ref}.\n\nMontre-moi d'abord un exemple de deux questions et attends mon accord.\nProduis ensuite la fiche à imprimer et son corrigé.\n${fin}`;
-  if (it.fam === 'forme') return `Je prépare une fiche à imprimer pour ma classe.\n${tete}Forme de la fiche : ${ref}.\n\nPropose-moi d'abord le plan de la fiche et les types d'exercice, puis attends mon accord.\nProduis ensuite le document à imprimer et son corrigé.\n${fin}`;
-  if (it.fam === 'aide') return `Je prépare une affiche ou une aide permanente pour ma classe.\n${tete}Outil choisi : ${ref}.\n\nPose-moi les questions utiles, puis produis le document à imprimer.\n${fin}`;
-  if (it.fam === 'support') return `Je prépare un support à imprimer pour ma classe.\n${tete}Support choisi : ${ref}.\n\nPose-moi les questions utiles, puis produis le document à imprimer.\n${fin}`;
-  return `Je prépare un jeu à imprimer pour ma classe.\n${tete}Jeu choisi : ${ref}.\n${P.coop === 'coop' ? 'Règle : variante coopérative, avec un but commun pour le groupe.\n' : ''}\nMontre-moi d'abord le format prévu pour ce degré et attends mon accord.\nProduis ensuite le document à imprimer et la feuille de solutions.\n${fin}`;
+  if (it.fam === 'exo') return `Je prépare une fiche d'exercices à imprimer pour ma classe.\n${tete}Type d'exercice : ${ref}.\n\nPrésente d'abord un exemple de deux questions et attends mon accord.\nProduis ensuite la fiche à imprimer et son corrigé.\n${fin}`;
+  if (it.fam === 'forme') return `Je prépare une fiche à imprimer pour ma classe.\n${tete}Forme de la fiche : ${ref}.\n\nPropose d'abord le plan de la fiche et les types d'exercice, puis attends mon accord.\nProduis ensuite le document à imprimer et son corrigé.\n${fin}`;
+  if (it.fam === 'aide') return `Je prépare une affiche ou une aide permanente pour ma classe.\n${tete}Outil choisi : ${ref}.\n\nPose les questions utiles, puis produis le document à imprimer.\n${fin}`;
+  if (it.fam === 'support') return `Je prépare un support à imprimer pour ma classe.\n${tete}Support choisi : ${ref}.\n\nPose les questions utiles, puis produis le document à imprimer.\n${fin}`;
+  return `Je prépare un jeu à imprimer pour ma classe.\n${tete}Jeu choisi : ${ref}.\n${P.coop === 'coop' ? 'Règle : variante coopérative, avec un but commun pour le groupe.\n' : ''}\nPrésente d'abord le format prévu pour ce degré et attends mon accord.\nProduis ensuite le document à imprimer et la feuille de solutions.\n${fin}`;
 }
 function brancher() {
   const pr = $('#prompt');
@@ -755,10 +755,10 @@ function brancher() {
     maj2();
     document.querySelectorAll('[data-amel]').forEach(c => c.addEventListener('change', () => { P.amel = [...document.querySelectorAll('[data-amel]:checked')].map(x => x.dataset.amel); garderP(); maj2(); }));
     document.querySelectorAll('[data-prop]').forEach(c => c.addEventListener('change', () => { P.prop = [...document.querySelectorAll('[data-prop]:checked')].map(x => +x.dataset.prop); garderP(); maj2(); }));
-    const c2 = $('#copier2'); if (c2) c2.onclick = () => copierTexte(p2, $('#statut2'), 'Copié. Collez ce texte dans la même conversation.');
+    const c2 = $('#copier2'); if (c2) c2.onclick = () => copierTexte(p2, $('#statut2'), 'Copié. Collez ce prompt dans la même conversation.');
     const sg = $('#garder'); if (sg) sg.addEventListener('change', e => { P.garder = e.target.checked ? 'oui' : 'non'; garderP(); pr.value = demande(); });
     const sl = $('#lignes'); if (sl) sl.addEventListener('change', e => { P.lignes = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
-    $('#copier').onclick = () => copierTexte(pr, $('#statut'), 'Copié. Collez ce texte dans votre conversation.');
+    $('#copier').onclick = () => copierTexte(pr, $('#statut'), 'Copié. Collez ce prompt dans votre conversation.');
   }
   const ps = $('#promptSeq');
   if (ps) {
@@ -772,7 +772,7 @@ function brancher() {
     $('#sObj').addEventListener('input', e => { Q.objectif = e.target.value; gardeQ(); maj(); });
     $('#sInd').addEventListener('input', e => { Q.indices = e.target.value; gardeQ(); maj(); });
     [['#sDegre', 'degre', 'change'], ['#sDisc', 'disc', 'input']].forEach(([s, k, ev]) => $(s).addEventListener(ev, e => { P[k] = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} maj(); }));
-    $('#copierSeq').onclick = () => copierTexte(ps, $('#statutSeq'), 'Copié. Collez ce texte dans votre conversation.');
+    $('#copierSeq').onclick = () => copierTexte(ps, $('#statutSeq'), 'Copié. Collez ce prompt dans votre conversation.');
   }
   const ex = $('#exCharger'); if (ex) ex.onclick = () => { Q = JSON.parse(JSON.stringify(EXEMPLE_SEQ)); P.degre = '6P'; P.disc = 'mathématiques'; garderP(); gardeQ(); naviguer({page: 'sequence', code: null}); };
   document.querySelectorAll('[data-defile]').forEach(b => b.onclick = () => { const c = document.getElementById(b.dataset.defile); if (c) { c.scrollIntoView({behavior: 'smooth'}); c.focus({preventScroll: true}); } });
