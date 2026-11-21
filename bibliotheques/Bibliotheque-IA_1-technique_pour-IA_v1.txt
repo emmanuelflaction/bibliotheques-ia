@@ -2,7 +2,7 @@
 
 Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, aux cycles 1 et 2 — Suisse romande.
 
-Version v1 du 31 octobre 2026, mise à jour le 2 novembre 2026 : Référentiel pédagogique IA 7.2, révision du 2 novembre 2026 (page pleine MP-O-14 et planche A5 R15 ; objectif sans étiquette ; contrôles V20 et V21), suite du 2 novembre 2026 (MP-J-10 pièces mobiles et cases d'accueil ; SP6 par tests opératoires ; GF-B3 en zones de tracé ; J10 refondu en carte à pinces multi-questions avec règle élève ; intitulés des zones laissées à la classe ; points mineurs des gabarits) ; 3 novembre 2026 : G21 Imagier et scène à légender (TR16), fonctions scene_numerotee, lignes_numerotees, bande_etiquettes, verifier_imagier. Types de ressources alignés sur le Catalogue Ressources au primaire (71 types, TR01 à TR71 ; renumérotation du 3 novembre 2026 : l'imagier prend TR16, les types TR16 à TR70 du 2 novembre deviennent TR17 à TR71) ; éléments de réalisation complétés pour chaque type. 19 novembre 2026 : planches à découper — toute la surface utile de la page (MP-J-11) et repères de coupe pour le massicot (MP-J-12) ; gabarit J2 redimensionné ; J5 refondu en quatre plateaux de parcours dessinés, sans tableau (serpent, escargot, chemin, circuit ; fonction plateau_parcours) ; gabarits J1, J3, J4, J6 à J8 et J12 à J16 redimensionnés pour la page entière ; fonctions planche_pdf et reperes_de_coupe ; MP-J-13 : l'IA montre le panorama des jeux et attend le choix (fonction panorama_jeux) ; variantes des jeux par tranche d'âge (1P-4P, 5P-8P, 9S-11S) et miniatures des formats (fonction miniatures_tranche) ; MP-J-14 : carte tirée à dos neutre, solutions sur une feuille numérotée ; carte à pinces sur toute la page (6, 10 ou 12 questions) ; dé à monter grand ou petit (fonction de_a_monter) ; dos à motif des cartes tirées (fonction dos_a_motif : motif encadré à 3 mm du bord, mention personnelle possible ; l'IA demande dos à motif ou blanc, avec ou sans mention) ; quatre gabarits de jeu ajoutés : J17 grille d'alignement, J18 serpents et échelles, J19 bataille navale, J20 roue de tirage ; panorama des exercices G1 à G21 (fonction panorama_exercices) ; modèles Word à remplir et planches prêtes à imprimer signalés au § 3.8 ; instruction système complétée (présentation des possibilités, questions sur le dos des cartes) ; 20.11.2026 : panorama des jeux et pages par tranche d'âge composés uniquement de miniatures tirées des documents réels ; un document réel pour chaque gabarit J1 à J20 (modèles J3, J8, J9, J12, J13, J15, J16 ; planche J11) ; plan_projectif corrigé pour n = 4 ; sept gabarits ajoutés : J21 puzzles à deux pièces, J22 puzzle à bandes, J23 mot mystère, J24 cocotte en papier, J25 horloge à aiguilles, J26 mémo-fiches en éventail, J27 bandes graphiques ; puis J28 plateau à camemberts, J29 cherche et trouve de mots, J30 mots interdits, J31 petit bac et G22 lignes d'écriture au lignage romand ; puis J32 cartes à terminaisons, J33 petits chevaux, J34 Qui est-ce ?, J35 bataille, J36 tuiles-lettres, J37 sudoku, J38 mot caché (la fleur, à la place du pendu), G23 syllabes et sons, cartes-questions de J28 et livret d'écriture A5 ; 21.11.2026 : G24 maisons des nombres, G25 reproduction sur quadrillage, G26 à G31 supports de classe et mises en page de projets (calendrier, étiquettes de l'horaire, livret à onglets, journal, bande dessinée, exposé) ; le guide pour l'enseignant·e est remplacé par une page web ; lignes d'écriture au choix en 1P à 4P : lignes simples ou lignes romandes (R1c, `bande_lignage`) ; couleur en option pour les dessins R11 (`definir_couleur`) ; règle du jeu en cinq questions, variante coopérative, astuces pratiques et différenciation autour d'une fiche unique (MP-J-07, MP-D-02, § 4.3) ; option « pictogrammes de consigne » (§ publics, codes IC-CON) ; étoiles de difficulté admises sur demande (MP-D-01, MP-J-06) ; J18 : numéros sur pastille ; J29 : mots mieux répartis ; J5 : « Départ » et « Arrivée » d'au moins 11 pt ; jeunes élèves : pas de ligne Prénom ni Date (MP-O-03, `definir_jeunes`) ; G1 : blancs pour entourer un mot dans une phrase, pictogramme composé `pictogramme_consigne` ; plateaux : « Départ » et « Arrivée » en grand ; carte à pinces : numéro à gauche, question centrée en grand ; J23 : « cases teintées » ; cartes : liseré à coins arrondis (MP-J-14) ; non-lecteurs : aucune consigne écrite, un exemple déjà fait en tête de fiche (G23, G24). Licence : CC BY-NC-SA 4.0. Emmanuel Flaction – emmanuel.flaction@hepl.ch
+Version v1 du 31 octobre 2026, mise à jour le 2 novembre 2026 : Référentiel pédagogique IA 7.2, révision du 2 novembre 2026 (page pleine MP-O-14 et planche A5 R15 ; objectif sans étiquette ; contrôles V20 et V21), suite du 2 novembre 2026 (MP-J-10 pièces mobiles et cases d'accueil ; SP6 par tests opératoires ; GF-B3 en zones de tracé ; J10 refondu en carte à pinces multi-questions avec règle élève ; intitulés des zones laissées à la classe ; points mineurs des gabarits) ; 3 novembre 2026 : G21 Imagier et scène à légender (TR16), fonctions scene_numerotee, lignes_numerotees, bande_etiquettes, verifier_imagier. Types de ressources alignés sur le Catalogue Ressources au primaire (71 types, TR01 à TR71 ; renumérotation du 3 novembre 2026 : l'imagier prend TR16, les types TR16 à TR70 du 2 novembre deviennent TR17 à TR71) ; éléments de réalisation complétés pour chaque type. 19 novembre 2026 : planches à découper — toute la surface utile de la page (MP-J-11) et repères de coupe pour le massicot (MP-J-12) ; gabarit J2 redimensionné ; J5 refondu en quatre plateaux de parcours dessinés, sans tableau (serpent, escargot, chemin, circuit ; fonction plateau_parcours) ; gabarits J1, J3, J4, J6 à J8 et J12 à J16 redimensionnés pour la page entière ; fonctions planche_pdf et reperes_de_coupe ; MP-J-13 : l'IA montre le panorama des jeux et attend le choix (fonction panorama_jeux) ; variantes des jeux par tranche d'âge (1P-4P, 5P-8P, 9S-11S) et miniatures des formats (fonction miniatures_tranche) ; MP-J-14 : carte tirée à dos neutre, solutions sur une feuille numérotée ; carte à pinces sur toute la page (6, 10 ou 12 questions) ; dé à monter grand ou petit (fonction de_a_monter) ; dos à motif des cartes tirées (fonction dos_a_motif : motif encadré à 3 mm du bord, mention personnelle possible ; l'IA demande dos à motif ou blanc, avec ou sans mention) ; quatre gabarits de jeu ajoutés : J17 grille d'alignement, J18 serpents et échelles, J19 bataille navale, J20 roue de tirage ; panorama des exercices G1 à G21 (fonction panorama_exercices) ; modèles Word à remplir et planches prêtes à imprimer signalés au § 3.8 ; instruction système complétée (présentation des possibilités, questions sur le dos des cartes) ; 20.11.2026 : panorama des jeux et pages par tranche d'âge composés uniquement de miniatures tirées des documents réels ; un document réel pour chaque gabarit J1 à J20 (modèles J3, J8, J9, J12, J13, J15, J16 ; planche J11) ; plan_projectif corrigé pour n = 4 ; sept gabarits ajoutés : J21 puzzles à deux pièces, J22 puzzle à bandes, J23 mot mystère, J24 cocotte en papier, J25 horloge à aiguilles, J26 mémo-fiches en éventail, J27 bandes graphiques ; puis J28 plateau à camemberts, J29 cherche et trouve de mots, J30 mots interdits, J31 petit bac et G22 lignes d'écriture au lignage romand ; puis J32 cartes à terminaisons, J33 petits chevaux, J34 Qui est-ce ?, J35 bataille, J36 tuiles-lettres, J37 sudoku, J38 mot caché (la fleur, à la place du pendu), G23 syllabes et sons, cartes-questions de J28 et livret d'écriture A5 ; 21.11.2026 : G24 maisons des nombres, G25 reproduction sur quadrillage, G26 à G31 supports de classe et mises en page de projets (calendrier, étiquettes de l'horaire, livret à onglets, journal, bande dessinée, exposé) ; le guide pour l'enseignant·e est remplacé par une page web ; lignes d'écriture au choix en 1P à 4P : lignes simples ou lignes romandes (R1c, `bande_lignage`) ; couleur en option pour les dessins R11 (`definir_couleur`) ; règle du jeu en cinq questions, variante coopérative, astuces pratiques et différenciation autour d'une fiche unique (MP-J-07, MP-D-02, § 4.3) ; option « pictogrammes de consigne » (§ publics, codes IC-CON) ; étoiles de difficulté admises sur demande (MP-D-01, MP-J-06) ; J18 : numéros sur pastille ; J29 : mots mieux répartis ; J5 : « Départ » et « Arrivée » d'au moins 11 pt ; jeunes élèves : pas de ligne Prénom ni Date (MP-O-03, `definir_jeunes`) ; G1 : blancs pour entourer un mot dans une phrase, pictogramme composé `pictogramme_consigne` ; plateaux : « Départ » et « Arrivée » en grand ; carte à pinces : numéro à gauche, question centrée en grand ; J23 : « cases teintées » ; cartes : liseré à coins arrondis (MP-J-14), puis dans les recettes PDF (`lisere_cartes` ; J28, J30, J32, J35) ; non-lecteurs : aucune consigne écrite, un exemple déjà fait en tête de fiche (G23, G24) ; exemples en police d'élèves GE Typo Libre (MP-T-10, `ecrire_exemple`, `taille_eleve`, police `'Eleve'` de `Dessin`) ; couverture du livret d'écriture : cartouche du prénom sans ligne. Licence : CC BY-NC-SA 4.0. Emmanuel Flaction – emmanuel.flaction@hepl.ch
 
 > **Les trois bibliothèques IA (v1).** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 3 — guide pour l'enseignant·e : version complète (Livres I et II) à lire et à imprimer. Les renvois « Livre I » et « Livre II » du texte désignent donc les bibliothèques 1 et 2. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
 
@@ -430,7 +430,7 @@ Règles communes : consigne directe au-dessus des données ; texte aligné à ga
 ### G9 — Tableau à compléter
 
 - **Usage** : conjugaison, synthèse, classement.
-- **Disposition** : en-tête en gras ; une ligne d'exemple remplie ; cellules vides aux endroits de réponse.
+- **Disposition** : en-tête en gras ; une ligne d'exemple remplie, réponses en police d'élèves (MP-T-10) ; cellules vides aux endroits de réponse.
 - **Zone** : cellules ≥ 5 cm × ≥ 1 cm ; largeur totale ≤ 16 cm.
 - **Items** : 3-5 lignes + 1 ligne d'exemple.
 - **Hauteur** : (1 + lignes) × 1,1 cm + consigne + 0,8 cm → environ 7 cm pour 4 lignes.
@@ -460,7 +460,7 @@ Règles communes : consigne directe au-dessus des données ; texte aligné à ga
 ### G12 — Classer en colonnes
 
 - **Usage** : tri selon un critère (nom/verbe, vivant/non-vivant).
-- **Disposition** : banque de mots **au-dessus** du tableau ; une colonne par catégorie ; un exemple placé par colonne.
+- **Disposition** : banque de mots **au-dessus** du tableau ; une colonne par catégorie ; un exemple placé par colonne, en police d'élèves (MP-T-10).
 - **Zone** : 2 colonnes de 6-8 cm ou 3 colonnes de 5 cm ; une ligne de 1 cm par entrée.
 - **Items** : 2-3 catégories × 3-5 mots.
 - **Hauteur** : banque 1,5 cm + (1 + entrées) × 1,0 cm + 0,8 cm → environ 7 cm.
@@ -565,7 +565,7 @@ Règles communes : consigne directe au-dessus des données ; texte aligné à ga
 - **Structure** : de haut en bas, ligne de plafond en pointillés, ligne du corps des lettres en trait fin, **ligne de base en trait épais**, ligne de plancher en pointillés. Le corps des lettres s'écrit entre la ligne du corps et la ligne de base ; les lettres hautes montent jusqu'au plafond, les lettres basses descendent jusqu'au plancher.
 - **Repère en couleur** (facultatif, cycle 1) : couloirs « ciel, herbe, terre » ; la position suffit à les distinguer, la couleur s'ajoute (MP-C-05).
 - **Dimensions** : module (hauteur d'un couloir) de 7 mm pour l'entrée dans l'écriture (mesuré sur le document « Lignes, document vertical » de la BDRP : 6,9 mm) ; 4 mm, puis 2,5 mm ou 2 mm ensuite (**indication de l'auteur, non vérifiée à une source officielle**) ; 8, 14 ou 20 lignes d'écriture par page A4.
-- **Recette** : R11 : `lignage_romand(base, module_mm, couleurs, entete)` écrit la page en PDF ; inséré dans un .docx, le PDF garde son échelle. **Bande dans une fiche** : `bande_lignage` (R1c) place quelques lignes romandes dans une zone d'écriture, à la place des lignes simples. **Livret A5** : `livret_ecriture(base, module_mm, couleurs, feuilles, titre)` produit un cahier à plier (deux pages A5 par feuille A4 paysage, couverture, repères du pli) : impression recto-verso avec retournement sur le bord court, pliage, agrafage dans le pli.
+- **Recette** : R11 : `lignage_romand(base, module_mm, couleurs, entete)` écrit la page en PDF ; inséré dans un .docx, le PDF garde son échelle. **Bande dans une fiche** : `bande_lignage` (R1c) place quelques lignes romandes dans une zone d'écriture, à la place des lignes simples. **Livret A5** : `livret_ecriture(base, module_mm, couleurs, feuilles, titre)` produit un cahier à plier (deux pages A5 par feuille A4 paysage, couverture avec un cartouche vide pour le prénom, sans ligne à remplir, repères du pli) : impression recto-verso avec retournement sur le bord court, pliage, agrafage dans le pli.
 - **Modèle d'écriture** : les lettres ne sont jamais dessinées par l'IA ; l'enseignant·e écrit le modèle à la main ou avec la police d'écriture liée de son canton (R10).
 - **Contrôles** : V15 si un modèle en écriture liée est ajouté ; impression à 100 %, sans « ajuster à la page ».
 - **Interdits** : quadrillage Seyès ; lettre tracée ou générée par l'IA ; module inférieur à 2 mm.
@@ -704,7 +704,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 | MP-J-11 | **Surface de la planche** : une planche de pièces à découper (cartes, dominos, étiquettes, pièces, modèles) occupe **toute la surface utile de la page** — en A4 portrait, environ 18,6 × 26,4 cm, avec des marges d'environ 1,2 cm sur les côtés et 1,6 cm en haut et en bas. On **agrandit les pièces** ou on **change leur disposition** (nombre de colonnes et de rangées) au lieu de laisser une bande vide ; la zone restée vide ne dépasse pas une demi-hauteur de pièce. Les dimensions retenues et le calcul (colonnes × largeur, rangées × hauteur) figurent dans la fiche technique. La planche, tableau à hauteur exacte, échappe au budget de 22 cm (MP-O-11) ; son rendu est contrôlé (V12). Le texte et l'image de chaque pièce sont centrés sur la pièce, contrôlés sur le rendu. (révision du 19.11.2026) | DOIT |
 | MP-J-12 | **Repères de coupe** : toute planche à découper porte des **repères de coupe au bord de la feuille**, pour la coupe au massicot : un trait fin (0,5 pt, noir, environ 0,45 cm de long) dans le prolongement de **chaque** ligne de coupe — en haut et en bas pour les coupes verticales, à gauche et à droite pour les coupes horizontales —, séparé de la planche par environ 0,25 cm et à au moins 0,5 cm du bord de la feuille (zone imprimable). Les pointillés restent pour la coupe aux ciseaux (MP-J-05). La mention de la planche se place dans la marge du haut, sans toucher les repères. (révision du 19.11.2026) | DOIT |
 | MP-J-13 | **Choix présenté** : avant de produire un jeu, et chaque fois que l'enseignant·e demande quelles sont les possibilités, l'IA **montre le panorama des jeux** (image produite par `panorama_jeux`, Annexe I-C ; même image dans la page web du guide et dans le fichier « Panorama des jeux » de la boîte à outils). **Le panorama ne contient que des miniatures tirées des documents réels** — la page elle-même, réduite, du modèle Word ou de la planche prête à imprimer : l'enseignant·e obtient ce qu'il ou elle voit ; un gabarit sans document n'y figure qu'en liste, sans image, et l'IA ne dessine jamais de schéma à la place (20.11.2026). Elle présente ensuite en une ligne chacun les deux ou trois gabarits qui conviennent à la demande, donne sa recommandation et **attend le choix**. Pour un gabarit à variantes (formes J5-a à J5-d, variantes de J2, J3 et J4), elle présente les variantes de la même façon. Quand le degré est connu, elle montre la page de miniatures de la tranche d'âge (`miniatures_tranche`), avec le nombre de pièces ou de cases de chaque format. Si elle ne peut ni exécuter le code ni afficher une image, elle donne la liste des codes et des noms (J1 à J38) et renvoie au fichier. Quand un **modèle Word à remplir** ou une **planche prête à imprimer** existe pour le gabarit retenu (liste à la fin du § 3.8), elle le signale. Pour une fiche, quand l'enseignant·e demande quels exercices sont possibles, elle montre de la même façon le **panorama des exercices** (`panorama_exercices`, gabarits G1 à G23 ; fichier « Panorama des exercices » de la boîte à outils). Exception : l'enseignant·e a déjà nommé le gabarit ou la forme. (19.11.2026) | DOIT |
-| MP-J-14 | **Carte tirée, dos neutre** : une carte que l'élève tire d'une pioche ou reçoit face cachée (carte-défi d'un plateau, carte d'appel, carte de memory) a un **dos neutre et identique** : ni réponse ni indice au verso, parce que l'élève verrait la réponse avant de répondre. Chaque carte porte un numéro ; le contrôle passe par une **feuille de solutions numérotée** par lot, tenue par un·e camarade ou retournée sur la table. **Avant de produire les cartes, l'IA pose deux questions** : (1) dos **à motif** ou dos **blanc** ? (2) **avec une mention personnelle** au dos — par exemple le nom du jeu, ou une catégorie de cartes : « Défi », « Bonus », « Malus », « Chance » — ou **sans** ? Sans réponse, elle retient le dos à motif sans mention et le signale. **Dos à motif** (`dos_a_motif`), comme celui d'une carte à jouer : des lignes fines (losanges, carreaux ou vagues) remplissent un cadre aux angles arrondis, tracé d'un trait fin à environ 3 mm du bord de la carte ; la marge reste blanche. Le motif est le même sur toutes les cartes du jeu, il gêne la lecture par transparence et donne son unité au jeu ; un motif différent par jeu permet de trier des jeux mélangés. **Dos blanc** : rien n'est imprimé au verso ; à réserver à un papier assez épais pour que le recto ne se lise pas par transparence. **Mention personnelle** : la même sur toutes les cartes d'une pile, en gras dans un cartouche gris au centre de la carte (paramètre `texte`) ; jamais une mention qui distingue deux cartes d'une même pile ; plusieurs catégories donnent plusieurs piles, donc une planche par catégorie. Le cadre rend visible un décalage du recto-verso : essai d'impression avant de tirer tout le jeu (V13). Le verso-réponse reste réservé aux cartes que l'élève tient lui-même, question vers lui (J4, J14), et à la carte à pinces (J10). (19.11.2026) **Liseré** : chaque carte d'un jeu de cartes porte un cadre à coins arrondis, tracé à 3 mm du trait de coupe ; la teinte de la carte s'arrête au cadre et la marge reste blanche, comme sur une carte à jouer. Les modèles Word de la boîte à outils le portent déjà : pour un jeu de cartes, partir du modèle plutôt que d'un tableau neuf. | DOIT |
+| MP-J-14 | **Carte tirée, dos neutre** : une carte que l'élève tire d'une pioche ou reçoit face cachée (carte-défi d'un plateau, carte d'appel, carte de memory) a un **dos neutre et identique** : ni réponse ni indice au verso, parce que l'élève verrait la réponse avant de répondre. Chaque carte porte un numéro ; le contrôle passe par une **feuille de solutions numérotée** par lot, tenue par un·e camarade ou retournée sur la table. **Avant de produire les cartes, l'IA pose deux questions** : (1) dos **à motif** ou dos **blanc** ? (2) **avec une mention personnelle** au dos — par exemple le nom du jeu, ou une catégorie de cartes : « Défi », « Bonus », « Malus », « Chance » — ou **sans** ? Sans réponse, elle retient le dos à motif sans mention et le signale. **Dos à motif** (`dos_a_motif`), comme celui d'une carte à jouer : des lignes fines (losanges, carreaux ou vagues) remplissent un cadre aux angles arrondis, tracé d'un trait fin à environ 3 mm du bord de la carte ; la marge reste blanche. Le motif est le même sur toutes les cartes du jeu, il gêne la lecture par transparence et donne son unité au jeu ; un motif différent par jeu permet de trier des jeux mélangés. **Dos blanc** : rien n'est imprimé au verso ; à réserver à un papier assez épais pour que le recto ne se lise pas par transparence. **Mention personnelle** : la même sur toutes les cartes d'une pile, en gras dans un cartouche gris au centre de la carte (paramètre `texte`) ; jamais une mention qui distingue deux cartes d'une même pile ; plusieurs catégories donnent plusieurs piles, donc une planche par catégorie. Le cadre rend visible un décalage du recto-verso : essai d'impression avant de tirer tout le jeu (V13). Le verso-réponse reste réservé aux cartes que l'élève tient lui-même, question vers lui (J4, J14), et à la carte à pinces (J10). (19.11.2026) **Liseré** : chaque carte d'un jeu de cartes porte un cadre à coins arrondis, tracé à 3 mm du trait de coupe ; la teinte de la carte s'arrête au cadre et la marge reste blanche, comme sur une carte à jouer. Les modèles Word de la boîte à outils le portent déjà : pour un jeu de cartes en .docx, partir du modèle plutôt que d'un tableau neuf, qui ne le porte pas. En PDF, `planche_pdf(..., lisere=True)`, `cartes_categories` et `cartes_mots_interdits` le tracent (`lisere_cartes`) ; sans modèle Word, produire la planche de cartes en PDF. Pas de liseré sur un domino, un puzzle ou une tuile. (21.11.2026) | DOIT |
 
 *MP-J-09 précise MP-O-12 pour le matériel de groupe (inférence de conception, conforme au test du 30.10.2026). MP-J-10 répond au défaut de G12-b (étiquettes plus grandes que les cases) relevé par la revue indépendante du 2.11.2026. MP-J-11 et MP-J-12 répondent à la demande de l'auteur du 19.11.2026 : planches qui laissaient le bas de la page vide, absence de repères pour le massicot ; règles appliquées au memory des consignes (19.11.2026, rendu PDF contrôlé, non testé en classe). MP-J-13 répond à sa demande du même jour : l'enseignant·e ne connaît pas les possibilités tant que l'IA ne les montre pas.*
 
@@ -728,7 +728,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 - **Zone de réponse** : aucune.
 - **Items** : 6 à 12 paires ; chaque carte n'a qu'une partenaire dans le lot (MP-J-01).
 - **Hauteur** : 4 × 6,6 = 26,4 cm ; marges d'environ 1,65 cm en haut et en bas (calculé ; rendu PDF contrôlé le 19.11.2026).
-- **Recette** : R8 avec une seule moitié par pièce (colonnes de 6,2 cm, rangées de 6,6 cm, 3 pièces par rangée), repères de coupe compris.
+- **Recette** : R8 avec une seule moitié par pièce (colonnes de 6,2 cm, rangées de 6,6 cm, 3 pièces par rangée), repères de coupe compris. Jeu de cartes : partir du modèle Word (liseré en place) ou, en PDF, `planche_pdf(..., lisere=True)` (MP-J-14).
 - **Vigilance** : pour la memory, aucune différence visible au dos : dos à motif encadré ou dos blanc, identique sur toutes les cartes, au choix de l'enseignant·e (`dos_a_motif`, MP-J-14) ; au cycle 1, pour des non-lecteurs, appariement image ↔ image ; aucune forme fautive (MP-CC-11).
 - **Statut** : non testé ; dimensions = inférence de conception, à tester.
 
@@ -740,7 +740,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 - **Zone de réponse** : aucune.
 - **Items** : 4 à 6 familles de 4 à 6 cartes ; chaque carte appartient à une seule famille (MP-J-01).
 - **Hauteur** : 3 × 8,8 = 26,4 cm (calculé ; disposition rendue en PDF le 19.11.2026).
-- **Recette** : R8 avec une seule moitié par pièce (colonnes de 6,2 cm, 3 pièces par rangée, hauteur 8,8 cm) ; en PDF : `planche_pdf`, repères de coupe compris.
+- **Recette** : R8 avec une seule moitié par pièce (colonnes de 6,2 cm, 3 pièces par rangée, hauteur 8,8 cm) ; en PDF : `planche_pdf`, repères de coupe compris. Jeu de cartes : partir du modèle Word (liseré en place) ou, en PDF, `planche_pdf(..., lisere=True)` (MP-J-14).
 - **Vigilance** : la famille est nommée en mots, jamais par la seule couleur (X-08) ; familles équilibrées ; pour une catégorie orthographique, les membres sont écrits, pas seulement nommés à l'oral (X-17).
 - **Statut** : non testé ; dimensions = inférence de conception, à tester.
 
@@ -752,7 +752,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 - **Zone de réponse** : aucune ; l'élève répond oralement ou sur une ardoise, puis retourne la carte.
 - **Items** : 8 à 16 cartes ; une seule réponse par question (MP-J-01).
 - **Hauteur** : 4 × 6,6 = 26,4 cm par planche (calculé ; disposition du recto rendue en PDF le 19.11.2026).
-- **Recette** : R8 (deux planches : recto, puis verso aux colonnes inversées) ; en PDF : `planche_pdf`, puis `verso_de` pour l'ordre du verso ; les marges égales à gauche et à droite gardent les repères alignés au verso.
+- **Recette** : R8 (deux planches : recto, puis verso aux colonnes inversées) ; en PDF : `planche_pdf`, puis `verso_de` pour l'ordre du verso ; les marges égales à gauche et à droite gardent les repères alignés au verso. Jeu de cartes : partir du modèle Word (liseré en place) ou, en PDF, `planche_pdf(..., lisere=True)` (MP-J-14).
 - **Vigilance** : alignement recto-verso contrôlé sur une impression test (V13) ; papier assez épais pour que le verso ne se lise pas par transparence ; une fiche de suivi des reprises (MF43) peut accompagner le jeu. Ces cartes se tiennent en main, question vers l'élève : elles ne servent jamais de pioche (MP-J-14).
 - **Statut** : non testé ; dimensions et inversion des colonnes = inférence de conception (calcul à confirmer sur l'imprimante de l'école).
 
@@ -1074,7 +1074,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 - **Pièces** : 12 cartes-phrases numérotées de 9,3 × 4,4 cm, le trou marqué par des points de suspension ; 24 cartes-terminaisons de 4,65 × 4,4 cm ; une feuille de solutions numérotée.
 - **Vérification** : par la feuille de solutions, tenue par un·e camarade (MP-J-04) ; jamais de réponse au dos d'une carte tirée (MP-J-14).
 - **Items** : chaque phrase n'admet qu'une terminaison du jeu (MP-J-01) ; chaque terminaison figure deux fois ; aucune forme fautive n'est imprimée : la phrase à trou reste incomplète.
-- **Recette** : `planche_pdf` pour les deux planches (repères de coupe compris) ; feuille de solutions en R11.
+- **Recette** : `planche_pdf(..., lisere=True)` pour les deux planches (liseré et repères de coupe compris) ; feuille de solutions en R11.
 - **Interdits** : phrase qui accepte deux terminaisons ; terminaison absente du jeu.
 - **Statut** : exemple 5P-8P (présent, verbes en -er et en -ir du type finir) produit en PDF et regardé le 20.11.2026 (police Liberation Sans pour l'essai) ; non imprimé, non testé en classe.
 
@@ -1105,7 +1105,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 - **Usage** : comparer deux valeurs : nombres et calculs, fractions, nombres décimaux et pourcentages, longueurs ; à deux.
 - **Principe** : chaque joueur retourne une carte ; la plus grande valeur gagne les deux cartes ; deux valeurs égales : « bataille », chacun retourne une nouvelle carte.
 - **Pièce** : carte de 6,2 × 6,6 cm (12 par planche), de 4,65 × 6,6 cm (16) ou de 4,65 × 5,28 cm (20) ; une valeur par carte, écrite sous des formes différentes d'une carte à l'autre.
-- **Disposition** : `planche_pdf`, toute la surface utile (MP-J-11), repères de coupe (MP-J-12) ; cartes tirées : dos neutre (MP-J-14).
+- **Disposition** : `planche_pdf(..., lisere=True)`, toute la surface utile (MP-J-11), liseré et repères de coupe (MP-J-12) ; cartes tirées : dos neutre (MP-J-14) ; valeur écrite en grand (36 à 40 pt), réduite seulement si elle ne tient pas dans le cadre.
 - **Items** : quelques valeurs égales sous deux écritures (3/5 et 60 %) pour provoquer des batailles ; vérification avec la carte-mémoire de la notion (MP-J-08).
 - **Interdits** : valeurs toutes écrites sous la même forme (le jeu ne ferait plus comparer) ; unités mêlées sans que ce soit l'objectif.
 - **Statut** : trois exemples produit en PDF et regardé le 20.11.2026 (police Liberation Sans pour l'essai) ; non imprimé, non testé en classe.
@@ -1342,7 +1342,7 @@ L'IA DEVRAIT créer des styles de paragraphe nommés et les utiliser pour **chaq
 | Fiche-Consigne | numéro + consigne | 14 pt, gras ; espace avant 10 pt ; solidaire du suivant |
 | Fiche-Données | items, textes, phrases sources | 14 pt ; interligne 1,5 ; solidaire |
 | Fiche-Lacune | items à lacune (R2) | 14 pt ; interligne 2,0 ; solidaire |
-| Fiche-Exemple | exemple résolu | 14 pt, italique ; la réponse en gras ; solidaire |
+| Fiche-Exemple | exemple résolu | 14 pt ; l'exemple (ou la réponse d'un item déjà fait) en police d'élèves GE Typo Libre, 17,5 pt, sans gras ni italique (MP-T-10, `ecrire_exemple`) ; solidaire |
 | Fiche-Aide | contenu d'un encadré d'aide | 13-14 pt dans un encadré R5 |
 | Fiche-Bilan | autoévaluation | 14 pt dans un tableau R6 |
 | Fiche-Étape | étape d'une règle du jeu | 14 pt ; numéro, tabulation, texte ; retrait suspendu de 0,8 cm ; une action par étape |
@@ -1665,7 +1665,7 @@ Pièces du dossier, dans cet ordre :
 ```
 <Titre du jeu>                                   [titre centré, sans Prénom ni Date]
 Joue avec un ou une camarade.
-Exemple : <question> donne <réponse>.            [Fiche-Exemple]
+Exemple : <question> donne <réponse>.            [Fiche-Exemple ; <réponse> en police d'élèves, MP-T-10]
 [2 pièces hors lot]                              [R8 sans saut de page]
 1  <Une action>                                  [Fiche-Étape]
 2  <Une action>
@@ -2166,6 +2166,7 @@ Une réduction progressive est possible au cours du cycle.
 | MP-F-07 | Format A3 admis pour les affiches lues à distance (TR17 à TR22) ; paramètres du § 2.5 ; dérogation explicite à MP-F-01. (v7.2) | PEUT |
 | MP-T-08 | Toute police scolaire est déclarée, installée et vérifiée sur le rendu ; sinon, repli libre annoncé. (v7.2, constat T4 du balayage BDRP) | DOIT |
 | MP-T-09 | TrueRomande n'est jamais utilisée pour du texte composé automatiquement ; l'écriture liée est composée en GE Typo Libre (R10). (v7.2) | DOIT |
+| MP-T-10 | **Exemple en police d'élèves** : partout où un exemple est donné ou affiché (exemple résolu, exemple déjà fait en tête de fiche, exemple d'un rappel, d'une règle de jeu ou d'une affiche, colonne « Exemple » d'un tableau), l'exemple est composé dans la police d'élèves **GE Typo Libre** (R10), comme écrit à la main, pour que l'élève distingue ce qui est donné de ce qui est montré en exemple. Ce qui est donné reste dans la police de la fiche : consigne, règle, intitulé « Exemple », item de départ. Dans un exercice dont le premier item est fait, l'item reste comme les autres et seule la réponse (ce que l'élève écrit, à l'endroit où il l'écrit) passe en police d'élèves. Corps : même hauteur apparente que le texte de la fiche, soit 1,25 fois le corps pour des lettres (17,5 pt pour 14 pt), 0,9 fois pour des chiffres seuls et 1,1 fois pour un mélange de lettres et de chiffres, un seul corps par exemple (`taille_eleve`) ; ni gras ni italique ; un léger retrait au début d'une cellule, la police ayant des attaques qui débordent à gauche. Caractère absent de la police (Â, Ä, Î, Ï, Ö, Ù, Û, Ü, Ÿ, ä, ÿ, æ, –, %, point médian) : le mot reste en script (`ecrire_exemple` le fait seul). Police non installée : repli annoncé (MP-T-08), l'exemple reste en italique. Ne s'applique pas aux données d'un jeu (texte des cartes, des dominos, des plateaux) ni au contenu d'un modèle rempli à adapter. Recettes : `ecrire_exemple`, option `{'eleve': taille}` d'`ecrire`, police `'Eleve'` de `Dessin` (`police_exemple_pdf`). (21.11.2026) | DOIT |
 | MP-P-10 | L'IA travaille avec des prénoms fictifs ou des marqueurs ; les prénoms réels sont insérés localement par l'enseignant·e (nLPD). (v7.2, constat T6 du balayage BDRP) | DOIT |
 | MP-O-13 | Rubrique « Conditionnement » dans la fiche technique de toute ressource imprimée autre qu'une fiche à photocopier (§ 2.3). (v7.2) | DEVRAIT |
 | MP-O-14 | Page pleine : aucune page élève remplie partiellement ; sur le rendu, chaque page atteint au moins 90 % du budget de hauteur (mesure sur l'image de la page) ; sinon aérer, compléter (lignes, items) ou passer en planche A5 (R15). Exceptions déclarées : partie enseignant·e, dernière planche d'un jeu à nombre de pièces fixé. Contrôle V20. (révision du 2.11.2026) | DOIT |
@@ -2343,7 +2344,8 @@ def saut_de_page(doc):
     return p
 
 def ecrire(p, contenu):
-    """contenu = str ou liste de segments (texte, {b, i})."""
+    """contenu = str ou liste de segments (texte, {b, i, eleve}). {'eleve': taille} : segment d'exemple en police
+    d'élèves, au corps taille_eleve(taille, texte) (MP-T-10, R10)."""
     if isinstance(contenu, str):
         contenu = [(contenu, {})]
     for seg in contenu:
@@ -2362,6 +2364,10 @@ def ecrire(p, contenu):
                     r.add_text(m)
         if 'b' in o: r.bold = o['b']
         if 'i' in o: r.italic = o['i']
+        if o.get('eleve'):                                                  # MP-T-10 : exemple en police d'élèves
+            r.font.name = POLICE_CURSIVE; r.font.size = Pt(taille_eleve(o['eleve'], txt))
+            rf = r._r.get_or_add_rPr().rFonts
+            for a in ('w:ascii', 'w:hAnsi', 'w:cs', 'w:eastAsia'): rf.set(qn(a), POLICE_CURSIVE)
     return p
 
 # ---------- géométrie des tableaux (ordre XML conforme) ----------
@@ -2491,7 +2497,7 @@ def styles_fiche(doc, taille=14):
     style_para(doc, 'Fiche-Consigne', taille, gras=True, avant=10, apres=4)
     style_para(doc, 'Fiche-Données', taille)
     style_para(doc, 'Fiche-Lacune', taille, interligne=2.0, apres=0)
-    style_para(doc, 'Fiche-Exemple', taille, italique=True)
+    style_para(doc, 'Fiche-Exemple', taille)              # l'exemple lui-même en police d'élèves (MP-T-10)
     style_para(doc, 'Fiche-Aide', taille, interligne=1.15, apres=2)
     style_para(doc, 'Fiche-Bilan', taille, interligne=1.0, apres=0)
     style_para(doc, 'Fiche-Étape', taille, interligne=1.15, apres=4, retrait=0.8, suspendu=0.8)
@@ -2714,7 +2720,28 @@ def distance_lecture_m(taille_pt, facteur=1.0, capitale=ARIAL_CAPITALE):
 
 # ---------- R10 : écriture liée composée en GE Typo Libre (jamais dessinée ni générée) ----------
 POLICE_CURSIVE = 'GE Typo Libre'
-CARACTERES_ABSENTS_CURSIVE = '·'         # point médian sans dessin dans la police : jamais en cursive
+CARACTERES_ABSENTS_CURSIVE = '·ÂÄÎÏÖÙÛÜŸäÿæÆ–—%'   # sans dessin dans ge_typo_libre.otf (vérifié le 21.11.2026) : jamais en cursive
+
+def taille_eleve(taille, texte):
+    """MP-T-10 : corps de la police d'élèves pour la même hauteur apparente que le texte de la fiche (Arial) :
+    1,25 fois le corps pour des lettres (hauteur des minuscules), 0,9 fois pour des chiffres seuls (les chiffres de
+    GE Typo Libre sont plus hauts), 1,1 fois pour un mélange. Un même exemple garde un seul corps."""
+    chiffres = all(c in '0123456789 +-=×:,./' for c in texte); lettres = not any(c.isdigit() for c in texte)
+    return round(taille * (0.9 if chiffres else 1.25 if lettres else 1.1) * 2) / 2
+
+def ecrire_exemple(p, donnee, exemple, taille, suite=''):
+    """MP-T-10 : une ligne d'exemple. donnee (consigne, item, intitulé « Exemple : ») dans la police de la fiche ;
+    exemple (la réponse ou l'exemple montré) en police d'élèves, sans gras ni italique ; suite éventuelle dans la
+    police de la fiche. Un mot qui contient un caractère absent de la police reste en script."""
+    if donnee: ecrire(p, donnee)
+    mots = exemple.split(' ')
+    if not set(exemple) & set(CARACTERES_ABSENTS_CURSIVE): mots = [exemple]
+    for k, m in enumerate(mots):
+        if k: p.add_run(' ')
+        if set(m) & set(CARACTERES_ABSENTS_CURSIVE): ecrire(p, m)
+        else: ecrire_cursive(p, m, taille_eleve(taille, exemple))
+    if suite: ecrire(p, suite)
+    return p
 
 def police_cursive_installee():
     for d in ('~/Library/Fonts', '/Library/Fonts', '~/.fonts', '~/.local/share/fonts'):
@@ -2742,6 +2769,12 @@ def verifier_cursive_pdf(chemin_pdf):
 # ---------- R11 : dessin vectoriel (SVG et PDF à l'échelle 1, unités en mm) ----------
 POLICES_PDF = {'Arial': '/System/Library/Fonts/Supplemental/Arial.ttf',
                'Arial-B': '/System/Library/Fonts/Supplemental/Arial Bold.ttf'}
+if police_cursive_installee(): POLICES_PDF['Eleve'] = police_cursive_installee()   # MP-T-10 : police d'élèves
+
+def police_exemple_pdf():
+    """MP-T-10 : police de Dessin pour un exemple : 'Eleve' (GE Typo Libre) si elle est installée ; sinon 'Arial',
+    repli à signaler (MP-T-08)."""
+    return 'Eleve' if 'Eleve' in POLICES_PDF else 'Arial'
 
 # Couleur facultative (21.11.2026). Par défaut : noir et blanc. La couleur ne porte jamais seule une information
 # (MP-C-02) : un gris devient une teinte de même clarté, de sorte qu'une photocopie en noir et blanc reste identique.
@@ -3606,7 +3639,7 @@ def reperes_de_coupe(d, xs, ys, long_mm=4.5, ecart_mm=2.5):
         d.ligne([(x0 + L + ecart_mm, y), (x0 + L + ecart_mm + long_mm, y)], ep=ep)
 
 def planche_pdf(base, pieces, colonnes, rangees, mention='', taille_pt=16, taille_min_pt=12, gras_gauche=True,
-                dessin=None):
+                dessin=None, lisere=False):
     """R8 en PDF : colonnes × rangees pièces sur toute la surface utile (MP-J-11), contour en pointillés
     (MP-J-05), repères de coupe (MP-J-12), mention dans la marge du haut.
     pieces : une chaîne par pièce (lignes séparées par '\\n'), ou un couple (moitié gauche, moitié droite)
@@ -3615,18 +3648,21 @@ def planche_pdf(base, pieces, colonnes, rangees, mention='', taille_pt=16, taill
     taille_min_pt, puis la planche est refusée. Une planche par appel ; l'ordre des pièces est celui reçu
     (à mélanger avant : melanger_sans_voisins, MP-J-03 ; verso : verso_de, R12).
     dessin : si un Dessin est fourni, la planche y est tracée et aucun fichier n'est écrit (miniatures).
+    lisere=True pour un jeu de cartes (MP-J-14) : cadre aux coins arrondis à 3 mm du trait de coupe, tracé avant
+    le texte (lisere_cartes) ; le texte reste à l'intérieur du cadre. Pas de liseré pour un domino ni un puzzle.
     Écrit base.svg et base.pdf ; renvoie (chemin du PDF, largeur et hauteur d'une pièce en cm, corps utilisé)."""
-    x0, y0, L, H = SURFACE_MM; l, h = L / colonnes, H / rangees
+    x0, y0, L, H = SURFACE_MM; l, h = L / colonnes, H / rangees; jeu = 10 if lisere else 6
     assert len(pieces) <= colonnes * rangees, 'trop de pièces pour une planche'
     d = dessin or Dessin(); moities = [p if isinstance(p, (tuple, list)) else (p,) for p in pieces]
     corps = taille_pt
     while True:                                                             # même corps pour toute la planche
         trop = [t for m in moities for k, bloc in enumerate(m) for t in bloc.split('\n')
                 if d.largeur_texte(t, corps, 'Arial-B' if len(m) == 2 and k == 0 and gras_gauche else 'Arial')
-                > l / len(m) - 6]
+                > l / len(m) - jeu]
         if not trop: break
         corps -= 0.5
         assert corps >= taille_min_pt, f'texte trop long pour la pièce : {trop[0]!r}'
+    if lisere: lisere_cartes(d, colonnes, rangees)                         # MP-J-14, sous le texte
     for i, m in enumerate(moities):
         x, y = x0 + (i % colonnes) * l, y0 + (i // colonnes) * h; lm = l / len(m)
         for k, bloc in enumerate(m):
@@ -4030,6 +4066,8 @@ VARIANTES = {
 
 `dos_a_motif` dessine avec la classe `Dessin` (R11) le verso d'une planche de cartes tirées, à la manière d'un dos de carte à jouer : sur chaque carte, des lignes fines (losanges, carreaux ou vagues, pas de 2 mm, trait de 0,2 mm) remplissent un cadre aux angles arrondis, tracé à 3 mm du bord ; la marge reste blanche. `colonnes` et `rangees` reprennent ceux du recto. Le paramètre `texte` ajoute au centre de chaque carte une mention personnelle (nom du jeu, catégorie) dans un cartouche gris. La page s'imprime au verso de la planche, retournement sur le bord long ; le cadre rend visible un décalage, d'où l'essai d'impression. Pour un dos blanc, la fonction n'est pas appelée. Le bloc se place après `planche_pdf`, dont il reprend `SURFACE_MM`, et après `arc_pts`.
 
+**Test du liseré (21.11.2026)** : `lisere_cartes` appelé par `planche_pdf`, `cartes_categories` et `cartes_mots_interdits` ; planches J30, J32 et J35 produites en noir et blanc et en couleur et regardées : cadre à 3 mm du trait de coupe, texte à l'intérieur ; police Liberation Sans à la place d'Arial ; non imprimé.
+
 **Test (19.11.2026)** : trois motifs encadrés produits et regardés sur une planche de 3 × 4 cartes, puis un dos à mention « Bonus » ; planches de 2 × 3 et de 4 × 5 cartes produites ; mention trop longue refusée ; couverture d'encre mesurée sur l'image : 18 % (losanges, carreaux), 11 % (vagues) ; opacité réelle sur papier et alignement recto-verso : non testés à l'impression.
 
 ```
@@ -4097,6 +4135,22 @@ def dos_a_motif(base, motif='losanges', colonnes=3, rangees=4, texte=None, taill
             d.texte(cx, cy + taille_pt * 0.125, texte, taille_pt, police='Arial-B')
     d.png(base, dpi)
     return d.sauver(base)
+
+def lisere_cartes(d, colonnes, rangees, marge_mm=3.0, rayon_mm=3.5, ep=0.44):
+    """MP-J-14 : liseré de chaque carte d'une planche de colonnes × rangees cartes (SURFACE_MM), comme sur une carte
+    à jouer : cadre aux coins arrondis à marge_mm du trait de coupe, trait de 1,25 pt ; en couleur (definir_couleur),
+    l'intérieur du cadre est teinté et la marge reste blanche. À appeler AVANT de tracer le contenu des cartes,
+    qui reste à l'intérieur du cadre (au moins 2 mm de jeu)."""
+    x0, y0, L, H = SURFACE_MM; l, h = L / colonnes, H / rangees; r = rayon_mm
+    garde = d.trait
+    if COULEUR[0] is not None and tuple(d.trait) == (0, 0, 0): d.trait = couleur_trait()
+    fond = _teinter((0.93, 0.93, 0.93)) if COULEUR[0] is not None else None
+    for i in range(colonnes * rangees):
+        xa, ya = x0 + (i % colonnes) * l + marge_mm, y0 + (i // colonnes) * h + marge_mm
+        xb, yb = xa + l - 2 * marge_mm, ya + h - 2 * marge_mm
+        d.ligne(arc_pts(xb - r, ya + r, r, 0, 90, 8) + arc_pts(xb - r, yb - r, r, 90, 180, 8) +
+                arc_pts(xa + r, yb - r, r, 180, 270, 8) + arc_pts(xa + r, ya + r, r, 270, 360, 8), ep=ep, ferme=True, fond=fond)
+    d.trait = garde
 ```
 
 #### 19 novembre 2026 : grille d'alignement, serpents et échelles, bataille navale, roue de tirage (J17 à J20)
@@ -4545,17 +4599,20 @@ def planche_lynx(base, mots, graine=1, taille_pt=15, titre='Cherche et trouve', 
         poses.append(pts); d.texte(x + rc * 0.6 * math.sin(a) * -1, y + rc * 0.6 * math.cos(a), mot, taille_pt, police='Arial-B', rot=rot)
     return (None if dessin else d.sauver(base)), len(mots), taille_pt
 
-def cartes_mots_interdits(base, cartes, colonnes=3, rangees=3, taille_pt=16, mention='', dessin=None):
+def cartes_mots_interdits(base, cartes, colonnes=3, rangees=3, taille_pt=16, mention='', dessin=None, lisere=True):
     """J30 : cartes à mots interdits. cartes : [(mot à faire deviner, [mots interdits])]. L'élève fait deviner le mot
-    du bandeau sans prononcer les mots interdits. Renvoie (chemin du PDF, nombre de cartes, largeur et hauteur en cm)."""
+    du bandeau sans prononcer les mots interdits. lisere : cadre arrondi à 3 mm du trait de coupe (MP-J-14).
+    Renvoie (chemin du PDF, nombre de cartes, largeur et hauteur en cm)."""
     x0, y0, L, H = SURFACE_MM; d = dessin or Dessin(); l, h = L / colonnes, H / rangees
     assert len(cartes) <= colonnes * rangees, 'trop de cartes pour une planche'
+    if lisere: lisere_cartes(d, colonnes, rangees)
+    e = 5.5 if lisere else 3                                                # bandeau à l'intérieur du liseré
     for i, (mot, interdits) in enumerate(cartes):
         x, y = x0 + (i % colonnes) * l, y0 + (i // colonnes) * h; hb = min(18.0, h * 0.24)
-        d.ligne([(x + 3, y + 3), (x + l - 3, y + 3), (x + l - 3, y + 3 + hb), (x + 3, y + 3 + hb)], ep=0.6, ferme=True, fond=(0.85, 0.85, 0.85))
-        _texte_ajuste(d, x + l / 2, y + 3 + hb / 2 + 1, mot, taille_pt + 3, l - 10, 'Arial-B', mini=10)
-        d.texte(x + l / 2, y + hb + 9.5, 'sans dire', 8); pas = (h - hb - 16) / max(len(interdits), 1)
-        for j, z in enumerate(interdits): _texte_ajuste(d, x + l / 2, y + hb + 13 + (j + 0.5) * pas, z, taille_pt, l - 8, mini=9)
+        d.ligne([(x + e, y + e), (x + l - e, y + e), (x + l - e, y + e + hb), (x + e, y + e + hb)], ep=0.6, ferme=True, fond=(0.85, 0.85, 0.85))
+        _texte_ajuste(d, x + l / 2, y + e + hb / 2 + 1, mot, taille_pt + 3, l - 2 * e - 4, 'Arial-B', mini=10)
+        d.texte(x + l / 2, y + e + hb + 6.5, 'sans dire', 8); pas = (h - hb - 2 * e - 13) / max(len(interdits), 1)
+        for j, z in enumerate(interdits): _texte_ajuste(d, x + l / 2, y + e + hb + 10 + (j + 0.5) * pas, z, taille_pt, l - 2 * e - 4, mini=9)
     xs = [x0 + c * l for c in range(colonnes + 1)]; ys = [y0 + r * h for r in range(rangees + 1)]
     for x in xs: d.ligne([(x, y0), (x, y0 + H)], ep=0.35, tirets=(1, 1.2))
     for y in ys: d.ligne([(x0, y), (x0 + L, y)], ep=0.35, tirets=(1, 1.2))
@@ -4617,24 +4674,27 @@ def _decoupe(d, colonnes, rangees, mention=''):
     if mention: _mention(d, mention)
     return l, h
 
-def cartes_categories(base, cartes, colonnes=2, rangees=2, taille_pt=11, mention='', dessin=None):
+def cartes_categories(base, cartes, colonnes=2, rangees=2, taille_pt=11, mention='', dessin=None, lisere=True):
     """J28 : cartes-questions du plateau à camemberts. cartes : une liste par carte de six couples (question, réponse),
     dans l'ordre des catégories (disque, triangle, carré, losange, étoile, croix). La carte est lue par un·e camarade :
-    la réponse est écrite en gras sous la question. Renvoie (chemin du PDF, nombre de cartes, largeur et hauteur en cm)."""
+    la réponse est écrite en gras sous la question. lisere : cadre arrondi à 3 mm du trait de coupe (MP-J-14).
+    Renvoie (chemin du PDF, nombre de cartes, largeur et hauteur en cm)."""
     x0, y0, L, H = SURFACE_MM; d = dessin or Dessin(); l, h = L / colonnes, H / rangees
     assert len(cartes) <= colonnes * rangees and all(len(c) == 6 for c in cartes), 'six questions par carte'
+    if lisere: lisere_cartes(d, colonnes, rangees)
+    e = 2.5 if lisere else 0                                                # contenu à l'intérieur du liseré
     for i, carte in enumerate(cartes):
-        x, y = x0 + (i % colonnes) * l, y0 + (i // colonnes) * h; pas = (h - 8) / 6
+        x, y = x0 + (i % colonnes) * l, y0 + (i // colonnes) * h; pas = (h - 8 - 2 * e) / 6
         for k, (q, r) in enumerate(carte):
-            yy = y + 4 + k * pas; _symbole(d, k, x + 8, yy + pas / 2, 2.8)
-            if k: d.ligne([(x + 4, yy), (x + l - 4, yy)], ep=0.2)
+            yy = y + 4 + e + k * pas; _symbole(d, k, x + 8 + e, yy + pas / 2, 2.8)
+            if k: d.ligne([(x + 4 + e, yy), (x + l - 4 - e, yy)], ep=0.2)
             lignes = q.split('\n'); t = taille_pt
-            while max(d.largeur_texte(z, t) for z in lignes) > l - 20: t -= 0.5; assert t >= 7.5, f'question trop longue : {q!r}'
+            while max(d.largeur_texte(z, t) for z in lignes) > l - 20 - 2 * e: t -= 0.5; assert t >= 7.5, f'question trop longue : {q!r}'
             p = t * 1.2 * 25.4 / 72; ya = yy + pas / 2 - (len(lignes) + 1) * p / 2 + t * 0.3
-            for j, z in enumerate(lignes): d.texte(x + 14, ya + j * p, z, t, ancre='s')
+            for j, z in enumerate(lignes): d.texte(x + 14 + e, ya + j * p, z, t, ancre='s')
             tr = t
-            while d.largeur_texte(r, tr, 'Arial-B') > l - 20: tr -= 0.5
-            d.texte(x + 14, ya + len(lignes) * p + 0.6, r, tr, ancre='s', police='Arial-B')
+            while d.largeur_texte(r, tr, 'Arial-B') > l - 20 - 2 * e: tr -= 0.5
+            d.texte(x + 14 + e, ya + len(lignes) * p + 0.6, r, tr, ancre='s', police='Arial-B')
     _decoupe(d, colonnes, rangees, mention)
     return (None if dessin else d.sauver(base)), len(cartes), (round(l / 10, 2), round(h / 10, 2))
 
@@ -4814,7 +4874,8 @@ def fiche_syllabes_sons(base, mots, colonnes=4, titre='Syllabes et sons', taille
 def livret_ecriture(base, module_mm=7.0, couleurs=True, feuilles=3, titre='Mon cahier d’écriture'):
     """G22, livret : cahier A5 de lignes d'écriture au lignage romand. Chaque feuille A4 paysage porte deux pages A5 ;
     impression recto-verso (retournement sur le bord court), pliage au milieu, agrafage dans le pli. La première
-    face porte la couverture. Renvoie (chemin du PDF, nombre de pages A5 de lignes, module en mm)."""
+    face porte la couverture : le titre et un cartouche vide pour le prénom, sans ligne Prénom ni Classe (MP-O-03).
+    Renvoie (chemin du PDF, nombre de pages A5 de lignes, module en mm)."""
     d = Dessin(297, 210); m = module_mm; assert feuilles >= 1
     def lignes(x, large):
         esp = max(5.0, 1.6 * m); n = int((180 + esp) / (3 * m + esp)); esp = (180 - n * 3 * m) / max(n - 1, 1)
@@ -4829,7 +4890,9 @@ def livret_ecriture(base, module_mm=7.0, couleurs=True, feuilles=3, titre='Mon c
         d.ligne([(148.5, 4), (148.5, 9)], ep=0.3); d.ligne([(148.5, 201), (148.5, 206)], ep=0.3)   # repères du pli
         if face == 0:                                                       # couverture à droite, dos à gauche
             _cadre_arrondi(d, 160.5, 14, 124.5, 182, r=8, ep=1.2); _cadre_arrondi(d, 163, 16.5, 119.5, 177, r=6.5, ep=0.35)
-            d.texte(222.75, 70, titre, 22, police='Arial-B'); d.texte(222.75, 120, 'Prénom : ____________________', 14); d.texte(222.75, 135, 'Classe : ____________________', 14)
+            d.texte(222.75, 70, titre, 22, police='Arial-B')
+            _cadre_arrondi(d, 172.75, 98, 100, 36, r=6, ep=0.8)               # cartouche du prénom, sans ligne (MP-O-03) :
+                                                                                # l'enfant l'écrit en grand, ou l'adulte y colle l'étiquette
             lignes(12, 124.5)
         else: lignes(12, 124.5); lignes(160.5, 124.5)
     d.d.save(base + '.pdf', garbage=4, deflate=True)
@@ -4860,7 +4923,9 @@ def maison_des_nombres(base, nombres=(5, 6, 7, 8), titre='Les maisons des nombre
         for k in range(etages + 1): d.ligne([(x, y + ht + k * he), (x + l, y + ht + k * he)], ep=1.0 if k in (0, etages) else 0.4)
         if JEUNES[0]:                                                         # non-lecteurs : le premier étage est déjà rempli
             d.ligne([(x, y + ht), (x + l, y + ht), (x + l, y + ht + he), (x, y + ht + he)], ep=0, ferme=True, fond=(0.9, 0.9, 0.9)); te = min(26, he * 1.9)
-            d.texte(x + l / 4, y + ht + he / 2 + te * 0.125, '1', te, police='Arial-B'); d.texte(x + 3 * l / 4, y + ht + he / 2 + te * 0.125, str(nb - 1), te, police='Arial-B')
+            pe = police_exemple_pdf(); te = te * 0.9 if pe == 'Eleve' else te   # MP-T-10 : l'exemple en police d'élèves
+            dy = te * (0.14 if pe == 'Eleve' else 0.125)                     # ligne de base : chiffres centrés dans l'étage
+            d.texte(x + l / 4, y + ht + he / 2 + dy, '1', te, police=pe); d.texte(x + 3 * l / 4, y + ht + he / 2 + dy, str(nb - 1), te, police=pe)
             d.ligne([(x, y + ht), (x + l, y + ht)], ep=1.0); d.ligne([(x, y + ht + he), (x + l, y + ht + he)], ep=0.4)
         for xx, ep in ((x, 1.0), (x + l / 2, 0.4), (x + l, 1.0)): d.ligne([(xx, y + ht), (xx, y + h)], ep=ep)
     return (None if dessin else d.sauver(base)), n, round(et, 1)

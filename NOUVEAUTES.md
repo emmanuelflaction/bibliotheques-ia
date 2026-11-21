@@ -2,6 +2,11 @@
 
 ## 21 novembre 2026 (suite)
 
+- Exemples en police d'élèves : partout où un exemple est donné ou affiché, il est écrit en GE Typo Libre, pour distinguer ce qui est donné de ce qui est montré en exemple (règle MP-T-10, fonctions `ecrire_exemple` et `taille_eleve`, police `'Eleve'` des dessins) ; maisons des nombres, exemples de formes de fiches et affiches mis à jour.
+- Liseré dans les recettes PDF (`lisere_cartes`, option `lisere=True` de `planche_pdf`) ; planches de bataille, de cartes à terminaisons et de mots interdits refaites avec liseré et texte agrandi.
+- Livret d'écriture : la couverture porte un cadre vide pour le prénom, sans ligne Prénom ni Classe.
+- Panoramas des jeux, des tranches d'âge, des fiches et supports, des formes de fiches et des affiches refaits à partir des documents actuels.
+- Exemples remplis des jeux en Word : un calcul ne se coupe plus en fin de ligne (espaces insécables autour des signes et devant « % ») ; liseré contrôlé dans Word pour les jeux de cartes.
 - Guide : nouvelle rubrique « Conseils » (règles du jeu en cinq questions, coopération, différenciation autour d'une fiche unique, grille « utile, utilisable, acceptable » à remplir) ; option « en coopération » dans la demande d'un jeu.
 - Bibliothèque IA 1 : règles MP-J-07 et MP-D-02 complétées, astuces pratiques et variante coopérative dans la partie enseignant·e.
 - Bibliothèque IA 2 : section « Repères pour les jeux, la coopération et la différenciation ».
