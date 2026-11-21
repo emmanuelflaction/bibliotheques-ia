@@ -20,6 +20,15 @@ Des « bibliothèques » à joindre à une IA générative pour lui faire produi
 | `modeles` | Modèles Word de jeux à remplir, en noir et blanc et en couleur |
 | `planches` | Planches et exemples prêts à imprimer (PDF) |
 | `icones` | Banque d'icônes en noir et blanc (licence CC0, voir le fichier de licence du dossier) |
+| `apercus` | Images d'aperçu affichées par le guide en ligne (chargées à la demande) |
+
+## Versions
+
+Une seule **édition**, identifiée par sa date, vaut pour l'ensemble : bibliothèques, guide web, modèles et planches. L'édition actuelle est celle du **21 novembre 2026**. Elle figure en tête de chaque bibliothèque et au pied du guide ; deux éléments de même édition sont conçus pour fonctionner ensemble. Les noms de fichiers (« _v1 ») ne changent pas, pour que les liens restent valables. Le détail des changements est dans [NOUVEAUTES.md](NOUVEAUTES.md) ; toutes les éditions antérieures restent dans l'historique du dépôt.
+
+## Statut
+
+Ce projet est conçu par un enseignant de la HEP Vaud ; ce n'est pas une publication officielle de l'institution. Les typologies et les procédures des bibliothèques sont des propositions de conception, appuyées sur des travaux de recherche cités ; elles ne constituent pas un modèle validé empiriquement.
 
 ## État du travail
 

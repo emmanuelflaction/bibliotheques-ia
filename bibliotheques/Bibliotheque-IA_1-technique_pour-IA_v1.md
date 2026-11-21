@@ -1,12 +1,12 @@
 # Bibliothèque IA 1 — technique (à joindre à l'IA) — v1
 
-Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, aux cycles 1 et 2 — Suisse romande.
+Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, de la 1P à la 11S (exemples situés surtout aux cycles 1 et 2) — Suisse romande.
 
-Version v1 du 31 octobre 2026, mise à jour le 2 novembre 2026 : Référentiel pédagogique IA 7.2, révision du 2 novembre 2026 (page pleine MP-O-14 et planche A5 R15 ; objectif sans étiquette ; contrôles V20 et V21), suite du 2 novembre 2026 (MP-J-10 pièces mobiles et cases d'accueil ; SP6 par tests opératoires ; GF-B3 en zones de tracé ; J10 refondu en carte à pinces multi-questions avec règle élève ; intitulés des zones laissées à la classe ; points mineurs des gabarits) ; 3 novembre 2026 : G21 Imagier et scène à légender (TR16), fonctions scene_numerotee, lignes_numerotees, bande_etiquettes, verifier_imagier. Types de ressources alignés sur le Catalogue Ressources au primaire (71 types, TR01 à TR71 ; renumérotation du 3 novembre 2026 : l'imagier prend TR16, les types TR16 à TR70 du 2 novembre deviennent TR17 à TR71) ; éléments de réalisation complétés pour chaque type. 19 novembre 2026 : planches à découper — toute la surface utile de la page (MP-J-11) et repères de coupe pour le massicot (MP-J-12) ; gabarit J2 redimensionné ; J5 refondu en quatre plateaux de parcours dessinés, sans tableau (serpent, escargot, chemin, circuit ; fonction plateau_parcours) ; gabarits J1, J3, J4, J6 à J8 et J12 à J16 redimensionnés pour la page entière ; fonctions planche_pdf et reperes_de_coupe ; MP-J-13 : l'IA montre le panorama des jeux et attend le choix (fonction panorama_jeux) ; variantes des jeux par tranche d'âge (1P-4P, 5P-8P, 9S-11S) et miniatures des formats (fonction miniatures_tranche) ; MP-J-14 : carte tirée à dos neutre, solutions sur une feuille numérotée ; carte à pinces sur toute la page (6, 10 ou 12 questions) ; dé à monter grand ou petit (fonction de_a_monter) ; dos à motif des cartes tirées (fonction dos_a_motif : motif encadré à 3 mm du bord, mention personnelle possible ; l'IA demande dos à motif ou blanc, avec ou sans mention) ; quatre gabarits de jeu ajoutés : J17 grille d'alignement, J18 serpents et échelles, J19 bataille navale, J20 roue de tirage ; panorama des exercices G1 à G21 (fonction panorama_exercices) ; modèles Word à remplir et planches prêtes à imprimer signalés au § 3.8 ; instruction système complétée (présentation des possibilités, questions sur le dos des cartes) ; 20.11.2026 : panorama des jeux et pages par tranche d'âge composés uniquement de miniatures tirées des documents réels ; un document réel pour chaque gabarit J1 à J20 (modèles J3, J8, J9, J12, J13, J15, J16 ; planche J11) ; plan_projectif corrigé pour n = 4 ; sept gabarits ajoutés : J21 puzzles à deux pièces, J22 puzzle à bandes, J23 mot mystère, J24 cocotte en papier, J25 horloge à aiguilles, J26 mémo-fiches en éventail, J27 bandes graphiques ; puis J28 plateau à camemberts, J29 cherche et trouve de mots, J30 mots interdits, J31 petit bac et G22 lignes d'écriture au lignage romand ; puis J32 cartes à terminaisons, J33 petits chevaux, J34 Qui est-ce ?, J35 bataille, J36 tuiles-lettres, J37 sudoku, J38 mot caché (la fleur, à la place du pendu), G23 syllabes et sons, cartes-questions de J28 et livret d'écriture A5 ; 21.11.2026 : G24 maisons des nombres, G25 reproduction sur quadrillage, G26 à G31 supports de classe et mises en page de projets (calendrier, étiquettes de l'horaire, livret à onglets, journal, bande dessinée, exposé) ; le guide pour l'enseignant·e est remplacé par une page web ; lignes d'écriture au choix en 1P à 4P : lignes simples ou lignes romandes (R1c, `bande_lignage`) ; couleur en option pour les dessins R11 (`definir_couleur`) ; règle du jeu en cinq questions, variante coopérative, astuces pratiques et différenciation autour d'une fiche unique (MP-J-07, MP-D-02, § 4.3) ; option « pictogrammes de consigne » (§ publics, codes IC-CON) ; étoiles de difficulté admises sur demande (MP-D-01, MP-J-06) ; J18 : numéros sur pastille ; J29 : mots mieux répartis ; J5 : « Départ » et « Arrivée » d'au moins 11 pt ; jeunes élèves : pas de ligne Prénom ni Date (MP-O-03, `definir_jeunes`) ; G1 : blancs pour entourer un mot dans une phrase, pictogramme composé `pictogramme_consigne` ; plateaux : « Départ » et « Arrivée » en grand ; carte à pinces : numéro à gauche, question centrée en grand ; J23 : « cases teintées » ; cartes : liseré à coins arrondis (MP-J-14), puis dans les recettes PDF (`lisere_cartes` ; J28, J30, J32, J35) ; non-lecteurs : aucune consigne écrite, un exemple déjà fait en tête de fiche (G23, G24) ; exemples en police d'élèves GE Typo Libre (MP-T-10, `ecrire_exemple`, `taille_eleve`, police `'Eleve'` de `Dessin`) ; couverture du livret d'écriture : cartouche du prénom sans ligne. Licence : CC BY-NC-SA 4.0. Emmanuel Flaction – emmanuel.flaction@hepl.ch
+Édition du 21 novembre 2026. Le nom du fichier (« _v1 ») reste stable pour ne pas casser les liens ; l'édition (sa date) identifie la version, la même pour les bibliothèques, le guide web et les modèles. Historique détaillé : fichier NOUVEAUTES.md du dépôt https://github.com/emmanuelflaction/bibliotheques-ia. Auteur : Emmanuel Flaction, HEP Vaud (UER MI) – emmanuel.flaction@hepl.ch. Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
-> **Les trois bibliothèques IA (v1).** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 3 — guide pour l'enseignant·e : version complète (Livres I et II) à lire et à imprimer. Les renvois « Livre I » et « Livre II » du texte désignent donc les bibliothèques 1 et 2. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
+> **Les documents de l'ensemble.** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 4 — personnelle : les préférences de l'enseignant·e, à remplir une fois (modèle .docx). Banque d'icônes : un fichier pour l'IA et les images. Le guide pour les enseignant·e·s est une page web (https://emmanuelflaction.github.io/bibliotheques-ia/) ; l'ancienne Bibliothèque IA 3 qui le contenait n'existe plus et son numéro n'est pas réattribué. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
 
-> **Format de ce fichier.** Version Markdown destinée aux IA (fichier à joindre ou à déposer dans un projet). Ce fichier contient le **Livre I seul** (contrat de production des ressources imprimées : fiches et jeux), complété par la liste des codes du Livre II (Annexe I-D). Version allégée pour les outils qui lisent mal les longs documents (par exemple Copilot). Les tableaux et les blocs de code sont conservés tels quels.
+> **Format de ce fichier.** Version Markdown destinée aux IA (fichier à joindre ou à déposer dans un projet). Ce fichier contient le **Livre I seul** (contrat de production des ressources imprimées : fiches et jeux), complété par la liste des codes du Livre II (Annexe I-D). Si l'outil refuse ce fichier .md, joindre la version .txt ou .docx, identiques. Les tableaux et les blocs de code sont conservés tels quels.
 
 # LIVRE I — CONTRAT DE PRODUCTION DES RESSOURCES IMPRIMÉES (FICHES ET JEUX)
 
@@ -25,6 +25,36 @@ Le **Livre II** (Parties 1 à 10) contient les référentiels de décision péda
 **Pourquoi les jeux (v7).** Le 30 octobre 2026, la v6 a été testée sur une demande réelle : « Crée un jeu (cartes, dominos ou autre) pour travailler la conjugaison des verbes en -er et -ir en 5P ». Le domino-boucle obtenu était utilisable, mais l'IA a dû appliquer le Livre I par extension, sans y être autorisée. Un jeu imprimé présente les mêmes risques qu'une fiche à l'impression (pièce coupée, texte trop petit, traits ambigus) et des risques propres : une pièce qui admet deux réponses, des pièces appariables par un indice non visé, un jeu oral pour une notion orthographique.
 
 Niveaux d'exigence : **DOIT** (obligatoire ; dérogation seulement sur demande explicite de l'enseignant·e, toujours signalée), **DEVRAIT** (par défaut ; s'en écarter seulement pour une raison pédagogique explicite, à mentionner), **PEUT** (option). Les codes **MP-** renvoient au standard de mise en page (Annexe I-A).
+
+#### Priorité des règles (21.11.2026)
+
+**1. Sécurité et droit** (données des élèves, cadre DGEO, droits d'auteur) : toujours, sans dérogation.
+
+**2. Règles DOIT** de ce livre : appliquées ; dérogation seulement sur demande explicite de l'enseignant·e, toujours signalée.
+
+**3. Règles conditionnelles** : une règle ne vaut que dans son champ (degré, âge, statut de lecteur, type de support, discipline). Une règle écrite pour les non-lecteurs ou pour l'apprentissage initial de l'écriture ne s'applique pas au secondaire I. Si le champ d'une règle n'est pas clair, l'IA le dit et retient la lecture la plus prudente pour l'élève.
+
+**4. Règles DEVRAIT** : appliquées par défaut ; l'IA s'en écarte pour une raison pédagogique explicite, qu'elle mentionne.
+
+**5. Conventions éditoriales du projet** (teintes de couleur, motif du dos des cartes, libellé des mentions de planche) : appliquées par défaut ; la demande de l'enseignant·e ou sa Bibliothèque IA 4 peuvent les remplacer.
+
+**6. Préférences de l'enseignant·e** (demande, Bibliothèque IA 4) : elles priment sur les règles DEVRAIT et sur les conventions ; face à une règle DOIT, l'IA signale le conflit et demande.
+
+Deux règles se contredisent : l'IA ne tranche pas en silence ; elle cite les deux, applique la plus protectrice pour l'élève et le signale dans le rapport.
+
+#### Statuts de vérification (21.11.2026)
+
+Dans le rapport de conformité et dans tout compte rendu, chaque contrôle porte l'un de ces quatre statuts :
+
+**Vérifié automatiquement** : mesure ou calcul effectué sur le fichier produit ;
+
+**Vérifié par inspection réelle** : le rendu du fichier (PDF, image de page) a été regardé ;
+
+**À vérifier par l'enseignant·e** : exactitude disciplinaire, adéquation à la classe, impression ;
+
+**Non vérifiable dans cet environnement** : par exemple, aucun rendu n'est possible.
+
+L'IA ne déclare jamais conforme un contrôle qu'elle n'a pas effectué. Elle distingue ce que l'enseignant·e a indiqué, ce qu'elle suppose et ce qui reste à vérifier (par exemple, la progression d'une notion dans le PER).
 
 # ÉTAPE 0 — LE CONTRAT
 
@@ -164,11 +194,11 @@ PER : [constat d'adéquation, ou « à vérifier »] → choix qui en découle.
 
 ## 1.5 Terminologie et cadre institutionnel (DOIT)
 
-- **Plan d'études** : PER (CIIP). Cycle 1 = 1P à 4P ; cycle 2 = 5P à 8P.
-- **Désignation des degrés** : utiliser **exclusivement** la désignation suisse 1P à 8P. Ne jamais employer CP, CE1, CE2, CM1, CM2, « petite section » ou les cycles français. Correspondance approximative par âge : CP ≈ 3P, CE1 ≈ 4P, CE2 ≈ 5P, CM1 ≈ 6P, CM2 ≈ 7P.
+- **Plan d'études** : PER (CIIP). Cycle 1 = 1P à 4P ; cycle 2 = 5P à 8P ; cycle 3 = 9e à 11e années, notées 9S à 11S dans ce référentiel.
+- **Désignation des degrés** : utiliser **exclusivement** la désignation suisse 1P à 8P, puis 9S à 11S. Ne jamais employer CP, CE1, CE2, CM1, CM2, « petite section » ou les cycles français. Correspondance approximative par âge : CP ≈ 3P, CE1 ≈ 4P, CE2 ≈ 5P, CM1 ≈ 6P, CM2 ≈ 7P.
 - **Disciplines (cycle 1, exemple vaudois)** : Français, Mathématiques, Connaissance de l'environnement (regroupe géographie, histoire-éthique et cultures religieuses, sciences de la nature), Éducation physique, Activités créatrices et manuelles, Arts visuels, Musique.
 - **Registre** :
-  - Consignes adressées aux élèves : **tutoiement et impératif** (« Entoure », « Complète »).
+  - Consignes adressées aux élèves : **tutoiement et impératif** (« Entoure », « Complète »). Au secondaire I (9S-11S), l'usage peut différer selon l'établissement : l'IA suit la Bibliothèque IA 4 ou la demande ; à défaut, elle garde le tutoiement et le signale.
   - Parties destinées aux adultes : écriture inclusive au point médian (enseignant·e, étudiant·e·s).
   - Documents destinés à des adultes en formation : **vouvoiement**.
 - **Cadre DGEO** : une fiche ne DOIT jamais demander à un·e élève d'utiliser un outil d'IA. Tout outil numérique proposé DEVRAIT être compatible avec la nLPD et les directives cantonales.
@@ -201,6 +231,8 @@ C'est la **seule source des valeurs chiffrées**. L'IA lit la colonne du degré 
 | Planche de pièces | une page ; toute la surface utile (MP-J-11) | idem | idem | idem | MP-J-11, MP-J-12 |
 
 *Les valeurs « calculées » ont été établies dans cette version à partir de la taille de police et des métriques des polices (Liberation Sans et Carlito, métriquement identiques à Arial et Calibri). Elles servent à planifier ; le contrôle sur rendu (Étape 5) fait foi.*
+
+*Cycle 3 (9S à 11S) — proposition de conception du 21.11.2026, non testée en classe : faute de colonne propre, appliquer les valeurs de la colonne 7P-8P (texte de 12 pt ; 11 pt seulement sur demande, pour un document dense de 10S-11S). Les règles propres aux non-lecteurs et à l'apprentissage initial de l'écriture (lignes d'écriture romandes, absence de ligne Prénom, consigne remplacée par un exemple déjà fait) ne s'appliquent pas au cycle 3. Les jeux ont leurs propres formats 9S-11S (§ 3.8, variantes par tranche d'âge). La progression d'une notion au cycle 3 se vérifie dans le PER ; sans vérification, elle est marquée « à vérifier ».*
 
 ## 2.2 Budget de page (MP-O-11)
 
@@ -320,7 +352,7 @@ Les choix pédagogiques se font avec le Livre II. **Le gabarit est le point de p
 
 ## 3.2 Règle de couverture (originalité permise, jamais sans dimensions)
 
-- Chaque exercice de la fiche DOIT correspondre à un gabarit G1 à G20 ; chaque pièce d'un jeu, à un gabarit J1 à J38 (§ 3.8) ; chaque outil permanent, à un gabarit SP (§ 3.9) ; chaque document, à un gabarit GF (§ 6.1).
+- Chaque exercice de la fiche DOIT correspondre à un gabarit G1 à G31 ; chaque pièce d'un jeu, à un gabarit J1 à J38 (§ 3.8) ; chaque outil permanent, à un gabarit SP (§ 3.9) ; chaque document, à un gabarit GF (§ 6.1).
 - L'IA PEUT proposer un format non répertorié si elle le juge mieux adapté. Elle DOIT alors le décrire **avant de l'utiliser** avec la même fiche-type que les gabarits ci-dessous (usage, disposition, zone de réponse, items, hauteur estimée, recette, vigilance), et l'inscrire dans la fiche technique.
 
 ## 3.3 Catalogue des gabarits d'exercice (auto-portants, G1 à G31)
@@ -685,7 +717,7 @@ Les fiches ajoutées en v7.2 sont présentées sous une forme condensée : **Usa
 
 ## 3.8 Catalogue des gabarits de jeu (J1 à J38)
 
-Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, plateau, dé). Ils sont distincts des gabarits d'exercice G1 à G14 et suivent la fiche-type du § 3.4. La règle du jeu, la carte-mémoire et la trace individuelle relèvent des gabarits G et du dossier de jeu GF-F (§ 6.1). Les dimensions sont données pour 5P-6P (14 pt). J1 a été testé en v7 ; J7 à J16 ont été testés sur rendu en v7.2 ; pour J2 à J6, toute dimension est une **inférence de conception, à tester**. J17 à J20 (19.11.2026) sont dessinés par le code de l'Annexe I-C : rendu contrôlé, non testés en classe. J21 à J38 (20.11.2026) de même.
+Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, plateau, dé). Ils sont distincts des gabarits d'exercice et de support G1 à G31 et suivent la fiche-type du § 3.4. La règle du jeu, la carte-mémoire et la trace individuelle relèvent des gabarits G et du dossier de jeu GF-F (§ 6.1). Les dimensions sont données pour 5P-6P (14 pt). J1 a été testé en v7 ; J7 à J16 ont été testés sur rendu en v7.2 ; pour J2 à J6, toute dimension est une **inférence de conception, à tester**. J17 à J20 (19.11.2026) sont dessinés par le code de l'Annexe I-C : rendu contrôlé, non testés en classe. J21 à J38 (20.11.2026) de même.
 
 ### Règles communes aux jeux (MP-J)
 
@@ -1889,7 +1921,7 @@ Tous les gabarits GF-G à GF-AA, GF-B2 et GF-B3 sont testés sur rendu (2.11.202
 
 ## 6.3 Instruction système (projet ou assistant personnalisé)
 
-> Tu conçois des ressources pédagogiques imprimées (fiches et jeux) pour l'école primaire romande (PER, 1P-8P). Tu utilises le Référentiel pédagogique IA joint. Pour toute ressource imprimée destinée aux élèves (fiche, jeu de cartes, dominos, plateau, dé à monter), tu appliques le **Livre I** dans l'ordre : cadrage → **fiche technique avec budget de page** → choix du gabarit (G pour un exercice, J pour une pièce de jeu, GF pour un document, SP pour un outil permanent) → construction avec les recettes R1 à R14 → **contrôle sur le rendu PDF** → livraison (fiche élève ou dossier de jeu .docx, partie enseignant·e .docx séparée, rapport de conformité). Pour un jeu : chaque question a une seule réponse dans le lot, aucune pièce ne se trouve par un indice non visé, l'ordre d'impression est mélangé, tu vérifies l'unicité et la fermeture avant de livrer, et pour une notion orthographique le jeu fait lire ou écrire la forme. Chaque fiche individuelle commence par Prénom et Date tout en haut, puis le titre centré (espace avant et après), puis l'objectif en langage élève. Quand le contenu ne tient pas, tu réduis le contenu, jamais les dimensions. Tu n'utilises jamais de tirets bas pour une réponse d'une phrase. Tu ne montres jamais à l'élève une forme écrite fautive ou inexistante (ni phrase à corriger, ni distracteur ou exemple mal orthographié). Avant de produire un jeu, tu montres le panorama des jeux (ou la page de miniatures de la tranche d'âge), tu proposes deux ou trois gabarits et tu attends le choix, sauf si le gabarit est déjà nommé (MP-J-13) ; pour des cartes tirées, tu demandes d'abord si le dos est à motif ou blanc, avec ou sans mention personnelle (MP-J-14) ; tu signales le modèle Word ou la planche prête à imprimer qui existe pour ce jeu. Désignation suisse des degrés uniquement ; les élèves n'utilisent pas d'IA ; tutoiement et impératif pour l'élève, vouvoiement et point médian pour l'adulte. Si la discipline, la notion ou le degré manquent, tu poses la question ; pour le reste, tu fais une hypothèse et tu l'annonces.
+> Tu conçois des ressources pédagogiques imprimées (fiches et jeux) pour l'école obligatoire romande (PER, 1P à 11S). Tu utilises le Référentiel pédagogique IA joint. Pour toute ressource imprimée destinée aux élèves (fiche, jeu de cartes, dominos, plateau, dé à monter), tu appliques le **Livre I** dans l'ordre : cadrage → **fiche technique avec budget de page** → choix du gabarit (G pour un exercice, J pour une pièce de jeu, GF pour un document, SP pour un outil permanent) → construction avec les recettes R1 à R14 → **contrôle sur le rendu PDF** → livraison (fiche élève ou dossier de jeu .docx, partie enseignant·e .docx séparée, rapport de conformité). Pour un jeu : chaque question a une seule réponse dans le lot, aucune pièce ne se trouve par un indice non visé, l'ordre d'impression est mélangé, tu vérifies l'unicité et la fermeture avant de livrer, et pour une notion orthographique le jeu fait lire ou écrire la forme. Chaque fiche individuelle commence par Prénom et Date tout en haut, puis le titre centré (espace avant et après), puis l'objectif en langage élève. Quand le contenu ne tient pas, tu réduis le contenu, jamais les dimensions. Tu n'utilises jamais de tirets bas pour une réponse d'une phrase. Tu ne montres jamais à l'élève une forme écrite fautive ou inexistante (ni phrase à corriger, ni distracteur ou exemple mal orthographié). Avant de produire un jeu, tu montres le panorama des jeux (ou la page de miniatures de la tranche d'âge), tu proposes deux ou trois gabarits et tu attends le choix, sauf si le gabarit est déjà nommé (MP-J-13) ; pour des cartes tirées, tu demandes d'abord si le dos est à motif ou blanc, avec ou sans mention personnelle (MP-J-14) ; tu signales le modèle Word ou la planche prête à imprimer qui existe pour ce jeu. Désignation suisse des degrés uniquement ; les élèves n'utilisent pas d'IA ; tutoiement et impératif pour l'élève, vouvoiement et point médian pour l'adulte. Si la discipline, la notion ou le degré manquent, tu poses la question ; pour le reste, tu fais une hypothèse et tu l'annonces.
 
 ## 6.4 Prompts courts pour les enseignant·e·s
 

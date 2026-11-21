@@ -1,12 +1,12 @@
 # Bibliothèque IA 2 — pédagogique (à joindre à l'IA) — v1
 
-Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, aux cycles 1 et 2 — Suisse romande.
+Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, de la 1P à la 11S (exemples situés surtout aux cycles 1 et 2) — Suisse romande.
 
-Version v1 du 31 octobre 2026, mise à jour le 2 novembre 2026 : Référentiel pédagogique IA 7.2, révision du 2 novembre 2026 (en-tête des fiches sans étiquette « Mon objectif », Livre I). Types de ressources alignés sur le Catalogue Ressources au primaire (71 types, TR01 à TR71, numérotation des cartes ; TR16 Imagier et scène à légender ajouté le 3 novembre 2026, les types TR16 à TR70 du 2 novembre devenant TR17 à TR71) ; éléments de réalisation complétés pour chaque type. Emmanuel Flaction – emmanuel.flaction@hepl.ch Licence : CC BY-NC-SA 4.0.
+Édition du 21 novembre 2026. Le nom du fichier (« _v1 ») reste stable pour ne pas casser les liens ; l'édition (sa date) identifie la version, la même pour les bibliothèques, le guide web et les modèles. Historique détaillé : fichier NOUVEAUTES.md du dépôt https://github.com/emmanuelflaction/bibliotheques-ia. Auteur : Emmanuel Flaction, HEP Vaud (UER MI) – emmanuel.flaction@hepl.ch. Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
-> **Les trois bibliothèques IA (v1).** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 3 — guide pour l'enseignant·e : version complète (Livres I et II) à lire et à imprimer. Les renvois « Livre I » et « Livre II » du texte désignent donc les bibliothèques 1 et 2. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
+> **Les documents de l'ensemble.** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 4 — personnelle : les préférences de l'enseignant·e, à remplir une fois (modèle .docx). Banque d'icônes : un fichier pour l'IA et les images. Le guide pour les enseignant·e·s est une page web (https://emmanuelflaction.github.io/bibliotheques-ia/) ; l'ancienne Bibliothèque IA 3 qui le contenait n'existe plus et son numéro n'est pas réattribué. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
 
-> **Format de ce fichier.** Version Markdown destinée aux IA (fichier à joindre ou à déposer dans un projet). Ce fichier contient le **Livre II seul** : fonctions pédagogiques, processus cognitifs, familles de ressources, patrons, micro-formats, règles de combinaison, procédure pour les ressources non imprimées, prompts, et l'Annexe II-A (Catalogue Ressources au primaire : 70 types de ressources, TR01 à TR71). Les tableaux et les blocs de code sont conservés tels quels.
+> **Format de ce fichier.** Version Markdown destinée aux IA (fichier à joindre ou à déposer dans un projet). Ce fichier contient le **Livre II seul** : fonctions pédagogiques, processus cognitifs, familles de ressources, patrons, micro-formats, règles de combinaison, procédure pour les ressources non imprimées, prompts, et l'Annexe II-A (Catalogue Ressources au primaire : 71 types de ressources, TR01 à TR71). Les tableaux et les blocs de code sont conservés tels quels.
 
 # LIVRE II — RÉFÉRENTIELS DE DÉCISION PÉDAGOGIQUE
 
@@ -375,7 +375,7 @@ Une « analyse de texte » qui se résume à retrouver des informations littéra
 
 # PARTIE 4 — PANORAMA DES FAMILLES DE RESSOURCES
 
-*Complément : l'Annexe II-A décrit les 70 types concrets de ressources du Catalogue Ressources au primaire (TR01 à TR71 ; TRnn = carte Rnn du catalogue), reconnaissables à leur structure, avec le verso de chaque carte (fonctions dominantes, conditions d'usage), leurs correspondances (classe, fonctions, patrons, micro-formats, gabarits) et des prompts d'image. Toute ressource imprimée destinée aux élèves, y compris les jeux de la Classe IV, se produit avec le Livre I (gabarits de jeu J1 à J6, § 3.8).*
+*Complément : l'Annexe II-A décrit les 71 types concrets de ressources du Catalogue Ressources au primaire (TR01 à TR71 ; TRnn = carte Rnn du catalogue), reconnaissables à leur structure, avec le verso de chaque carte (fonctions dominantes, conditions d'usage), leurs correspondances (classe, fonctions, patrons, micro-formats, gabarits) et des prompts d'image. Toute ressource imprimée destinée aux élèves, y compris les jeux de la Classe IV, se produit avec le Livre I (gabarits de jeu J1 à J6, § 3.8).*
 
 **Au-delà de la fiche d'exercices**
 
@@ -2856,7 +2856,7 @@ Sailer, M., & Homner, L. (2020). The gamification of learning: A meta-analysis. 
 
 ---
 
-Statut des références : les cadres de recherche étayent les principes généraux de conception ; ils ne valident pas individuellement les 43 fonctions, 24 patrons et 48 micro-formats de cette typologie de travail. Les références CIIP (2024, 2025) ont été vérifiées sur les sites officiels. D’autres entrées historiques conservées gagneront à faire l’objet d’une vérification bibliographique exhaustive avant publication institutionnelle. Toute information PER précise doit être contrôlée dans le texte officiel.
+Statut des références : les cadres de recherche étayent les principes généraux de conception ; ils ne valident pas individuellement les 43 fonctions, 24 patrons et 72 micro-formats de cette typologie de travail. Les références CIIP (2024, 2025) ont été vérifiées sur les sites officiels. D’autres entrées historiques conservées gagneront à faire l’objet d’une vérification bibliographique exhaustive avant publication institutionnelle. Toute information PER précise doit être contrôlée dans le texte officiel.
 
 ---
 
