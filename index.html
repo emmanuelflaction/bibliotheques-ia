@@ -235,9 +235,10 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const typo = h => h.replace(/ ([:;?!»])/g, ' $1').replace(/« /g, '« ');
 const S = {page: 'accueil', cat: null, code: null, tr: null, onglet: 'ia'};
-const P = {degre: '', disc: '', notion: '', lignes: '', teinte: '', coop: '', picto: '', etoiles: '', outil: '', besoin: '', indices: '', contraintes: '', ress: '', garder: 'oui', amel: []};
+const P = {degre: '', disc: '', notion: '', lignes: '', teinte: '', coop: '', picto: '', etoiles: '', outil: '', besoin: '', indices: '', contraintes: '', ress: '', obs: '', garder: 'oui', amel: [], prop: [], prec: ''};
 try { Object.assign(P, JSON.parse(localStorage.getItem('guide-demande') || '{}')); } catch (e) {}
 if (!Array.isArray(P.amel)) P.amel = [];
+if (!Array.isArray(P.prop)) P.prop = [];
 const garderP = () => { try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} };
 const COUL = ['#e4572e', '#2a9d8f', '#3a7bd5', '#8e5bd0', '#e9a100', '#d6457f', '#4c9f38'];
 const RUB = [
@@ -378,7 +379,7 @@ const VUES = {
       <div class="pile" aria-hidden="true">${['J18', 'GF-L', 'J28'].map(c => `<img src="${vign(c)}" alt="">`).join('')}</div></div>
     <h2>Que souhaitez-vous faire ?</h2>
     <div class="entrees">
-      <button class="entree" style="--c:#c2571a" type="button" ${go({page: 'ameliorer', code: null})}><span class="n">Améliorer une ressource que j’utilise déjà</span><span class="d">Clarifier, différencier, ajouter des aides, en faire un jeu… en gardant votre objectif.</span></button>
+      <button class="entree" style="--c:#c2571a" type="button" ${go({page: 'ameliorer', code: null})}><span class="n">Améliorer une ressource que j’utilise déjà</span><span class="d">L’IA analyse d’abord votre ressource et propose deux ou trois transformations ; vous décidez ensuite de ce qui change.</span></button>
       <button class="entree" style="--c:#e9a100" type="button" ${go({page: 'hesite', code: null})}><span class="n">Créer une nouvelle ressource</span><span class="d">Partez de ce que vos élèves doivent apprendre : l’IA compare deux ou trois formats et attend votre choix.</span></button>
       <button class="entree" style="--c:#e4572e" type="button" ${go({page: 'sequence', code: null})}><span class="n">Composer une séquence</span><span class="d">Relier plusieurs ressources : chacune a sa fonction, et ce que l’une produit sert à la suivante.</span></button>
       <button class="entree" style="--c:#2a9d8f" type="button" data-defile="explorer"><span class="n">Explorer les modèles</span><span class="d">Jeux, fiches, supports et icônes : consulter, télécharger, imprimer, avec ou sans IA.</span></button></div>
@@ -664,13 +665,20 @@ const VUES = {
 
   ameliorer: () => `
     <h1 class="titre" style="--c:#c2571a">Améliorer une ressource que vous utilisez déjà</h1>
-    <p class="chapo">Partez de votre fiche, de votre jeu ou de votre support. L’IA garde ce qui fonctionne, propose deux ou trois transformations et attend votre choix.</p>
-    <div class="bloc fort" style="max-width:46em"><h2>Votre demande à l’IA</h2>
+    <p class="chapo">Partez de votre fiche, de votre jeu ou de votre support. En deux temps : l’IA analyse d’abord votre ressource et vous propose deux ou trois transformations ; vous décidez ensuite des modifications, et elle transforme la ressource.</p>
+    <div class="bloc fort" style="max-width:46em"><h2>1. Faites analyser votre ressource</h2>
       <label for="ress">Votre ressource, en une phrase<input id="ress" value="${esc(P.ress)}" placeholder="par exemple : fiche de deux pages, quatre exercices sur le présent" autocomplete="off"></label>
-      <fieldset class="choix"><legend>Ce que vous souhaitez changer</legend>${AMEL.map(([k, t], i) => `<label for="am${i}" class="case"><input type="checkbox" id="am${i}" data-amel="${k}" ${P.amel.includes(k) ? 'checked' : ''}>${t}</label>`).join('')}</fieldset>
+      <label for="obs">Ce que vous observez avec vos élèves (facultatif)<input id="obs" value="${esc(P.obs)}" placeholder="par exemple : beaucoup s’arrêtent à l’exercice 3" autocomplete="off"></label>
       <label for="garder" class="case"><input type="checkbox" id="garder" ${P.garder !== 'non' ? 'checked' : ''}>Garder l’objectif d’apprentissage de la ressource</label>
       ${champs('français', 'le présent des verbes en -er')}</div>
-    <p class="note">Joignez votre ressource à la conversation (fichier ou photo), sans nom, photo ni production d’élève. Avant de coller ce texte, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
+    <p class="note">Joignez votre ressource à la conversation (fichier ou photo), sans nom, photo ni production d’élève. Avant de coller ce texte, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>
+    <div class="bloc fort" style="max-width:46em"><h2>2. Décidez des modifications, puis faites transformer</h2>
+      <p>Lisez l’analyse et les propositions de l’IA. Vous pouvez vous arrêter là : l’analyse seule est déjà utile. Sinon, choisissez ce qui change, puis collez ce second texte dans la même conversation.</p>
+      <fieldset class="choix"><legend>Proposition retenue</legend>${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Proposition ${n}</label>`).join('')}</fieldset>
+      <fieldset class="choix"><legend>Ajouter aussi (facultatif)</legend>${AMEL.map(([k, t], i) => `<label for="am${i}" class="case"><input type="checkbox" id="am${i}" data-amel="${k}" ${P.amel.includes(k) ? 'checked' : ''}>${t}</label>`).join('')}</fieldset>
+      <label for="prec">Ce que vous corrigez dans l’analyse ou voulez préciser (facultatif)<input id="prec" value="${esc(P.prec)}" placeholder="par exemple : l’objectif est la conjugaison, pas l’orthographe" autocomplete="off"></label>
+      <label for="prompt2">Second texte à coller dans la conversation<textarea id="prompt2" readonly></textarea></label>
+      <div class="rang"><button class="btn" type="button" id="copier2">Copier le second texte</button><span class="statut" id="statut2" role="status"></span></div></div>`,
 
   verifier: () => `
     <h1 class="titre">Vérifiez ce que l’IA a produit</h1>
@@ -705,6 +713,11 @@ const VUES = {
     <div class="rang"><button class="btn" type="button" ${go({page: 'jeux'})}>Voir les jeux</button></div>`
 };
 
+function demandeAmel2() {
+  const ch = AMEL.filter(a => P.amel.includes(a[0])).map(a => a[2]), pr = [...P.prop].sort();
+  const ret = pr.length === 1 ? `Je retiens ta proposition ${pr[0]}.` : pr.length ? `Je retiens tes propositions ${pr.slice(0, -1).join(', ')} et ${pr[pr.length - 1]}.` : ch.length ? `Je ne retiens aucune de tes propositions telle quelle.` : `Je retiens ta proposition [numéro à compléter].`;
+  return `${ret}${ch.length ? `\n${pr.length ? 'Autres modifications à faire' : 'Modifications à faire'} : ${ch.join(' ; ')}.` : ''}${(P.prec || '').trim() ? `\nPrécisions : ${P.prec.trim().replace(/([^.!?…])$/, '$1.')}` : ''}\nProduis maintenant la ressource transformée et son corrigé selon la Bibliothèque IA 1, en gardant ce qui fonctionne et en signalant ce qui a changé.\n${finV()}`;
+}
 function demande() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, it = S.page === 'fiche' ? item(S.code) : null;
   const lg = !jeunes() ? '' : P.lignes === 'simples' ? 'Zones d\'écriture : lignes simples.\n' : P.lignes === 'romandes' ? 'Zones d\'écriture : lignes d\'écriture romandes.\n' : '';
@@ -712,8 +725,7 @@ function demande() {
   const tete = `Degré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nNotion à travailler : ${v(P.notion, '[à compléter]')}\n${pn}${lg}${avecConsignes() && P.picto === 'oui' ? 'Consignes : place devant chaque consigne le pictogramme de la banque d\'icônes qui correspond à son verbe, le même pour le même verbe. Je joins la banque d\'icônes.\n' : ''}${avecEtoiles() && P.etoiles === 'oui' ? 'Difficulté : repère chaque exercice ou chaque carte par une à trois étoiles, de la tâche la plus simple à la plus difficile.\n' : ''}${enCouleur() && P.teinte ? `Impression : en couleur, teinte « ${P.teinte} » (option couleur de la bibliothèque).\n` : ''}`;
   const fin = `${joints()}${outilL()}\n${finV()}` + (it ? `\n\nRepère pour l'IA : ${it.ref} dans la Bibliothèque IA 1.` : '');
   if (S.page === 'ameliorer') {
-    const ch = AMEL.filter(a => P.amel.includes(a[0])).map(a => a[2]);
-    return `J'ai une ressource que j'utilise déjà dans ma classe et je veux l'améliorer. Je la joins à cette conversation, sans nom ni donnée d'élève.\n${tete}Ma ressource : ${v(P.ress, '[à compléter]')}\nCe que je souhaite changer : ${ch.length ? ch.join(' ; ') : 'je ne sais pas encore, propose-moi les améliorations les plus utiles'}.\n${P.garder !== 'non' ? `Garde l'objectif d'apprentissage de la ressource.` : `L'objectif peut évoluer : propose-le-moi avant de transformer.`}\n\n1. Analyse d'abord la ressource en quelques lignes : son objectif, ce que l'élève y fait réellement, ce qui fonctionne et doit être gardé.\n2. Propose ensuite deux ou trois transformations, chacune en deux ou trois phrases : ce qui change, pour quels élèves, et ce qui permettra de voir que l'apprentissage progresse. Attends mon choix.\n3. Produis enfin la ressource transformée et son corrigé selon la Bibliothèque IA 1, en signalant ce qui a changé.\n${fin}`;
+    return `J'ai une ressource que j'utilise déjà dans ma classe et je veux l'améliorer. Je la joins à cette conversation, sans nom ni donnée d'élève.\n${tete}Ma ressource : ${v(P.ress, '[à compléter]')}\n${(P.obs || '').trim() ? `Ce que j'observe avec mes élèves : ${P.obs.trim()}\n` : ''}${P.garder !== 'non' ? `Je souhaite garder l'objectif d'apprentissage de la ressource.` : `L'objectif peut évoluer : dis-le-moi dans ton analyse.`}\n\nNe transforme rien pour l'instant.\n1. Analyse la ressource en t'appuyant sur la grille de relecture de la Bibliothèque IA 1 : son objectif tel qu'il apparaît ; ce que l'élève y fait réellement ; trois points forts à garder ; trois obstacles prioritaires (lien entre l'objectif et les tâches, clarté des consignes, charge de lecture, lisibilité et mise en page, accessibilité, possibilité d'observer la réussite, exactitude). Distingue ce que tu constates de ce que tu supposes, et n'invente pas ce qui manque.\n2. Propose deux ou trois transformations numérotées, chacune en deux ou trois phrases : ce qui change, pour quels élèves, et ce qui permettra de voir que l'apprentissage progresse. Ne propose un jeu que si sa mécanique fait travailler la même opération.\nPuis attends : je te dirai quelles modifications effectuer.\n\n${joints()}${outilL()}`;
   }
   if (!it) return `Je veux créer une ressource pour ma classe.\n${tete}Ce que mes élèves doivent apprendre : ${v(P.besoin, '[à compléter]')}\nCe qui montrera qu'ils ont réussi : ${v(P.indices, 'propose-le-moi')}\n${(P.contraintes || '').trim() ? `Contraintes : ${P.contraintes.trim()}\n` : ''}\nAvant de produire quoi que ce soit :\n1. Reformule l'objectif et ce qui permettra d'observer la réussite. Ne me pose une question que si une information indispensable manque.\n2. Compare deux ou trois formats possibles (fiche, jeu, support, activité avec le matériel de la classe), en quelques phrases chacun : ce que l'élève y fait réellement, en quoi cela sert l'objectif, ses limites. Ne retiens un jeu que si sa mécanique fait travailler l'opération visée. Si tu disposes des panoramas des jeux et des exercices, montre-les.\n3. Recommande un format et attends mon choix.\nProduis ensuite la ressource et son corrigé selon la Bibliothèque IA 1.\n${fin}`;
   const ref = `${it.nom}`;
@@ -736,7 +748,14 @@ function brancher() {
     const se = $('#etoiles'); if (se) se.addEventListener('change', e => { P.etoiles = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
     const so = $('#outil'); if (so) so.addEventListener('change', e => { P.outil = e.target.value; garderP(); pr.value = demande(); });
     [['#besoin', 'besoin'], ['#indices', 'indices'], ['#contraintes', 'contraintes'], ['#ress', 'ress']].forEach(([sel, k]) => { const el = $(sel); if (el) el.addEventListener('input', e => { P[k] = e.target.value; garderP(); pr.value = demande(); }); });
-    document.querySelectorAll('[data-amel]').forEach(c => c.addEventListener('change', () => { P.amel = [...document.querySelectorAll('[data-amel]:checked')].map(x => x.dataset.amel); garderP(); pr.value = demande(); }));
+    const p2 = $('#prompt2'), maj2 = () => { if (p2) p2.value = demandeAmel2(); };
+    maj2();
+    document.querySelectorAll('[data-amel]').forEach(c => c.addEventListener('change', () => { P.amel = [...document.querySelectorAll('[data-amel]:checked')].map(x => x.dataset.amel); garderP(); maj2(); }));
+    document.querySelectorAll('[data-prop]').forEach(c => c.addEventListener('change', () => { P.prop = [...document.querySelectorAll('[data-prop]:checked')].map(x => +x.dataset.prop); garderP(); maj2(); }));
+    [['#obs', 'obs', () => pr.value = demande()], ['#prec', 'prec', maj2]].forEach(([sel, k, f]) => { const el = $(sel); if (el) el.addEventListener('input', e => { P[k] = e.target.value; garderP(); f(); }); });
+    const c2 = $('#copier2'); if (c2) c2.onclick = async () => { let ok = false;
+      try { await navigator.clipboard.writeText(p2.value); ok = true; } catch (e) { p2.focus(); p2.select(); try { ok = document.execCommand('copy'); } catch (x) {} }
+      $('#statut2').textContent = ok ? 'Copié. Collez ce texte dans la même conversation.' : 'Le texte est sélectionné : copiez-le avec Ctrl + C ou ⌘ + C.'; };
     const sg = $('#garder'); if (sg) sg.addEventListener('change', e => { P.garder = e.target.checked ? 'oui' : 'non'; garderP(); pr.value = demande(); });
     const sl = $('#lignes'); if (sl) sl.addEventListener('change', e => { P.lignes = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
     $('#copier').onclick = async () => {

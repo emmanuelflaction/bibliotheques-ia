@@ -2488,9 +2488,10 @@ Les prompts suivants peuvent être utilisés en complément des instructions ci-
 > \[Plus manipulable / plus collaboratif / plus accessible aux lecteurs
 > débutants / etc.\]
 >
-> Propose 2 ou 3 transformations possibles, en précisant pour chacune la
-> fonction visée, le patron, les micro-formats et ce qui change par
-> rapport à l'original.
+> Analyse d'abord brièvement la ressource (forces, obstacles prioritaires),
+> puis propose 2 ou 3 transformations possibles, numérotées, en précisant
+> pour chacune la fonction visée, le patron, les micro-formats et ce qui
+> change par rapport à l'original. Attends mon choix avant de transformer.
 
 ### Prompt C — Différencier une ressource
 
@@ -2570,7 +2571,7 @@ Les prompts suivants peuvent être utilisés en complément des instructions ci-
 ### Prompt G — Analyser et améliorer une ressource
 
 > RESSOURCE : \[joindre ou coller\] ; OBJECTIF : \[préciser\] ; DEGRÉ : \[préciser\].
-> Analyser l’alignement, les processus cognitifs, la clarté, les erreurs éventuelles, l’accessibilité, les possibilités d’évaluation formative et la faisabilité. Identifier d’abord 3 forces et 3 priorités de révision, puis produire une version améliorée complète et expliciter ce qui a changé. Ne pas inventer les informations manquantes.
+> Analyser l’alignement, les processus cognitifs, la clarté, les erreurs éventuelles, l’accessibilité, les possibilités d’évaluation formative et la faisabilité. Identifier d’abord 3 forces et 3 priorités de révision, puis proposer 2 ou 3 transformations numérotées et attendre le choix de l’enseignant·e ; produire ensuite seulement la version améliorée complète, en explicitant ce qui a changé. Ne pas inventer les informations manquantes.
 
 ### Prompt H — Générer des variantes comparables
 

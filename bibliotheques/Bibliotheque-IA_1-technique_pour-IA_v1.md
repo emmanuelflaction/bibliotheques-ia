@@ -2013,9 +2013,9 @@ Attends mon choix avant de produire.
 #### Transformer
 
 ```
-Transforme cette fiche selon le Livre I. Commence par la fiche
-technique (budget de page), garde les contenus justes, reconstruis
-la mise en page avec les recettes R1 à R8, puis vérifie le rendu.
+Analyse d'abord cette fiche avec la grille de l'Annexe I-B : trois points forts, trois obstacles prioritaires, puis deux ou trois transformations numérotées. Ne transforme rien et attends mon choix.
+Ensuite seulement, transforme-la selon le Livre I : fiche technique (budget de page), contenus justes gardés,
+mise en page reconstruite avec les recettes R1 à R8, puis vérification du rendu.
 ```
 
 # ANNEXE I-A — STANDARD DE MISE EN PAGE MP-* (RÉFÉRENCE DES CODES)
