@@ -334,7 +334,7 @@ const jeunes = () => tranche(P.degre) === 0 && !(S.page === 'fiche' && item(S.co
 const avecConsignes = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme'; };
 const avecEtoiles = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme' || it.fam === 'jeu'; };
 const enCouleur = () => { const it = S.page === 'fiche' ? item(S.code) : null; return it && (it.fam === 'jeu' || it.fam === 'support') && it.fo.length && !it.fo.some(f => f.w); };
-const boite = (id, sfx, lib) => `<label for="${id}">Texte à coller dans la conversation<textarea id="${id}" readonly></textarea></label>
+const boite = (id, sfx, lib, haut) => `<label for="${id}">Texte à coller dans la conversation<textarea id="${id}" readonly${haut ? ` style="min-height:${haut}"` : ''}></textarea></label>
   <div class="rang"><button class="btn" type="button" id="copier${sfx}">${lib}</button><span class="statut" id="statut${sfx}" role="status"></span></div>`;
 async function copierTexte(t, st, msg) {
   let ok = false;
@@ -384,7 +384,7 @@ const VUES = {
       <div class="pile" aria-hidden="true">${['J18', 'GF-L', 'J28'].map(c => `<img src="${vign(c)}" alt="">`).join('')}</div></div>
     <h2>Que souhaitez-vous faire ?</h2>
     <div class="entrees">
-      <button class="entree" style="--c:#c2571a" type="button" ${go({page: 'ameliorer', code: null})}><span class="n">Améliorer une ressource que j’utilise déjà</span><span class="d">L’IA analyse d’abord votre ressource et propose deux ou trois transformations ; vous décidez ensuite de ce qui change.</span></button>
+      <button class="entree" style="--c:#c2571a" type="button" ${go({page: 'ameliorer', code: null})}><span class="n">Améliorer une ressource que j’utilise déjà</span><span class="d">L’IA analyse votre fiche et vous remet un bref rapport ; vous décidez ensuite si vous la faites évoluer.</span></button>
       <button class="entree" style="--c:#e9a100" type="button" ${go({page: 'hesite', code: null})}><span class="n">Créer une nouvelle ressource</span><span class="d">Partez de ce que vos élèves doivent apprendre : l’IA compare deux ou trois formats et attend votre choix.</span></button>
       <button class="entree" style="--c:#e4572e" type="button" ${go({page: 'sequence', code: null})}><span class="n">Composer une séquence</span><span class="d">Relier plusieurs ressources : chacune a sa fonction, et ce que l’une produit sert à la suivante.</span></button>
       <button class="entree" style="--c:#2a9d8f" type="button" data-defile="explorer"><span class="n">Explorer les modèles</span><span class="d">Jeux, fiches, supports et icônes : consulter, télécharger, imprimer, avec ou sans IA.</span></button></div>
@@ -669,15 +669,16 @@ const VUES = {
 
   ameliorer: () => `
     <h1 class="titre" style="--c:#c2571a">Améliorer une ressource que vous utilisez déjà</h1>
-    <p class="chapo">L’IA analyse votre fiche, vous la corrigez si besoin, puis vous choisissez ce qui change.</p>
-    <div class="bloc fort" style="max-width:46em"><h2>Demander à l’IA d’analyser ma fiche</h2>
-      <p>Joignez votre fiche à la conversation, sans donnée d’élève, puis collez ce texte.</p>
-      ${boite('prompt', '', 'Copier le texte')}</div>
-    <div class="bloc fort" style="max-width:46em"><h2>Demander à l’IA de transformer ma fiche</h2>
-      <p>Cochez la proposition retenue, puis collez ce texte dans la même conversation.</p>
-      <fieldset class="choix"><legend>Proposition retenue</legend>${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Proposition ${n}</label>`).join('')}</fieldset>
-      <details class="plus" ${P.amel.length ? 'open' : ''}><summary>Ajouter d’autres modifications (facultatif)</summary><fieldset class="choix">${AMEL.map(([k, t], i) => `<label for="am${i}" class="case"><input type="checkbox" id="am${i}" data-amel="${k}" ${P.amel.includes(k) ? 'checked' : ''}>${t}</label>`).join('')}</fieldset></details>
-      ${boite('prompt2', '2', 'Copier le texte')}</div>
+    <div class="bloc fort" style="max-width:46em"><h2>Analyser une fiche / ressource</h2>
+      <p>Demandez à l’IA de réaliser une analyse de votre document en le joignant à la conversation (fichier ou photo, sans donnée d’élève).</p>
+      <p>En utilisant le prompt ci-dessous, l’IA vous remet un bref rapport (ce qu’elle comprend de votre fiche, ce qui fonctionne et les possibilités d’amélioration).</p>
+      <p>Vérifiez si l’IA a bien compris votre document et corrigez-la si besoin ; dites-lui aussi ce que vous observez avec vos élèves.</p>
+      ${boite('prompt', '', 'Copier le texte', '11.5em')}</div>
+    <div class="bloc fort" style="max-width:46em"><h2>Transformer votre fiche / ressource (facultatif)</h2>
+      <p>Si vous souhaitez faire évoluer la fiche, vous pouvez coller ce prompt à la suite dans la même conversation (cochez la possibilité retenue).</p>
+      <p>Relisez toujours très attentivement le résultat avant de l’utiliser en classe !</p>
+      <fieldset class="choix"><legend>Possibilité retenue</legend>${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Possibilité ${n}</label>`).join('')}</fieldset>
+      ${boite('prompt2', '2', 'Copier le texte', '4.5em')}</div>
     <p class="note">Avant votre première demande, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
 
   verifier: () => `
@@ -714,9 +715,9 @@ const VUES = {
 };
 
 function demandeAmel2() {
-  const ch = AMEL.filter(a => P.amel.includes(a[0])).map(a => a[2]), pr = [...P.prop].sort();
-  const ret = pr.length === 1 ? `Je retiens ta proposition ${pr[0]}.` : pr.length ? `Je retiens tes propositions ${pr.slice(0, -1).join(', ')} et ${pr[pr.length - 1]}.` : ch.length ? `Je ne retiens aucune de tes propositions telle quelle.` : `Je retiens ta proposition [numéro à compléter].`;
-  return `${ret}${ch.length ? `\n${pr.length ? 'Ajoute aussi' : 'Fais plutôt ceci'} : ${ch.join(' ; ')}.` : ''}\nTransforme maintenant la ressource, avec son corrigé, selon la démarche « Améliorer une ressource » de la Bibliothèque IA 1. Dis-moi ce qui a changé, ce que tu as vérifié et ce qui me reste à vérifier.`;
+  const pr = [...P.prop].sort();
+  const sel = pr.length === 1 ? `la possibilité ${pr[0]}` : pr.length ? `les possibilités ${pr.slice(0, -1).join(', ')} et ${pr[pr.length - 1]}` : `la possibilité [numéro à compléter]`;
+  return `Transforme la fiche selon ${sel} de ton rapport, avec son corrigé, et dis-moi ce que tu as changé.`;
 }
 function demande() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, it = S.page === 'fiche' ? item(S.code) : null;
@@ -725,7 +726,7 @@ function demande() {
   const tete = `Degré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nNotion à travailler : ${v(P.notion, '[à compléter]')}\n${pn}${lg}${avecConsignes() && P.picto === 'oui' ? 'Consignes : place devant chaque consigne le pictogramme de la banque d\'icônes qui correspond à son verbe, le même pour le même verbe. Je joins la banque d\'icônes.\n' : ''}${avecEtoiles() && P.etoiles === 'oui' ? 'Difficulté : repère chaque exercice ou chaque carte par une à trois étoiles, de la tâche la plus simple à la plus difficile.\n' : ''}${enCouleur() && P.teinte ? `Impression : en couleur, teinte « ${P.teinte} » (option couleur de la bibliothèque).\n` : ''}`;
   const fin = `${joints()}${outilL()}\n${finV()}`;
   if (S.page === 'ameliorer') {
-    return `Voici une ressource que j'utilise dans ma classe (fichier joint, sans donnée d'élève). Je souhaite l'améliorer. Ne la transforme pas encore.\n1. Décris ce que tu observes : type de ressource, degré, discipline, notion et objectif probables, ce que l'élève fait réellement, trois points forts et trois obstacles principaux. Sépare ce que tu constates de ce que tu supposes.\n2. Demande-moi de confirmer ou de corriger, et ce que j'observe avec mes élèves.\n3. Propose deux ou trois améliorations numérotées : ce qui change, pour quels élèves, et comment voir les progrès.\nPuis attends ma réponse.\n\nSuis la démarche « Améliorer une ressource » de la Bibliothèque IA 1 jointe ; appuie-toi aussi sur la Bibliothèque IA 2 ou ma Bibliothèque IA 4 si je les ai jointes. Si la Bibliothèque IA 1 manque, dis-le avant de commencer.`;
+    return `Voici une fiche que j'utilise avec mes élèves (fichier joint).\nAnalyse-la et fais-moi un bref rapport, en quelques points :\n– ce que tu en comprends (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document) ;\n– ce qui fonctionne ;\n– les possibilités d'amélioration, numérotées.\nTermine en me demandant de confirmer ou de corriger ta lecture.\nSuis la Bibliothèque IA 1 jointe.`;
   }
   if (!it) return `Je veux créer une ressource pour ma classe.\n${tete}Ce que mes élèves doivent apprendre : ${v(P.besoin, '[à compléter]')}\nCe qui montrera qu'ils ont réussi : ${v(P.indices, 'propose-le-moi')}\n${(P.contraintes || '').trim() ? `Contraintes : ${P.contraintes.trim()}\n` : ''}\nAvant de produire quoi que ce soit :\n1. Reformule l'objectif et ce qui permettra d'observer la réussite. Ne me pose une question que si une information indispensable manque.\n2. Compare deux ou trois formats possibles (fiche, jeu, support, activité avec le matériel de la classe), en quelques phrases chacun : ce que l'élève y fait réellement, en quoi cela sert l'objectif, ses limites. Ne retiens un jeu que si sa mécanique fait travailler l'opération visée. Si tu disposes des panoramas des jeux et des exercices, montre-les.\n3. Recommande un format et attends mon choix.\nProduis ensuite la ressource et son corrigé selon la Bibliothèque IA 1.\n${fin}`;
   const ref = `${it.nom}`;

@@ -132,20 +132,11 @@ Si l'IA ne peut pas créer de tableaux, de hauteurs de ligne exactes ou de tabul
 
 Elle ne présente jamais un texte avec des tirets bas comme une fiche prête à imprimer.
 
-## 0.6 Démarche « Améliorer une ressource »
+## 0.6 Analyser, puis transformer une ressource
 
-Quand l'enseignant·e joint une ressource qu'il ou elle utilise déjà et demande de l'améliorer (texte du guide web ou demande libre), l'IA procède en deux temps.
+**Analyser une ressource.** Quand l'enseignant·e joint une ressource et demande de l'analyser, l'IA remet un bref rapport en quelques points : ce qu'elle en comprend (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document), ce qui fonctionne, les possibilités d'amélioration numérotées, en s'appuyant sur la grille de l'Annexe I-B. Elle termine en demandant de confirmer ou de corriger sa lecture. L'analyse s'arrête au rapport.
 
-**Premier temps : analyser, sans rien transformer.**
-
-1. Décrire la ressource : type ; degré, discipline, notion et objectif probables ; ce que l'élève y fait réellement.
-2. Relever trois points forts à garder et trois obstacles prioritaires, en s'appuyant sur la grille de l'Annexe I-B : lien entre l'objectif et les tâches, clarté des consignes, charge de lecture, lisibilité et mise en page, accessibilité, possibilité d'observer la réussite, exactitude.
-3. Distinguer ce qui est constaté de ce qui est supposé ; ne rien inventer de ce qui manque.
-4. Demander à l'enseignant·e de confirmer ou de corriger la description, en particulier le degré, la notion et l'objectif, et ce qu'il ou elle observe avec ses élèves.
-5. Proposer deux ou trois améliorations numérotées : ce qui change, pour quels élèves, et ce qui permettra de voir les progrès. Garder l'objectif repéré, sauf avis contraire ; ne proposer un jeu que si sa mécanique fait travailler la même opération (Étape 3).
-6. Attendre la réponse ; si l'enseignant·e corrige ou complète la description, adapter les propositions.
-
-**Second temps : transformer, après le choix de l'enseignant·e.** Produire la ressource transformée et son corrigé selon les Étapes 1 à 6, en gardant ce qui fonctionne ; signaler ce qui a changé. Si l'outil ne peut pas créer de fichier Word, appliquer le § 0.5. Terminer par la liste des contrôles, chacun avec son statut : vérifié sur le fichier, à vérifier par l'enseignant·e, ou impossible à vérifier ici.
+**Transformer une ressource analysée.** Quand l'enseignant·e choisit une ou plusieurs possibilités du rapport, l'IA transforme la ressource selon les Étapes 1 à 6, en gardant l'objectif et ce qui fonctionne, et dit ce qui a changé. Si l'enseignant·e a corrigé la lecture ou dit ce qu'il ou elle observe avec ses élèves, l'IA en tient compte.
 
 ## 0.7 Demandes venant du guide web
 
@@ -154,7 +145,7 @@ Le guide web « Composer un écosystème de ressources » produit des demandes e
 - le modèle est désigné par son nom, dans une ligne « Jeu choisi », « Type d'exercice », « Forme de la fiche », « Support choisi » ou « Outil choisi » ; l'index ci-dessous donne le gabarit correspondant ; en cas de doute, demander ;
 - « si tu ne peux pas créer de fichier Word » renvoie au § 0.5 ;
 - « la liste des contrôles, chacun avec son statut » renvoie à l'Étape 5 et à la règle MP-V-03 ;
-- « la démarche Améliorer une ressource » renvoie au § 0.6.
+- « Analyse-la et fais-moi un bref rapport » et « Transforme la fiche selon la possibilité … de ton rapport » renvoient au § 0.6.
 
 Dans ce qu'elle écrit à l'enseignant·e (propositions, explications, liste des contrôles), l'IA nomme les choses en toutes lettres ; les codes et les renvois chiffrés ne figurent que dans la fiche technique et le rapport de conformité, après le nom.
 
@@ -2153,12 +2144,12 @@ les deux ou trois gabarits qui conviennent à :
 Attends mon choix avant de produire.
 ```
 
-#### Transformer
+#### Analyser, puis transformer
 
 ```
-Améliore cette fiche selon la démarche « Améliorer une ressource » (§ 0.6) :
-analyse-la d'abord et propose deux ou trois améliorations, sans rien transformer ;
-attends mon choix avant de la transformer.
+Analyse cette fiche et fais-moi un bref rapport, en quelques points (§ 0.6) :
+ce que tu en comprends, ce qui fonctionne, les possibilités d'amélioration numérotées.
+Termine en me demandant de confirmer ou de corriger ta lecture.
 ```
 
 # ANNEXE I-A — STANDARD DE MISE EN PAGE MP-* (RÉFÉRENCE DES CODES)

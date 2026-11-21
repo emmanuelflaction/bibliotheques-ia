@@ -1,10 +1,10 @@
 # Nouveautés
 
-## 21 novembre 2026 (améliorer une ressource en deux temps)
+## 21 novembre 2026 (analyser, puis transformer une ressource)
 
-- Guide : les textes destinés à l'IA restent visibles (l'enseignant·e doit pouvoir lire ce qu'il ou elle demande), mais ils sont en langage courant : plus de code de modèle ni de renvoi chiffré. Les détails sont passés dans la Bibliothèque IA 1 : démarche « Améliorer une ressource » (§ 0.6) ; demandes venant du guide, avec l'index qui relie chaque nom du guide à son gabarit (§ 0.7), contrôlé par `outils/verifier.py`. Page « Améliorer une ressource » raccourcie.
-- Guide, « Améliorer une ressource » : premier temps, « Demander à l'IA d'analyser ma fiche », sans rien à remplir : l'IA décrit ce qu'elle observe (degré, notion, objectif, ce que fait l'élève, points forts, obstacles prioritaires, avec la grille de relecture), demande à l'enseignant·e de confirmer ou de corriger, et propose deux ou trois transformations numérotées, sans rien transformer ; second temps, l'enseignant·e retient une ou plusieurs propositions, ajoute éventuellement des modifications, et colle un second texte qui fait produire la ressource.
-- Même démarche dans le prompt court « Transformer » de la Bibliothèque IA 1 (§ 6.4) et dans les prompts B et G de la Bibliothèque IA 2.
+- Guide, page « Améliorer une ressource » : deux temps séparés. « Analyser une fiche / ressource » : l'IA remet un bref rapport (ce qu'elle comprend du document, ce qui fonctionne, possibilités d'amélioration numérotées) et demande de confirmer ou de corriger sa lecture. « Transformer votre fiche / ressource (facultatif) » : l'enseignant·e coche la possibilité retenue et colle un second texte.
+- Textes destinés à l'IA visibles sur toutes les pages, en langage courant, sans code ni renvoi chiffré ; les détails sont dans la Bibliothèque IA 1 : § 0.6 « Analyser, puis transformer une ressource » et § 0.7 « Demandes venant du guide web », avec l'index qui relie chaque nom du guide à son gabarit, contrôlé par `outils/verifier.py`.
+- Bibliothèque IA 1, § 6.4 : prompt court « Analyser, puis transformer ».
 
 ## 21 novembre 2026 (arbitrages)
 
