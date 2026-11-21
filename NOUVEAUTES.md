@@ -2,7 +2,7 @@
 
 ## 21 novembre 2026 (analyser, puis transformer une ressource)
 
-- Guide, page « Améliorer une ressource » : deux temps séparés. « Analyser une fiche / ressource » : l'IA remet un bref rapport (ce qu'elle comprend du document, ce qui fonctionne, possibilités d'amélioration numérotées) et demande de confirmer ou de corriger sa lecture. « Transformer votre fiche / ressource (facultatif) » : l'enseignant·e coche la possibilité retenue et colle un second texte.
+- Guide, page « Faire analyser ou transformer une fiche » (auparavant « Améliorer une ressource ») : deux temps séparés. « Analyser une fiche / ressource » : l'IA remet un bref rapport (ce qu'elle comprend du document, ce qui fonctionne, possibilités d'amélioration numérotées) et demande de confirmer ou de corriger sa lecture. « Transformer votre fiche / ressource (facultatif) » : l'enseignant·e coche la possibilité retenue et colle un second texte.
 - Textes destinés à l'IA visibles sur toutes les pages, en langage courant, sans code ni renvoi chiffré ; les détails sont dans la Bibliothèque IA 1 : § 0.6 « Analyser, puis transformer une ressource » et § 0.7 « Demandes venant du guide web », avec l'index qui relie chaque nom du guide à son gabarit, contrôlé par `outils/verifier.py`.
 - Bibliothèque IA 1, § 6.4 : prompt court « Analyser, puis transformer ».
 

@@ -385,7 +385,7 @@ const VUES = {
       <div class="pile" aria-hidden="true">${['J18', 'GF-L', 'J28'].map(c => `<img src="${vign(c)}" alt="">`).join('')}</div></div>
     <h2>Que souhaitez-vous faire ?</h2>
     <div class="entrees">
-      <button class="entree" style="--c:#c2571a" type="button" ${go({page: 'ameliorer', code: null})}><span class="n">Améliorer une ressource que j’utilise déjà</span><span class="d">L’IA analyse votre fiche et vous remet un bref rapport ; vous décidez ensuite si vous la faites évoluer.</span></button>
+      <button class="entree" style="--c:#c2571a" type="button" ${go({page: 'ameliorer', code: null})}><span class="n">Faire analyser ou transformer une fiche</span><span class="d">L’IA analyse une fiche ou une ressource que vous utilisez déjà et vous remet un bref rapport ; vous décidez ensuite si vous la faites évoluer.</span></button>
       <button class="entree" style="--c:#e9a100" type="button" ${go({page: 'hesite', code: null})}><span class="n">Créer une nouvelle ressource</span><span class="d">Partez de ce que vos élèves doivent apprendre : l’IA compare deux ou trois formats et attend votre choix.</span></button>
       <button class="entree" style="--c:#e4572e" type="button" ${go({page: 'sequence', code: null})}><span class="n">Composer une séquence</span><span class="d">Relier plusieurs ressources : chacune a sa fonction, et ce que l’une produit sert à la suivante.</span></button>
       <button class="entree" style="--c:#2a9d8f" type="button" data-defile="explorer"><span class="n">Explorer les modèles</span><span class="d">Jeux, fiches, supports et icônes : consulter, télécharger, imprimer, avec ou sans IA.</span></button></div>
@@ -586,7 +586,7 @@ const VUES = {
     <ul class="puces"><li>Les fractions de la bataille sont justes, et chaque égalité est voulue.</li><li>La synthèse reprend les formulations des élèves, sans en ajouter d’inexactes.</li><li>Les textes sont lisibles à la bonne taille ; aucun nom d’élève n’apparaît.</li><li>Ce que l’IA déclare « à vérifier » a été vérifié.</li></ul>
     <h2>9. Et si la fiche existante ne convient pas ?</h2>
     <p style="max-width:42em">Passez par « Améliorer une ressource » : par exemple, gardez l’objectif de la fiche et demandez une bande de fractions en aide détachable et deux défis en fin de page, plutôt que trois versions de la fiche.</p>
-    <div class="rang"><button class="btn" type="button" id="exCharger">Reprendre cet exemple dans l’outil</button><button class="btn second" type="button" ${go({page: 'ameliorer', code: null})}>Améliorer une ressource</button></div>`,
+    <div class="rang"><button class="btn" type="button" id="exCharger">Reprendre cet exemple dans l’outil</button><button class="btn second" type="button" ${go({page: 'ameliorer', code: null})}>Faire analyser ou transformer une fiche</button></div>`,
 
   c_ecosysteme: () => `
     <h1 class="titre" style="--c:#e4572e">Qu’est-ce qu’un écosystème de ressources ?</h1>
@@ -669,7 +669,7 @@ const VUES = {
     <p>Avant de coller ce texte, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
 
   ameliorer: () => `
-    <h1 class="titre" style="--c:#c2571a">Améliorer une fiche / ressource que vous utilisez déjà</h1>
+    <h1 class="titre" style="--c:#c2571a">Faire analyser ou transformer une fiche</h1>
     <div class="bloc fort" style="max-width:46em"><h2>Analyser une fiche / ressource</h2>
       <p>Demandez à l’IA de réaliser une analyse de votre document en le joignant à la conversation (fichier ou photo, sans donnée d’élève).</p>
       <p>En utilisant le prompt ci-dessous, l’IA vous remet un bref rapport (ce qu’elle comprend de votre fiche, ce qui fonctionne et les possibilités d’amélioration).</p>
