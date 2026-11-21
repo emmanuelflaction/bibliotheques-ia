@@ -142,7 +142,7 @@ body { border-top: 0; }
 .menu .dans { max-width: 1120px; margin: 0 auto; padding: 10px 20px 0; display: flex; flex-direction: column; gap: 6px; }
 .menu .marque { color: #fff; font-size: 1rem; padding: 4px 0; }
 .menu ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; overflow-x: auto; }
-.menu li button { background: none; border: 0; color: #dff1f5; padding: 12px 16px 14px; font-size: 1rem; cursor: pointer; white-space: nowrap; border-bottom: 6px solid transparent; border-radius: 10px 10px 0 0; }
+.menu li button { background: none; border: 0; color: #dff1f5; padding: 11px 11px 13px; font-size: .93rem; cursor: pointer; white-space: nowrap; border-bottom: 6px solid transparent; border-radius: 10px 10px 0 0; }
 .menu li button:hover { background: rgba(255, 255, 255, .12); color: #fff; }
 .menu li button[aria-current="page"] { background: var(--fond); color: var(--encre); font-weight: 700; border-bottom-color: var(--surligneur); }
 .page { padding-top: 28px; }
@@ -177,6 +177,15 @@ body { border-top: 0; }
 .courriels { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
 .courriels a { display: block; background: var(--papier); border: 2px solid var(--accent); border-radius: 14px; padding: 16px 20px; color: var(--accent); font-weight: 700; font-size: 1.05rem; text-decoration: underline; }
 .courriels a:hover { background: var(--accent-pale); }
+.puces { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 10px; max-width: 40em; } .puces li { padding-left: 4px; }
+.source { color: var(--doux); font-size: .88rem; max-width: 44em; }
+.grille { display: flex; flex-direction: column; gap: 10px; max-width: 44em; }
+.grille .ligne { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: center; background: var(--papier); border: 2px solid var(--trait); border-radius: 14px; padding: 12px 16px; }
+.grille select { width: auto; min-width: 8.5em; padding: 8px 10px; }
+.grille .ligne[data-v="oui"] { border-color: #4c9f38; background: color-mix(in srgb, #4c9f38 12%, var(--papier)); }
+.grille .ligne[data-v="partie"] { border-color: #e9a100; background: color-mix(in srgb, #e9a100 13%, var(--papier)); }
+.grille .ligne[data-v="non"] { border-color: #e4572e; background: color-mix(in srgb, #e4572e 11%, var(--papier)); }
+@media (max-width: 560px) { .grille .ligne { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -194,7 +203,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const typo = h => h.replace(/ ([:;?!»])/g, ' $1').replace(/« /g, '« ');
 const S = {page: 'accueil', cat: null, code: null, tr: null, onglet: 'ia'};
-const P = {degre: '', disc: '', notion: '', lignes: '', teinte: ''};
+const P = {degre: '', disc: '', notion: '', lignes: '', teinte: '', coop: ''};
 try { Object.assign(P, JSON.parse(localStorage.getItem('guide-demande') || '{}')); } catch (e) {}
 const COUL = ['#e4572e', '#2a9d8f', '#3a7bd5', '#8e5bd0', '#e9a100', '#d6457f', '#4c9f38'];
 const RUB = [
@@ -204,10 +213,12 @@ const RUB = [
   {id: 'formes', n: 'Formes de fiches', c: '#c2571a', v: 'GF-A', d: 'Entraînement, évaluation, devoir, ateliers, synthèse, billet de sortie…'},
   {id: 'supports', n: 'Supports et affiches', c: '#0a7f96', v: 'G26', d: 'Calendrier, horaire, journal de classe, affiches, sous-main, aides de table.'},
   {id: 'icones', n: 'Icônes', c: '#4c9f38', d: 'Pictogrammes de consignes, mains, dés, émotions, à insérer dans vos fiches.'},
+  {id: 'conseils', n: 'Conseils', c: '#d6457f', d: 'Règles du jeu, coopération, différenciation, vérifications avant de tester en classe.'},
   {id: 'mode', n: 'Mode d’emploi', c: '#5d6f7b', d: 'Préparer l’IA, vérifier, imprimer, ou travailler sans IA.'},
   {id: 'apropos', n: 'À propos', c: '#0a5f70', d: 'L’auteur, comment participer, les nouveautés.'}
 ];
 const rub = id => RUB.find(r => r.id === id);
+const GRILLE = {"Utile : fait-il apprendre ce qui est visé ?": ["L’objectif d’apprentissage est formulé en une phrase et relié au plan d’études.", "Chaque carte ou chaque case fait travailler cet objectif, sans tâche décorative.", "Le temps passé à apprendre est plus long que le temps passé à attendre ou à gérer le matériel.", "Tous les élèves du groupe répondent, pas seulement celui dont c’est le tour.", "L’erreur est exploitée : vérification, explication, nouvelle tentative.", "Je dispose d’un moyen de savoir ce que les élèves ont appris (fiche de suivi, questions avant et après).", "Les contenus ont été relus : réponses exactes, questions sans ambiguïté, orthographe."], "Utilisable : peut-on s’en servir sans difficulté ?": ["Une marche à suivre écrite accompagne le jeu : but, matériel, tour de jeu, erreur, fin de partie.", "Un élève peut expliquer la règle à un camarade après une partie modèle.", "Les textes sont lisibles à la distance d’utilisation ; la mise en page est la même sur toutes les cartes.", "Les images sont de style homogène et sans détail inutile.", "La réponse n’est pas visible par celui qui doit la trouver ; un corrigé est disponible.", "Le matériel est solide, facile à distribuer et à ranger, et le dé ne s’échappe pas.", "La taille des groupes et la durée d’une partie sont définies.", "Des niveaux ou des variantes permettent à chacun de réussir et de progresser."], "Acceptable : a-t-on envie et la possibilité de l’utiliser ?": ["Les élèves ont envie d’y rejouer ; je leur ai demandé leur avis.", "La règle favorise l’entraide et ne met personne en échec devant les autres.", "Aucun élève n’est désigné comme « différent » par le matériel qu’il reçoit.", "Le niveau sonore et l’organisation sont compatibles avec la classe et les classes voisines.", "Le temps de préparation est raisonnable par rapport au nombre d’utilisations prévues.", "Un·e collègue pourrait reprendre le jeu sans mes explications.", "Les images sont libres de droits ou leurs sources sont citées ; aucune donnée d’élève n’apparaît."]};
 const DEGRES = ['1P', '2P', '3P', '4P', '5P', '6P', '7P', '8P', '9S', '10S', '11S'];
 const tranche = d => { const i = DEGRES.indexOf(d); return i < 0 ? -1 : i < 4 ? 0 : i < 8 ? 1 : 2; };
 const item = c => D.items.find(i => i.c === c);
@@ -219,7 +230,7 @@ const couleur = it => it.rub === 'jeux' ? COUL[it.cat] : rub(it.rub).c;
 const aDoc = it => it.fo.length && it.fo[0].f;
 const rubriqueCourante = () => { const p = S.page;
   if (p === 'fiche') { const it = item(S.code); return it ? it.rub : 'accueil'; }
-  return ({cat: 'jeux', preparer: 'mode', verifier: 'mode', imprimer: 'mode', sansia: 'mode', hesite: 'accueil'})[p] || p; };
+  return ({cat: 'jeux', preparer: 'mode', verifier: 'mode', imprimer: 'mode', sansia: 'mode', hesite: 'accueil', c_regles: 'conseils', c_cooperer: 'conseils', c_differencier: 'conseils', c_grille: 'conseils'})[p] || p; };
 
 function naviguer(o) {
   Object.assign(S, o);
@@ -231,6 +242,7 @@ function parent() {
   if (it) return it.rub === 'jeux' ? {page: 'cat', cat: it.cat} : {page: it.rub};
   if (p === 'cat') return {page: 'jeux'};
   if (['preparer', 'verifier', 'imprimer', 'sansia'].includes(p)) return {page: 'mode'};
+  if (p.startsWith('c_')) return {page: 'conseils'};
   return {page: 'accueil'};
 }
 function menu() {
@@ -244,6 +256,7 @@ const champs = (ex1, ex2) => `
   <label for="degre">Degré<select id="degre"><option value="">Choisir…</option>${DEGRES.map(d => `<option ${P.degre === d ? 'selected' : ''}>${d}</option>`).join('')}</select></label>
   ${jeunes() ? `<label for="lignes">Lignes pour écrire (1P à 4P)<select id="lignes"><option value="">L’IA me posera la question</option><option value="simples" ${P.lignes === 'simples' ? 'selected' : ''}>Lignes simples</option><option value="romandes" ${P.lignes === 'romandes' ? 'selected' : ''}>Lignes d’écriture romandes</option></select></label>` : ''}
   ${enCouleur() ? `<label for="teinte">Impression<select id="teinte">${[['', 'Noir et blanc'], ['bleu', 'Couleur : bleu'], ['orange', 'Couleur : orange'], ['vert', 'Couleur : vert'], ['violet', 'Couleur : violet']].map(([v, t]) => `<option value="${v}" ${P.teinte === v ? 'selected' : ''}>${t}</option>`).join('')}</select></label>` : ''}
+  ${S.page === 'fiche' && item(S.code) && item(S.code).fam === 'jeu' ? `<label for="coop">Façon de jouer<select id="coop"><option value="">Règle habituelle</option><option value="coop" ${P.coop === 'coop' ? 'selected' : ''}>En coopération : un but commun pour le groupe</option></select></label>` : ''}
   <label for="disc">Discipline<input id="disc" value="${esc(P.disc)}" placeholder="par exemple : ${ex1}" autocomplete="off"></label>
   <label for="notion">Notion à travailler<input id="notion" value="${esc(P.notion)}" placeholder="par exemple : ${ex2}" autocomplete="off"></label>
   <label for="prompt">Texte à coller dans la conversation<textarea id="prompt" readonly></textarea></label>
@@ -278,7 +291,7 @@ const VUES = {
       <div class="confettis" aria-hidden="true">${COUL.concat('#0a7f96').map(c => `<i style="background:${c}"></i>`).join('')}</div></div>
       <div class="pile" aria-hidden="true">${['J18', 'GF-L', 'J28'].map(c => `<img src="${vign(c)}" alt="">`).join('')}</div></div>
     <h2>Que cherchez-vous ?</h2>
-    <div class="rubriques">${RUB.slice(1).map(r => { const n = r.id === 'icones' ? D.icones.reduce((a, g) => a + g.l.length, 0) + ' icônes' : r.id === 'mode' || r.id === 'apropos' ? '' : D.items.filter(i => i.rub === r.id).length + ' modèles';
+    <div class="rubriques">${RUB.slice(1).map(r => { const n = r.id === 'icones' ? D.icones.reduce((a, g) => a + g.l.length, 0) + ' icônes' : r.id === 'mode' || r.id === 'apropos' || r.id === 'conseils' ? '' : D.items.filter(i => i.rub === r.id).length + ' modèles';
       const v = r.id === 'icones' ? `<span class="ics" aria-hidden="true">${D.icones[3].l.slice(0, 4).map(i => `<img src="${i.u}" alt="">`).join('')}</span>` : r.v ? `<img class="vg" src="${vign(r.v)}" alt="">` : '';
       return `<button class="rubrique" style="--c:${r.c}" type="button" ${go({page: r.id})}><span class="tx"><span class="n">${r.n}</span><span class="d">${r.d}</span>${n ? `<span class="nb">${n}</span>` : ''}</span>${v}</button>`; }).join('')}
       <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'hesite', code: null})}><span class="tx"><span class="n">Je ne sais pas encore</span><span class="d">Décrivez votre besoin : l’IA vous propose deux ou trois possibilités.</span></span></button></div>`,
@@ -333,11 +346,91 @@ const VUES = {
       ${D.web ? `<p>Toutes les versions des bibliothèques et des modèles sont conservées sur GitHub.</p><div class="rang"><a class="btn second" href="${D.depot}" target="_blank" rel="noopener">Ouvrir le dépôt GitHub</a></div>` : ''}
       <p class="note">N’envoyez ni nom ni photo d’élève.</p></div>
     <div class="bloc" style="max-width:42em"><h2>Nouveautés</h2>
-      ${[['21 novembre 2026', 'Ce guide en ligne. Exemples en couleur des 27 formes de fiches et des 13 affiches. Couleur en option pour les jeux et pour les modèles Word. Lignes simples ou lignes d’écriture romandes, au choix, de la 1P à la 4P. Nouveaux supports : calendrier, horaire, livret à onglets, journal de classe, bande dessinée, exposé, maisons des nombres, quadrillage.'],
+      ${[['21 novembre 2026', 'Rubrique « Conseils » : règles du jeu, coopération, différenciation, grille avant le test en classe. Toutes les planches en couleur, treize exemples de jeux remplis de vrais contenus. Ce guide en ligne. Exemples en couleur des 27 formes de fiches et des 13 affiches. Couleur en option pour les jeux et pour les modèles Word. Lignes simples ou lignes d’écriture romandes, au choix, de la 1P à la 4P. Nouveaux supports : calendrier, horaire, livret à onglets, journal de classe, bande dessinée, exposé, maisons des nombres, quadrillage.'],
          ['20 novembre 2026', 'Dix-huit nouveaux jeux, dont les puzzles, le mot mystère, la cocotte, l’horloge, le petit bac, les petits chevaux et le sudoku. Lignes d’écriture romandes, syllabes et sons. Panoramas composés de vraies pages.'],
          ['19 novembre 2026', 'Grille d’alignement, serpents et échelles, bataille navale, roue de tirage. Quatre plateaux de parcours, dés à monter, dos de cartes à motif. Modèles Word à remplir.'],
          ['2 novembre 2026', 'Mise à jour de la version 1.'], ['31 octobre 2026', 'Version 1 des bibliothèques.']]
         .map(([d, t]) => `<div><h3>${d}</h3><p>${t}</p></div>`).join('')}</div>`,
+
+  conseils: () => `
+    <h1 class="titre" style="--c:${rub('conseils').c}">Conseils</h1>
+    <p class="chapo">Quatre repères pour qu’un jeu ou une fiche fasse vraiment apprendre.</p>
+    <div class="rubriques">
+      <button class="rubrique" style="--c:#2a9d8f" type="button" ${go({page: 'c_regles'})}><span class="tx"><span class="n">Des règles du jeu qui font travailler tous les élèves</span><span class="d">La marche à suivre en cinq questions, et des astuces pratiques.</span></span></button>
+      <button class="rubrique" style="--c:#3a7bd5" type="button" ${go({page: 'c_cooperer'})}><span class="tx"><span class="n">Passer de la compétition à la coopération</span><span class="d">Changer la condition de victoire.</span></span></button>
+      <button class="rubrique" style="--c:#8e5bd0" type="button" ${go({page: 'c_differencier'})}><span class="tx"><span class="n">Différencier sans faire trois versions</span><span class="d">Sept leviers autour d’une fiche unique.</span></span></button>
+      <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'c_grille'})}><span class="tx"><span class="n">Mon jeu est-il utile, utilisable, acceptable ?</span><span class="d">Une grille à remplir avant le test en classe, puis après.</span></span></button>
+    </div>`,
+
+  c_regles: () => `
+    <h1 class="titre" style="--c:#2a9d8f">Des règles du jeu qui font travailler tous les élèves</h1>
+    <p class="chapo">Un jeu remis sans mode d’emploi laisse chaque groupe inventer ses règles. Une marche à suivre d’une demi-page répond à cinq questions.</p>
+    <ol class="pas">
+      <li><div class="c"><h3>Quel est le but, et qu’apprend-on en jouant ?</h3></div></li>
+      <li><div class="c"><h3>Quel matériel faut-il, et combien de joueurs ?</h3></div></li>
+      <li><div class="c"><h3>Que fait-on à son tour, étape par étape ?</h3></div></li>
+      <li><div class="c"><h3>Que se passe-t-il en cas d’erreur, et comment vérifie-t-on la réponse ?</h3></div></li>
+      <li><div class="c"><h3>Quand la partie est-elle terminée ?</h3></div></li>
+    </ol>
+    <h2>Pour que chacun travaille, pas seulement celui qui joue</h2>
+    <ul class="puces">
+      <li>Groupes de trois ou quatre. Au-delà, l’attente entre deux tours est longue et les tensions montent.</li>
+      <li>Tout le monde répond. Chaque élève note sa réponse sur une ardoise ; celui dont c’est le tour la dit à voix haute.</li>
+      <li>Un vérificateur ou une vérificatrice dispose du corrigé et change à chaque tour.</li>
+      <li>Assez de cartes pour éviter les répétitions, numérotées et rangées par lots.</li>
+      <li>Une partie modèle jouée devant la classe avant de lancer les groupes.</li>
+      <li>Un but annoncé avant de jouer : « à la fin, vous saurez… ».</li>
+    </ul>
+    <h2>Astuces pratiques</h2>
+    <ul class="puces">
+      <li>Faites lancer le dé dans une boîte ou un couvercle : il ne roule plus sous les tables et le bruit diminue. Un dé en mousse ou un tapis en feutrine ont le même effet.</li>
+      <li>Pour des cartes question-réponse, cachez la réponse : pochette, rabat, ou carte tenue par le camarade qui interroge.</li>
+      <li>Un sablier par groupe limite le temps de réponse et la durée de la partie.</li>
+      <li>Un sachet étiqueté par jeu, avec la marche à suivre et le corrigé à l’intérieur.</li>
+      <li>Testez l’impression recto-verso sur une seule feuille avant de tout imprimer.</li>
+      <li>Laissez le jeu en libre accès après la séance : les élèves y reviennent volontiers.</li>
+    </ul>
+    <p class="note">Avec une IA : la Bibliothèque IA 1 lui demande déjà de rédiger la règle selon ces cinq questions.</p>`,
+
+  c_cooperer: () => `
+    <h1 class="titre" style="--c:#3a7bd5">Passer de la compétition à la coopération</h1>
+    <p class="chapo">Dans un jeu de l’oie classique, le premier arrivé gagne. La compétition vient donc de la règle, pas des élèves : pour obtenir de la coopération, changez la condition de victoire.</p>
+    <div class="bloc" style="max-width:42em"><p>Le principe central est l’interdépendance positive : chacun ne réussit que si les autres réussissent aussi. Elle va de pair avec la responsabilité individuelle : chacun doit apporter sa part (Johnson & Johnson, 2009).</p></div>
+    <ul class="puces">
+      <li><b>Un seul pion pour le groupe, contre le jeu.</b> L’équipe doit atteindre l’arrivée avant la fin du sablier, ou avant un pion adverse qui avance tout seul.</li>
+      <li><b>Un but commun chiffré.</b> La partie est gagnée si tous les pions sont arrivés en moins de dix tours, ou si le groupe a réussi vingt cartes.</li>
+      <li><b>Des rôles tournants.</b> Lecteur ou lectrice, vérificateur ou vérificatrice, secrétaire, gardien ou gardienne du temps : personne ne monopolise le jeu.</li>
+      <li><b>L’aide qui rapporte.</b> Si l’explication d’un camarade permet de répondre, les deux avancent.</li>
+      <li><b>L’erreur sans recul.</b> Remplacez « je recule d’une case » par « le groupe explique, puis je rejoue ».</li>
+      <li><b>Des binômes par pion</b>, qui se mettent d’accord avant de répondre.</li>
+      <li><b>Un bilan en fin de partie.</b> « Qu’est-ce qui nous a aidés ? »</li>
+    </ul>
+    <p class="note">Si un élève décide de tout à la place des autres, renforcez les rôles. Si l’intérêt retombe sans enjeu, gardez un défi : battre le score de la partie précédente, ou jouer équipe contre équipe.</p>
+    <div class="rang"><button class="btn second" type="button" ${go({page: 'fiche', code: 'J13'})}>Voir les cartes de rôle</button></div>
+    <p class="source">Johnson, D. W., & Johnson, R. T. (2009). An educational psychology success story: Social interdependence theory and cooperative learning. Educational Researcher, 38(5), 365-379.</p>`,
+
+  c_differencier: () => `
+    <h1 class="titre" style="--c:#8e5bd0">Différencier sans faire trois versions de chaque fiche</h1>
+    <p class="chapo">La différenciation peut porter sur les contenus, les processus, les productions ou les structures (Forget, 2018). Tripler une fiche ne joue que sur les contenus, le levier le plus coûteux à préparer. Les autres se règlent autour d’une fiche unique.</p>
+    <ul class="puces">
+      <li><b>Difficulté croissante.</b> Les exercices vont du plus simple au plus difficile, avec un repère discret. Chacun choisit son point de départ.</li>
+      <li><b>Noyau commun et prolongements.</b> Tous font le haut de la fiche, qui porte l’objectif ; le bas propose des défis facultatifs.</li>
+      <li><b>Aides détachées.</b> Exemple résolu, rappel de la règle, pictogramme de la démarche : sur des cartes en libre accès, réutilisables d’une fiche à l’autre.</li>
+      <li><b>Quantité plutôt qu’objectif.</b> « Faites au moins quatre exercices sur huit, dont le numéro 5. »</li>
+      <li><b>Forme de la réponse.</b> Écrire, entourer, relier, manipuler puis dessiner, ou expliquer oralement.</li>
+      <li><b>Organisation.</b> Seul, en binôme d’entraide, ou en petit groupe avec l’enseignant·e.</li>
+      <li><b>Trame stable.</b> Toujours la même mise en page : objectif, exemple, exercices gradués, défi.</li>
+    </ul>
+    <p class="note">Une fiche identique pour tous, avec des aides en libre accès, ne désigne personne comme « différent ». Le libre choix a une limite : certains élèves choisissent toujours trop facile ou trop difficile, et il faut alors orienter leur point de départ.</p>
+    <div class="rang"><button class="btn second" type="button" ${go({page: 'fiche', code: 'J15'})}>Voir les cartes d’aide graduée</button></div>
+    <p class="source">Forget, A. (2018). Penser la différenciation pédagogique. Carnets des sciences de l’éducation, Université de Genève.</p>`,
+
+  c_grille: () => `
+    <h1 class="titre" style="--c:#e9a100">Mon jeu est-il utile, utilisable, acceptable ?</h1>
+    <p class="chapo">À remplir avant le test en classe, puis à reprendre après. Chaque « en partie » ou « non » indique une amélioration possible.</p>
+    ${Object.entries(GRILLE).map(([t, l], g) => `<section class="groupe"><h2>${t}</h2><div class="grille">${l.map((x, i) => `<div class="ligne" data-v=""><label for="g${g}_${i}" style="font-weight:400">${x}</label><select id="g${g}_${i}" data-grille><option value="">Choisir…</option><option value="oui">Oui</option><option value="partie">En partie</option><option value="non">Non</option></select></div>`).join('')}</div></section>`).join('')}
+    <p class="statut" id="bilan" role="status"></p>
+    <p class="source">Les trois questions viennent du triptyque utilité, utilisabilité, acceptabilité (Tricot et al., 2003). Vos réponses restent sur cette page et ne sont pas enregistrées.</p>`,
 
   preparer: () => `
     <h1 class="titre">Préparez votre IA</h1>
@@ -431,7 +524,7 @@ function demande() {
   if (it.fam === 'forme') return `Je prépare une fiche à imprimer pour ma classe.\n${tete}Forme de la fiche : ${ref}.\n\nPropose-moi d'abord le plan de la fiche et les types d'exercice, puis attends mon accord.\nProduis ensuite le document à imprimer et son corrigé.\n${fin}`;
   if (it.fam === 'aide') return `Je prépare une affiche ou une aide permanente pour ma classe.\n${tete}Outil choisi : ${ref}.\n\nPose-moi les questions utiles, puis produis le document à imprimer.\n${fin}`;
   if (it.fam === 'support') return `Je prépare un support à imprimer pour ma classe.\n${tete}Support choisi : ${ref}.\n\nPose-moi les questions utiles, puis produis le document à imprimer.\n${fin}`;
-  return `Je prépare un jeu à imprimer pour ma classe.\n${tete}Jeu choisi : ${ref}.\n\nMontre-moi d'abord le format prévu pour ce degré et attends mon accord.\nProduis ensuite le document à imprimer et la feuille de solutions.\n${fin}`;
+  return `Je prépare un jeu à imprimer pour ma classe.\n${tete}Jeu choisi : ${ref}.\n${P.coop === 'coop' ? 'Règle : variante coopérative, avec un but commun pour le groupe.\n' : ''}\nMontre-moi d'abord le format prévu pour ce degré et attends mon accord.\nProduis ensuite le document à imprimer et la feuille de solutions.\n${fin}`;
 }
 function brancher() {
   const pr = $('#prompt');
@@ -441,6 +534,7 @@ function brancher() {
       P[k] = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {}
       if (k === 'degre') { rendre(); $('#degre').focus(); } else pr.value = demande(); }));
     const st = $('#teinte'); if (st) st.addEventListener('change', e => { P.teinte = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
+    const sc = $('#coop'); if (sc) sc.addEventListener('change', e => { P.coop = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
     const sl = $('#lignes'); if (sl) sl.addEventListener('change', e => { P.lignes = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
     $('#copier').onclick = async () => {
       let ok = false;
@@ -449,6 +543,9 @@ function brancher() {
     };
   }
   const z = $('#zoom'); if (z) z.onclick = () => { $('#grand-img').src = z.querySelector('img').src; const d = $('#grand'); d.showModal ? d.showModal() : d.setAttribute('open', ''); };
+  document.querySelectorAll('[data-grille]').forEach(s => s.onchange = () => { s.closest('.ligne').dataset.v = s.value;
+    const v = [...document.querySelectorAll('[data-grille]')].map(x => x.value), n = k => v.filter(x => x === k).length;
+    $('#bilan').textContent = `${n('oui')} oui, ${n('partie')} en partie, ${n('non')} non, ${n('')} sans réponse.`; });
   document.querySelectorAll('[data-tr]').forEach(b => b.onclick = () => { S.tr = +b.dataset.tr; rendre(); });
   document.querySelectorAll('[data-onglet]').forEach(b => b.onclick = () => { S.onglet = b.dataset.onglet; rendre(); });
 }

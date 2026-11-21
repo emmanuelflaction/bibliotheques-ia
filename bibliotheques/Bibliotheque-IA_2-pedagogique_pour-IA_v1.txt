@@ -2,7 +2,7 @@
 
 Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, aux cycles 1 et 2 — Suisse romande.
 
-Version v1 du 31 octobre 2026, mise à jour le 2 novembre 2026 : Référentiel pédagogique IA 7.2, révision du 2 novembre 2026 (en-tête des fiches sans étiquette « Mon objectif », Livre I). Types de ressources alignés sur le Catalogue Ressources au primaire (71 types, TR01 à TR71, numérotation des cartes ; TR16 Imagier et scène à légender ajouté le 3 novembre 2026, les types TR16 à TR70 du 2 novembre devenant TR17 à TR71) ; éléments de réalisation complétés pour chaque type. Emmanuel Flaction – emmanuel.flaction@hepl.ch
+Version v1 du 31 octobre 2026, mise à jour le 2 novembre 2026 : Référentiel pédagogique IA 7.2, révision du 2 novembre 2026 (en-tête des fiches sans étiquette « Mon objectif », Livre I). Types de ressources alignés sur le Catalogue Ressources au primaire (71 types, TR01 à TR71, numérotation des cartes ; TR16 Imagier et scène à légender ajouté le 3 novembre 2026, les types TR16 à TR70 du 2 novembre devenant TR17 à TR71) ; éléments de réalisation complétés pour chaque type. Emmanuel Flaction – emmanuel.flaction@hepl.ch Licence : CC BY-NC-SA 4.0.
 
 > **Les trois bibliothèques IA (v1).** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 3 — guide pour l'enseignant·e : version complète (Livres I et II) à lire et à imprimer. Les renvois « Livre I » et « Livre II » du texte désignent donc les bibliothèques 1 et 2. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
 
@@ -2663,6 +2663,70 @@ C'est à ce palier que la pleine valeur du référentiel apparaît : l'IA cesse 
 Les catégories et les correspondances F–P–MF constituent une proposition opérationnelle : elles ne sont pas une taxonomie académique validée telle quelle. Un usage institutionnel devrait être précédé d’essais sur plusieurs disciplines et degrés. Comparer, pour les mêmes objectifs, des ressources générées avec et sans ce référentiel, puis les faire apprécier par des enseignant·e·s selon l’alignement, la diversité, l’accessibilité, la faisabilité, l’exactitude et le temps de révision.
 
 Le dispositif ne doit jamais inférer un diagnostic, un style d’apprentissage ou une caractéristique personnelle à partir de quelques réponses. Les productions d’élèves doivent être anonymisées, et le traitement de données personnelles respecter les exigences institutionnelles. Les contrôles de qualité automatisés ne remplacent pas l’expertise de l’enseignant·e.
+
+## Repères pour les jeux, la coopération et la différenciation
+
+Ces repères complètent les règles de la Bibliothèque IA 1 (MP-J-07, MP-D-02, § 4.3). Ils servent à conseiller l'enseignant·e avant la production et à justifier les choix dans la partie enseignant·e.
+
+**Évaluer une ressource : utile, utilisable, acceptable**
+
+Le triptyque utilité, utilisabilité, acceptabilité (Tricot et al., 2003) donne trois questions : la ressource fait-elle apprendre ce qui est visé ? Est-elle facile à utiliser ? Les élèves et l'enseignant·e ont-ils envie de s'en servir, et le peuvent-ils dans leur contexte ? L'acceptabilité (ce que les utilisateurs pensent de la ressource) ne se confond pas avec l'accessibilité (la possibilité d'y accéder). La mise en page réduit la charge extrinsèque, celle qui vient de la présentation ; la charge intrinsèque dépend du contenu lui-même.
+
+- Utile : l'objectif d'apprentissage tient en une phrase et se relie au plan d'études ; chaque carte ou chaque case fait travailler cet objectif, sans tâche décorative ; le temps passé à apprendre dépasse le temps passé à attendre ou à gérer le matériel ; tous les élèves du groupe répondent ; l'erreur est exploitée (vérification, explication, nouvelle tentative) ; un moyen permet de savoir ce que les élèves ont appris ; les contenus sont relus.
+- Utilisable : une marche à suivre écrite accompagne le jeu ; un élève peut expliquer la règle après une partie modèle ; les textes se lisent à la distance d'utilisation et la mise en page est la même sur toutes les cartes ; les images sont de style homogène ; la réponse n'est pas visible par celui qui doit la trouver et un corrigé est disponible ; le matériel est solide, facile à distribuer et à ranger ; la taille des groupes et la durée d'une partie sont définies ; des niveaux ou des variantes permettent à chacun de réussir.
+- Acceptable : les élèves ont envie de rejouer ; la règle favorise l'entraide et ne met personne en échec devant les autres ; aucun élève n'est désigné comme « différent » par le matériel qu'il reçoit ; le niveau sonore et l'organisation conviennent à la classe ; le temps de préparation reste raisonnable ; un·e collègue pourrait reprendre le jeu sans explications ; les images sont libres de droits ou sourcées, et aucune donnée d'élève n'apparaît.
+
+**Des règles du jeu qui font travailler tous les élèves**
+
+Un jeu remis sans mode d'emploi laisse chaque groupe inventer ses règles. Une marche à suivre d'une demi-page répond à cinq questions : le but et ce qu'on apprend en jouant ; le matériel et le nombre de joueurs ; ce qu'on fait à son tour, étape par étape ; ce qui se passe en cas d'erreur et la façon de vérifier la réponse ; la fin de la partie.
+
+- Groupes de trois ou quatre : au-delà, l'attente entre deux tours est longue.
+- Tout le monde répond : chaque élève note sa réponse, celui dont c'est le tour la dit à voix haute.
+- Un vérificateur ou une vérificatrice dispose du corrigé et change à chaque tour.
+- Assez de cartes pour éviter les répétitions, numérotées et rangées par lots.
+- Une partie modèle jouée devant la classe, et un but annoncé avant de jouer : « à la fin, vous saurez… ».
+
+**De la compétition à la coopération**
+
+Dans un jeu de l'oie classique, le premier arrivé gagne : la compétition vient de la règle, pas des élèves. Pour obtenir de la coopération, il faut changer la condition de victoire. Le principe central est l'interdépendance positive : chacun ne réussit que si les autres réussissent aussi ; elle va de pair avec la responsabilité individuelle (Johnson & Johnson, 2009).
+
+- Un seul pion pour le groupe, contre le sablier ou contre un pion adverse qui avance tout seul.
+- Un but commun chiffré : tous les pions arrivés en moins de dix tours, ou vingt cartes réussies.
+- Des rôles tournants : lecteur ou lectrice, vérificateur ou vérificatrice, secrétaire, gardien ou gardienne du temps.
+- L'aide qui rapporte : si l'explication d'un camarade permet de répondre, les deux avancent.
+- L'erreur sans recul : le groupe explique, puis l'élève rejoue.
+- Des binômes par pion, qui se mettent d'accord avant de répondre, et un bilan de fin de partie.
+
+Si un élève décide de tout à la place des autres, renforcer les rôles. Si l'intérêt retombe sans enjeu, garder un défi : battre le score de la partie précédente, ou jouer équipe contre équipe.
+
+**Différencier sans faire trois versions de chaque fiche**
+
+La différenciation peut porter sur les contenus, les processus, les productions ou les structures (Forget, 2018). Tripler une fiche ne joue que sur les contenus, le levier le plus coûteux à préparer ; les autres se règlent autour d'une fiche unique.
+
+- Difficulté croissante, avec un repère neutre : chacun choisit son point de départ.
+- Noyau commun en haut de la fiche, prolongements facultatifs en bas.
+- Aides détachées en libre accès : exemple résolu, rappel de la règle, pictogramme de la démarche.
+- Quantité plutôt qu'objectif : « au moins quatre exercices sur huit, dont le numéro 5 ».
+- Forme de la réponse au choix : écrire, entourer, relier, manipuler puis dessiner, expliquer oralement.
+- Organisation : seul, en binôme d'entraide, ou en petit groupe avec l'enseignant·e.
+- Trame stable : objectif, exemple, exercices gradués, défi.
+
+Une fiche identique pour tous, avec des aides en libre accès, ne désigne personne comme « différent ». Le libre choix a une limite : certains élèves choisissent toujours trop facile ou trop difficile, et il faut alors orienter leur point de départ.
+
+**Montrer que les élèves ont appris**
+
+- Trois ou quatre questions identiques avant et après l'activité.
+- Une fiche de suivi où l'élève note ce qui est réussi et ce qui reste difficile.
+- Trois productions d'élèves commentées : une réussie, une moyenne, une en difficulté.
+- Une courte observation ciblée : qui répond, qui attend, qui aide.
+
+**Références de cette section**
+
+Forget, A. (2018). *Penser la différenciation pédagogique* (Carnets des sciences de l'éducation). Université de Genève. https://unige.ch/fapse/editions/index.php/download_file/view/544/492
+
+Tricot, A., et al. (2003). Utilité, utilisabilité, acceptabilité : interpréter les relations entre trois dimensions de l'évaluation des EIAH. Dans *Environnements informatiques pour l'apprentissage humain* (Strasbourg).
+
+Statut : existence des trois références citées vérifiée le 21.11.2026 (Forget, 2018 ; Johnson & Johnson, 2009 ; Tricot et al., 2003) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
 
 ## Références scientifiques (APA 7)
 

@@ -1,5 +1,12 @@
 # Nouveautés
 
+## 21 novembre 2026 (suite)
+
+- Guide : nouvelle rubrique « Conseils » (règles du jeu en cinq questions, coopération, différenciation autour d'une fiche unique, grille « utile, utilisable, acceptable » à remplir) ; option « en coopération » dans la demande d'un jeu.
+- Bibliothèque IA 1 : règles MP-J-07 et MP-D-02 complétées, astuces pratiques et variante coopérative dans la partie enseignant·e.
+- Bibliothèque IA 2 : section « Repères pour les jeux, la coopération et la différenciation ».
+- Mention de la licence CC BY-NC-SA 4.0 dans les deux bibliothèques.
+
 ## 21 novembre 2026
 - Toutes les planches existent aussi en couleur (fichiers « (couleur) »).
 - Treize exemples de jeux remplis de vrais contenus, à adapter (fichiers « Exemple rempli »).
