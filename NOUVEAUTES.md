@@ -1,5 +1,19 @@
 # Nouveautés
 
+## 21 novembre 2026 (arbitrages)
+
+Décisions de l'auteur sur les propositions de la révision d'ensemble, appliquées le même jour (même édition).
+
+- Orthographe : par défaut, l'élève ne voit toujours que des formes correctes ; exception encadrée, sur décision de l'enseignant·e, dès la 5P et pour une notion déjà enseignée : une analyse d'erreurs où chaque forme fautive est marquée, corrigée et justifiée, une seule fois, jamais en distracteur ni en exemple. Aucune exception au cycle 1 (Bibliothèque IA 1, § 3.7, règles X-13, MP-CC-11, V10 ; Bibliothèque IA 2, patrons et micro-formats concernés ; guide, rubrique « Vérifier »).
+- Élèves et IA : de la 1P à la 8P, une fiche ne demande jamais à un·e élève d'utiliser un outil d'IA ; de la 9S à la 11S, seulement sur demande de l'enseignant·e, avec un outil fourni ou autorisé par le canton ou l'établissement, en classe, et pour vérifier ou critiquer la réponse de l'outil (Bibliothèque IA 1, § 1.5 et instruction système).
+- Secondaire I : les valeurs de la 9S-11S (colonne 7P-8P, texte de 12 pt) et le tutoiement par défaut sont confirmés.
+- Liseré des cartes et police d'élèves des exemples : conventions du projet, appliquées par défaut ; l'enseignant·e peut demander de s'en passer.
+- Fonctions : les huit fonctions du guide restent la porte d'entrée ; leur correspondance avec les 43 fonctions de la Bibliothèque IA 2 est donnée dans les deux bibliothèques, avec les fonctions qu'elles ne couvrent pas (diagnostic, autoévaluation, métacognition, régulation…) ; le guide le signale.
+- Codes : plus aucun code de gabarit dans les panoramas (« Dites le nom »), dans les titres et mentions des modèles Word, ni dans les mentions des planches ; les codes restent dans les noms de fichiers et dans les bibliothèques. Panoramas et aperçus du guide refaits.
+- Table des correspondances : les ateliers différenciés et le rallye de postes admettent désormais les gabarits G1 à G25 (et G29 à G31 pour les ateliers).
+- Modules : la Bibliothèque IA 1 intégrale reste la source unique ; le script `outils/modules.py` en tire sept modules (noyau, fiches, jeux, différenciation et accessibilité, séquences, vérification et livraison, code des recettes), à l'essai dans `bibliotheques/modules`. `outils/verifier.py` contrôle qu'ils sont à jour.
+- Police GE Typo Libre : mention ajoutée dans LICENCE.md ; conditions de diffusion à vérifier auprès du DIP.
+
 ## Édition du 21 novembre 2026 (révision d'ensemble)
 
 - Bibliothèques : en-tête opérationnel (édition, champ, dépendances) à la place du long historique, déplacé ci-dessous ; la Bibliothèque IA 3 n'est plus annoncée (le guide est une page web) ; dénombrements corrigés (71 types de ressources, 72 micro-formats, gabarits G1 à G31).

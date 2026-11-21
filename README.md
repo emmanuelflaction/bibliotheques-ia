@@ -16,12 +16,12 @@ Des « bibliothèques » à joindre à une IA générative pour lui faire produi
 
 | Dossier | Contenu |
 |---|---|
-| `bibliotheques` | Bibliothèque IA 1 (technique), Bibliothèque IA 2 (pédagogique), Bibliothèque IA 4 (modèle personnel à remplir), panoramas des modèles |
+| `bibliotheques` | Bibliothèque IA 1 (technique), Bibliothèque IA 2 (pédagogique), Bibliothèque IA 4 (modèle personnel à remplir), panoramas des modèles ; dans `bibliotheques/modules`, la Bibliothèque IA 1 découpée en modules à joindre selon la tâche (à l'essai : leur effet sur les réponses des IA n'est pas encore mesuré) |
 | `modeles` | Modèles Word de jeux à remplir, en noir et blanc et en couleur |
 | `planches` | Planches et exemples prêts à imprimer (PDF) |
 | `icones` | Banque d'icônes en noir et blanc (licence CC0, voir le fichier de licence du dossier) |
 | `apercus` | Images d'aperçu affichées par le guide en ligne (chargées à la demande) |
-| `outils` | `verifier.py` : contrôle que chaque fichier annoncé par le guide existe et que les éditions concordent ; `guide_local.py` : construit la version du guide pour un dossier partagé (un seul fichier, aperçus intégrés) |
+| `outils` | `verifier.py` : contrôle que chaque fichier annoncé par le guide existe et que les éditions concordent ; `guide_local.py` : construit la version du guide pour un dossier partagé (un seul fichier, aperçus intégrés) ; `modules.py` : tire les modules de la Bibliothèque IA 1 intégrale, d'après les balises placées sous ses titres |
 
 ## Versions
 

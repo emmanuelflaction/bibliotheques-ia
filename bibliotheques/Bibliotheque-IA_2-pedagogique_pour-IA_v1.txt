@@ -111,6 +111,7 @@ Les prompts fournis dans ce référentiel invitent systématiquement l'IA à pro
 ---
 
 # PARTIE 1 — RÉFÉRENTIEL DES FONCTIONS PÉDAGOGIQUES (F01 À F43)
+<!-- modules : sequences -->
 
 La typologie suivante propose un vocabulaire opérationnel pour orienter les décisions de conception. Les fonctions ne sont pas exclusives : une ressource peut en associer plusieurs sans devoir toutes les mobiliser.
 
@@ -647,7 +648,7 @@ Chaque patron est documenté selon la structure suivante :
 
 ### P04 — L'erreur à débusquer
 
-*Restriction (v6.1, règle MP-CC-11 du Livre I) : un support destiné à l'élève ne montre jamais de forme écrite fautive ou inexistante. En langue écrite, ce patron s'applique uniquement à partir de formes correctes (justifier, comparer, choisir la règle) ou des productions des élèves eux-mêmes ; il reste pleinement utilisable en mathématiques, en sciences et pour un raisonnement ou un fait.*
+*Restriction (v6.1, règle MP-CC-11 du Livre I) : par défaut, un support destiné à l'élève ne montre aucune forme écrite fautive ou inexistante. En langue écrite, ce patron s'applique à partir de formes correctes (justifier, comparer, choisir la règle) ou des productions des élèves eux-mêmes ; sur décision de l'enseignant·e, dès la 5P et pour une notion déjà enseignée, il peut aussi montrer des formes fautives marquées comme erreurs, corrigées et justifiées, une seule fois chacune (exception encadrée du Livre I, § 3.7, décision du 21.11.2026) ; il reste pleinement utilisable en mathématiques, en sciences et pour un raisonnement ou un fait.*
 
 **Principe** : présenter une réponse ou une démarche comportant une erreur plausible. L'élève la repère, explique son origine ou sa nature, et propose une correction justifiée. Travaille la posture critique et renverse la dynamique habituelle.
 
@@ -1644,7 +1645,7 @@ Vigilance : la variation doit tester la robustesse de l'apprentissage.
 
 ### MF16 — Vrai / faux justifié
 
-*Restriction (v6.1, règle MP-CC-11 du Livre I) : un support destiné à l'élève ne montre jamais de forme écrite fautive ou inexistante. Une affirmation fausse porte sur le sens, un fait ou une règle, jamais sur une forme mal orthographiée.*
+*Restriction (v6.1, règle MP-CC-11 du Livre I) : par défaut, un support destiné à l'élève ne montre aucune forme écrite fautive ou inexistante (seule exception : l'analyse d'erreurs encadrée du Livre I, § 3.7). Une affirmation fausse porte sur le sens, un fait ou une règle, jamais sur une forme mal orthographiée.*
 
 Affirmations à juger, avec justification obligatoire quand la réponse est « faux ».
 
@@ -1656,7 +1657,7 @@ Vigilance : affirmations plausibles ; interdire le simple cochage sans justifica
 
 ### MF17 — Appariement avec distracteurs
 
-*Restriction (v6.1, règle MP-CC-11 du Livre I) : un support destiné à l'élève ne montre jamais de forme écrite fautive ou inexistante. Les distracteurs sont toujours des mots ou des formes correctement orthographiés.*
+*Restriction (v6.1, règle MP-CC-11 du Livre I) : par défaut, un support destiné à l'élève ne montre aucune forme écrite fautive ou inexistante (seule exception : l'analyse d'erreurs encadrée du Livre I, § 3.7). Les distracteurs sont toujours des mots ou des formes correctement orthographiés.*
 
 Deux listes à associer, avec distracteurs plausibles pour éviter l'élimination mécanique.
 
@@ -1832,7 +1833,7 @@ Variante v7.2 — **jauge affective** (BDRP-F4) : trois phrases décrivant comme
 
 ### MF33 — Bilan d'erreur
 
-*Restriction (v6.1, règle MP-CC-11 du Livre I) : un support destiné à l'élève ne montre jamais de forme écrite fautive ou inexistante. Le bilan part d'une erreur figurant dans la production de l'élève ; le support n'en recopie pas la forme fautive et l'élève écrit la forme correcte.*
+*Restriction (v6.1, règle MP-CC-11 du Livre I) : par défaut, un support destiné à l'élève ne montre aucune forme écrite fautive ou inexistante (seule exception : l'analyse d'erreurs encadrée du Livre I, § 3.7). Le bilan part d'une erreur figurant dans la production de l'élève ; le support n'en recopie pas la forme fautive et l'élève écrit la forme correcte.*
 
 Analyse courte d'une erreur commise : nature, cause, correction, règle à retenir.
 
@@ -2665,6 +2666,7 @@ Les catégories et les correspondances F–P–MF constituent une proposition op
 Le dispositif ne doit jamais inférer un diagnostic, un style d’apprentissage ou une caractéristique personnelle à partir de quelques réponses. Les productions d’élèves doivent être anonymisées, et le traitement de données personnelles respecter les exigences institutionnelles. Les contrôles de qualité automatisés ne remplacent pas l’expertise de l’enseignant·e.
 
 ## Repères pour les jeux, la coopération et la différenciation
+<!-- modules : jeux, differenciation -->
 
 Ces repères complètent les règles de la Bibliothèque IA 1 (MP-J-07, MP-D-02, § 4.3). Ils servent à conseiller l'enseignant·e avant la production et à justifier les choix dans la partie enseignant·e.
 
@@ -2733,6 +2735,7 @@ Tricot, A., et al. (2003). Utilité, utilisabilité, acceptabilité : interprét
 Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ, 2023 ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
 
 ## Composer un écosystème de ressources
+<!-- modules : sequences -->
 
 Cette section sert quand l'enseignant·e demande une séquence composée de plusieurs ressources reliées (rubrique « Composer une séquence » du guide), et non une ressource isolée.
 
@@ -2752,7 +2755,20 @@ Statut : proposition de l'auteur, à valider. Le terme n'a pas de définition st
 
 **Huit fonctions proposées dans le guide**
 
-Présenter une information ; faire s'exercer ; enseigner pas à pas, avec un retour ; motiver par le jeu ; faire explorer ; faire manipuler et observer ; faire construire ; faire échanger entre élèves. Ces fonctions sont adaptées de De Vries (2001), qui les a définies pour les logiciels d'apprentissage ; leur transposition aux ressources imprimées est une proposition. Pour une analyse plus fine, utiliser les fonctions F01 à F43 de la Partie 1.
+Présenter une information ; faire s'exercer ; enseigner pas à pas, avec un retour ; motiver par le jeu ; faire explorer ; faire manipuler et observer ; faire construire ; faire échanger entre élèves. Ces fonctions sont adaptées de De Vries (2001), qui les a définies pour les logiciels d'apprentissage ; leur transposition aux ressources imprimées est une proposition. Pour une analyse plus fine, utiliser les fonctions F01 à F43 de la Partie 1, selon la correspondance suivante (proposition de l'auteur, 21.11.2026 ; inférence de conception) :
+
+| Fonction du guide | Fonctions de la Partie 1 |
+|---|---|
+| Présenter une information | F08, F09, F10, F14 |
+| Faire s'exercer | F26, F27, F28, F29 |
+| Enseigner pas à pas, avec un retour | F11, F21, F22, F36, F38 |
+| Motiver par le jeu | F01, F04 (le plus souvent avec F27 ou F29) |
+| Faire explorer | F15, F16, F19 |
+| Faire manipuler et observer | F12, F17, F18 |
+| Faire construire | F13, F30, F31 |
+| Faire échanger entre élèves | F33, F34, F35, F40 |
+
+Les huit fonctions restent la porte d'entrée du guide ; elles ne couvrent pas F02, F03, F05, F06, F07, F20, F23, F24, F25, F32, F37, F39, F41, F42 et F43. L'IA traduit chaque fonction choisie en fonctions F, puis signale au regard de l'objectif celles qui manquent, en particulier le diagnostic de départ (F07), les aides et la différenciation (F23, F24), les traces et la régulation (F37, F42), l'autoévaluation et la métacognition (F39, F43). Elle les nomme en toutes lettres dans ce qu'elle écrit à l'enseignant·e.
 
 **Conduite attendue de l'IA devant une demande de séquence**
 
@@ -2825,6 +2841,7 @@ Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2
 Roediger, H. L., & Butler, A. C. (2011). The critical role of retrieval practice in long-term retention. *Trends in Cognitive Sciences*, 15(1), 20-27. https://doi.org/10.1016/j.tics.2010.09.003
 
 ## Gamification, styles d’apprentissage et différenciation
+<!-- modules : differenciation -->
 
 Pashler, H., McDaniel, M., Rohrer, D., & Bjork, R. (2008). Learning styles: Concepts and evidence. Psychological Science in the Public Interest, 9(3), 105–119. https://doi.org/10.1111/j.1539-6053.2009.01038.x
 

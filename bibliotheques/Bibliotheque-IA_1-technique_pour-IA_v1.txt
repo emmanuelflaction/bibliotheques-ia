@@ -1,4 +1,5 @@
 # Bibliothèque IA 1 — technique (à joindre à l'IA) — v1
+<!-- modules : noyau -->
 
 Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, de la 1P à la 11S (exemples situés surtout aux cycles 1 et 2) — Suisse romande.
 
@@ -9,6 +10,7 @@ Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA,
 > **Format de ce fichier.** Version Markdown destinée aux IA (fichier à joindre ou à déposer dans un projet). Ce fichier contient le **Livre I seul** (contrat de production des ressources imprimées : fiches et jeux), complété par la liste des codes du Livre II (Annexe I-D). Si l'outil refuse ce fichier .md, joindre la version .txt ou .docx, identiques. Les tableaux et les blocs de code sont conservés tels quels.
 
 # LIVRE I — CONTRAT DE PRODUCTION DES RESSOURCES IMPRIMÉES (FICHES ET JEUX)
+<!-- modules : noyau -->
 
 ## À lire en premier
 
@@ -28,7 +30,7 @@ Niveaux d'exigence : **DOIT** (obligatoire ; dérogation seulement sur demande e
 
 #### Priorité des règles (21.11.2026)
 
-**1. Sécurité et droit** (données des élèves, cadre DGEO, droits d'auteur) : toujours, sans dérogation.
+**1. Sécurité et droit** (données des élèves, cadre cantonal sur l'IA, droits d'auteur) : toujours, sans dérogation.
 
 **2. Règles DOIT** de ce livre : appliquées ; dérogation seulement sur demande explicite de l'enseignant·e, toujours signalée.
 
@@ -36,7 +38,7 @@ Niveaux d'exigence : **DOIT** (obligatoire ; dérogation seulement sur demande e
 
 **4. Règles DEVRAIT** : appliquées par défaut ; l'IA s'en écarte pour une raison pédagogique explicite, qu'elle mentionne.
 
-**5. Conventions éditoriales du projet** (teintes de couleur, motif du dos des cartes, libellé des mentions de planche) : appliquées par défaut ; la demande de l'enseignant·e ou sa Bibliothèque IA 4 peuvent les remplacer.
+**5. Conventions éditoriales du projet** (teintes de couleur, motif du dos des cartes, liseré des cartes (MP-J-14), police d'élèves des exemples (MP-T-10), libellé des mentions de planche : nom du jeu en toutes lettres, sans code de gabarit) : appliquées par défaut, sans exception tant que rien n'est demandé ; la demande de l'enseignant·e ou sa Bibliothèque IA 4 peuvent les remplacer.
 
 **6. Préférences de l'enseignant·e** (demande, Bibliothèque IA 4) : elles priment sur les règles DEVRAIT et sur les conventions ; face à une règle DOIT, l'IA signale le conflit et demande.
 
@@ -57,6 +59,7 @@ Dans le rapport de conformité et dans tout compte rendu, chaque contrôle porte
 L'IA ne déclare jamais conforme un contrôle qu'elle n'a pas effectué. Elle distingue ce que l'enseignant·e a indiqué, ce qu'elle suppose et ce qui reste à vérifier (par exemple, la progression d'une notion dans le PER).
 
 # ÉTAPE 0 — LE CONTRAT
+<!-- modules : noyau -->
 
 ## 0.1 Six étapes, six livrables, six portes
 
@@ -110,7 +113,7 @@ Ces dix-huit pratiques ont produit des fiches ou des jeux inutilisables lors des
 | X-10 | Lacune dont la longueur ne correspond pas à la réponse attendue | Incohérence consigne–format | Calibrage R2 ; MP-CO-07 |
 | X-11 | Mettre la différenciation, le corrigé ou le barème dans la fiche élève | Mélange des destinataires | Partie enseignant·e séparée |
 | X-12 | Livrer sans fiche technique ni rapport de conformité, ou affirmer un contrôle de rendu non effectué | Les défauts d'impression restent invisibles | Étapes 2 et 5 |
-| X-13 | Montrer à l'élève une forme écrite fautive ou inexistante : mot mal orthographié, accord ou conjugaison erronés (par exemple « il a manger », « prendu »), y compris dans une phrase à corriger, un vrai/faux, un distracteur, une banque de mots ou un exemple | Choix didactique du référentiel : un support destiné à l'élève ne donne à voir que des formes correctes | Formes correctes à justifier, à trier, à comparer ; travail sur les propres productions de l'élève (§ 3.7, MP-CC-11) |
+| X-13 | Montrer à l'élève une forme écrite fautive ou inexistante : mot mal orthographié, accord ou conjugaison erronés (par exemple « il a manger », « prendu »), y compris dans une phrase à corriger, un vrai/faux, un distracteur, une banque de mots ou un exemple, hors de l'exception encadrée du § 3.7 | Choix didactique du référentiel : par défaut, un support destiné à l'élève ne donne à voir que des formes correctes | Formes correctes à justifier, à trier, à comparer ; travail sur les propres productions de l'élève ; sur décision de l'enseignant·e, dès la 5P, analyse d'erreurs aux quatre conditions du § 3.7 (MP-CC-11) |
 | X-14 | Placer le titre avant la ligne Prénom et Date, omettre l'objectif formulé pour l'élève, ou le faire précéder d'une étiquette (« Mon objectif : », « Objectif : ») | Repères instables d'une fiche à l'autre | En-tête obligatoire (R7, MP-O-12) |
 | X-15 | Jeu : fabriquer une pièce qui admet deux réponses dans le lot | L'élève ne peut pas trancher ; la boucle ou l'appariement échoue sans erreur de sa part | Une seule pièce correcte par question dans tout le lot (MP-J-01) ; contrôle V11 |
 | X-16 | Jeu : rendre des pièces appariables par un indice non visé (radical, longueur, ordre d'impression, position sur la planche) | L'élève réussit sans mobiliser la notion | Au moins trois formes du même mot dans le lot ; ordre d'impression mélangé (MP-J-02, MP-J-03) |
@@ -118,6 +121,7 @@ Ces dix-huit pratiques ont produit des fiches ou des jeux inutilisables lors des
 | X-18 | Livrer une page élève remplie partiellement (bas de page vide) | Papier gaspillé ; fiche qui paraît inachevée ; l'élève croit avoir oublié une partie | Aérer, compléter ou passer en planche A5 (MP-O-14, R15, V20) |
 
 ## 0.5 Si l'outil ne peut pas produire un fichier .docx structuré
+<!-- modules : noyau, verification -->
 
 Si l'IA ne peut pas créer de tableaux, de hauteurs de ligne exactes ou de tabulations dans un vrai fichier .docx, elle DOIT **le dire avant de produire**. Elle livre alors :
 
@@ -129,6 +133,7 @@ Si l'IA ne peut pas créer de tableaux, de hauteurs de ligne exactes ou de tabul
 Elle ne présente jamais un texte avec des tirets bas comme une fiche prête à imprimer.
 
 # ÉTAPE 1 — CADRER
+<!-- modules : noyau -->
 
 ## 1.1 Paramètres
 
@@ -166,6 +171,7 @@ Avant de concevoir, l'IA DOIT examiner si la notion, la **modalité** (oral ou �
 - Source du cycle 2 lisible par une IA, vérifiée lors de la préparation de la v7 (30.10.2026) : CIIP, *Plan d'études romand (PER) – Aperçu des contenus, cycle 2*, 2012 (https://edudoc.ch/record/104591/files/cycle_2_webCIIP.pdf). **Limite** : c'est un aperçu ; il ne contient ni les codes d'objectifs (par exemple L1 26), ni la progression des apprentissages détaillée, ni les attentes fondamentales. Pour une progression précise, la mention [À VÉRIFIER dans le PER] reste nécessaire.
 
 ## 1.3 Statut de lecture
+<!-- modules : noyau, differenciation -->
 
 Le statut non-lecteur / lecteur change le fonctionnement de toute la fiche.
 
@@ -201,9 +207,10 @@ PER : [constat d'adéquation, ou « à vérifier »] → choix qui en découle.
   - Consignes adressées aux élèves : **tutoiement et impératif** (« Entoure », « Complète »). Au secondaire I (9S-11S), l'usage peut différer selon l'établissement : l'IA suit la Bibliothèque IA 4 ou la demande ; à défaut, elle garde le tutoiement et le signale.
   - Parties destinées aux adultes : écriture inclusive au point médian (enseignant·e, étudiant·e·s).
   - Documents destinés à des adultes en formation : **vouvoiement**.
-- **Cadre DGEO** : une fiche ne DOIT jamais demander à un·e élève d'utiliser un outil d'IA. Tout outil numérique proposé DEVRAIT être compatible avec la nLPD et les directives cantonales.
+- **Cadre cantonal (élèves et IA)** : de la 1P à la 8P, une fiche ne DOIT jamais demander à un·e élève d'utiliser un outil d'IA. De la 9S à la 11S, une fiche PEUT prévoir un tel usage aux quatre conditions suivantes, sinon la règle de la 1P-8P s'applique : (1) l'enseignant·e le demande explicitement ; (2) l'outil est fourni ou autorisé par le canton ou l'établissement, jamais un compte personnel de l'élève sur un service grand public, et aucune donnée personnelle d'élève n'y est saisie ; (3) l'activité a lieu en classe et elle est encadrée ; (4) la tâche fait vérifier, comparer ou critiquer la réponse de l'outil plutôt que la recopier. L'IA rappelle que les directives et les documents de référence du canton et de l'établissement font foi, et qu'elle ne les connaît pas forcément dans leur version en vigueur. Repère : le canton de Vaud a annoncé, pour la rentrée 2026, un outil sécurisé permettant d'expérimenter l'IA avec les élèves de l'école obligatoire et des documents de référence (communiqué du 12 août 2026). Tout outil numérique proposé DEVRAIT être compatible avec la nLPD et les directives cantonales.
 
 # ÉTAPE 2 — SPÉCIFIER : FICHE TECHNIQUE ET BUDGET DE PAGE
+<!-- modules : fiches, jeux -->
 
 ## 2.1 Table unique des paramètres par degré
 
@@ -232,9 +239,10 @@ C'est la **seule source des valeurs chiffrées**. L'IA lit la colonne du degré 
 
 *Les valeurs « calculées » ont été établies dans cette version à partir de la taille de police et des métriques des polices (Liberation Sans et Carlito, métriquement identiques à Arial et Calibri). Elles servent à planifier ; le contrôle sur rendu (Étape 5) fait foi.*
 
-*Cycle 3 (9S à 11S) — proposition de conception du 21.11.2026, non testée en classe : faute de colonne propre, appliquer les valeurs de la colonne 7P-8P (texte de 12 pt ; 11 pt seulement sur demande, pour un document dense de 10S-11S). Les règles propres aux non-lecteurs et à l'apprentissage initial de l'écriture (lignes d'écriture romandes, absence de ligne Prénom, consigne remplacée par un exemple déjà fait) ne s'appliquent pas au cycle 3. Les jeux ont leurs propres formats 9S-11S (§ 3.8, variantes par tranche d'âge). La progression d'une notion au cycle 3 se vérifie dans le PER ; sans vérification, elle est marquée « à vérifier ».*
+*Cycle 3 (9S à 11S) — valeurs retenues le 21.11.2026, non testées en classe : appliquer les valeurs de la colonne 7P-8P (texte de 12 pt ; 11 pt seulement sur demande, pour un document dense de 10S-11S). Les règles propres aux non-lecteurs et à l'apprentissage initial de l'écriture (lignes d'écriture romandes, absence de ligne Prénom, consigne remplacée par un exemple déjà fait) ne s'appliquent pas au cycle 3. Les jeux ont leurs propres formats 9S-11S (§ 3.8, variantes par tranche d'âge). La progression d'une notion au cycle 3 se vérifie dans le PER ; sans vérification, elle est marquée « à vérifier ».*
 
 ## 2.2 Budget de page (MP-O-11)
+<!-- modules : fiches -->
 
 - Hauteur utile d'une page A4 portrait : 29,7 − 2 × 2,5 = **24,7 cm**.
 - Pour absorber les écarts de rendu entre logiciels, l'IA DOIT planifier au plus **22 cm de contenu par page**, en-tête compris.
@@ -289,6 +297,7 @@ Pour toute ressource imprimée autre qu'une fiche à photocopier, la fiche techn
 | papier épais, feuille sous pochette effaçable, A3 | plastification, velcro, pincette, attache parisienne | par l'adulte, en atelier, par l'élève | n exemplaires, numérotés si les pièces doivent se retrouver | verso, double impression, rabat, forme, grille croisée, ou aucune |
 
 ## 2.4 Limites de pages par type de fiche
+<!-- modules : fiches -->
 
 | Type de fiche | Pages élève au maximum | Si le budget est dépassé |
 |---|---|---|
@@ -311,6 +320,7 @@ Pour toute ressource imprimée autre qu'une fiche à photocopier, la fiche techn
 Les annexes facultatives (aide-mémoire, étiquettes à découper) ne comptent pas dans ce total ; elles sont annoncées dans la fiche technique et dans la partie enseignant·e.
 
 ## 2.5 Format affiche A3 et lisibilité à distance (v7.2)
+<!-- modules : fiches -->
 
 Le Livre I est calibré pour la page A4. Les affiches, référentiels collectifs, glossaires, cartes mentales et infographies destinés à être lus depuis les places (TR17 à TR22) suivent la table ci-dessous, propre au format A3 (MP-F-07, GF-V, recette R9).
 
@@ -343,6 +353,7 @@ La hauteur de la capitale d'Arial vaut 0,716 fois le corps (métrique de la poli
 *Valeurs calculées avec `distance_lecture_m` (Annexe I-C). Elles ne remplacent pas l'essai : placer l'affiche, puis la lire depuis la place la plus éloignée (V17).*
 
 # ÉTAPE 3 — CHOISIR : DE L'OBJECTIF AU GABARIT
+<!-- modules : fiches, jeux -->
 
 ## 3.1 Chaîne de décision
 
@@ -356,6 +367,7 @@ Les choix pédagogiques se font avec le Livre II. **Le gabarit est le point de p
 - L'IA PEUT proposer un format non répertorié si elle le juge mieux adapté. Elle DOIT alors le décrire **avant de l'utiliser** avec la même fiche-type que les gabarits ci-dessous (usage, disposition, zone de réponse, items, hauteur estimée, recette, vigilance), et l'inscrire dans la fiche technique.
 
 ## 3.3 Catalogue des gabarits d'exercice (auto-portants, G1 à G31)
+<!-- modules : fiches -->
 
 Chaque fiche donne tout ce qu'il faut pour construire l'exercice. Les hauteurs sont des **estimations pour 5P-6P (14 pt)** ; pour un autre degré, utiliser les hauteurs de ligne de la table 2.1. Dans les exemples, `______` représente une lacune calibrée (R2) et `[ligne]` une vraie ligne d'écriture (R1).
 
@@ -404,7 +416,7 @@ Règles communes : consigne directe au-dessus des données ; texte aligné à ga
 - **Items** : 3-4 phrases (exercice coûteux en place).
 - **Hauteur** : par item 0,74 + 2 × 1,0 + 0,3 cm ≈ 3 cm → environ 10 cm pour 3 items.
 - **Recette** : R1a.
-- **Vigilance** : jamais de phrase source fautive « à corriger » (X-13) ; pour travailler le jugement orthographique, voir les alternatives du § 3.7.
+- **Vigilance** : pas de phrase source fautive « à corriger » (X-13), sauf analyse d'erreurs demandée par l'enseignant·e aux conditions du § 3.7 ; pour travailler le jugement orthographique, voir d'abord les alternatives du § 3.7.
 
 ```
 4  Écris la phrase au passé composé.
@@ -657,6 +669,7 @@ Tout format nouveau DOIT être décrit ainsi avant usage : **Usage · Dispositio
 Les fiches ajoutées en v7.2 sont présentées sous une forme condensée : **Usage · Structure · Dimensions · Recette · Contrôles · Interdits** (la structure reprend la disposition et les items ; les dimensions, la zone de réponse et la hauteur ; les interdits, la vigilance).
 
 ## 3.5 Correspondances patron × gabarit × micro-format
+<!-- modules : fiches, jeux, sequences -->
 
 | Patron pédagogique (Livre II, Partie 5) | Gabarits compatibles | Micro-formats compatibles | Gabarits de jeu (J) |
 |---|---|---|---|
@@ -674,11 +687,11 @@ Les fiches ajoutées en v7.2 sont présentées sous une forme condensée : **Usa
 | P12 Production sous contraintes | G7, G10 | MF23, MF29, MF56 | — |
 | P13 Confrontation des solutions | G6, G7, G9 | MF07, MF25, MF30 | — |
 | P14 Rappel actif progressif | G1, G3, G6 | MF17, MF18, MF32 | J1, J2, J4, J5 |
-| P15 Ateliers différenciés | G1 à G14 | MF13, MF15, MF36 | J1 à J6 |
+| P15 Ateliers différenciés | G1 à G25, G29 à G31 | MF13, MF15, MF36 | J1 à J6 |
 | P16 Transfert de contexte | G7, G10 | MF15, MF34 | — |
 | P17 Investigation critique des sources | G8, G9 | MF04, MF07, MF16, MF54 | — |
 | P18 Retour sur sa démarche | G6, G7 | MF21, MF31-MF35, MF51, MF58 | — |
-| P19 Rallye de postes | G1 à G14 | MF05, MF38, MF43 | J1 à J38 |
+| P19 Rallye de postes | G1 à G25 | MF05, MF38, MF43 | J1 à J38 |
 | P20 Apprivoiser un outil de référence | G6, G8 | MF04, MF05, MF12 | — |
 | P21 Même tâche, plusieurs temps | G10, G15 | MF21, MF35, MF43 | — |
 | P22 Les élèves conçoivent l'exercice | G18 | MF23, MF64, MF68 | J4 |
@@ -687,9 +700,10 @@ Les fiches ajoutées en v7.2 sont présentées sous une forme condensée : **Usa
 
 **Colonne J** : correspondances proposées (inférence de conception), sauf P14 → J1, testé le 30.10.2026.
 
-**P04 (erreur à débusquer)** : pleinement utilisable en mathématiques, en sciences et pour un raisonnement ou un fait ; en langue écrite, uniquement à partir de formes correctes ou des productions des élèves eux-mêmes (§ 3.7).
+**P04 (erreur à débusquer)** : pleinement utilisable en mathématiques, en sciences et pour un raisonnement ou un fait ; en langue écrite, à partir de formes correctes ou des productions des élèves eux-mêmes, ou, sur décision de l'enseignant·e et dès la 5P, avec des formes fautives marquées et corrigées (exception encadrée du § 3.7).
 
 ## 3.6 Différenciation et mise en page (MP-D)
+<!-- modules : fiches, differenciation -->
 
 | Code | Règle | Niveau |
 |---|---|---|
@@ -698,9 +712,10 @@ Les fiches ajoutées en v7.2 sont présentées sous une forme condensée : **Usa
 | MP-D-03 | Chaque version ou parcours respecte son propre budget de page (Étape 2). | DOIT |
 | MP-D-04 | Les modalités d'attribution (diagnostic court, choix accompagné) et la consigne « une version décrit un besoin du moment, pas un niveau d'élève » figurent dans la partie enseignant·e. | DEVRAIT |
 
-## 3.7 Orthographe : l'élève ne voit que des formes correctes (MP-CC-11)
+## 3.7 Orthographe : par défaut, l'élève ne voit que des formes correctes (MP-CC-11)
+<!-- modules : noyau -->
 
-**Règle (DOIT).** Aucun support destiné à l'élève (fiche, carte, étiquette, affiche, corrigé élève) ne montre de mot mal orthographié, d'accord ou de conjugaison fautifs, ni de forme inexistante. La règle vaut pour les consignes, les exemples, les items, les distracteurs, les banques de mots et les phrases « à corriger ». La partie enseignant·e peut, elle, nommer les erreurs typiques.
+**Règle (DOIT).** Par défaut, aucun support destiné à l'élève (fiche, carte, étiquette, affiche, corrigé élève) ne montre de mot mal orthographié, d'accord ou de conjugaison fautifs, ni de forme inexistante. La règle vaut pour les consignes, les exemples, les items, les distracteurs, les banques de mots et les phrases « à corriger ». La partie enseignant·e peut, elle, nommer les erreurs typiques. Une seule exception, sur décision explicite de l'enseignant·e : l'analyse d'erreurs encadrée décrite ci-dessous.
 
 #### Pour travailler le jugement orthographique sans montrer de forme fautive
 
@@ -711,11 +726,25 @@ Les fiches ajoutées en v7.2 sont présentées sous une forme condensée : **Usa
 - **Relire sa propre production** avec une liste de contrôle : l'erreur éventuelle vient de l'élève, pas du support, et l'élève écrit ensuite la forme correcte.
 - **Choisir entre formes existantes**, chacune correcte dans l'absolu (*a* / *à*, *ai* / *suis*), présentées comme options et sans phrase complète affichant la mauvaise forme. *[Règle validée par l'enseignant·e responsable du référentiel (v6.1) : admis, car aucune forme écrite fautive n'est montrée.]*
 
+#### Exception encadrée : l'analyse d'erreurs (décision du 21.11.2026)
+
+Sur **décision explicite de l'enseignant·e**, **à partir de la 5P** et pour une **notion déjà enseignée**, une activité d'analyse d'erreurs dont l'objectif est le jugement orthographique PEUT montrer des formes fautives, aux quatre conditions suivantes, toutes obligatoires :
+
+1. chaque forme fautive est **marquée comme erreur** : barrée ou encadrée, avec la mention « erreur à expliquer » ;
+2. la **forme correcte** figure sur le même support, ou l'élève l'écrit aussitôt, avec la **règle** qui la justifie ;
+3. une forme fautive n'apparaît **qu'une fois**, jamais dans une banque de mots, un distracteur ou un exemple ;
+4. le support ne sert pas à l'**apprentissage initial** de la notion.
+
+L'IA n'applique cette exception que si l'enseignant·e la demande ; quand on lui demande de travailler le jugement orthographique dès la 5P, elle peut la mentionner parmi les possibilités, après les alternatives ci-dessus. Elle vérifie les quatre conditions et les cite dans le rapport de conformité (V10). **Au cycle 1 et pour les lecteurs débutants, la règle ne connaît pas d'exception.** Les **erreurs de raisonnement** (calcul, démarche) peuvent être présentées dès que leur analyse est l'objectif, avec correction et explication (J14, patron P04).
+
+*Fondement (références non vérifiées) : des travaux indiquent qu'être exposé à des graphies erronées peut perturber la mémoire orthographique (par exemple Brown, 1988, à contrôler) ; l'étude d'exemples erronés est aussi un dispositif d'apprentissage documenté, surtout en mathématiques. L'exception limite l'exposition à des élèves lecteurs, à une notion enseignée et à une forme marquée.*
+
 **Images générées par IA (MP-I-05)** : le texte qu'un générateur d'images incruste est souvent fautif ou inexistant. Une image destinée à l'élève ne contient donc aucun texte généré ; le texte nécessaire est ajouté dans le document, puis relu. Voir aussi le socle commun des visuels (Annexe II-A, A.1).
 
 **Contrôle** : relecture orthographique de tout le texte élève avant livraison (V10).
 
 ## 3.8 Catalogue des gabarits de jeu (J1 à J38)
+<!-- modules : jeux -->
 
 Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, plateau, dé). Ils sont distincts des gabarits d'exercice et de support G1 à G31 et suivent la fiche-type du § 3.4. La règle du jeu, la carte-mémoire et la trace individuelle relèvent des gabarits G et du dossier de jeu GF-F (§ 6.1). Les dimensions sont données pour 5P-6P (14 pt). J1 a été testé en v7 ; J7 à J16 ont été testés sur rendu en v7.2 ; pour J2 à J6, toute dimension est une **inférence de conception, à tester**. J17 à J20 (19.11.2026) sont dessinés par le code de l'Annexe I-C : rendu contrôlé, non testés en classe. J21 à J38 (20.11.2026) de même.
 
@@ -735,8 +764,8 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 | MP-J-10 | **Pièce mobile et case d'accueil** : toute case destinée à recevoir une pièce mobile (étiquette, carte, jeton, pince) mesure au moins la pièce + 0,5 cm par côté, en largeur et en hauteur ; les deux dimensions de la pièce et de la case figurent dans la fiche technique ; contrôle par programme (`verifier_case_piece`, Annexe I-C) et sur le rendu (V12). S'applique aussi aux fiches (G12-b, plateaux, tableaux à étiquettes). (révision du 2.11.2026, suite) | DOIT |
 | MP-J-11 | **Surface de la planche** : une planche de pièces à découper (cartes, dominos, étiquettes, pièces, modèles) occupe **toute la surface utile de la page** — en A4 portrait, environ 18,6 × 26,4 cm, avec des marges d'environ 1,2 cm sur les côtés et 1,6 cm en haut et en bas. On **agrandit les pièces** ou on **change leur disposition** (nombre de colonnes et de rangées) au lieu de laisser une bande vide ; la zone restée vide ne dépasse pas une demi-hauteur de pièce. Les dimensions retenues et le calcul (colonnes × largeur, rangées × hauteur) figurent dans la fiche technique. La planche, tableau à hauteur exacte, échappe au budget de 22 cm (MP-O-11) ; son rendu est contrôlé (V12). Le texte et l'image de chaque pièce sont centrés sur la pièce, contrôlés sur le rendu. (révision du 19.11.2026) | DOIT |
 | MP-J-12 | **Repères de coupe** : toute planche à découper porte des **repères de coupe au bord de la feuille**, pour la coupe au massicot : un trait fin (0,5 pt, noir, environ 0,45 cm de long) dans le prolongement de **chaque** ligne de coupe — en haut et en bas pour les coupes verticales, à gauche et à droite pour les coupes horizontales —, séparé de la planche par environ 0,25 cm et à au moins 0,5 cm du bord de la feuille (zone imprimable). Les pointillés restent pour la coupe aux ciseaux (MP-J-05). La mention de la planche se place dans la marge du haut, sans toucher les repères. (révision du 19.11.2026) | DOIT |
-| MP-J-13 | **Choix présenté** : avant de produire un jeu, et chaque fois que l'enseignant·e demande quelles sont les possibilités, l'IA **montre le panorama des jeux** (image produite par `panorama_jeux`, Annexe I-C ; même image dans la page web du guide et dans le fichier « Panorama des jeux » de la boîte à outils). **Le panorama ne contient que des miniatures tirées des documents réels** — la page elle-même, réduite, du modèle Word ou de la planche prête à imprimer : l'enseignant·e obtient ce qu'il ou elle voit ; un gabarit sans document n'y figure qu'en liste, sans image, et l'IA ne dessine jamais de schéma à la place (20.11.2026). Elle présente ensuite en une ligne chacun les deux ou trois gabarits qui conviennent à la demande, donne sa recommandation et **attend le choix**. Pour un gabarit à variantes (formes J5-a à J5-d, variantes de J2, J3 et J4), elle présente les variantes de la même façon. Quand le degré est connu, elle montre la page de miniatures de la tranche d'âge (`miniatures_tranche`), avec le nombre de pièces ou de cases de chaque format. Si elle ne peut ni exécuter le code ni afficher une image, elle donne la liste des codes et des noms (J1 à J38) et renvoie au fichier. Quand un **modèle Word à remplir** ou une **planche prête à imprimer** existe pour le gabarit retenu (liste à la fin du § 3.8), elle le signale. Pour une fiche, quand l'enseignant·e demande quels exercices sont possibles, elle montre de la même façon le **panorama des exercices** (`panorama_exercices`, gabarits G1 à G23 ; fichier « Panorama des exercices » de la boîte à outils). Exception : l'enseignant·e a déjà nommé le gabarit ou la forme. (19.11.2026) | DOIT |
-| MP-J-14 | **Carte tirée, dos neutre** : une carte que l'élève tire d'une pioche ou reçoit face cachée (carte-défi d'un plateau, carte d'appel, carte de memory) a un **dos neutre et identique** : ni réponse ni indice au verso, parce que l'élève verrait la réponse avant de répondre. Chaque carte porte un numéro ; le contrôle passe par une **feuille de solutions numérotée** par lot, tenue par un·e camarade ou retournée sur la table. **Avant de produire les cartes, l'IA pose deux questions** : (1) dos **à motif** ou dos **blanc** ? (2) **avec une mention personnelle** au dos — par exemple le nom du jeu, ou une catégorie de cartes : « Défi », « Bonus », « Malus », « Chance » — ou **sans** ? Sans réponse, elle retient le dos à motif sans mention et le signale. **Dos à motif** (`dos_a_motif`), comme celui d'une carte à jouer : des lignes fines (losanges, carreaux ou vagues) remplissent un cadre aux angles arrondis, tracé d'un trait fin à environ 3 mm du bord de la carte ; la marge reste blanche. Le motif est le même sur toutes les cartes du jeu, il gêne la lecture par transparence et donne son unité au jeu ; un motif différent par jeu permet de trier des jeux mélangés. **Dos blanc** : rien n'est imprimé au verso ; à réserver à un papier assez épais pour que le recto ne se lise pas par transparence. **Mention personnelle** : la même sur toutes les cartes d'une pile, en gras dans un cartouche gris au centre de la carte (paramètre `texte`) ; jamais une mention qui distingue deux cartes d'une même pile ; plusieurs catégories donnent plusieurs piles, donc une planche par catégorie. Le cadre rend visible un décalage du recto-verso : essai d'impression avant de tirer tout le jeu (V13). Le verso-réponse reste réservé aux cartes que l'élève tient lui-même, question vers lui (J4, J14), et à la carte à pinces (J10). (19.11.2026) **Liseré** : chaque carte d'un jeu de cartes porte un cadre à coins arrondis, tracé à 3 mm du trait de coupe ; la teinte de la carte s'arrête au cadre et la marge reste blanche, comme sur une carte à jouer. Les modèles Word de la boîte à outils le portent déjà : pour un jeu de cartes en .docx, partir du modèle plutôt que d'un tableau neuf, qui ne le porte pas. En PDF, `planche_pdf(..., lisere=True)`, `cartes_categories` et `cartes_mots_interdits` le tracent (`lisere_cartes`) ; sans modèle Word, produire la planche de cartes en PDF. Pas de liseré sur un domino, un puzzle ou une tuile. (21.11.2026) | DOIT |
+| MP-J-13 | **Choix présenté** : avant de produire un jeu, et chaque fois que l'enseignant·e demande quelles sont les possibilités, l'IA **montre le panorama des jeux** (image produite par `panorama_jeux`, Annexe I-C ; même image dans la page web du guide et dans le fichier « Panorama des jeux » de la boîte à outils). **Le panorama ne contient que des miniatures tirées des documents réels** — la page elle-même, réduite, du modèle Word ou de la planche prête à imprimer : l'enseignant·e obtient ce qu'il ou elle voit ; un gabarit sans document n'y figure qu'en liste, sans image, et l'IA ne dessine jamais de schéma à la place (20.11.2026). Elle présente ensuite en une ligne chacun les deux ou trois gabarits qui conviennent à la demande, donne sa recommandation et **attend le choix**. Pour un gabarit à variantes (formes J5-a à J5-d, variantes de J2, J3 et J4), elle présente les variantes de la même façon. Quand le degré est connu, elle montre la page de miniatures de la tranche d'âge (`miniatures_tranche`), avec le nombre de pièces ou de cases de chaque format. Si elle ne peut ni exécuter le code ni afficher une image, elle donne la liste des noms des jeux et renvoie au fichier. Dans ce qu'elle présente à l'enseignant·e, elle désigne chaque jeu ou exercice par son nom, sans code ; les panoramas et les mentions de planche ne portent pas de code (21.11.2026). Quand un **modèle Word à remplir** ou une **planche prête à imprimer** existe pour le gabarit retenu (liste à la fin du § 3.8), elle le signale. Pour une fiche, quand l'enseignant·e demande quels exercices sont possibles, elle montre de la même façon le **panorama des exercices** (`panorama_exercices`, gabarits G1 à G23 ; fichier « Panorama des exercices » de la boîte à outils). Exception : l'enseignant·e a déjà nommé le gabarit ou la forme. (19.11.2026) | DOIT |
+| MP-J-14 | **Carte tirée, dos neutre** : une carte que l'élève tire d'une pioche ou reçoit face cachée (carte-défi d'un plateau, carte d'appel, carte de memory) a un **dos neutre et identique** : ni réponse ni indice au verso, parce que l'élève verrait la réponse avant de répondre. Chaque carte porte un numéro ; le contrôle passe par une **feuille de solutions numérotée** par lot, tenue par un·e camarade ou retournée sur la table. **Avant de produire les cartes, l'IA pose deux questions** : (1) dos **à motif** ou dos **blanc** ? (2) **avec une mention personnelle** au dos — par exemple le nom du jeu, ou une catégorie de cartes : « Défi », « Bonus », « Malus », « Chance » — ou **sans** ? Sans réponse, elle retient le dos à motif sans mention et le signale. **Dos à motif** (`dos_a_motif`), comme celui d'une carte à jouer : des lignes fines (losanges, carreaux ou vagues) remplissent un cadre aux angles arrondis, tracé d'un trait fin à environ 3 mm du bord de la carte ; la marge reste blanche. Le motif est le même sur toutes les cartes du jeu, il gêne la lecture par transparence et donne son unité au jeu ; un motif différent par jeu permet de trier des jeux mélangés. **Dos blanc** : rien n'est imprimé au verso ; à réserver à un papier assez épais pour que le recto ne se lise pas par transparence. **Mention personnelle** : la même sur toutes les cartes d'une pile, en gras dans un cartouche gris au centre de la carte (paramètre `texte`) ; jamais une mention qui distingue deux cartes d'une même pile ; plusieurs catégories donnent plusieurs piles, donc une planche par catégorie. Le cadre rend visible un décalage du recto-verso : essai d'impression avant de tirer tout le jeu (V13). Le verso-réponse reste réservé aux cartes que l'élève tient lui-même, question vers lui (J4, J14), et à la carte à pinces (J10). (19.11.2026) **Liseré** : chaque carte d'un jeu de cartes porte un cadre à coins arrondis, tracé à 3 mm du trait de coupe ; la teinte de la carte s'arrête au cadre et la marge reste blanche, comme sur une carte à jouer. Les modèles Word de la boîte à outils le portent déjà : pour un jeu de cartes en .docx, partir du modèle plutôt que d'un tableau neuf, qui ne le porte pas. En PDF, `planche_pdf(..., lisere=True)`, `cartes_categories` et `cartes_mots_interdits` le tracent (`lisere_cartes`) ; sans modèle Word, produire la planche de cartes en PDF. Pas de liseré sur un domino, un puzzle ou une tuile. (21.11.2026) | DOIT ; le liseré et le motif du dos sont des conventions (priorité 5) |
 
 *MP-J-09 précise MP-O-12 pour le matériel de groupe (inférence de conception, conforme au test du 30.10.2026). MP-J-10 répond au défaut de G12-b (étiquettes plus grandes que les cases) relevé par la revue indépendante du 2.11.2026. MP-J-11 et MP-J-12 répondent à la demande de l'auteur du 19.11.2026 : planches qui laissaient le bas de la page vide, absence de repères pour le massicot ; règles appliquées au memory des consignes (19.11.2026, rendu PDF contrôlé, non testé en classe). MP-J-13 répond à sa demande du même jour : l'enseignant·e ne connaît pas les possibilités tant que l'IA ne les montre pas.*
 
@@ -901,7 +930,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 - **Pièce** : carte de 8 × 10 cm : auteur·e fictif·ve, résolution, consigne. Verso : ce qui s'est passé, calcul juste. Depuis le 19.11.2026 (MP-J-11, MP-J-12) : carte de 9,3 × 13,2 cm, 2 × 2 par planche ; repères de coupe au bord de la feuille ; dimensions calculées, non rendues.
 - **Recette** : R14, R12.
 - **Contrôles** : V12, V13 ; corrigé recalculé par programme ; V21 : nombres et procédure adaptés à la progression du degré (MP-P-09) ; le verso nomme l'erreur de procédure (par exemple « a écrit 13 à côté du 3, sans faire de retenue »).
-- **Interdits** : orthographe et grammaire (X-13, MP-CC-11 ; mathématiques et raisonnement seulement) ; erreur attribuée à un·e élève identifiable.
+- **Interdits** : orthographe et grammaire, sauf analyse d'erreurs demandée par l'enseignant·e, dès la 5P, aux quatre conditions du § 3.7 (X-13, MP-CC-11) ; erreur attribuée à un·e élève identifiable.
 - **Statut** : testé sur rendu (2.11.2026, LibreOffice, PDF regardé page par page, schéma OOXML valide).
 
 ### J15 — Cartes d'aide graduée (testé sur rendu)
@@ -1175,7 +1204,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### Variantes par tranche d'âge (19.11.2026 ; formats calculés et rendus en miniature, non testés en classe)
 
 - **Principe** : chaque gabarit de jeu existe en trois formats : moins de pièces ou de cases et une écriture plus grande pour les plus jeunes, davantage de pièces et une écriture plus petite ensuite. L'IA lit la tranche du degré demandé et applique les nombres ci-dessous ; les valeurs sont celles du dictionnaire `VARIANTES` (Annexe I-C), par planche A4.
-- **Corps minimal du texte des pièces** : 24 pt de la 1P à la 4P (18 pt admis en 3P-4P, § 2.1), 14 pt de la 5P à la 8P (12 pt admis en 7P-8P), 12 pt de la 9S à la 11S. La tranche 9S-11S sort du périmètre primaire de cette bibliothèque : ses valeurs sont une inférence de conception.
+- **Corps minimal du texte des pièces** : 24 pt de la 1P à la 4P (18 pt admis en 3P-4P, § 2.1), 14 pt de la 5P à la 8P (12 pt admis en 7P-8P), 12 pt de la 9S à la 11S (valeurs retenues le 21.11.2026, non testées en classe).
 - **Affichage** (MP-J-13) : quand le degré est connu, l'IA montre la page de miniatures de la tranche (`miniatures_tranche`, ou les fichiers « Jeux par tranche d'âge » de la boîte à outils) à la place du panorama général.
 - **Plateaux J5** : au cycle 3, les cases descendent à 2,1 cm au moins : prévoir des jetons plutôt que des pions (`case_min_mm=20`).
 - **Gabarits absents d'une tranche** : J12 (lettres à fabriquer) seulement de la 1P à la 4P ; J14 (cartes d'erreurs) dès la 5P ; J9 demande de lire et d'écrire un prénom : dès la 3P (inférences de conception).
@@ -1237,6 +1266,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 - **J4, cartes construites par l'élève** (BDRP-C4) : l'élève écrit la réponse, fait corriger, découpe ; une carte réussie sort du paquet, une carte ratée y retourne.
 
 ## 3.9 Catalogue des outils d'étayage permanents (SP1 à SP13, v7.2)
+<!-- modules : fiches -->
 
 Les outils SP restent sous les yeux de l'élève ou de la classe. SP1 à SP3 sont des sous-mains ; SP4 et SP6 à SP13 des affiches au format GF-V (§ 2.5) ; SP5, des étiquettes. Les codes SP1 à SP8 viennent du balayage BDRP ; SP9 à SP13 les prolongent. Tous sont testés sur rendu (2.11.2026) ; leurs dimensions sont des inférences de conception.
 
@@ -1361,6 +1391,7 @@ Les outils SP restent sous les yeux de l'élève ou de la classe. SP1 à SP3 son
 - **Interdits** : chiffre inventé présenté comme réel.
 
 # ÉTAPE 4 — CONSTRUIRE : STYLES ET RECETTES TECHNIQUES
+<!-- modules : fiches, jeux -->
 
 ## 4.1 Un rôle, un style (MP-S-01)
 
@@ -1384,6 +1415,7 @@ L'IA DEVRAIT créer des styles de paragraphe nommés et les utiliser pour **chaq
 | Affiche-Titre, Affiche-Texte, Affiche-Étape, Affiche-Détail, Affiche-Cellule | rôles d'une affiche A3 (GF-V) | 72 pt gras centré ; 48 pt ; 48 pt ; 36 pt ; 36 pt centré (§ 2.5) |
 
 ## 4.2 Recettes
+<!-- modules : fiches -->
 
 Les recettes R1 à R6 servent aux exercices, la recette R7 à l'en-tête, la recette R8 aux planches de pièces des jeux. Les recettes R9 à R14 (v7.2) servent à l'affiche A3, à l'écriture liée, au dessin vectoriel, au recto-verso, aux contrôles combinatoires et aux grilles à zones ; la recette R15 (révision du 2.11.2026), à la planche A5. Chaque recette est décrite pour Word (enseignant·e ou IA intégrée à Word) puis renvoie au module python-docx de l'Annexe I-C, testé avec rendu PDF dans cette version.
 
@@ -1441,6 +1473,7 @@ L'en-tête DOIT suivre cet ordre, sur toutes les fiches :
 Le repère discret de version (♣ ♦ ♠, MP-D-01) se place en en-tête de page, au-dessus ou à droite de la ligne Prénom et Date. Dans Word : un paragraphe avec deux tabulations à points de suite (la première vers le milieu de la ligne, la seconde à 16 cm, alignée à droite), puis le titre centré, puis l'objectif.
 
 ### R8 — Planche de pièces à découper (jeux J1 à J6)
+<!-- modules : jeux -->
 
 - **Tableau à largeurs fixées** : une colonne par moitié de pièce (pour J1 : 4 colonnes de 4 cm, soit deux dominos de 8 cm par rangée) ; largeur et hauteur totales calculées pour occuper toute la surface utile (MP-J-11), en agrandissant les pièces ou en changeant le nombre de colonnes et de rangées ; jamais de largeur automatique.
 - **Repères de coupe** (MP-J-12) : un trait fin dans le prolongement de chaque ligne de coupe, dans les quatre marges. Dans Word : formes « Trait » positionnées par rapport à la page ; plus sûr : planche produite en PDF par le code (traits, pointillés et repères dessinés aux coordonnées exactes), contrôlée sur le rendu (V12) : fonctions `planche_pdf` (pièces de texte, dominos compris) et `reperes_de_coupe` de l'Annexe I-C (19.11.2026). Les planches à zones (R14) restent en .docx : marges de la section réduites à 1,2 cm sur les côtés et à 1,65 cm en haut et en bas, repères ajoutés en formes « Trait » ; aucune fonction ne les pose à ce jour.
@@ -1460,6 +1493,7 @@ Le repère discret de version (♣ ♦ ♠, MP-D-01) se place en en-tête de pag
 - Testé : dix documents rendus en A3 (29,7 × 42 cm mesurés) ; contenu de 32,3 cm de haut au plus en portrait, sous le budget de 33 cm.
 
 ### R10 — Écriture liée composée (v7.2)
+<!-- modules : fiches, jeux -->
 
 - L'écriture liée est **composée** en GE Typo Libre (`ecrire_cursive`) : jamais dessinée, jamais générée par une IA (MP-CC-11).
 - Vérifié dans la session : famille exacte « GE Typo Libre », nom PostScript GETypoLibre, fichier `ge_typo_libre.otf`, incorporation autorisée (fsType 0) ; lettres accentuées, œ, guillemets et apostrophe présents. Le **point médian n'a pas de dessin visible** : la fonction le refuse.
@@ -1468,6 +1502,7 @@ Le repère discret de version (♣ ♦ ♠, MP-D-01) se place en en-tête de pag
 - Sans police installée : l'IA le déclare, laisse le modèle en script et écrit « écriture liée à ajouter par l'enseignant·e ».
 
 ### R11 — Dessin vectoriel (v7.2)
+<!-- modules : fiches, jeux -->
 
 - Pour ce que le .docx construit mal : tracés, labyrinthes, disques, schémas. La classe `Dessin` écrit le même dessin en SVG et en PDF, à l'échelle 1, en millimètres.
 - `couloir`, `arrondir`, `labyrinthe`, `roue_J11` servent G19 et J11 ; `plateau_parcours` (19.11.2026) sert J5 ; `de_a_monter` (19.11.2026) sert J6 ; `dos_a_motif` (19.11.2026) imprime le dos des cartes tirées ; `grille_alignement`, `serpents_echelles`, `bataille_navale` et `roue_tirage` (19.11.2026) servent J17 à J20 ; `puzzle_association`, `puzzle_bandes`, `mot_mystere`, `cocotte`, `horloge`, `eventail` et `bandes_graphiques` (20.11.2026) servent J21 à J27 ; `plateau_camemberts`, `planche_lynx`, `cartes_mots_interdits` et `petit_bac` servent J28 à J31, `lignage_romand` et `livret_ecriture` servent G22 ; `cartes_categories` (J28), `petits_chevaux`, `grille_qui_est_ce`, `tuiles_lettres`, `sudoku` et `mot_cache_fleur` servent J33 à J38, `fiche_syllabes_sons` sert G23 ; `maison_des_nombres`, `reproduction_quadrillage`, `calendrier_mensuel`, `etiquettes_horaire`, `livret_a_onglets`, `page_journal`, `planche_bd` et `plan_expose` (21.11.2026) servent G24 à G31 ; `panorama_supports` montre les fiches et supports qui ont un document prêt ; `panorama_jeux` et `panorama_exercices` montrent les gabarits disponibles.
@@ -1475,16 +1510,19 @@ Le repère discret de version (♣ ♦ ♠, MP-D-01) se place en en-tête de pag
 - Les icônes de la banque IC passent par `icone`. `Dessin` requiert PyMuPDF ; les chemins de police (`POLICES_PDF`) sont ceux de macOS, à adapter sur un autre système.
 
 ### R12 — Planche recto-verso (v7.2)
+<!-- modules : jeux -->
 
 - `verso_de` inverse les colonnes d'une planche, pour une impression sur le bord long. Pour J10, la colonne des réponses passe au bord gauche du verso ; l'ordre des lignes est inchangé (`carte_a_pinces`, verso=True).
 - Le PDF ne prouve pas l'alignement : V13 reste obligatoire sur papier.
 
 ### R13 — Contrôles combinatoires (v7.2)
+<!-- modules : jeux -->
 
 - `generer_loto` et `verifier_loto` (J7), `plan_projectif` et `verifier_symboles` (J8), `verifier_appariement` (J2, J7, J10), `verifier_code` (GF-X : chaque énigme porte son calcul, qui doit donner un chiffre de 0 à 9), `verifier_graphemes` (GF-J, SP10, cartes de sons).
 - Ces contrôles s'exécutent **avant** la mise en page (V11, V19, V21).
 
 ### R14 — Grille et planche à zones (v7.2)
+<!-- modules : fiches, jeux -->
 
 - `grille` : tableau à largeurs fixées dont chaque cellule reçoit du texte, une image ou de l'écriture liée.
 - `planche_zones` étend R8 : pièce découpée en zones superposées, sous-cellules côte à côte, contour en pointillés, séparations internes fines.
@@ -1492,6 +1530,7 @@ Le repère discret de version (♣ ♦ ♠, MP-D-01) se place en en-tête de pag
 - **Mots coupés** : dans toute cellule, un mot qui se coupe impose une cellule plus large, un item plus court ou une taille réduite dans les limites du degré ; jamais de césure (règle commune à R14 et R15 ; `verifier_mots_coupes` sur le texte extrait du PDF, V12 et V10).
 
 ### R15 — Planche A5 (révision du 2.11.2026)
+<!-- modules : fiches, jeux -->
 
 - Pour un contenu court qui laisserait une page A4 à moitié vide (MP-O-14) : règle de jeu, petite fiche, bande, ticket, brevet. La feuille A4 porte **deux exemplaires identiques**, séparés par un **trait de coupe en tirets** (1 pt) ; on imprime deux fois moins et on coupe la feuille en deux.
 - **Côte à côte** : A4 paysage, deux colonnes A5 portrait ; marges de 1 cm ; retrait intérieur de 0,9 cm ; largeur de contenu 12,05 cm. **Empilé** : A4 portrait, deux rangées A5 paysage ; largeur de contenu 17,2 cm.
@@ -1502,6 +1541,7 @@ Le repère discret de version (♣ ♦ ♠, MP-D-01) se place en en-tête de pag
 - Fonction `planche_A5` de l'Annexe I-C. Testé dans cette version : règles de GF-X, J7 et J8, GF-B2 (côte à côte) ; GF-M (empilé) ; remplissage mesuré de 90 % au moins par exemplaire.
 
 ## 4.3 Partie enseignant·e : structure fixe
+<!-- modules : fiches, jeux, verification -->
 
 La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet ordre :
 
@@ -1528,6 +1568,7 @@ La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet or
 **Pour un jeu ou une dictée**, la partie enseignant·e est une page à part entière, jamais oubliée (V21) : pour un jeu, la règle complète, la solution et le débriefing ; pour une dictée (G20), le texte à dicter en entier. La règle destinée aux élèves est imprimée avec le matériel, en étapes numérotées (MP-J-07), en planche A5 si elle tient sur une demi-page (R15). Avant le test en classe, elle renvoie à la grille « utile, utilisable, acceptable » (Tricot et al., 2003 ; Bibliothèque IA 2).
 
 # ÉTAPE 5 — VÉRIFIER SUR LE RENDU
+<!-- modules : verification -->
 
 ## 5.1 Obligation (MP-V-01)
 
@@ -1548,7 +1589,7 @@ Lors des essais qui ont conduit à cette version, un audit fondé sur le seul te
 | V7 | Rien d'essentiel près des bords ; lignes et tableaux dans la largeur utile. | MP-F-04, MP-F-06 |
 | V8 | Aucune trace de la partie enseignant·e (corrigé, barème, niveaux) sur la fiche élève. | X-05, X-11 |
 | V9 | En-tête dans l'ordre : Prénom et Date tout en haut, puis titre centré avec un espace avant et après, puis objectif en langage élève, sans étiquette « Mon objectif ». | X-14, MP-O-12 |
-| V10 | Relecture orthographique de tout le texte élève : aucune forme fautive ou inexistante, ni dans les consignes, ni dans les exemples, items, distracteurs, banques de mots ou textes d'images. | X-13, MP-CC-11, MP-I-05 |
+| V10 | Relecture orthographique de tout le texte élève : aucune forme fautive ou inexistante, ni dans les consignes, ni dans les exemples, items, distracteurs, banques de mots ou textes d'images ; si l'enseignant·e a demandé une analyse d'erreurs (§ 3.7), chaque forme fautive est marquée, corrigée et justifiée, une seule fois, et les quatre conditions sont vérifiées. | X-13, MP-CC-11, MP-I-05 |
 | V11 | **Jeu — unicité et fermeture** : chaque question a une seule réponse dans le lot ; la boucle se ferme (ou chaque paire, chaque famille est complète). Contrôle par programme (Annexe I-C) ou à la main, pièce par pièce. | MP-J-01, X-15 |
 | V12 | **Jeu — pièces** : dimensions prévues ; aucune pièce coupée entre deux pages ; traits de coupe (pointillés) distincts des séparations internes (trait plein épais) ; ordre d'impression mélangé ; chaque case d'accueil dépasse la pièce mobile d'au moins 0,5 cm par côté (`verifier_case_piece`) ; la planche occupe toute la surface utile, texte et images centrés ; repères de coupe présents au bord de la feuille pour chaque ligne de coupe. | R8, MP-J-03, MP-J-05, MP-J-10, MP-J-11, MP-J-12 |
 | V13 | **Jeu recto-verso** : alignement du recto et du verso contrôlé sur une impression test (le PDF ne suffit pas), si le jeu est imprimé recto-verso. | J4 |
@@ -1583,7 +1624,7 @@ V1 à V10 et V12 se contrôlent sur le PDF ou l'aperçu ; V11 sur les données d
 | 12 | Partie enseignant·e séparée et complète (structure § 4.3) ? | Étape 4 |
 | 13 | Contrôle visuel V1-V10 effectué (ou impossibilité déclarée) ; V20 (page pleine) et V21 (cohérence didactique) ; pour un jeu, V11 à V13 ; pour un fichier produit par du code, V14 ? | MP-V-01, MP-O-14 |
 | 14 | En-tête conforme : Prénom et Date en première ligne, titre centré entre deux espaces, objectif en langage élève sans étiquette ? | MP-O-12, R7 |
-| 15 | Aucune forme écrite fautive ou inexistante montrée à l'élève, y compris dans les exercices de jugement ? | MP-CC-11, X-13 |
+| 15 | Aucune forme écrite fautive ou inexistante montrée à l'élève, y compris dans les exercices de jugement, hors analyse d'erreurs demandée et conforme aux quatre conditions du § 3.7 ? | MP-CC-11, X-13 |
 | 16 | Jeu : une seule pièce correcte par question, aucun indice non visé, ordre mélangé, autocorrection intégrée, règle en étapes avec un exemple hors lot, modalité adaptée à la notion, cases d'accueil plus grandes que les pièces mobiles ? | MP-J-01 à MP-J-08, MP-J-10, X-15 à X-17 |
 
 La grille détaillée (audit ou transformation d'une fiche existante) figure en Annexe I-B.
@@ -1604,8 +1645,10 @@ L'IA DOIT livrer un rapport court, dans ce format :
 Puis : **Écarts assumés** (du plus important au plus mineur, avec leur justification) et **Statut des informations** (MP-V-03) : ce qui a été vérifié dans la session (avec la source), ce qui ne l'a pas été, ce qui relève d'une inférence de conception.
 
 # ÉTAPE 6 — LIVRER
+<!-- modules : verification -->
 
 ## 6.1 Gabarits de fiches et de dossiers de jeu
+<!-- modules : fiches -->
 
 Les éléments entre chevrons `< >` sont à remplacer. Les durées figurent **dans la partie enseignant·e**, jamais sur la fiche élève. `[lignes : n]` désigne n lignes R1a ; `[encadré]` un encadré R5 ; `[bilan R6]` un bilan en mots dans des cellules.
 
@@ -1686,6 +1729,7 @@ En-tête R7 (Prénom et Date, titre centré, objectif). Quatre à six items cour
 Quatre stations au plus (lire, manipuler, écrire, numérique) ; même structure visuelle d'une station à l'autre (MP-O-09) ; seul le contenu change.
 
 ### GF-F — Dossier de jeu (règle 1 page par groupe ; 1 page par planche ; trace 1 page)
+<!-- modules : fiches, jeux -->
 
 Pièces du dossier, dans cet ordre :
 
@@ -1912,6 +1956,7 @@ Prénom : ____________________     Date : ______________   (R7, 1re ligne)
 Tous les gabarits GF-G à GF-AA, GF-B2 et GF-B3 sont testés sur rendu (2.11.2026, LibreOffice, PDF regardé page par page, schéma OOXML valide) ; leurs dimensions sont des inférences de conception, à ajuster après usage (MP-P-08).
 
 ## 6.2 Barèmes et codes de retour
+<!-- modules : fiches -->
 
 **Barème générique par item (0-1-2)** : 2 = correct, avec la méthode ou la justification si elle est demandée ; 1 = idée juste, mais erreur de forme ou oubli partiel ; 0 = hors sujet ou non fait.
 
@@ -1920,10 +1965,12 @@ Tous les gabarits GF-G à GF-AA, GF-B2 et GF-B3 sont testés sur rendu (2.11.202
 **Fiche d'entraînement** : un retour critère par critère (« acquis » / « en cours » / « à revoir ») est préférable à une note.
 
 ## 6.3 Instruction système (projet ou assistant personnalisé)
+<!-- modules : noyau -->
 
-> Tu conçois des ressources pédagogiques imprimées (fiches et jeux) pour l'école obligatoire romande (PER, 1P à 11S). Tu utilises le Référentiel pédagogique IA joint. Pour toute ressource imprimée destinée aux élèves (fiche, jeu de cartes, dominos, plateau, dé à monter), tu appliques le **Livre I** dans l'ordre : cadrage → **fiche technique avec budget de page** → choix du gabarit (G pour un exercice, J pour une pièce de jeu, GF pour un document, SP pour un outil permanent) → construction avec les recettes R1 à R14 → **contrôle sur le rendu PDF** → livraison (fiche élève ou dossier de jeu .docx, partie enseignant·e .docx séparée, rapport de conformité). Pour un jeu : chaque question a une seule réponse dans le lot, aucune pièce ne se trouve par un indice non visé, l'ordre d'impression est mélangé, tu vérifies l'unicité et la fermeture avant de livrer, et pour une notion orthographique le jeu fait lire ou écrire la forme. Chaque fiche individuelle commence par Prénom et Date tout en haut, puis le titre centré (espace avant et après), puis l'objectif en langage élève. Quand le contenu ne tient pas, tu réduis le contenu, jamais les dimensions. Tu n'utilises jamais de tirets bas pour une réponse d'une phrase. Tu ne montres jamais à l'élève une forme écrite fautive ou inexistante (ni phrase à corriger, ni distracteur ou exemple mal orthographié). Avant de produire un jeu, tu montres le panorama des jeux (ou la page de miniatures de la tranche d'âge), tu proposes deux ou trois gabarits et tu attends le choix, sauf si le gabarit est déjà nommé (MP-J-13) ; pour des cartes tirées, tu demandes d'abord si le dos est à motif ou blanc, avec ou sans mention personnelle (MP-J-14) ; tu signales le modèle Word ou la planche prête à imprimer qui existe pour ce jeu. Désignation suisse des degrés uniquement ; les élèves n'utilisent pas d'IA ; tutoiement et impératif pour l'élève, vouvoiement et point médian pour l'adulte. Si la discipline, la notion ou le degré manquent, tu poses la question ; pour le reste, tu fais une hypothèse et tu l'annonces.
+> Tu conçois des ressources pédagogiques imprimées (fiches et jeux) pour l'école obligatoire romande (PER, 1P à 11S). Tu utilises le Référentiel pédagogique IA joint. Pour toute ressource imprimée destinée aux élèves (fiche, jeu de cartes, dominos, plateau, dé à monter), tu appliques le **Livre I** dans l'ordre : cadrage → **fiche technique avec budget de page** → choix du gabarit (G pour un exercice, J pour une pièce de jeu, GF pour un document, SP pour un outil permanent) → construction avec les recettes R1 à R14 → **contrôle sur le rendu PDF** → livraison (fiche élève ou dossier de jeu .docx, partie enseignant·e .docx séparée, rapport de conformité). Pour un jeu : chaque question a une seule réponse dans le lot, aucune pièce ne se trouve par un indice non visé, l'ordre d'impression est mélangé, tu vérifies l'unicité et la fermeture avant de livrer, et pour une notion orthographique le jeu fait lire ou écrire la forme. Chaque fiche individuelle commence par Prénom et Date tout en haut, puis le titre centré (espace avant et après), puis l'objectif en langage élève. Quand le contenu ne tient pas, tu réduis le contenu, jamais les dimensions. Tu n'utilises jamais de tirets bas pour une réponse d'une phrase. Par défaut, tu ne montres jamais à l'élève une forme écrite fautive ou inexistante (ni phrase à corriger, ni distracteur ou exemple mal orthographié) ; seule exception : une analyse d'erreurs que l'enseignant·e demande explicitement, dès la 5P, aux quatre conditions du § 3.7. Avant de produire un jeu, tu montres le panorama des jeux (ou la page de miniatures de la tranche d'âge), tu proposes deux ou trois gabarits et tu attends le choix, sauf si le gabarit est déjà nommé (MP-J-13) ; pour des cartes tirées, tu demandes d'abord si le dos est à motif ou blanc, avec ou sans mention personnelle (MP-J-14) ; tu signales le modèle Word ou la planche prête à imprimer qui existe pour ce jeu. Désignation suisse des degrés uniquement ; les élèves n'utilisent pas d'IA (de la 9S à la 11S, seulement aux conditions du cadre cantonal, § 1.5) ; tutoiement et impératif pour l'élève, vouvoiement et point médian pour l'adulte. Si la discipline, la notion ou le degré manquent, tu poses la question ; pour le reste, tu fais une hypothèse et tu l'annonces.
 
 ## 6.4 Prompts courts pour les enseignant·e·s
+<!-- modules : noyau -->
 
 #### Créer
 
@@ -1972,6 +2019,7 @@ la mise en page avec les recettes R1 à R8, puis vérifie le rendu.
 ```
 
 # ANNEXE I-A — STANDARD DE MISE EN PAGE MP-* (RÉFÉRENCE DES CODES)
+<!-- modules : noyau -->
 
 Cette annexe rassemble toutes les règles codées utilisées dans les fiches techniques, les rapports de conformité et les audits. Les Étapes 0 à 6 en indiquent l'usage ; en cas de doute sur une valeur chiffrée, la table 2.1 fait foi.
 
@@ -2002,6 +2050,7 @@ Cette annexe rassemble toutes les règles codées utilisées dans les fiches tec
 | N21 | Pour un jeu imprimé : une seule pièce correcte par question dans le lot, aucun indice non visé, ordre d'impression mélangé, autocorrection intégrée ; vérifier l'unicité et la fermeture (V11) et le rendu des planches (V12). | § 3.8, MP-J, R8 |
 
 ## Règles détaillées
+<!-- modules : fiches, jeux -->
 
 ### MP-P — Principes de conception
 
@@ -2192,18 +2241,19 @@ Une réduction progressive est possible au cours du cycle.
 | MP-V-02 | Rapport de conformité livré avec la fiche. | DOIT |
 | MP-O-12 | En-tête obligatoire dans cet ordre : Prénom et Date tout en haut (première ligne) ; titre centré avec un espace avant et après (≥ 12 pt) ; objectif en langage élève (une phrase à la première personne, sans étiquette « Mon objectif : » ; révision du 2.11.2026). Recette R7. Jeunes élèves : pas de ligne Prénom et Date (MP-O-03). | DOIT |
 | MP-I-05 | Image générée par IA destinée à l'élève : aucun texte produit par le générateur dans l'image (souvent fautif ou inexistant) ; le texte est ajouté dans le document, puis relu (V10). Ni logo, ni marque, ni personne réelle reconnaissable. | DOIT |
-| MP-CC-11 | Aucune forme écrite fautive ou inexistante dans un support destiné à l'élève (consignes, exemples, items, distracteurs, banques de mots, phrases à corriger) ; alternatives au § 3.7 ; relecture orthographique avant livraison (V10). | DOIT |
+| MP-CC-11 | Par défaut, aucune forme écrite fautive ou inexistante dans un support destiné à l'élève (consignes, exemples, items, distracteurs, banques de mots, phrases à corriger) ; alternatives au § 3.7 ; exception encadrée, sur décision de l'enseignant·e, dès la 5P, pour une analyse d'erreurs (quatre conditions, § 3.7) ; relecture orthographique avant livraison (V10). | DOIT |
 | MP-V-03 | Statut des informations : vérifié dans la session (avec la source) / non vérifié / inférence de conception. | DEVRAIT |
 | MP-J-01 à MP-J-13 | Règles communes aux jeux imprimés : choix présenté avec le panorama des jeux (MP-J-13) ; surface de la planche et repères de coupe (MP-J-11, MP-J-12) ; unicité, aucun indice non visé, ordre mélangé, autocorrection, traits de coupe, aucun repère de niveau, règle en étapes avec exemple hors lot, carte-mémoire pour vérifier, en-tête, case d'accueil ≥ pièce mobile + 0,5 cm par côté (voir § 3.8). (v7 ; MP-J-10 : révision du 2.11.2026, suite) | DOIT / DEVRAIT |
 | MP-F-07 | Format A3 admis pour les affiches lues à distance (TR17 à TR22) ; paramètres du § 2.5 ; dérogation explicite à MP-F-01. (v7.2) | PEUT |
 | MP-T-08 | Toute police scolaire est déclarée, installée et vérifiée sur le rendu ; sinon, repli libre annoncé. (v7.2, constat T4 du balayage BDRP) | DOIT |
 | MP-T-09 | TrueRomande n'est jamais utilisée pour du texte composé automatiquement ; l'écriture liée est composée en GE Typo Libre (R10). (v7.2) | DOIT |
-| MP-T-10 | **Exemple en police d'élèves** : partout où un exemple est donné ou affiché (exemple résolu, exemple déjà fait en tête de fiche, exemple d'un rappel, d'une règle de jeu ou d'une affiche, colonne « Exemple » d'un tableau), l'exemple est composé dans la police d'élèves **GE Typo Libre** (R10), comme écrit à la main, pour que l'élève distingue ce qui est donné de ce qui est montré en exemple. Ce qui est donné reste dans la police de la fiche : consigne, règle, intitulé « Exemple », item de départ. Dans un exercice dont le premier item est fait, l'item reste comme les autres et seule la réponse (ce que l'élève écrit, à l'endroit où il l'écrit) passe en police d'élèves. Corps : même hauteur apparente que le texte de la fiche, soit 1,25 fois le corps pour des lettres (17,5 pt pour 14 pt), 0,9 fois pour des chiffres seuls et 1,1 fois pour un mélange de lettres et de chiffres, un seul corps par exemple (`taille_eleve`) ; ni gras ni italique ; un léger retrait au début d'une cellule, la police ayant des attaques qui débordent à gauche. Caractère absent de la police (Â, Ä, Î, Ï, Ö, Ù, Û, Ü, Ÿ, ä, ÿ, æ, –, %, point médian) : le mot reste en script (`ecrire_exemple` le fait seul). Police non installée : repli annoncé (MP-T-08), l'exemple reste en italique. Ne s'applique pas aux données d'un jeu (texte des cartes, des dominos, des plateaux) ni au contenu d'un modèle rempli à adapter. Recettes : `ecrire_exemple`, option `{'eleve': taille}` d'`ecrire`, police `'Eleve'` de `Dessin` (`police_exemple_pdf`). (21.11.2026) | DOIT |
+| MP-T-10 | **Exemple en police d'élèves** : partout où un exemple est donné ou affiché (exemple résolu, exemple déjà fait en tête de fiche, exemple d'un rappel, d'une règle de jeu ou d'une affiche, colonne « Exemple » d'un tableau), l'exemple est composé dans la police d'élèves **GE Typo Libre** (R10), comme écrit à la main, pour que l'élève distingue ce qui est donné de ce qui est montré en exemple. Ce qui est donné reste dans la police de la fiche : consigne, règle, intitulé « Exemple », item de départ. Dans un exercice dont le premier item est fait, l'item reste comme les autres et seule la réponse (ce que l'élève écrit, à l'endroit où il l'écrit) passe en police d'élèves. Corps : même hauteur apparente que le texte de la fiche, soit 1,25 fois le corps pour des lettres (17,5 pt pour 14 pt), 0,9 fois pour des chiffres seuls et 1,1 fois pour un mélange de lettres et de chiffres, un seul corps par exemple (`taille_eleve`) ; ni gras ni italique ; un léger retrait au début d'une cellule, la police ayant des attaques qui débordent à gauche. Caractère absent de la police (Â, Ä, Î, Ï, Ö, Ù, Û, Ü, Ÿ, ä, ÿ, æ, –, %, point médian) : le mot reste en script (`ecrire_exemple` le fait seul). Police non installée : repli annoncé (MP-T-08), l'exemple reste en italique. Ne s'applique pas aux données d'un jeu (texte des cartes, des dominos, des plateaux) ni au contenu d'un modèle rempli à adapter. Recettes : `ecrire_exemple`, option `{'eleve': taille}` d'`ecrire`, police `'Eleve'` de `Dessin` (`police_exemple_pdf`). (21.11.2026) | Convention (priorité 5) : appliquée par défaut |
 | MP-P-10 | L'IA travaille avec des prénoms fictifs ou des marqueurs ; les prénoms réels sont insérés localement par l'enseignant·e (nLPD). (v7.2, constat T6 du balayage BDRP) | DOIT |
 | MP-O-13 | Rubrique « Conditionnement » dans la fiche technique de toute ressource imprimée autre qu'une fiche à photocopier (§ 2.3). (v7.2) | DEVRAIT |
 | MP-O-14 | Page pleine : aucune page élève remplie partiellement ; sur le rendu, chaque page atteint au moins 90 % du budget de hauteur (mesure sur l'image de la page) ; sinon aérer, compléter (lignes, items) ou passer en planche A5 (R15). Exceptions déclarées : partie enseignant·e, dernière planche d'un jeu à nombre de pièces fixé. Contrôle V20. (révision du 2.11.2026) | DOIT |
 
 # ANNEXE I-B — GRILLE DE RELECTURE DÉTAILLÉE
+<!-- modules : verification -->
 
 À utiliser pour auditer une fiche existante ou pour transformer une fiche d'une autre source. Chaque écart est référencé par son code ; le relevé est présenté du plus grave au plus mineur, en commençant par les écarts aux règles DOIT.
 
@@ -2229,7 +2279,7 @@ Une réduction progressive est possible au cours du cycle.
 - Public cible identifié ; vocabulaire, syntaxe, structure et densité adaptés (MP-P-04).
 - Contexte d'usage pris en compte ; durée estimée réaliste (MP-P-05).
 - Type d'objectif (comprendre, agir, explorer) et format d'exercice cohérents (MP-P-06).
-- Terminologie suisse respectée (1P-8P, cycles 1 et 2, disciplines romandes).
+- Terminologie suisse respectée (1P-8P et 9S-11S, cycles 1 à 3, disciplines romandes).
 - Adéquation de la demande à la progression PER examinée et signalée (MP-P-09).
 - En-tête : Prénom et Date en première ligne, titre centré entre deux espaces, objectif en langage élève sans étiquette (MP-O-12).
 - Aucune forme écrite fautive ou inexistante dans tout le texte élève, y compris exemples, distracteurs et phrases de jugement (MP-CC-11).
@@ -2297,6 +2347,7 @@ Une réduction progressive est possible au cours du cycle.
 Le relevé est présenté **du plus grave au plus mineur**, en commençant par les écarts aux règles DOIT, puis DEVRAIT.
 
 # ANNEXE I-C — MODULE PYTHON-DOCX DES RECETTES R1 À R15 (ET CONTRÔLES V11 À V21)
+<!-- modules : code -->
 
 Pour les IA qui produisent le fichier .docx par du code. La v7 remplace le module de la v6 par le module « recettes R1-R6 corrigées », issu du test du 30.10.2026, complété par R3, R5, R6, R7 (en-tête), R8 (planche de pièces), les styles nommés et deux outils pour les jeux.
 
@@ -3719,7 +3770,7 @@ def planche_pdf(base, pieces, colonnes, rangees, mention='', taille_pt=16, taill
 
 #### 19 novembre 2026 : panorama des jeux (MP-J-13)
 
-`panorama_jeux` dessine avec la classe `Dessin` (R11) une image A4 paysage qui présente les jeux disponibles **uniquement par des miniatures tirées des documents réels** : la page du modèle Word ou de la planche prête à imprimer est insérée telle quelle, réduite (`show_pdf_page`), avec le code, le nom, l'usage et la page du document. La table `SOURCES_JEUX` donne, pour chaque gabarit, le document de la boîte à outils, la page de chaque tranche d'âge et le nombre de pièces par planche ; un gabarit sans document est cité dans une liste, sans image (20.11.2026). `miniatures_tranche` compose de la même façon la page d'une tranche d'âge (fonction commune `_page_miniatures`). L'IA l'affiche avant de proposer un jeu, ou quand on lui demande quelles sont les possibilités (MP-J-13). Les listes `JEUX` et `SOURCES_JEUX` se complètent à chaque nouveau gabarit ou nouveau document ; un modèle Word est converti en PDF avant l'appel. `panorama_exercices` fait de même pour les gabarits d'exercice G1 à G23 (liste `EXERCICES`, schémas dans `_vignette_exercice`) : l'IA l'affiche quand on lui demande quels exercices sont possibles. Le bloc se place après `Dessin` et `arc_pts`.
+`panorama_jeux` dessine avec la classe `Dessin` (R11) une image A4 paysage qui présente les jeux disponibles **uniquement par des miniatures tirées des documents réels** : la page du modèle Word ou de la planche prête à imprimer est insérée telle quelle, réduite (`show_pdf_page`), avec le nom, l'usage et la page du document (sans code depuis le 21.11.2026). La table `SOURCES_JEUX` donne, pour chaque gabarit, le document de la boîte à outils, la page de chaque tranche d'âge et le nombre de pièces par planche ; un gabarit sans document est cité dans une liste, sans image (20.11.2026). `miniatures_tranche` compose de la même façon la page d'une tranche d'âge (fonction commune `_page_miniatures`). L'IA l'affiche avant de proposer un jeu, ou quand on lui demande quelles sont les possibilités (MP-J-13). Les listes `JEUX` et `SOURCES_JEUX` se complètent à chaque nouveau gabarit ou nouveau document ; un modèle Word est converti en PDF avant l'appel. `panorama_exercices` fait de même pour les gabarits d'exercice G1 à G23 (liste `EXERCICES`, schémas dans `_vignette_exercice`) : l'IA l'affiche quand on lui demande quels exercices sont possibles. Le bloc se place après `Dessin` et `arc_pts`.
 
 **Test (19.11.2026)** : images produites à partir du code de cette annexe et regardées (panorama des jeux, 20.11.2026 : 41 miniatures de documents réels, aucun gabarit en liste ; pages par tranche d'âge : 38 à 40 miniatures ; panorama des exercices : 23 gabarits, en schémas ; textes sans débordement) ; police Liberation Sans à la place d'Arial ; affichage par une IA dans une conversation : non testé.
 
@@ -3804,15 +3855,15 @@ def _page_miniatures(base, titres, entrees, dossier, dpi, sources=None):
     sans = []; ouverts = {}
     for code, nom, ligne2, tranche in entrees:
         doc, pages, unite, nombres = (sources or SOURCES_JEUX).get(code, (None, (None,) * 3, '', ()))
-        if doc is None or pages[tranche - 1] is None: sans.append(f'{code} · {nom}'); continue
-        i = len([1 for e in entrees[:entrees.index((code, nom, ligne2, tranche))] if f'{e[0]} · {e[1]}' not in sans]) + 1
+        if doc is None or pages[tranche - 1] is None: sans.append(nom); continue
+        i = len([1 for e in entrees[:entrees.index((code, nom, ligne2, tranche))] if e[1] not in sans]) + 1
         x, y = m + (i % col) * l, m + (i // col) * h; mx, my = x + (l - 210 * k) / 2, y + 1.5
         doc = doc if isinstance(doc, str) else doc[tranche - 1]; page = pages[tranche - 1]
         src = ouverts.setdefault(doc, d.f.open(os.path.join(dossier, doc + '.pdf'))); r = src[page - 1].rect; w, t = r.width / d.k * k, r.height / d.k * k
         ox, oy = mx + (210 * k - w) / 2, my + (297 * k - t) / 2
         d.p.show_pdf_page(d.f.Rect(ox * d.k, oy * d.k, (ox + w) * d.k, (oy + t) * d.k), src, page - 1)
         d.ligne([(mx, my), (mx + 210 * k, my), (mx + 210 * k, my + 297 * k), (mx, my + 297 * k)], ep=0.25, ferme=True)
-        by = my + 297 * k; lignes = ((f'{code} · {nom}', 7.2 if col < 7 else 6.2, 'Arial-B'), (ligne2 or f'{nombres[tranche - 1]} {unite}'.replace('1 dés', '1 dé'), 6.4, 'Arial'),
+        by = my + 297 * k; lignes = ((nom, 7.2 if col < 7 else 6.2, 'Arial-B'), (ligne2 or f'{nombres[tranche - 1]} {unite}'.replace('1 dés', '1 dé'), 6.4, 'Arial'),
                                     (('modèle Word' if doc.startswith('Modèle') else 'planche PDF') + f' · page {page}', 5.6, 'Arial'))
         for j, (t, c, pol) in enumerate(lignes):
             while d.largeur_texte(t, c, pol) > l - 1.5: c -= 0.2; assert c >= 4.5, t
@@ -3831,7 +3882,7 @@ def panorama_jeux(base, dossier, dpi=200):
     def tr(code):
         pages = SOURCES_JEUX.get(code, (None, (None,) * 3))[1]
         return 2 if pages[1] is not None else next((t for t in (1, 3) if pages[t - 1] is not None), 2)
-    return _page_miniatures(base, ('Jeux imprimés', 'Chaque miniature est une page', 'du document réel, réduite.', 'Dites le code ou le nom', 'du jeu choisi.'),
+    return _page_miniatures(base, ('Jeux imprimés', 'Chaque miniature est une page', 'du document réel, réduite.', 'Dites le nom', 'du jeu choisi.'),
                             [(c, n, u, tr(c)) for c, n, u in JEUX], dossier, dpi)
 
 SUPPORTS = [('G22', 'Lignes d\'écriture romandes', 'pages de 7, 4 et 2,5 mm'), ('G23', 'Syllabes et sons', 'image, syllabes, sons'),
@@ -3854,7 +3905,7 @@ SOURCES_SUPPORTS = {
 def panorama_supports(base, dossier, dpi=200):
     """Page des fiches et supports qui ont un document prêt à imprimer (G22 à G31) : miniatures tirées des documents
     réels, comme pour les jeux. Complète panorama_exercices, qui montre G1 à G23 en schémas."""
-    return _page_miniatures(base, ('Fiches et supports', 'Chaque miniature est une page', 'du document réel, réduite.', 'Dites le code ou le nom', 'du support choisi.'),
+    return _page_miniatures(base, ('Fiches et supports', 'Chaque miniature est une page', 'du document réel, réduite.', 'Dites le nom', 'du support choisi.'),
                             [(c, n, u, 1) for c, n, u in SUPPORTS], dossier, dpi, SOURCES_SUPPORTS)
 
 def miniatures_tranche(base, tranche, dossier, dpi=200):
@@ -3964,13 +4015,13 @@ def panorama_exercices(base, dpi=150):
     quand on demande quels exercices sont possibles. Écrit base.svg, base.pdf et base.png ; renvoie le chemin du PNG."""
     L, H, m, col, ran = 297, 210, 8, 6, 4; l, h = (L - 2 * m) / col, (H - 2 * m) / ran; d = Dessin(L, H)
     d.texte(m + l / 2, m + 16, 'Exercices', 16, police='Arial-B'); d.texte(m + l / 2, m + 23, 'les gabarits disponibles', 10)
-    d.texte(m + l / 2, m + 33, 'Dites le code ou le nom', 9); d.texte(m + l / 2, m + 37.5, 'de l’exercice choisi.', 9)
+    d.texte(m + l / 2, m + 33, 'Dites le nom', 9); d.texte(m + l / 2, m + 37.5, 'de l’exercice choisi.', 9)
     for i, (code, nom) in enumerate(EXERCICES, 1):
         x, y = m + (i % col) * l, m + (i // col) * h
         d.ligne([(x + 1.5, y + 1.5), (x + l - 1.5, y + 1.5), (x + l - 1.5, y + h - 1.5), (x + 1.5, y + h - 1.5)], ep=0.3, ferme=True)
         _vignette_exercice(d, code, x + 4, y + 4, l - 8, 27)
-        d.texte(x + l / 2, y + 36.5, code, 10, police='Arial-B'); d.texte(x + l / 2, y + 41.5, nom, 8.2)
-        assert d.largeur_texte(nom, 8.2) <= l - 4, code
+        d.texte(x + l / 2, y + 39, nom, 8.4, police='Arial-B')                  # nom seul, sans code (21.11.2026)
+        assert d.largeur_texte(nom, 8.4, 'Arial-B') <= l - 6, code
     d.sauver(base)
     return d.png(base, dpi)
 ```
@@ -5269,10 +5320,12 @@ if __name__ == '__main__':
 ```
 
 # ANNEXE I-D — LISTE DES CODES DU LIVRE II (NOMS SEULEMENT)
+<!-- modules : noyau -->
 
 Ce fichier contient le Livre I seul. Les définitions complètes des fonctions, patrons, micro-formats et types de ressources figurent dans le Livre II (fichier complet). Pour une fiche courante, cette liste, le tableau 3.5 et le catalogue des gabarits (§ 3.3) suffisent ; pour un choix pédagogique fin, utiliser le fichier complet.
 
 ## Fonctions pédagogiques (F01 à F43)
+<!-- modules : noyau, sequences -->
 
 - F01 — Susciter l'intérêt et motiver
 - F02 — Contextualiser et donner du sens
@@ -5317,6 +5370,24 @@ Ce fichier contient le Livre I seul. Les définitions complètes des fonctions, 
 - F41 — Évaluer les acquis
 - F42 — Réguler et remédier
 - F43 — Développer la métacognition et l'autorégulation
+
+## Correspondance avec les huit fonctions du guide (21.11.2026)
+<!-- modules : noyau, sequences -->
+
+Le guide web propose huit fonctions simples pour composer une séquence. Correspondance proposée par l'auteur (inférence de conception) :
+
+| Fonction du guide | Fonctions du Livre II |
+|---|---|
+| Présenter une information | F08, F09, F10, F14 |
+| Faire s'exercer | F26, F27, F28, F29 |
+| Enseigner pas à pas, avec un retour | F11, F21, F22, F36, F38 |
+| Motiver par le jeu | F01, F04 (le plus souvent avec F27 ou F29) |
+| Faire explorer | F15, F16, F19 |
+| Faire manipuler et observer | F12, F17, F18 |
+| Faire construire | F13, F30, F31 |
+| Faire échanger entre élèves | F33, F34, F35, F40 |
+
+Sans équivalent dans les huit : F02, F03, F05, F06, F07, F20, F23, F24, F25, F32, F37, F39, F41, F42, F43. Devant une séquence, l'IA traduit chaque fonction du guide en fonctions F, puis vérifie au regard de l'objectif celles qui manquent, notamment le diagnostic de départ (F07), les aides et la différenciation (F23, F24), les traces et la régulation (F37, F42), l'autoévaluation et la métacognition (F39, F43). Dans ce qu'elle écrit à l'enseignant·e, elle nomme les fonctions en toutes lettres, sans code.
 
 ## Fonctions pour le travail enseignant (E01 à E11)
 

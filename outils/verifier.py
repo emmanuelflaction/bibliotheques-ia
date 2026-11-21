@@ -1,6 +1,7 @@
 """Contrôles déterministes du dépôt (à lancer depuis la racine : python3 outils/verifier.py).
 Vérifie que chaque fichier annoncé par le guide existe, que chaque aperçu référencé existe,
-et que les bibliothèques portent la même édition que le guide."""
+que les bibliothèques portent la même édition que le guide et que les modules de la Bibliothèque IA 1
+sont à jour (outils/modules.py)."""
 import json, os, re, sys
 h = open('index.html', encoding='utf-8').read()
 i = h.index('const D = ') + len('const D = '); D = json.loads(h[i:h.index('};\n', i) + 1])
@@ -24,6 +25,9 @@ ap = set(re.findall(r'apercus/[0-9a-f]{12}\.(?:jpg|png|svg)', h)); manque += [a 
 ed = re.search(r'Édition du (\d+)&nbsp;(\w+) (\d{4})', h); ed = ed and f'{ed.group(1)} {ed.group(2)} {ed.group(3)}'
 for b in ('bibliotheques/Bibliotheque-IA_1-technique_pour-IA_v1.md', 'bibliotheques/Bibliotheque-IA_2-pedagogique_pour-IA_v1.md'):
     if f'Édition du {ed}' not in open(b, encoding='utf-8').read(): manque.append(f'édition différente du guide ({ed}) : {b}')
+import subprocess
+r = subprocess.run([sys.executable, 'outils/modules.py', '--verifier'], capture_output=True, text=True)
+if r.returncode: manque.append('modules de la Bibliothèque IA 1 : ' + (r.stdout.strip() or r.stderr.strip().splitlines()[-1]))
 print(f'{n} fichiers annoncés, {len(ap)} aperçus, édition du guide : {ed}')
 print('Aucun problème.' if not manque else 'Problèmes :\n- ' + '\n- '.join(manque))
 sys.exit(1 if manque else 0)

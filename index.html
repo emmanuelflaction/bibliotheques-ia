@@ -597,6 +597,7 @@ const VUES = {
     <h2>Huit fonctions possibles</h2>
     <ul class="puces">${FONCTIONS.map(f => `<li>${f[1]}</li>`).join('')}</ul>
     <p class="source">Fonctions adaptées de De Vries (2001), qui les a définies pour les logiciels d’apprentissage ; elles sont transposées ici aux ressources imprimées.</p>
+    <p class="note">Ces huit fonctions sont une porte d’entrée. La Bibliothèque IA 2 les relie à une liste plus fine, que l’IA utilise pour signaler ce qui manque à votre séquence : par exemple un diagnostic de départ, une autoévaluation ou un moment où les élèves reviennent sur leur démarche.</p>
     <h2>Ce que le mot apporte, et où il trompe</h2>
     <ul class="puces">
       <li>Il dit l’interdépendance et la diversité : chaque ressource occupe une place, sa fonction.</li>
@@ -674,7 +675,7 @@ const VUES = {
   verifier: () => `
     <h1 class="titre">Vérifiez ce que l’IA a produit</h1>
     <p class="chapo">L’IA se trompe parfois. Relisez tout avant d’imprimer pour la classe.</p>
-    <ul class="coches">${['Les faits, les calculs et l’orthographe sont justes.', 'Chaque question a une seule réponse possible.', 'Aucune forme fautive n’est imprimée, même pour la faire corriger.',
+    <ul class="coches">${['Les faits, les calculs et l’orthographe sont justes.', 'Chaque question a une seule réponse possible.', 'Aucune forme fautive n’est imprimée, sauf l’analyse d’erreurs que vous avez demandée (dès la 5P) : chaque erreur y est barrée, corrigée et expliquée.',
       'Les textes tiennent dans leurs cases et aucun mot n’est coupé.', 'La taille des textes convient à vos élèves.', 'Aucun nom d’élève n’apparaît.', 'L’IA a dit ce qu’elle a vérifié elle-même et ce qui reste à vérifier.']
       .map((t, i) => `<li><label for="v${i}"><input type="checkbox" id="v${i}">${t}</label></li>`).join('')}</ul>
     <p class="note">Quelque chose ne va pas ? Dites-le à l’IA dans la même conversation : elle corrige et vous redonne le document.</p>
