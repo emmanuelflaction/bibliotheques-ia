@@ -6,6 +6,7 @@
 - Bibliothèque IA 1 : règles MP-J-07 et MP-D-02 complétées, astuces pratiques et variante coopérative dans la partie enseignant·e.
 - Bibliothèque IA 2 : section « Repères pour les jeux, la coopération et la différenciation ».
 - Mention de la licence CC BY-NC-SA 4.0 dans les deux bibliothèques.
+- Non-lecteurs : aucune consigne écrite destinée à l'élève, mais un exemple déjà fait en tête de la fiche et une ligne « Pour l'adulte » en bas de page (règle, recettes G23 et G24, page-son).
 - Cartes : liseré à coins arrondis à 3 mm du trait de coupe, marge blanche autour (dix jeux de cartes, modèles et exemples ; règle MP-J-14).
 - Carte à pinces : numéro à gauche, question centrée et agrandie. Plateaux : « Départ » et « Arrivée » aussi grands que la case le permet.
 - Mot mystère : « cases teintées » ; dans les fichiers en couleur, « fond teinté » au lieu de « fond gris ».
