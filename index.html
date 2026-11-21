@@ -85,7 +85,6 @@ details summary { cursor: pointer; font-weight: 700; } details p { margin-top: 1
 label { display: flex; flex-direction: column; gap: 6px; font-weight: 700; }
 input, select, textarea { background: var(--fond); border: 2px solid var(--trait); border-radius: 10px; padding: 12px 14px; font-weight: 400; width: 100%; }
 textarea { min-height: 20.5em; resize: vertical; line-height: 1.45; }
-details.texte { margin-top: 4px; } details.texte > summary { font-weight: 400; color: var(--doux, #555); font-size: .95em; } details.texte[open] > summary { margin-bottom: 8px; }
 .statut { font-weight: 700; color: var(--accent); min-height: 1.5em; }
 .degres { display: flex; flex-wrap: wrap; gap: 10px; }
 .degres button { min-height: 54px; padding: 8px 22px; border-radius: 12px; border: 2px solid var(--trait); background: var(--papier); font-weight: 700; cursor: pointer; }
@@ -284,8 +283,7 @@ function criteres() {
 function demandeSeq() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, es = Q.etapes.filter(e => nomEtape(e));
   const l = es.map((e, i) => `${i + 1}. ${nomEtape(e)}${e.c ? '' : ' (ressource que j\'ai déjà, à ne pas produire)'}${placeTxt(e.place)}\n   Fonction : ${v(fonction(e.fn), '[à compléter]').toLowerCase()}.${(e.obs || '').trim() ? `\n   Ce que j'observe et comment j'ajuste : ${e.obs.trim()}` : ''}${i < es.length - 1 ? `\n   Ce qui passe à la ressource suivante : ${v(e.vers, '[à compléter]')}` : ''}`).join('\n');
-  const refs = es.filter(e => e.c).map(e => item(e.c).ref).join(', ');
-  return `Je prépare une séquence pour ma classe, composée de plusieurs ressources reliées entre elles.\nDegré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nObjectif d'apprentissage : ${v(Q.objectif, '[à compléter]')}\nCe qui montrera la réussite : ${v(Q.indices || '', 'propose-le-moi')}\n\nRessources :\n${l || '[à compléter]'}\n\nPremier temps : montre-moi le plan d'ensemble. Pour chaque ressource : sa fonction, ce qu'elle apporte que les autres n'apportent pas, ce qu'elle reprend et ce qu'elle transmet, ce que j'observerai et comment ajuster. Signale toute redondance involontaire et toute fonction qui manque, puis attends mon accord.\nSecond temps : produis, une à une, les ressources à imprimer et leur corrigé, sans refaire celles que j'ai déjà. Chacune reprend ce que la précédente a produit.\n${joints()}${outilL()}\n${finV()}${refs ? `\n\nRepères pour l'IA : ${refs} dans la Bibliothèque IA 1.` : ''}`;
+  return `Je prépare une séquence pour ma classe, composée de plusieurs ressources reliées entre elles.\nDegré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nObjectif d'apprentissage : ${v(Q.objectif, '[à compléter]')}\nCe qui montrera la réussite : ${v(Q.indices || '', 'propose-le-moi')}\n\nRessources :\n${l || '[à compléter]'}\n\nPremier temps : montre-moi le plan d'ensemble. Pour chaque ressource : sa fonction, ce qu'elle apporte que les autres n'apportent pas, ce qu'elle reprend et ce qu'elle transmet, ce que j'observerai et comment ajuster. Signale toute redondance involontaire et toute fonction qui manque, puis attends mon accord.\nSecond temps : produis, une à une, les ressources à imprimer et leur corrigé, sans refaire celles que j'ai déjà. Chacune reprend ce que la précédente a produit.\n${joints()}${outilL()}\n${finV()}`;
 }
 function exempleDemande() { const q = Q, p = Object.assign({}, P); Q = JSON.parse(JSON.stringify(EXEMPLE_SEQ)); P.degre = '6P'; P.disc = 'mathématiques'; P.outil = ''; const t = demandeSeq(); Q = q; Object.assign(P, p); return t; }
 const joints = () => `Appuie-toi sur la Bibliothèque IA 1 jointe, et sur la Bibliothèque IA 2 ou ma Bibliothèque IA 4 si je les ai jointes. Si la Bibliothèque IA 1 manque, dis-le avant de commencer.`;
@@ -336,8 +334,8 @@ const jeunes = () => tranche(P.degre) === 0 && !(S.page === 'fiche' && item(S.co
 const avecConsignes = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme'; };
 const avecEtoiles = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme' || it.fam === 'jeu'; };
 const enCouleur = () => { const it = S.page === 'fiche' ? item(S.code) : null; return it && (it.fam === 'jeu' || it.fam === 'support') && it.fo.length && !it.fo.some(f => f.w); };
-const boite = (id, sfx, lib) => `<div class="rang"><button class="btn" type="button" id="copier${sfx}">${lib}</button><span class="statut" id="statut${sfx}" role="status"></span></div>
-  <details class="texte"><summary>Voir le texte</summary><textarea id="${id}" readonly aria-label="Texte qui sera collé dans la conversation"></textarea></details>`;
+const boite = (id, sfx, lib) => `<label for="${id}">Texte à coller dans la conversation<textarea id="${id}" readonly></textarea></label>
+  <div class="rang"><button class="btn" type="button" id="copier${sfx}">${lib}</button><span class="statut" id="statut${sfx}" role="status"></span></div>`;
 async function copierTexte(t, st, msg) {
   let ok = false;
   try { await navigator.clipboard.writeText(t.value); ok = true; } catch (e) { const d = t.closest('details'); if (d) d.open = true; t.focus(); t.select(); try { ok = document.execCommand('copy'); } catch (x) {} }
@@ -354,7 +352,7 @@ const champs = (ex1, ex2) => `
   <label for="notion">Notion à travailler<input id="notion" value="${esc(P.notion)}" placeholder="par exemple : ${ex2}" autocomplete="off"></label>
   <div class="note" id="notePicto" ${avecConsignes() && P.picto === 'oui' ? '' : 'hidden'}><p>Joignez aussi à la conversation la banque d’icônes : le fichier « Banque_icones_IC_pour-IA.md » et les images (zip). Ce choix reste enregistré pour vos prochaines demandes.</p>${fichiers(D05, [['Banque_icones_IC_pour-IA.md', 'Fichier à joindre à l’IA'], ['Banque_icones_IC_png.zip', 'Toutes les icônes (zip)']])}</div>
   <label for="outil">Votre outil d’IA crée-t-il des fichiers Word ?<select id="outil">${[['', 'Je ne sais pas'], ['oui', 'Oui'], ['non', 'Non : il répond seulement par du texte']].map(([v, t]) => `<option value="${v}" ${P.outil === v ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
-  ${boite('prompt', '', 'Copier le texte pour l’IA')}`;
+  ${boite('prompt', '', 'Copier le texte')}`;
 function carte(it) {
   const c = couleur(it);
   if (!it.fo.length) return `<button class="carte texte" style="--c:${c}" type="button" ${go({page: 'fiche', code: it.c})}><span class="tx"><span class="n">${esc(it.nom)}</span><span class="d">${esc(it.sert)}</span></span></button>`;
@@ -556,7 +554,7 @@ const VUES = {
       <div class="rang"><button class="btn second" type="button" id="seqAjoute">Ajouter une ressource</button></div></section>
     <section class="groupe"><h2>3. Est-ce un écosystème ?</h2><ul class="criteres" id="seqCriteres"></ul></section>
     <section class="groupe"><h2>4. Votre demande à l’IA</h2><div class="bloc" style="max-width:46em">
-      ${boite('promptSeq', 'Seq', 'Copier le texte pour l’IA')}</div>
+      ${boite('promptSeq', 'Seq', 'Copier le texte')}</div>
       <p class="note">Sans IA : ouvrez chaque modèle depuis sa rubrique, et gardez cette page comme plan de la séquence.</p></section>`,
 
   c_exemple: () => `
@@ -674,12 +672,12 @@ const VUES = {
     <p class="chapo">L’IA analyse votre fiche, vous la corrigez si besoin, puis vous choisissez ce qui change.</p>
     <div class="bloc fort" style="max-width:46em"><h2>Demander à l’IA d’analyser ma fiche</h2>
       <p>Joignez votre fiche à la conversation, sans donnée d’élève, puis collez ce texte.</p>
-      ${boite('prompt', '', 'Copier le texte pour l’IA')}</div>
+      ${boite('prompt', '', 'Copier le texte')}</div>
     <div class="bloc fort" style="max-width:46em"><h2>Demander à l’IA de transformer ma fiche</h2>
       <p>Cochez la proposition retenue, puis collez ce texte dans la même conversation.</p>
       <fieldset class="choix"><legend>Proposition retenue</legend>${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Proposition ${n}</label>`).join('')}</fieldset>
       <details class="plus" ${P.amel.length ? 'open' : ''}><summary>Ajouter d’autres modifications (facultatif)</summary><fieldset class="choix">${AMEL.map(([k, t], i) => `<label for="am${i}" class="case"><input type="checkbox" id="am${i}" data-amel="${k}" ${P.amel.includes(k) ? 'checked' : ''}>${t}</label>`).join('')}</fieldset></details>
-      ${boite('prompt2', '2', 'Copier le texte pour l’IA')}</div>
+      ${boite('prompt2', '2', 'Copier le texte')}</div>
     <p class="note">Avant votre première demande, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
 
   verifier: () => `
@@ -725,7 +723,7 @@ function demande() {
   const lg = !jeunes() ? '' : P.lignes === 'simples' ? 'Zones d\'écriture : lignes simples.\n' : P.lignes === 'romandes' ? 'Zones d\'écriture : lignes d\'écriture romandes.\n' : '';
   const pn = ['1P', '2P'].includes(P.degre) && !(it && it.fam === 'jeu') ? 'En-tête : pas de ligne « Prénom » ni « Date » ; mes élèves écrivent leur prénom au dos de la feuille.\nMes élèves ne lisent pas encore : aucune consigne écrite pour eux, mais un exemple déjà fait en tête de la fiche.\n' : '';
   const tete = `Degré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nNotion à travailler : ${v(P.notion, '[à compléter]')}\n${pn}${lg}${avecConsignes() && P.picto === 'oui' ? 'Consignes : place devant chaque consigne le pictogramme de la banque d\'icônes qui correspond à son verbe, le même pour le même verbe. Je joins la banque d\'icônes.\n' : ''}${avecEtoiles() && P.etoiles === 'oui' ? 'Difficulté : repère chaque exercice ou chaque carte par une à trois étoiles, de la tâche la plus simple à la plus difficile.\n' : ''}${enCouleur() && P.teinte ? `Impression : en couleur, teinte « ${P.teinte} » (option couleur de la bibliothèque).\n` : ''}`;
-  const fin = `${joints()}${outilL()}\n${finV()}` + (it ? `\n\nRepère pour l'IA : ${it.ref} dans la Bibliothèque IA 1.` : '');
+  const fin = `${joints()}${outilL()}\n${finV()}`;
   if (S.page === 'ameliorer') {
     return `Voici une ressource que j'utilise dans ma classe (fichier joint, sans donnée d'élève). Je souhaite l'améliorer. Ne la transforme pas encore.\n1. Décris ce que tu observes : type de ressource, degré, discipline, notion et objectif probables, ce que l'élève fait réellement, trois points forts et trois obstacles principaux. Sépare ce que tu constates de ce que tu supposes.\n2. Demande-moi de confirmer ou de corriger, et ce que j'observe avec mes élèves.\n3. Propose deux ou trois améliorations numérotées : ce qui change, pour quels élèves, et comment voir les progrès.\nPuis attends ma réponse.\n\nSuis la démarche « Améliorer une ressource » de la Bibliothèque IA 1 jointe ; appuie-toi aussi sur la Bibliothèque IA 2 ou ma Bibliothèque IA 4 si je les ai jointes. Si la Bibliothèque IA 1 manque, dis-le avant de commencer.`;
   }

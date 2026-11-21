@@ -147,7 +147,133 @@ Quand l'enseignant·e joint une ressource qu'il ou elle utilise déjà et demand
 
 **Second temps : transformer, après le choix de l'enseignant·e.** Produire la ressource transformée et son corrigé selon les Étapes 1 à 6, en gardant ce qui fonctionne ; signaler ce qui a changé. Si l'outil ne peut pas créer de fichier Word, appliquer le § 0.5. Terminer par la liste des contrôles, chacun avec son statut : vérifié sur le fichier, à vérifier par l'enseignant·e, ou impossible à vérifier ici.
 
-Dans ce qu'elle écrit à l'enseignant·e, l'IA n'emploie ni code ni renvoi chiffré (gabarits, règles, paragraphes) : elle nomme les choses en toutes lettres.
+## 0.7 Demandes venant du guide web
+
+Le guide web « Composer un écosystème de ressources » produit des demandes en langage courant, sans code ni renvoi chiffré : l'enseignant·e les lit avant de les coller et doit pouvoir les comprendre. Les détails restent dans cette bibliothèque, et l'IA les applique sans qu'ils soient rappelés :
+
+- le modèle est désigné par son nom, dans une ligne « Jeu choisi », « Type d'exercice », « Forme de la fiche », « Support choisi » ou « Outil choisi » ; l'index ci-dessous donne le gabarit correspondant ; en cas de doute, demander ;
+- « si tu ne peux pas créer de fichier Word » renvoie au § 0.5 ;
+- « la liste des contrôles, chacun avec son statut » renvoie à l'Étape 5 et à la règle MP-V-03 ;
+- « la démarche Améliorer une ressource » renvoie au § 0.6.
+
+Dans ce qu'elle écrit à l'enseignant·e (propositions, explications, liste des contrôles), l'IA nomme les choses en toutes lettres ; les codes et les renvois chiffrés ne figurent que dans la fiche technique et le rapport de conformité, après le nom.
+
+**Index des noms du guide** (tiré du guide, édition du 21 novembre 2026)
+
+| Ligne de la demande | Gabarit |
+|---|---|
+| Jeu choisi : Domino-boucle | J1 |
+| Jeu choisi : Memory, appariement | J2 |
+| Jeu choisi : Familles | J3 |
+| Jeu choisi : Cartes recto-verso | J4 |
+| Jeu choisi : Plateau · serpent | J5-a |
+| Jeu choisi : Plateau · escargot | J5-b |
+| Jeu choisi : Plateau · chemin | J5-c |
+| Jeu choisi : Plateau · circuit | J5-d |
+| Jeu choisi : Dé à monter | J6 |
+| Jeu choisi : Loto | J7 |
+| Jeu choisi : Symboles communs | J8 |
+| Jeu choisi : Trouve quelqu'un qui… | J9 |
+| Jeu choisi : Carte à pinces | J10 |
+| Jeu choisi : Roue à fenêtre et rabat | J11 |
+| Jeu choisi : Lettres à fabriquer | J12 |
+| Jeu choisi : Cartes de rôle | J13 |
+| Jeu choisi : Cartes d'erreurs | J14 |
+| Jeu choisi : Cartes d'aide graduée | J15 |
+| Jeu choisi : Cartons-réponses | J16 |
+| Jeu choisi : Grille d'alignement | J17 |
+| Jeu choisi : Serpents et échelles | J18 |
+| Jeu choisi : Bataille navale | J19 |
+| Jeu choisi : Roue de tirage | J20 |
+| Jeu choisi : Puzzles à deux pièces | J21 |
+| Jeu choisi : Puzzle à bandes | J22 |
+| Jeu choisi : Mot mystère | J23 |
+| Jeu choisi : Cocotte en papier | J24 |
+| Jeu choisi : Horloge à aiguilles | J25 |
+| Jeu choisi : Mémo-fiches en éventail | J26 |
+| Jeu choisi : Bandes graphiques | J27 |
+| Jeu choisi : Plateau à camemberts | J28 |
+| Jeu choisi : Cherche et trouve | J29 |
+| Jeu choisi : Mots interdits | J30 |
+| Jeu choisi : Petit bac | J31 |
+| Jeu choisi : Cartes à terminaisons | J32 |
+| Jeu choisi : Petits chevaux | J33 |
+| Jeu choisi : Qui est-ce ? | J34 |
+| Jeu choisi : Bataille | J35 |
+| Jeu choisi : Tuiles-lettres | J36 |
+| Jeu choisi : Sudoku | J37 |
+| Jeu choisi : Mot caché : la fleur | J38 |
+| Type d'exercice : Entourer | G1 |
+| Type d'exercice : Relier | G2 |
+| Type d'exercice : Compléter | G3 |
+| Type d'exercice : Transformer, recopier | G4 |
+| Type d'exercice : Remettre en ordre | G5 |
+| Type d'exercice : Cocher | G6 |
+| Type d'exercice : Production courte guidée | G7 |
+| Type d'exercice : Repérer dans un texte | G8 |
+| Type d'exercice : Tableau à compléter | G9 |
+| Type d'exercice : Image et écriture | G10 |
+| Type d'exercice : Colorier selon une consigne | G11 |
+| Type d'exercice : Classer en colonnes | G12 |
+| Type d'exercice : Calcul posé | G13 |
+| Type d'exercice : Chronologie | G14 |
+| Type d'exercice : Copier puis illustrer | G15 |
+| Type d'exercice : Recherche visuelle | G16 |
+| Type d'exercice : Série chronométrée | G17 |
+| Type d'exercice : Grille croisée de nombres | G18 |
+| Type d'exercice : Tracé de chemin | G19 |
+| Type d'exercice : Dictée réfléchie | G20 |
+| Type d'exercice : Imagier, scène à légender | G21 |
+| Forme de la fiche : Fiche d'entraînement | GF-A |
+| Forme de la fiche : Fiche d'évaluation | GF-B |
+| Forme de la fiche : Fiche de remédiation | GF-C |
+| Forme de la fiche : Devoir à la maison | GF-D |
+| Forme de la fiche : Ateliers | GF-E |
+| Forme de la fiche : Dossier de jeu | GF-F |
+| Forme de la fiche : Feuille de route par niveaux | GF-G |
+| Forme de la fiche : Trace longitudinale | GF-H |
+| Forme de la fiche : Menu à choix | GF-I |
+| Forme de la fiche : Page-son | GF-J |
+| Forme de la fiche : Carnet de rituel | GF-K |
+| Forme de la fiche : Dossier de défis | GF-L |
+| Forme de la fiche : Brevet d'étape | GF-M |
+| Forme de la fiche : Fiche théorique | GF-N |
+| Forme de la fiche : Fiche guide | GF-O |
+| Forme de la fiche : Fiche de synthèse | GF-P |
+| Forme de la fiche : Questionnaire sur document | GF-Q |
+| Forme de la fiche : Dossier documentaire et grille de croisement | GF-R |
+| Forme de la fiche : Fiche-trace de sortie | GF-S |
+| Forme de la fiche : Billet de sortie | GF-T |
+| Forme de la fiche : Page de carnet de bord | GF-U |
+| Forme de la fiche : Affiche A3 | GF-V |
+| Forme de la fiche : Planche de BD | GF-W |
+| Forme de la fiche : Dossier d'escape game | GF-X |
+| Forme de la fiche : Fiche de comparaison pour le débat | GF-Y |
+| Forme de la fiche : Fiche de commentaire de galerie | GF-Z |
+| Forme de la fiche : Grille d'évaluation et version élève | GF-AA |
+| Support choisi : Lignes d'écriture romandes | G22 |
+| Support choisi : Syllabes et sons | G23 |
+| Support choisi : Maisons des nombres | G24 |
+| Support choisi : Reproduction sur quadrillage | G25 |
+| Support choisi : Calendrier mensuel | G26 |
+| Support choisi : Étiquettes de l'horaire | G27 |
+| Support choisi : Livret à onglets | G28 |
+| Support choisi : Page de journal | G29 |
+| Support choisi : Planche de BD | G30 |
+| Support choisi : Plan d'exposé | G31 |
+| Outil choisi : Bande numérique à triple codage | SP1 |
+| Outil choisi : Réglette avec repère de latéralité | SP2 |
+| Outil choisi : Sous-main personnel | SP3 |
+| Outil choisi : Affiche-procédure en « je » | SP4 |
+| Outil choisi : Étiquettes de coin ou de journée | SP5 |
+| Outil choisi : Affiche-métaphore structurante | SP6 |
+| Outil choisi : Affiche-acronyme de stratégie | SP7 |
+| Outil choisi : Affiche mnémotechnique | SP8 |
+| Outil choisi : Affiche de stratégies | SP9 |
+| Outil choisi : Référentiel collectif | SP10 |
+| Outil choisi : Glossaire de classe | SP11 |
+| Outil choisi : Carte mentale | SP12 |
+| Outil choisi : Infographie | SP13 |
 
 # ÉTAPE 1 — CADRER
 <!-- modules : noyau -->

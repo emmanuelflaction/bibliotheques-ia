@@ -2,7 +2,7 @@
 
 ## 21 novembre 2026 (améliorer une ressource en deux temps)
 
-- Guide : les textes à copier pour l'IA sont repliés (« Voir le texte ») sur toutes les pages ; on copie d'un bouton. La page « Améliorer une ressource » est raccourcie, et ses textes sont en langage courant : le détail de la démarche est passé dans la Bibliothèque IA 1 (§ 0.6), où l'IA le lit. Plus aucun renvoi chiffré dans les textes copiés.
+- Guide : les textes destinés à l'IA restent visibles (l'enseignant·e doit pouvoir lire ce qu'il ou elle demande), mais ils sont en langage courant : plus de code de modèle ni de renvoi chiffré. Les détails sont passés dans la Bibliothèque IA 1 : démarche « Améliorer une ressource » (§ 0.6) ; demandes venant du guide, avec l'index qui relie chaque nom du guide à son gabarit (§ 0.7), contrôlé par `outils/verifier.py`. Page « Améliorer une ressource » raccourcie.
 - Guide, « Améliorer une ressource » : premier temps, « Demander à l'IA d'analyser ma fiche », sans rien à remplir : l'IA décrit ce qu'elle observe (degré, notion, objectif, ce que fait l'élève, points forts, obstacles prioritaires, avec la grille de relecture), demande à l'enseignant·e de confirmer ou de corriger, et propose deux ou trois transformations numérotées, sans rien transformer ; second temps, l'enseignant·e retient une ou plusieurs propositions, ajoute éventuellement des modifications, et colle un second texte qui fait produire la ressource.
 - Même démarche dans le prompt court « Transformer » de la Bibliothèque IA 1 (§ 6.4) et dans les prompts B et G de la Bibliothèque IA 2.
 
