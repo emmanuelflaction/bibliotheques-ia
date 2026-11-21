@@ -1,6 +1,10 @@
 # Nouveautés
 
 ## 21 novembre 2026
+- Toutes les planches existent aussi en couleur (fichiers « (couleur) »).
+- Treize exemples de jeux remplis de vrais contenus, à adapter (fichiers « Exemple rempli »).
+- Modèles Word : correction d'une page vide en fin de document dans Word.
+- Licence CC BY-NC-SA 4.0.
 - Guide en ligne (`index.html`).
 - Exemples en couleur des 27 formes de fiches et des 13 affiches et aides permanentes.
 - Couleur en option pour les jeux dessinés et versions en couleur des modèles Word.
