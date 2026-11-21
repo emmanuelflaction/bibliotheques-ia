@@ -6,6 +6,8 @@
 - Bibliothèque IA 1 : règles MP-J-07 et MP-D-02 complétées, astuces pratiques et variante coopérative dans la partie enseignant·e.
 - Bibliothèque IA 2 : section « Repères pour les jeux, la coopération et la différenciation ».
 - Mention de la licence CC BY-NC-SA 4.0 dans les deux bibliothèques.
+- Exemples de formes de fiches : pages pleines (aération automatique jusqu'à 92 % de la hauteur au moins) ; fiche d'entraînement enrichie.
+- Exercice « Entourer » : mots espacés et interligne large ; nouvelle recette `pictogramme_consigne` (le geste et le mot visé, par exemple « verbe » entouré).
 - Jeunes élèves (1P-2P) : plus de ligne « Prénom » ni « Date » ; mention « Prénom au dos de la feuille » (règle MP-O-03, recettes `entete(..., jeunes=True)` et `definir_jeunes`). Fiches G22 (7 mm), G23 et G24 corrigées.
 - Exemples de jeux plus variés : conjugaison au présent, participes passés, pluriel des noms, contraires, synonymes, nature des mots, pays et capitales.
 - Aspect retravaillé : numéros lisibles sur « Serpents et échelles », mots mieux répartis dans « Cherche et trouve », carte à pinces centrée, cartons de loto mieux délimités, « Départ » et « Arrivée » plus grands sur les plateaux.
