@@ -2,7 +2,7 @@
 
 ## 21 novembre 2026 (améliorer une ressource en deux temps)
 
-- Guide, « Améliorer une ressource » : premier temps, l'IA analyse la ressource (points forts, obstacles prioritaires, en s'appuyant sur la grille de relecture) et propose deux ou trois transformations numérotées, sans rien transformer ; second temps, l'enseignant·e retient une ou plusieurs propositions, ajoute éventuellement des modifications ou corrige l'analyse, et colle un second texte qui fait produire la ressource. Nouveau champ facultatif : ce que l'enseignant·e observe avec ses élèves.
+- Guide, « Améliorer une ressource » : premier temps, « Demander à l'IA d'analyser ma fiche », sans rien à remplir : l'IA décrit ce qu'elle observe (degré, notion, objectif, ce que fait l'élève, points forts, obstacles prioritaires, avec la grille de relecture), demande à l'enseignant·e de confirmer ou de corriger, et propose deux ou trois transformations numérotées, sans rien transformer ; second temps, l'enseignant·e retient une ou plusieurs propositions, ajoute éventuellement des modifications, et colle un second texte qui fait produire la ressource.
 - Même démarche dans le prompt court « Transformer » de la Bibliothèque IA 1 (§ 6.4) et dans les prompts B et G de la Bibliothèque IA 2.
 
 ## 21 novembre 2026 (arbitrages)
