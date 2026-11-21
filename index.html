@@ -677,7 +677,7 @@ const VUES = {
     <div class="bloc fort" style="max-width:46em"><h2>Transformer votre fiche / ressource (facultatif)</h2>
       <p>Si vous souhaitez faire évoluer la fiche, vous pouvez coller ce prompt à la suite dans la même conversation (cochez la possibilité retenue).</p>
       <p>Relisez toujours très attentivement le résultat avant de l’utiliser en classe !</p>
-      <fieldset class="choix"><legend>Possibilité retenue</legend>${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Possibilité ${n}</label>`).join('')}</fieldset>
+      <fieldset class="choix"><legend>Possibilité(s) retenue(s)</legend>${[1, 2, 3].map(n => `<label for="pr${n}" class="case"><input type="checkbox" id="pr${n}" data-prop="${n}" ${P.prop.includes(n) ? 'checked' : ''}>Possibilité ${n}</label>`).join('')}</fieldset>
       ${boite('prompt2', '2', 'Copier le texte', '4.5em')}</div>
     <p class="note">Avant votre première demande, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
 
