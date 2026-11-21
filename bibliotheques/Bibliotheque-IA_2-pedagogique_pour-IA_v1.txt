@@ -2670,7 +2670,7 @@ Ces repères complètent les règles de la Bibliothèque IA 1 (MP-J-07, MP-D-02,
 
 **Évaluer une ressource : utile, utilisable, acceptable**
 
-Le triptyque utilité, utilisabilité, acceptabilité (Tricot et al., 2003) donne trois questions : la ressource fait-elle apprendre ce qui est visé ? Est-elle facile à utiliser ? Les élèves et l'enseignant·e ont-ils envie de s'en servir, et le peuvent-ils dans leur contexte ? L'acceptabilité (ce que les utilisateurs pensent de la ressource) ne se confond pas avec l'accessibilité (la possibilité d'y accéder). La mise en page réduit la charge extrinsèque, celle qui vient de la présentation ; la charge intrinsèque dépend du contenu lui-même.
+Le triptyque utilité, utilisabilité, acceptabilité (Tricot et al., 2003) donne trois questions : la ressource fait-elle apprendre ce qui est visé ? Est-elle facile à utiliser ? Les élèves et l'enseignant·e ont-ils envie de s'en servir, et le peuvent-ils dans leur contexte ? L'acceptabilité (ce que les utilisateurs pensent de la ressource) ne se confond pas avec l'accessibilité (la possibilité d'y accéder). La mise en page réduit la charge extrinsèque, celle qui vient de la présentation ; la charge intrinsèque dépend du contenu lui-même (Maitre, 2020).
 
 - Utile : l'objectif d'apprentissage tient en une phrase et se relie au plan d'études ; chaque carte ou chaque case fait travailler cet objectif, sans tâche décorative ; le temps passé à apprendre dépasse le temps passé à attendre ou à gérer le matériel ; tous les élèves du groupe répondent ; l'erreur est exploitée (vérification, explication, nouvelle tentative) ; un moyen permet de savoir ce que les élèves ont appris ; les contenus sont relus.
 - Utilisable : une marche à suivre écrite accompagne le jeu ; un élève peut expliquer la règle après une partie modèle ; les textes se lisent à la distance d'utilisation et la mise en page est la même sur toutes les cartes ; les images sont de style homogène ; la réponse n'est pas visible par celui qui doit la trouver et un corrigé est disponible ; le matériel est solide, facile à distribuer et à ranger ; la taille des groupes et la durée d'une partie sont définies ; des niveaux ou des variantes permettent à chacun de réussir.
@@ -2688,7 +2688,7 @@ Un jeu remis sans mode d'emploi laisse chaque groupe inventer ses règles. Une m
 
 **De la compétition à la coopération**
 
-Dans un jeu de l'oie classique, le premier arrivé gagne : la compétition vient de la règle, pas des élèves. Pour obtenir de la coopération, il faut changer la condition de victoire. Le principe central est l'interdépendance positive : chacun ne réussit que si les autres réussissent aussi ; elle va de pair avec la responsabilité individuelle (Johnson & Johnson, 2009).
+Dans un jeu de l'oie classique, le premier arrivé gagne : la compétition vient de la règle, pas des élèves. Pour obtenir de la coopération, il faut changer la condition de victoire. Le principe central est l'interdépendance positive : chacun ne réussit que si les autres réussissent aussi ; elle va de pair avec la responsabilité individuelle (Johnson & Johnson, 2009). Le guide du CTREQ y ajoute trois autres conditions : la promotion des interactions, les habiletés sociales et coopératives, et le retour du groupe sur son fonctionnement.
 
 - Un seul pion pour le groupe, contre le sablier ou contre un pion adverse qui avance tout seul.
 - Un but commun chiffré : tous les pions arrivés en moins de dix tours, ou vingt cartes réussies.
@@ -2722,11 +2722,15 @@ Une fiche identique pour tous, avec des aides en libre accès, ne désigne perso
 
 **Références de cette section**
 
+Centre de transfert pour la réussite éducative du Québec (CTREQ). (s. d., mis en ligne en 2023). *L'approche coopérative en 4 étapes : les premiers pas vers la rétroaction par les pairs*. https://www.ctreq.qc.ca/wp-content/uploads/2023/10/CTREQ-D232-Preparation-a-la-REPAIR-Guide-14x85-44329-V9.pdf
+
 Forget, A. (2018). *Penser la différenciation pédagogique* (Carnets des sciences de l'éducation). Université de Genève. https://unige.ch/fapse/editions/index.php/download_file/view/544/492
+
+Maitre, J.-P. (2020). *La théorie de la charge cognitive*. Centre de soutien à l'enseignement, Université de Lausanne. https://enseigner.unil.ch/ressources/wp-content/uploads/20CSE_IN_A_NUTSHELL_01_la_theorie_de_la_charge_cognitive.pdf
 
 Tricot, A., et al. (2003). Utilité, utilisabilité, acceptabilité : interpréter les relations entre trois dimensions de l'évaluation des EIAH. Dans *Environnements informatiques pour l'apprentissage humain* (Strasbourg).
 
-Statut : existence des trois références citées vérifiée le 21.11.2026 (Forget, 2018 ; Johnson & Johnson, 2009 ; Tricot et al., 2003) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
+Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
 
 ## Références scientifiques (APA 7)
 

@@ -6,6 +6,8 @@
 - Bibliothèque IA 1 : règles MP-J-07 et MP-D-02 complétées, astuces pratiques et variante coopérative dans la partie enseignant·e.
 - Bibliothèque IA 2 : section « Repères pour les jeux, la coopération et la différenciation ».
 - Mention de la licence CC BY-NC-SA 4.0 dans les deux bibliothèques.
+- Pictogrammes de consigne : un choix dans la demande du guide et une option dans la Bibliothèque IA 1 les font placer devant chaque consigne (codes IC-CON).
+- Bibliothèque IA 2 : références CTREQ et Maitre (2020) ajoutées, trois défauts de mise en page corrigés dans le Word.
 
 ## 21 novembre 2026
 - Toutes les planches existent aussi en couleur (fichiers « (couleur) »).

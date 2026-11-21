@@ -203,7 +203,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const typo = h => h.replace(/ ([:;?!»])/g, ' $1').replace(/« /g, '« ');
 const S = {page: 'accueil', cat: null, code: null, tr: null, onglet: 'ia'};
-const P = {degre: '', disc: '', notion: '', lignes: '', teinte: '', coop: ''};
+const P = {degre: '', disc: '', notion: '', lignes: '', teinte: '', coop: '', picto: ''};
 try { Object.assign(P, JSON.parse(localStorage.getItem('guide-demande') || '{}')); } catch (e) {}
 const COUL = ['#e4572e', '#2a9d8f', '#3a7bd5', '#8e5bd0', '#e9a100', '#d6457f', '#4c9f38'];
 const RUB = [
@@ -251,14 +251,17 @@ function menu() {
 }
 const retour = () => `<div><button class="retour" type="button" ${go(parent())}>← Retour</button></div>`;
 const jeunes = () => tranche(P.degre) === 0 && !(S.page === 'fiche' && item(S.code) && item(S.code).fam === 'jeu');
+const avecConsignes = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme'; };
 const enCouleur = () => { const it = S.page === 'fiche' ? item(S.code) : null; return it && (it.fam === 'jeu' || it.fam === 'support') && it.fo.length && !it.fo.some(f => f.w); };
 const champs = (ex1, ex2) => `
   <label for="degre">Degré<select id="degre"><option value="">Choisir…</option>${DEGRES.map(d => `<option ${P.degre === d ? 'selected' : ''}>${d}</option>`).join('')}</select></label>
   ${jeunes() ? `<label for="lignes">Lignes pour écrire (1P à 4P)<select id="lignes"><option value="">L’IA me posera la question</option><option value="simples" ${P.lignes === 'simples' ? 'selected' : ''}>Lignes simples</option><option value="romandes" ${P.lignes === 'romandes' ? 'selected' : ''}>Lignes d’écriture romandes</option></select></label>` : ''}
+  ${avecConsignes() ? `<label for="picto">Pictogrammes de consigne<select id="picto"><option value="">Sans pictogramme imposé</option><option value="oui" ${P.picto === 'oui' ? 'selected' : ''}>Un pictogramme devant chaque consigne</option></select></label>` : ''}
   ${enCouleur() ? `<label for="teinte">Impression<select id="teinte">${[['', 'Noir et blanc'], ['bleu', 'Couleur : bleu'], ['orange', 'Couleur : orange'], ['vert', 'Couleur : vert'], ['violet', 'Couleur : violet']].map(([v, t]) => `<option value="${v}" ${P.teinte === v ? 'selected' : ''}>${t}</option>`).join('')}</select></label>` : ''}
   ${S.page === 'fiche' && item(S.code) && item(S.code).fam === 'jeu' ? `<label for="coop">Façon de jouer<select id="coop"><option value="">Règle habituelle</option><option value="coop" ${P.coop === 'coop' ? 'selected' : ''}>En coopération : un but commun pour le groupe</option></select></label>` : ''}
   <label for="disc">Discipline<input id="disc" value="${esc(P.disc)}" placeholder="par exemple : ${ex1}" autocomplete="off"></label>
   <label for="notion">Notion à travailler<input id="notion" value="${esc(P.notion)}" placeholder="par exemple : ${ex2}" autocomplete="off"></label>
+  <div class="note" id="notePicto" ${avecConsignes() && P.picto === 'oui' ? '' : 'hidden'}><p>Joignez aussi à la conversation la banque d’icônes : le fichier « Banque_icones_IC_pour-IA.md » et les images (zip). Ce choix reste enregistré pour vos prochaines demandes.</p>${fichiers(D05, [['Banque_icones_IC_pour-IA.md', 'Fichier à joindre à l’IA'], ['Banque_icones_IC_png.zip', 'Toutes les icônes (zip)']])}</div>
   <label for="prompt">Texte à coller dans la conversation<textarea id="prompt" readonly></textarea></label>
   <div class="rang"><button class="btn" type="button" id="copier">Copier la demande</button><span class="statut" id="statut" role="status"></span></div>`;
 function carte(it) {
@@ -315,7 +318,7 @@ const VUES = {
   icones: () => `
     <h1 class="titre" style="--c:${rub('icones').c}">Icônes</h1>
     <p class="chapo">${D.icones.reduce((a, g) => a + g.l.length, 0)} pictogrammes en noir et blanc, libres de droits, à placer dans vos fiches.</p>
-    <div class="bloc" style="max-width:42em"><p><b>Avec une IA.</b> Joignez aussi le fichier « Banque_icones_IC_pour-IA.md » : l’IA place elle-même les pictogrammes.</p>
+    <div class="bloc" style="max-width:42em"><p><b>Avec une IA.</b> Joignez aussi le fichier « Banque_icones_IC_pour-IA.md » : l’IA place elle-même les pictogrammes. Sur la fiche d’un exercice ou d’une forme de fiche, le choix « Un pictogramme devant chaque consigne » le lui demande pour tout le document.</p>
       <p><b>Sans IA.</b> Insérez l’image dans votre document Word. Le nom du fichier est écrit sous chaque icône.</p>
       ${fichiers(D05, [['Banque_icones_IC_png.zip', 'Toutes les icônes (zip)'], ['Banque_icones_IC_pour-IA.md', 'Fichier à joindre à l’IA'], ['Banque d’icônes — mode d’emploi et catalogue.pdf', 'Catalogue (PDF)']])}</div>
     ${D.icones.map(g => `<section class="groupe"><h2>${esc(g.n)}</h2><div class="icones">${g.l.map(i => `<div class="icone"><img src="${i.u}" alt="" loading="lazy"><span>${esc(i.n)}</span><span class="f">${i.c}.png</span></div>`).join('')}</div></section>`).join('')}`,
@@ -346,7 +349,7 @@ const VUES = {
       ${D.web ? `<p>Toutes les versions des bibliothèques et des modèles sont conservées sur GitHub.</p><div class="rang"><a class="btn second" href="${D.depot}" target="_blank" rel="noopener">Ouvrir le dépôt GitHub</a></div>` : ''}
       <p class="note">N’envoyez ni nom ni photo d’élève.</p></div>
     <div class="bloc" style="max-width:42em"><h2>Nouveautés</h2>
-      ${[['21 novembre 2026', 'Rubrique « Conseils » : règles du jeu, coopération, différenciation, grille avant le test en classe. Toutes les planches en couleur, treize exemples de jeux remplis de vrais contenus. Ce guide en ligne. Exemples en couleur des 27 formes de fiches et des 13 affiches. Couleur en option pour les jeux et pour les modèles Word. Lignes simples ou lignes d’écriture romandes, au choix, de la 1P à la 4P. Nouveaux supports : calendrier, horaire, livret à onglets, journal de classe, bande dessinée, exposé, maisons des nombres, quadrillage.'],
+      ${[['21 novembre 2026', 'Pictogrammes de consigne : un choix dans la demande les fait placer devant chaque consigne. Rubrique « Conseils » : règles du jeu, coopération, différenciation, grille avant le test en classe. Toutes les planches en couleur, treize exemples de jeux remplis de vrais contenus. Ce guide en ligne. Exemples en couleur des 27 formes de fiches et des 13 affiches. Couleur en option pour les jeux et pour les modèles Word. Lignes simples ou lignes d’écriture romandes, au choix, de la 1P à la 4P. Nouveaux supports : calendrier, horaire, livret à onglets, journal de classe, bande dessinée, exposé, maisons des nombres, quadrillage.'],
          ['20 novembre 2026', 'Dix-huit nouveaux jeux, dont les puzzles, le mot mystère, la cocotte, l’horloge, le petit bac, les petits chevaux et le sudoku. Lignes d’écriture romandes, syllabes et sons. Panoramas composés de vraies pages.'],
          ['19 novembre 2026', 'Grille d’alignement, serpents et échelles, bataille navale, roue de tirage. Quatre plateaux de parcours, dés à monter, dos de cartes à motif. Modèles Word à remplir.'],
          ['2 novembre 2026', 'Mise à jour de la version 1.'], ['31 octobre 2026', 'Version 1 des bibliothèques.']]
@@ -516,7 +519,7 @@ const VUES = {
 function demande() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, it = S.page === 'fiche' ? item(S.code) : null;
   const lg = !jeunes() ? '' : P.lignes === 'simples' ? 'Zones d\'écriture : lignes simples.\n' : P.lignes === 'romandes' ? 'Zones d\'écriture : lignes d\'écriture romandes (recette R1c de la bibliothèque).\n' : '';
-  const tete = `Degré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nNotion à travailler : ${v(P.notion, '[à compléter]')}\n${lg}${enCouleur() && P.teinte ? `Impression : en couleur, teinte « ${P.teinte} » (option couleur de la bibliothèque).\n` : ''}`;
+  const tete = `Degré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nNotion à travailler : ${v(P.notion, '[à compléter]')}\n${lg}${avecConsignes() && P.picto === 'oui' ? 'Consignes : place devant chaque consigne le pictogramme de la banque d\'icônes qui correspond à son verbe (codes IC-CON), le même pour le même verbe. Je joins la banque d\'icônes.\n' : ''}${enCouleur() && P.teinte ? `Impression : en couleur, teinte « ${P.teinte} » (option couleur de la bibliothèque).\n` : ''}`;
   const fin = `Termine en me disant ce que tu n'as pas pu vérifier.`;
   if (!it) return `Je cherche une ressource à imprimer pour ma classe.\n${tete}\nMontre-moi le panorama des jeux et celui des exercices.\nPropose-moi deux ou trois possibilités adaptées, puis attends mon choix.`;
   const ref = `${it.nom} (référence ${it.ref} dans la bibliothèque jointe)`;
@@ -535,6 +538,7 @@ function brancher() {
       if (k === 'degre') { rendre(); $('#degre').focus(); } else pr.value = demande(); }));
     const st = $('#teinte'); if (st) st.addEventListener('change', e => { P.teinte = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
     const sc = $('#coop'); if (sc) sc.addEventListener('change', e => { P.coop = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
+    const sp = $('#picto'); if (sp) sp.addEventListener('change', e => { P.picto = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); const np = $('#notePicto'); if (np) np.hidden = P.picto !== 'oui'; });
     const sl = $('#lignes'); if (sl) sl.addEventListener('change', e => { P.lignes = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
     $('#copier').onclick = async () => {
       let ok = false;
