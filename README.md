@@ -6,7 +6,8 @@ Des « bibliothèques » à joindre à une IA générative pour lui faire produi
 
 ## Pour commencer
 
-- **Le guide** : le fichier `index.html` présente tous les modèles (jeux, exercices, formes de fiches, supports et affiches, icônes) et rédige la demande à coller dans la conversation avec l'IA.
+- **Le guide en ligne** : https://emmanuelflaction.github.io/bibliotheques-ia/
+- **Ce qu'il contient** : le guide (fichier `index.html`) présente tous les modèles (jeux, exercices, formes de fiches, supports et affiches, icônes) et rédige la demande à coller dans la conversation avec l'IA.
 - **Avec une IA** : joignez `bibliotheques/Bibliotheque-IA_1-technique_pour-IA_v1.md` à votre conversation (ou la version `.txt` ou `.docx` si votre outil refuse le `.md`), puis collez la demande proposée par le guide.
 - **Sans IA** : les dossiers `modeles` et `planches` contiennent des documents à remplir ou à imprimer tels quels.
 

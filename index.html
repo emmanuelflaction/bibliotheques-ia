@@ -268,7 +268,7 @@ const D01 = '01_Bibliothèque IA 1 — technique, à joindre à l’IA', D02 = '
 const fichiers = (d, l) => (D.web ? '' : `<div class="chemin"><b>Dossier</b>${esc(d)}</div>` + (D.local ? '' : l.map(([f]) => `<div class="chemin"><b>Fichier</b>${esc(f)}</div>`).join('')))
   + (D.local ? `<div class="rang">${l.map(([f, t]) => `<a class="btn second" href="${U(d, f)}" target="_blank" rel="noopener">${t}</a>`).join('')}</div>` : '');
 const lienFichier = (d, f, page, texte) => D.local
-  ? `<a class="btn" href="${U(d, f)}${page && !D.base ? '#page=' + page : ''}" target="_blank" rel="noopener">${texte}</a>`
+  ? `<a class="btn" href="${U(d, f)}${page ? '#page=' + page : ''}" target="_blank" rel="noopener">${texte}</a>`
   : `<div class="chemin"><b>Dossier</b>${esc(d)}</div><div class="chemin"><b>Fichier</b>${esc(f)}</div>`;
 
 const VUES = {
