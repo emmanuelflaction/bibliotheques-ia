@@ -357,10 +357,23 @@ const rubriqueCourante = () => { const p = S.page;
   if (p === 'fiche') { const it = item(S.code); return it ? it.rub : 'accueil'; }
   return ({cat: 'jeux', preparer: 'mode', verifier: 'conseils', imprimer: 'mode', sansia: 'mode', hesite: 'hesite', analyser: 'analyser', transformer: 'transformer', c_exemple: 'sequence', c_regles: 'conseils', c_cooperer: 'conseils', c_differencier: 'conseils', c_grille: 'conseils', c_ecosysteme: 'conseils', c_decider: 'conseils', c_apres: 'conseils', c_jeu: 'conseils'})[p] || p; };
 
+const adresse = () => '#' + [S.page, S.cat == null ? '' : S.cat, S.code || ''].join('/');
 function naviguer(o) {
+  const avant = adresse();
   Object.assign(S, o);
-  try { history.replaceState(null, '', '#' + [S.page, S.cat == null ? '' : S.cat, S.code || ''].join('/')); } catch (e) {}
+  const apres = adresse();
+  try { if (apres !== avant) { history.replaceState({y: window.scrollY}, '', location.href); history.pushState({y: 0}, '', apres); }
+    else history.replaceState({y: 0}, '', apres); } catch (e) {}
   rendre(); window.scrollTo(0, 0); $('#vue').focus({preventScroll: true});
+}
+function lireAdresse() {
+  try { const h = decodeURIComponent(location.hash.slice(1)).split('/'); if (h[0] === 'ameliorer') h[0] = 'analyser';
+    if (h.length === 3 && VUES[h[0]]) { const r = {page: h[0], cat: h[1] === '' ? null : +h[1], code: h[2] || null}; if (r.page === 'cat' && r.cat == null) r.page = 'jeux'; return r; } } catch (e) {}
+  return location.hash.length > 1 ? null : {page: 'accueil', cat: null, code: null};
+}
+function suivreAdresse(y) {
+  const r = lireAdresse(); if (!r || (r.page === S.page && r.cat === S.cat && r.code === S.code)) return;
+  Object.assign(S, r); rendre(); window.scrollTo(0, y || 0); $('#vue').focus({preventScroll: true});
 }
 function parent() {
   const p = S.page, it = p === 'fiche' ? item(S.code) : null;
@@ -511,7 +524,7 @@ const VUES = {
       ${D.web ? `<p>Toutes les versions des bibliothèques et des modèles sont conservées sur GitHub.</p><div class="rang"><a class="btn second" href="${D.depot}" target="_blank" rel="noopener">Ouvrir le dépôt GitHub</a></div>` : ''}
       <p class="note">N’envoyez ni nom ni photo d’élève.</p></div>
     <div class="bloc" style="max-width:42em"><h2>Nouveautés</h2>
-      ${[['22 novembre 2026', 'Un menu par démarche : analyser, transformer ou créer une ressource, composer une séquence. Un accueil qui présente le guide en trois étapes. Rubrique « Repères pédagogiques », qui part des difficultés rencontrées en classe : avant de demander à l’IA, avant d’imprimer, un jeu pour apprendre, des règles du jeu précises, après la classe. Pour chaque jeu, ce qui le fait apprendre. Classes multi-âges dans les demandes. Mise en page : plus aucun chiffre ni signe seul en début ou en fin de ligne.'],
+      ${[['22 novembre 2026', 'Un menu par démarche : analyser, transformer ou créer une ressource, composer une séquence. Un accueil qui présente le guide en trois étapes. Rubrique « Repères pédagogiques », qui part des difficultés rencontrées en classe : avant de demander à l’IA, avant d’imprimer, un jeu pour apprendre, des règles du jeu précises, après la classe. Pour chaque jeu, ce qui le fait apprendre. Classes multi-âges dans les demandes. Mise en page : plus aucun chiffre ni signe seul en début ou en fin de ligne. Le bouton Retour du navigateur ramène à la page précédente du guide.'],
          ['21 novembre 2026, révision d’ensemble', 'Quatre entrées selon votre besoin : améliorer une ressource que vous utilisez déjà, en créer une nouvelle, composer une séquence, explorer les modèles. Chaque fiche indique ce qui est disponible : modèle Word, exemple rempli, planche à imprimer, ou page produite par l’IA. La demande précise les fichiers à joindre, prévoit le cas d’un outil qui ne crée pas de fichier Word et demande à l’IA ce qu’elle a vérifié. Séquence : ressources en libre accès ou selon les observations, ce que vous observez et comment ajuster ; exemple commenté de bout en bout. Bibliothèques : en-tête simplifié, règles pour le secondaire I précisées. Page plus légère : les images se chargent à la demande.'],
          ['21 novembre 2026', 'Exemples écrits en écriture d’élève (police GE Typo Libre) : l’élève distingue ce qui est donné de ce qui est montré en exemple. Liseré aussi sur les cartes dessinées : bataille, cartes à terminaisons, mots interdits, cartes-questions. Couverture du livret d’écriture : un cadre pour le prénom, sans ligne à remplir. Panoramas mis à jour. Non-lecteurs : plus de consigne écrite sur « Syllabes et sons », « Maisons des nombres » et la page-son, mais un exemple déjà fait. Cartes : liseré à coins arrondis et marge blanche, texte agrandi. Carte à pinces : numéro à gauche, question centrée en grand. Plateaux : « Départ » et « Arrivée » en grand. Conjugaison : « je (chanter) ». Trois affiches redessinées. Exemples de fiches en page pleine ; mots espacés pour l’exercice « Entourer » ; pictogramme de consigne qui montre le mot visé (par exemple « verbe » entouré). Jeunes élèves : en 1P et 2P, plus de ligne « Prénom » ni « Date », le prénom s’écrit au dos. Exemples de jeux plus variés : conjugaison, pluriels, contraires, synonymes, nature des mots, capitales. Aspect retravaillé : serpents et échelles, cherche et trouve, carte à pinces, loto, plateaux. Nouveau nom : « Composer un écosystème de ressources ». Nouvelle rubrique « Composer une séquence », qui relie plusieurs ressources et prépare une demande d’ensemble. Étoiles de difficulté en option dans la demande. Pictogrammes de consigne : un choix dans la demande les fait placer devant chaque consigne. Rubrique « Conseils » : règles du jeu, coopération, différenciation, grille avant le test en classe. Toutes les planches en couleur, treize exemples de jeux remplis de vrais contenus. Ce guide en ligne. Exemples en couleur des 27 formes de fiches et des 13 affiches. Couleur en option pour les jeux et pour les modèles Word. Lignes simples ou lignes d’écriture romandes, au choix, de la 1P à la 4P. Nouveaux supports : calendrier, horaire, livret à onglets, journal de classe, bande dessinée, exposé, maisons des nombres, quadrillage.'],
          ['20 novembre 2026', 'Dix-huit nouveaux jeux, dont les puzzles, le mot mystère, la cocotte, l’horloge, le petit bac, les petits chevaux et le sudoku. Lignes d’écriture romandes, syllabes et sons. Panoramas composés de vraies pages.'],
@@ -964,9 +977,10 @@ function rendre() {
 document.addEventListener('click', e => { const b = e.target.closest('[data-go]'); if (b) naviguer(JSON.parse(b.dataset.go)); });
 $('#fermer').onclick = () => $('#grand').close();
 $('#grand').addEventListener('click', e => { if (e.target === $('#grand')) $('#grand').close(); });
-try { const h = decodeURIComponent(location.hash.slice(1)).split('/'); if (h[0] === 'ameliorer') h[0] = 'analyser';
-  if (h.length === 3 && VUES[h[0]]) Object.assign(S, {page: h[0], cat: h[1] === '' ? null : +h[1], code: h[2] || null}); } catch (e) {}
-if (S.page === 'cat' && S.cat == null) S.page = 'jeux';
+Object.assign(S, lireAdresse() || {});
+try { history.scrollRestoration = 'manual'; } catch (e) {}
+window.addEventListener('popstate', e => suivreAdresse(e.state && e.state.y));
+window.addEventListener('hashchange', () => suivreAdresse(0));
 rendre();
 </script>
 </body>

@@ -1,5 +1,10 @@
 # Nouveautés
 
+## 22 novembre 2026 (navigation du guide)
+
+- Guide : le bouton Retour (et Avancer) du navigateur ramène à la page précédente du guide, à la même position dans la page ; une adresse modifiée dans un onglet déjà ouvert (#page) affiche la page demandée. Auparavant, le guide remplaçait l'adresse sans garder d'historique : le bouton Retour faisait quitter le site.
+- Contrôle ajouté à test_navigateur.py : Retour, Avancer, position retrouvée, adresse changée dans l'onglet.
+
 ## 22 novembre 2026 (typographie du guide)
 
 - Guide, espaces insécables posées à l'affichage, sur le texte seulement (jamais dans les balises, ni dans les textes à copier pour l'IA) : avant « · », « – », « — », « / », « & » et « → » ; de part et d'autre de « ↔ », « × », « + » et « = » ; entre un nombre et le mot qui suit (« 8 cartons », « 9 mm ») ; entre un mot et le chiffre seul qui le suit (« Bibliothèque IA 1 »). Les textes affichés après coup (critères de la séquence, bilan de la grille, message de copie, menu) suivent la même règle.
