@@ -1,6 +1,6 @@
 # Bibliothèque IA 1 — module « Code des recettes » — v1
 
-Édition du 21 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Ce module** : Annexe I-C : à joindre seulement à un outil qui exécute du code Python.
 

@@ -1,6 +1,6 @@
 # Bibliothèque IA 1 — module « Séquences » — v1
 
-Édition du 21 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale et de sections de la Bibliothèque IA 2 par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale et de sections de la Bibliothèque IA 2 par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Ce module** : composer une séquence : fonctions pédagogiques, correspondance avec les huit fonctions du guide, critères de l'écosystème, circulation et régulation.
 
@@ -330,3 +330,56 @@ Barron, B. (2006). Interest and self-sustained learning as catalysts of developm
 Trouche, L., Gueudet, G., Pepin, B., & Aldon, G. (2020). *L'approche documentaire du didactique*. https://hal.archives-ouvertes.fr/hal-02512596/file/DAD-TGP_Encyclopedie_Francais-v1.pdf
 
 Statut : les huit fonctions de De Vries (2001) ont été vérifiées dans l'article le 21.11.2026 ; les références Barron (2006) et Trouche et al. (2020) sont reprises d'une note de l'auteur, sans nouvelle vérification ; la définition, les critères et la conduite attendue sont des propositions.
+
+## Décider avant de demander, observer après la classe
+
+Ces repères servent quand l'enseignant·e transforme ou crée une ressource. Ils complètent la procédure de conception (Partie 8) : l'IA s'y réfère pour rappeler ce qui n'a pas été décidé, sans décider à la place de l'enseignant·e.
+
+**Les quatre temps d'une demande**
+
+1. Pourquoi : l'intention propre à cette transformation, et le besoin qu'elle sert.
+2. Ce que je décide : ce qui ne change pas (objectif, critères de réussite) et ce qui peut varier (guidage, quantité, complexité, contexte).
+3. Ce que je demande : le contexte, la tâche précise, la forme attendue.
+4. Ce que je contrôle : le risque propre à cette transformation (perdre l'objectif en simplifiant, souffler la réponse en aidant, décorer sans faire apprendre), et si la transformation était nécessaire.
+
+Les deux premiers temps appartiennent à l'enseignant·e. L'IA peut les rendre explicites et poser une question si une information indispensable manque.
+
+**Partir du problème, pas de la forme**
+
+| Départ par la forme | Risque | Départ par le problème |
+|---|---|---|
+| Transformer en jeu | Amusant mais peu aligné | Les élèves s'engagent peu : quel défi ou quel rôle soutient l'activité ? |
+| Rendre plus original | Surcharge, perte de lisibilité | La tâche est trop mécanique : comment provoquer justification et verbalisation ? |
+| Numériser la fiche | Numérique sans valeur ajoutée | Besoin de retour rapide ou de collaboration : quel outil apporte une fonction utile ? |
+| Ajouter des images | Décor sans aide à la compréhension | Un obstacle de compréhension appelle-t-il un schéma, un exemple ? |
+| Créer un escape game | Activité lourde, parfois superficielle | Un besoin d'enquête ou de résolution progressive justifie-t-il ce format ? |
+
+**Profondeur d'une transformation**
+
+| Niveau | Type | Effet sur l'activité |
+|---|---|---|
+| 1. Surface | Mise en page, reformulation, clarification | Améliore la lisibilité, change peu la nature de la tâche |
+| 2. Adaptation | Différenciation, aides progressives, version accessible | Répond à des besoins réels, soutient l'équité d'accès |
+| 3. Outillage | Autocorrection, cartes d'aide, grilles, plan de travail | Modifie les conditions de travail, libère l'enseignant·e pour observer |
+| 4. Socialisation | Tutorat, débat, correction croisée, production collective | Fait des interactions un levier d'apprentissage |
+| 5. Reconfiguration | Fiche → enquête, exercice → situation-problème, réponse → production | Transforme la nature cognitive ou sociale de l'activité |
+| 6. Dispositif | Parcours articulé (aides, autoévaluation, corrigés, ajustements) | Forte valeur, mais exige contrôle et faisabilité |
+
+L'échelle décrit, elle ne hiérarchise pas : le bon niveau est celui qui répond au problème identifié, dans les contraintes de la classe.
+
+**Après la classe : effet recherché, observations, traces**
+
+| Effet recherché | Ce qu'on chercherait à observer | Traces envisageables |
+|---|---|---|
+| Engagement | Persévérance, implication dans les rôles ou les défis | Observation, productions terminées |
+| Compréhension | Réponses mieux justifiées, capacité à expliquer | Billet de sortie, mini-quiz, explication orale |
+| Autonomie | Moins de demandes d'aide immédiate, autocorrection pertinente | Traces d'autocorrection, tableau de suivi |
+| Verbalisation | Échanges sur les stratégies, vocabulaire disciplinaire | Notes d'observation, critères de discussion |
+| Différenciation effective | Tous les élèves entrent dans la tâche et progressent | Parcours réalisés, aides utilisées |
+| Transfert | Usage de la notion dans une situation nouvelle | Tâche ouverte, production finale |
+| Régulation | Obstacles repérés, ajustements pour la suite | Grille enseignant·e, erreurs-types |
+| Mémorisation | Rappel correct après un délai, réutilisation spontanée | Mini-quiz différé, cartes de rappel, autotest |
+
+Ces catégories orientent le regard ; elles se lisent au conditionnel (ce que l'on chercherait à observer) et ne prescrivent ni note ni mesure. L'IA peut proposer, dans la partie enseignant·e, l'effet visé, une observation et une trace ; elle ne présume jamais du résultat.
+
+Statut : propositions de conception de l'auteur (22.11.2026), reprises de son travail sur la transformation des ressources ; sans référence propre dans cette section.

@@ -3,7 +3,7 @@
 
 Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, de la 1P à la 11S (exemples situés surtout aux cycles 1 et 2) — Suisse romande.
 
-Édition du 21 novembre 2026. Le nom du fichier (« _v1 ») reste stable pour ne pas casser les liens ; l'édition (sa date) identifie la version, la même pour les bibliothèques, le guide web et les modèles. Historique détaillé : fichier NOUVEAUTES.md du dépôt https://github.com/emmanuelflaction/bibliotheques-ia. Auteur : Emmanuel Flaction, HEP Vaud (UER MI) – emmanuel.flaction@hepl.ch. Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Le nom du fichier (« _v1 ») reste stable pour ne pas casser les liens ; l'édition (sa date) identifie la version, la même pour les bibliothèques, le guide web et les modèles. Historique détaillé : fichier NOUVEAUTES.md du dépôt https://github.com/emmanuelflaction/bibliotheques-ia. Auteur : Emmanuel Flaction, HEP Vaud (UER MI) – emmanuel.flaction@hepl.ch. Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Les documents de l'ensemble.** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 4 — personnelle : les préférences de l'enseignant·e, à remplir une fois (modèle .docx). Banque d'icônes : un fichier pour l'IA et les images. Le guide pour les enseignant·e·s est une page web (https://emmanuelflaction.github.io/bibliotheques-ia/) ; l'ancienne Bibliothèque IA 3 qui le contenait n'existe plus et son numéro n'est pas réattribué. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
 
@@ -134,7 +134,9 @@ Elle ne présente jamais un texte avec des tirets bas comme une fiche prête à 
 
 ## 0.6 Analyser, puis transformer une ressource
 
-**Analyser une ressource.** Quand l'enseignant·e joint une ressource et demande de l'analyser, l'IA remet un bref rapport en quelques points : ce qu'elle en comprend (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document), ce qui fonctionne, les possibilités d'amélioration numérotées, en s'appuyant sur la grille de l'Annexe I-B. Elle termine en demandant de confirmer ou de corriger sa lecture. L'analyse s'arrête au rapport.
+**Analyser une ressource.** Quand l'enseignant·e joint une ressource et demande de l'analyser, l'IA remet un bref rapport en quelques points : ce qu'elle en comprend (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document), ce qui fonctionne, les possibilités d'amélioration numérotées, en s'appuyant sur la grille de l'Annexe I-B, à commencer par son bloc « Contenu didactique ». Elle termine en demandant de confirmer ou de corriger sa lecture. L'analyse s'arrête au rapport.
+
+**Lire avant d'interpréter.** L'IA s'assure d'abord de sa lecture : si la ressource est une photo ou un scan, elle signale ce qu'elle n'a pas pu lire ou dont elle n'est pas sûre (nombres, écriture à la main, schémas, flèches, cases) et ne corrige jamais en silence ce qu'elle croit être une faute. Dans le rapport, elle distingue ce qu'elle observe dans la ressource de ce qu'elle suppose (degré, objectif, usage). Quand un élément peut être un choix didactique (une donnée superflue à trier, une difficulté voulue), elle le formule comme une question, non comme un défaut : l'analyse est un matériau pour l'enseignant·e, pas un verdict. Si la ressource sert déjà bien l'objectif visé, le rapport peut conclure qu'aucune transformation n'est nécessaire, ou qu'une seule l'est.
 
 **Transformer une ressource analysée.** Quand l'enseignant·e choisit une ou plusieurs possibilités du rapport, ou indique d'autres modifications, l'IA transforme la ressource selon les Étapes 1 à 6, en gardant l'objectif et ce qui fonctionne, et dit ce qui a changé. Si l'enseignant·e a corrigé la lecture ou dit ce qu'il ou elle observe avec ses élèves, l'IA en tient compte.
 
@@ -145,11 +147,12 @@ Le guide web « Composer un écosystème de ressources » produit des demandes e
 - le modèle est désigné par son nom, dans une ligne « Jeu choisi », « Type d'exercice », « Forme de la fiche », « Support choisi » ou « Outil choisi » ; l'index ci-dessous donne le gabarit correspondant ; en cas de doute, demander ;
 - « si tu ne peux pas créer de fichier Word » renvoie au § 0.5 ;
 - « la liste des contrôles, chacun avec son statut » renvoie à l'Étape 5 et à la règle MP-V-03 ;
-- « Analyse-la et rédige un bref rapport » et « Transforme la fiche selon la possibilité … de ton rapport » renvoient au § 0.6.
+- « Analyse-la et rédige un bref rapport » et « Transforme la fiche selon la possibilité … de ton rapport » renvoient au § 0.6 ;
+- « Classe multi-âges » renvoie à la règle MP-D-05.
 
 Dans ce qu'elle écrit à l'enseignant·e (propositions, explications, liste des contrôles), l'IA nomme les choses en toutes lettres ; les codes et les renvois chiffrés ne figurent que dans la fiche technique et le rapport de conformité, après le nom.
 
-**Index des noms du guide** (tiré du guide, édition du 21 novembre 2026)
+**Index des noms du guide** (tiré du guide, édition du 22 novembre 2026)
 
 | Ligne de la demande | Gabarit |
 |---|---|
@@ -845,6 +848,8 @@ Les fiches ajoutées en v7.2 sont présentées sous une forme condensée : **Usa
 | MP-D-02 | Deux dispositifs possibles : **parcours sur la même fiche** (items a-c, a-d, a-e ; aide-mémoire pour un parcours) ou **versions parallèles** (mêmes exercices, mêmes phrases et mêmes lettres d'items ; seuls l'étayage et l'étendue changent), ce qui permet une correction commune et un changement de version en cours de route. Autour d'une **fiche unique**, sans tripler la fiche (leviers : contenus, processus, productions, structures ; Forget, 2018) : difficulté croissante, chacun choisissant son point de départ avec un repère neutre ou, sur demande, des étoiles de difficulté (MP-D-01) ; noyau commun en haut de la fiche et prolongements facultatifs en bas ; aides détachées en libre accès, réutilisables d'une fiche à l'autre (J15) ; quantité plutôt qu'objectif (« au moins quatre exercices sur huit, dont le numéro 5 ») ; forme de la réponse au choix (écrire, entourer, relier, manipuler puis dessiner, expliquer oralement) ; organisation (seul, binôme d'entraide, petit groupe avec l'enseignant·e) ; trame stable (objectif, exemple, exercices gradués, défi). Si un élève choisit toujours trop facile ou trop difficile, l'enseignant·e oriente son point de départ. | DEVRAIT |
 | MP-D-03 | Chaque version ou parcours respecte son propre budget de page (Étape 2). | DOIT |
 | MP-D-04 | Les modalités d'attribution (diagnostic court, choix accompagné) et la consigne « une version décrit un besoin du moment, pas un niveau d'élève » figurent dans la partie enseignant·e. | DEVRAIT |
+| MP-D-05 | **Classe multi-âges** (deux degrés, ou deux niveaux de programme, dans la même classe : très fréquente en 1P-2P, possible à tous les degrés, notamment dans les petits établissements et les classes spécialisées). Un seul matériel commun, avec une entrée par degré ou par niveau : par exemple une collection jusqu'à 5 ou jusqu'à 10, des images ou des mots, moins ou plus de cartes, une tâche de base et un prolongement. Aucun repère de degré ou de niveau n'est visible pour les élèves (MP-D-01) ; les entrées se distinguent par le contenu ou par un repère neutre. Dès qu'un des degrés ne lit pas encore, les consignes sont prévues à l'oral ou en pictogrammes. La partie enseignant·e indique quelle entrée convient à quel degré ou niveau, l'objectif du plan d'études de chacun (§ 1.2) et un moment commun (lancement, mise en commun). L'IA ne demande et n'utilise aucune information sur des élèves : elle part des degrés ou des niveaux annoncés. | DOIT |
+| MP-D-06 | **Encadré « Si je bloque »**, sur demande ou pour un travail autonome (atelier, plan de travail, devoir) : deux ou trois stratégies dans l'ordre (relire la consigne et l'exemple, utiliser une aide en libre accès, demander à un·e camarade), puis le moment où demander à l'enseignant·e ; formulé en « je », avec pictogrammes si les élèves lisent peu ; jamais la réponse. | PEUT |
 
 ## 3.7 Orthographe : par défaut, l'élève ne voit que des formes correctes (MP-CC-11)
 <!-- modules : noyau -->
@@ -1679,13 +1684,13 @@ Le repère discret de version (♣ ♦ ♠, MP-D-01) se place en en-tête de pag
 
 La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet ordre :
 
-1. **En bref** : objectif, indices de réussite, moment de la séquence, durée, matériel.
+1. **En bref** : objectif, indices de réussite, moment de la séquence, durée, matériel, avec une solution de rechange pour ce qui pourrait manquer (par exemple, sans dé : la roue de tirage J20 ; sans jetons : des cases à cocher).
 2. **Choix pédagogiques** : codes F, P, MF, G mobilisés, en une ligne chacun.
 3. **Ancrage PER** : texte consulté et date, ou **[À VÉRIFIER dans le PER]** ; constat d'adéquation (§ 1.2).
 4. **Hypothèses annoncées** (§ 1.1).
 5. **Déroulement conseillé** (par exemple lancement oral 5 min, travail 20 min, mise en commun 5 min).
-6. **Différenciation** : dispositif (MP-D-02), attribution, extension éventuelle.
-7. **Corrigé expliqué** : réponse et « Pourquoi » pour chaque item.
+6. **Différenciation** : dispositif (MP-D-02), attribution, extension éventuelle ; pour une classe multi-âges, l'entrée de chaque degré ou niveau (MP-D-05).
+7. **Corrigé expliqué** : réponse et « Pourquoi » pour chaque item ; quand la tâche admet plusieurs réponses, toutes les réponses acceptables (l'unicité reste exigée pour les jeux d'appariement, MP-J-01).
 8. **Barème indicatif** ou grille formative sans note.
 9. **Erreurs typiques** : erreur → hypothèse → rétroaction actionnable → tâche de reprise.
 10. **Ticket de sortie et décision** (MF44) : résultat → suite proposée.
@@ -1695,6 +1700,8 @@ La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet or
 **Pour un jeu (GF-F)**, la partie enseignant·e ajoute :
 
 - dans « En bref », un **tableau d'impression** : page, contenu, quantité, papier, découpe ; Sous le tableau, des **astuces pratiques** : faire lancer le dé dans une boîte ou un couvercle (ou dé en mousse, tapis de feutrine) ; cacher la réponse des cartes question-réponse (pochette, rabat, carte tenue par le camarade qui interroge) ; un sablier par groupe ; un sachet étiqueté par jeu, avec la règle et le corrigé ; un essai recto-verso sur une seule feuille ; le jeu laissé en libre accès après la séance.
+- dans « En bref », **ce qui fait apprendre** dans ce jeu, en une ou deux phrases : le mécanisme qui fait travailler l'objectif (rappel actif, retour immédiat, nombre de réponses par élève et par partie, verbalisation), et ce qui ferait perdre l'apprentissage (attente, hasard dominant, réponse visible) ;
+- dans « Déroulement conseillé », une **mise en commun** après la partie : ce qu'on a appris, les erreurs fréquentes, la règle ou la procédure à retenir ;
 - dans « Corrigé expliqué », la **solution du jeu** (ordre de la boucle, paires ou familles), avec un « Pourquoi » pour chaque pièce ;
 - dans « Différenciation », les **variantes de jeu** : solo, à trois, mélange des lots ; Pour tout jeu de parcours ou de compétition, proposer aussi une **variante coopérative**, fondée sur l'interdépendance positive et la responsabilité individuelle (Johnson & Johnson, 2009) : un seul pion pour le groupe, contre le sablier ou contre un pion adverse qui avance seul ; un but commun chiffré (tous les pions arrivés en moins de dix tours, vingt cartes réussies) ; des rôles tournants (J13) ; l'aide qui rapporte (si l'explication d'un camarade permet de répondre, les deux avancent) ; l'erreur sans recul (le groupe explique, puis l'élève rejoue) ; des binômes par pion ; un bilan de fin de partie (« qu'est-ce qui nous a aidés ? »).
 - dans le rapport de conformité, les contrôles **V11 à V13** (et V14 si le fichier est produit par du code ; V15 à V19 selon le gabarit ; V20 et V21 toujours).
@@ -1754,7 +1761,7 @@ V1 à V10 et V12 se contrôlent sur le PDF ou l'aperçu ; V11 sur les données d
 | 8 | Lacunes calibrées (R2) et cohérentes avec la réponse attendue ? | MP-E-11, MP-CO-07 |
 | 9 | 3-5 exercices courts ou 1-2 longs par page ; au plus 4 éléments principaux par exercice ? | MP-O-04, MP-CI-02 |
 | 10 | Exemple résolu pour toute tâche nouvelle ; aides placées au-dessus de l'exercice ; pré-training ≤ ¼ de page ? | MP-CC-04, MP-CC-06, MP-PT |
-| 11 | Différenciation sans étiquette évaluative ; chaque version dans son budget ? | MP-D-01, MP-D-03 |
+| 11 | Différenciation sans étiquette évaluative ; chaque version dans son budget ; en classe multi-âges, une entrée par degré ou niveau, sans repère visible ? | MP-D-01, MP-D-03, MP-D-05 |
 | 12 | Partie enseignant·e séparée et complète (structure § 4.3) ? | Étape 4 |
 | 13 | Contrôle visuel V1-V10 effectué (ou impossibilité déclarée) ; V20 (page pleine) et V21 (cohérence didactique) ; pour un jeu, V11 à V13 ; pour un fichier produit par du code, V14 ? | MP-V-01, MP-O-14 |
 | 14 | En-tête conforme : Prénom et Date en première ligne, titre centré entre deux espaces, objectif en langage élève sans étiquette ? | MP-O-12, R7 |
@@ -2370,7 +2377,7 @@ Une réduction progressive est possible au cours du cycle.
 | MP-E-11 | Lacune dans une phrase : réservée à 1-2 mots ; nombre de tirets bas calculé selon la police et la taille (table 2.1). | DOIT |
 | MP-C-06 | Symboles (☐, ★, ◐) : vérifier leur rendu ; préférer des mots dans des cellules et des cases dessinées (cellules vides bordées). | DEVRAIT |
 | MP-S-01 | Un rôle, un style de paragraphe nommé (ou une mise en forme directe strictement identique). | DEVRAIT |
-| MP-D-01 à MP-D-04 | Différenciation sans étiquette évaluative, dispositifs, budget par version, attribution (voir § 3.6). | DOIT / DEVRAIT |
+| MP-D-01 à MP-D-06 | Différenciation sans étiquette évaluative, dispositifs, budget par version, attribution, classe multi-âges, encadré « Si je bloque » (voir § 3.6). | DOIT / DEVRAIT / PEUT |
 | MP-V-01 | Contrôle sur le rendu imprimé (V1-V10 et V20 ; V11 à V19 selon le cas ; V21) avant livraison, ou déclaration « Rendu non contrôlé » avec la liste des contrôles. | DOIT |
 | MP-V-02 | Rapport de conformité livré avec la fiche. | DOIT |
 | MP-O-12 | En-tête obligatoire dans cet ordre : Prénom et Date tout en haut (première ligne) ; titre centré avec un espace avant et après (≥ 12 pt) ; objectif en langage élève (une phrase à la première personne, sans étiquette « Mon objectif : » ; révision du 2.11.2026). Recette R7. Jeunes élèves : pas de ligne Prénom et Date (MP-O-03). | DOIT |
@@ -2395,7 +2402,18 @@ Une réduction progressive est possible au cours du cycle.
 
 À utiliser pour auditer une fiche existante (prompt G) ou transformer une fiche d'une autre source (prompt B). Chaque écart constaté est référencé par son identifiant.
 
-#### Rendu imprimé (à faire en premier, sur le PDF)
+#### Contenu didactique (en premier pour analyser une ressource existante, § 0.6)
+- Objectif probable et alignement : chaque item fait-il travailler cet objectif ? Les écarts sont signalés, item par item.
+- Prérequis implicites : ce que la ressource suppose acquis sans le dire.
+- Progression : ordre des items, sauts de difficulté, étapes intermédiaires qui manquent.
+- Structure des tâches : types de problèmes ou d'exercices présents (par exemple une ou deux étapes, recherche du tout ou d'une partie) et leur variété.
+- Erreurs probables et obstacles prévisibles pour les élèves du degré.
+- Données superflues, pièges, difficultés : les signaler et demander s'il s'agit d'un choix didactique.
+- Biais possibles : contextes, prénoms, références culturelles ou sociales ; stéréotypes.
+- Réponses et corrigé : présence, exactitude ; une seule réponse ou plusieurs réponses acceptables.
+- Usage prévu : moment de la séquence, travail individuel ou collectif, part d'autonomie.
+
+#### Rendu imprimé (à faire en premier pour un fichier produit, sur le PDF)
 - Contrôle visuel V1-V10 (§ 5.2) : pages, coupures, nombre réel de lignes, longueur des lacunes, tailles, symboles, bords, absence de la partie enseignant·e, ordre de l'en-tête, orthographe.
 - Budget de page de la fiche technique cohérent avec le rendu (MP-O-11) ; aucune page élève remplie partiellement (MP-O-14, V20).
 - Cohérence didactique : graphème présent dans chaque mot, réponses d'énigme calculées, cases de réussite vides, zone de réponse pour chaque question, partie enseignant·e des jeux et des dictées (V21).

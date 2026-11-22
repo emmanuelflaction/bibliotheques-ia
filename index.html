@@ -227,7 +227,7 @@ pre.demande { white-space: pre-wrap; background: var(--fond); border: 2px solid 
   <ul id="menu"></ul></div></nav>
 <div class="page">
   <main id="vue" class="vue" tabindex="-1"><h1>Composer un écosystème de ressources</h1><p>Un guide pour concevoir des jeux, des fiches et des supports à imprimer pour la classe, de la 1P à la 11S (école romande) : améliorer une ressource existante, en créer une nouvelle avec une IA générative, composer une séquence de ressources reliées, ou télécharger des modèles prêts à l’emploi.</p><noscript><p>Ce guide a besoin de JavaScript pour composer les demandes à l’IA. Sans JavaScript, les bibliothèques, les modèles Word et les planches à imprimer restent disponibles dans le <a href="https://github.com/emmanuelflaction/bibliotheques-ia">dépôt GitHub du projet</a>.</p></noscript></main>
-  <footer>Édition du 21&nbsp;novembre 2026 · Bibliothèques IA et guide&nbsp;: Emmanuel Flaction, HEP Vaud (UER MI).</footer>
+  <footer>Édition du 22&nbsp;novembre 2026 · Bibliothèques IA et guide&nbsp;: Emmanuel Flaction, HEP Vaud (UER MI).</footer>
 </div>
 <dialog id="grand"><button class="btn second" type="button" id="fermer">Fermer</button><img id="grand-img" alt=""></dialog>
 <script>
@@ -236,7 +236,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const typo = h => h.replace(/ ([:;?!»])/g, ' $1').replace(/« /g, '« ');
 const S = {page: 'accueil', cat: null, code: null, tr: null, onglet: 'ia'};
-const P = {degre: '', disc: '', notion: '', lignes: '', teinte: '', coop: '', picto: '', etoiles: '', outil: '', besoin: '', indices: '', contraintes: '', ress: '', garder: 'oui', amel: [], prop: []};
+const P = {degre: '', multi: '', degre2: '', disc: '', notion: '', lignes: '', teinte: '', coop: '', picto: '', etoiles: '', outil: '', besoin: '', indices: '', contraintes: '', ress: '', garder: 'oui', amel: [], prop: []};
 try { Object.assign(P, JSON.parse(localStorage.getItem('guide-demande') || '{}')); } catch (e) {}
 if (!Array.isArray(P.amel)) P.amel = [];
 if (!Array.isArray(P.prop)) P.prop = [];
@@ -284,7 +284,7 @@ function criteres() {
 function demandeSeq() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, es = Q.etapes.filter(e => nomEtape(e));
   const l = es.map((e, i) => `${i + 1}. ${nomEtape(e)}${e.c ? '' : ' (ressource que j\'ai déjà, à ne pas produire)'}${placeTxt(e.place)}\n   Fonction : ${v(fonction(e.fn), '[à compléter]').toLowerCase()}.${(e.obs || '').trim() ? `\n   Ce que j'observe et comment j'ajuste : ${e.obs.trim()}` : ''}${i < es.length - 1 ? `\n   Ce qui passe à la ressource suivante : ${v(e.vers, '[à compléter]')}` : ''}`).join('\n');
-  return `Je prépare une séquence pour ma classe, composée de plusieurs ressources reliées entre elles.\nDegré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nObjectif d'apprentissage : ${v(Q.objectif, '[à compléter]')}\nCe qui montrera la réussite : ${v(Q.indices || '', 'à proposer')}\n\nRessources :\n${l || '[à compléter]'}\n\nPremier temps : présente le plan d'ensemble. Pour chaque ressource : sa fonction, ce qu'elle apporte que les autres n'apportent pas, ce qu'elle reprend et ce qu'elle transmet, ce que j'observerai et comment ajuster. Signale toute redondance involontaire et toute fonction qui manque, puis attends mon accord.\nSecond temps : produis, une à une, les ressources à imprimer et leur corrigé, sans refaire celles que j'ai déjà. Chacune reprend ce que la précédente a produit.\n${joints()}${outilL()}\n${finV()}`;
+  return `Je prépare une séquence pour ma classe, composée de plusieurs ressources reliées entre elles.\nDegré : ${degreL('[à compléter]')}\n${multiL(true)}Discipline : ${v(P.disc, '[à compléter]')}\nObjectif d'apprentissage : ${v(Q.objectif, '[à compléter]')}\nCe qui montrera la réussite : ${v(Q.indices || '', 'à proposer')}\n\nRessources :\n${l || '[à compléter]'}\n\nPremier temps : présente le plan d'ensemble. Pour chaque ressource : sa fonction, ce qu'elle apporte que les autres n'apportent pas, ce qu'elle reprend et ce qu'elle transmet, ce que j'observerai et comment ajuster. Signale toute redondance involontaire et toute fonction qui manque, puis attends mon accord.\nSecond temps : produis, une à une, les ressources à imprimer et leur corrigé, sans refaire celles que j'ai déjà. Chacune reprend ce que la précédente a produit.\n${joints()}${outilL()}\n${finV()}`;
 }
 function exempleDemande() { const q = Q, p = Object.assign({}, P); Q = JSON.parse(JSON.stringify(EXEMPLE_SEQ)); P.degre = '6P'; P.disc = 'mathématiques'; P.outil = ''; const t = demandeSeq(); Q = q; Object.assign(P, p); return t; }
 const joints = () => `Appuie-toi sur la Bibliothèque IA 1 jointe, et sur la Bibliothèque IA 2 ou ma Bibliothèque IA 4 si je les ai jointes. Si la Bibliothèque IA 1 manque, signale-le avant de commencer.`;
@@ -300,6 +300,13 @@ function dispo(it) {
   return `<p class="dispo"><b>Disponible :</b> ${l.join(' · ')}.</p>`;
 }
 const DEGRES = ['1P', '2P', '3P', '4P', '5P', '6P', '7P', '8P', '9S', '10S', '11S'];
+const multi = () => P.multi === 'oui';
+const degres = () => multi() && P.degre2 ? [P.degre, P.degre2] : [P.degre];
+const degreL = vide => { if (!P.degre) return vide; if (!multi()) return P.degre; if (!P.degre2 || P.degre2 === P.degre) return `${P.degre} et [autre degré à compléter] (classe multi-âges)`;
+  const [a, b] = [P.degre, P.degre2].sort((x, y) => DEGRES.indexOf(x) - DEGRES.indexOf(y)); return `${a} et ${b} (classe multi-âges)`; };
+const multiL = (seq) => multi() ? `Classe multi-âges : ${seq ? 'pour chaque ressource, ' : 'un seul matériel commun, avec '}une entrée pour chaque degré ou niveau, sans repère de degré visible pour les élèves ; indique quelle entrée convient à quel degré, avec l'objectif du plan d'études de chacun, et prévois un moment commun.\n` : '';
+const champMulti = (id, id2) => `<label for="${id}" class="case"><input type="checkbox" id="${id}" ${multi() ? 'checked' : ''}> Classe multi-âges (deux degrés ou deux niveaux de programme)</label>
+  ${multi() ? `<label for="${id2}">Autre degré ou niveau de programme<select id="${id2}"><option value="">Choisir…</option>${DEGRES.map(d => `<option ${P.degre2 === d ? 'selected' : ''}>${d}</option>`).join('')}</select></label>` : ''}`;
 const tranche = d => { const i = DEGRES.indexOf(d); return i < 0 ? -1 : i < 4 ? 0 : i < 8 ? 1 : 2; };
 const item = c => D.items.find(i => i.c === c);
 const go = o => `data-go='${esc(JSON.stringify(o))}'`;
@@ -310,7 +317,7 @@ const couleur = it => it.rub === 'jeux' ? COUL[it.cat] : rub(it.rub).c;
 const aDoc = it => it.fo.length && it.fo[0].f;
 const rubriqueCourante = () => { const p = S.page;
   if (p === 'fiche') { const it = item(S.code); return it ? it.rub : 'accueil'; }
-  return ({cat: 'jeux', preparer: 'mode', verifier: 'mode', imprimer: 'mode', sansia: 'mode', hesite: 'accueil', ameliorer: 'accueil', c_exemple: 'sequence', c_regles: 'conseils', c_cooperer: 'conseils', c_differencier: 'conseils', c_grille: 'conseils', c_ecosysteme: 'conseils'})[p] || p; };
+  return ({cat: 'jeux', preparer: 'mode', verifier: 'mode', imprimer: 'mode', sansia: 'mode', hesite: 'accueil', ameliorer: 'accueil', c_exemple: 'sequence', c_regles: 'conseils', c_cooperer: 'conseils', c_differencier: 'conseils', c_grille: 'conseils', c_ecosysteme: 'conseils', c_decider: 'conseils', c_apres: 'conseils'})[p] || p; };
 
 function naviguer(o) {
   Object.assign(S, o);
@@ -331,7 +338,7 @@ function menu() {
   $('#menu').innerHTML = RUB.map(r => `<li><button type="button" ${cur === r.id ? 'aria-current="page"' : ''} ${go({page: r.id, code: null})}>${r.m || r.n}</button></li>`).join('');
 }
 const retour = () => `<div><button class="retour" type="button" ${go(parent())}>← Retour</button></div>`;
-const jeunes = () => tranche(P.degre) === 0 && !(S.page === 'fiche' && item(S.code) && item(S.code).fam === 'jeu');
+const jeunes = () => degres().some(d => tranche(d) === 0) && !(S.page === 'fiche' && item(S.code) && item(S.code).fam === 'jeu');
 const avecConsignes = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme'; };
 const avecEtoiles = () => { const it = S.page === 'fiche' ? item(S.code) : null; return !it || it.fam === 'exo' || it.fam === 'forme' || it.fam === 'jeu'; };
 const enCouleur = () => { const it = S.page === 'fiche' ? item(S.code) : null; return it && (it.fam === 'jeu' || it.fam === 'support') && it.fo.length && !it.fo.some(f => f.w); };
@@ -344,6 +351,7 @@ async function copierTexte(t, st, msg) {
 }
 const champs = (ex1, ex2) => `
   <label for="degre">Degré<select id="degre"><option value="">Choisir…</option>${DEGRES.map(d => `<option ${P.degre === d ? 'selected' : ''}>${d}</option>`).join('')}</select></label>
+  ${champMulti('multi', 'degre2')}
   ${jeunes() ? `<label for="lignes">Lignes pour écrire (1P à 4P)<select id="lignes"><option value="">L’IA me posera la question</option><option value="simples" ${P.lignes === 'simples' ? 'selected' : ''}>Lignes simples</option><option value="romandes" ${P.lignes === 'romandes' ? 'selected' : ''}>Lignes d’écriture romandes</option></select></label>` : ''}
   ${avecConsignes() ? `<label for="picto">Pictogrammes de consigne<select id="picto"><option value="">Sans pictogramme imposé</option><option value="oui" ${P.picto === 'oui' ? 'selected' : ''}>Un pictogramme devant chaque consigne</option></select></label>` : ''}
   ${avecEtoiles() ? `<label for="etoiles">Repères de difficulté<select id="etoiles"><option value="">Sans étoiles</option><option value="oui" ${P.etoiles === 'oui' ? 'selected' : ''}>Une à trois étoiles, du plus simple au plus difficile</option></select></label>` : ''}
@@ -434,7 +442,7 @@ const VUES = {
       <p>Emmanuel Flaction est enseignant à la Haute école pédagogique du canton de Vaud (HEP Vaud, UER MI). Ses principaux champs d’activité sont l’éducation numérique (médias, usages du numérique, intelligence artificielle dans l’enseignement), l’ingénierie de formation et l’analyse de pratiques professionnelles.</p>
       <p>Les bibliothèques et ce guide sont développés avec l’assistance d’IA génératives (Claude et quelques autres). Les documents sont contrôlés à l’écran ; tous n’ont pas encore été expérimentés en classe.</p>
       <p>C’est un projet personnel de l’auteur, et non une publication officielle de la HEP Vaud. Les classements et les démarches proposés s’appuient sur des travaux de recherche cités ; ce sont des propositions de conception, et non un modèle validé par des études.</p>
-      <p>Version : édition du 21 novembre 2026, la même pour le guide, les bibliothèques et les modèles.</p></div>
+      <p>Version : édition du 22 novembre 2026, la même pour le guide, les bibliothèques et les modèles.</p></div>
     <div class="bloc" style="max-width:42em"><h2>Droits d’utilisation</h2>
       <p>Les bibliothèques, le guide, les modèles et les planches sont en accès libre, sous licence Creative Commons Attribution – Pas d’utilisation commerciale – Partage dans les mêmes conditions 4.0 (CC BY-NC-SA 4.0).</p>
       <p>Vous pouvez les utiliser, les copier et les adapter pour votre classe ou vos formations, à trois conditions : citer l’auteur, ne pas en faire un usage commercial, et partager vos adaptations sous la même licence. Les icônes sont dans le domaine public (CC0).</p>
@@ -456,14 +464,53 @@ const VUES = {
 
   conseils: () => `
     <h1 class="titre" style="--c:${rub('conseils').c}">Conseils</h1>
-    <p class="chapo">Cinq repères pour qu’un jeu, une fiche ou une séquence fasse vraiment apprendre.</p>
+    <p class="chapo">Des repères pour qu’un jeu, une fiche ou une séquence fasse vraiment apprendre.</p>
     <div class="rubriques">
+      <button class="rubrique" style="--c:#c2571a" type="button" ${go({page: 'c_decider'})}><span class="tx"><span class="n">Décider avant de demander</span><span class="d">Quatre questions avant chaque demande, et partir du problème plutôt que de la forme.</span></span></button>
       <button class="rubrique" style="--c:#2a9d8f" type="button" ${go({page: 'c_regles'})}><span class="tx"><span class="n">Des règles du jeu qui font travailler tous les élèves</span><span class="d">La marche à suivre en cinq questions, et des astuces pratiques.</span></span></button>
       <button class="rubrique" style="--c:#3a7bd5" type="button" ${go({page: 'c_cooperer'})}><span class="tx"><span class="n">Passer de la compétition à la coopération</span><span class="d">Changer la condition de victoire.</span></span></button>
-      <button class="rubrique" style="--c:#8e5bd0" type="button" ${go({page: 'c_differencier'})}><span class="tx"><span class="n">Différencier sans faire trois versions</span><span class="d">Sept leviers autour d’une fiche unique.</span></span></button>
+      <button class="rubrique" style="--c:#8e5bd0" type="button" ${go({page: 'c_differencier'})}><span class="tx"><span class="n">Différencier sans faire trois versions</span><span class="d">Des leviers autour d’une fiche unique, les obstacles à lever, les classes multi-âges.</span></span></button>
       <button class="rubrique" style="--c:#e4572e" type="button" ${go({page: 'c_ecosysteme'})}><span class="tx"><span class="n">Qu’est-ce qu’un écosystème de ressources ?</span><span class="d">Une définition, cinq critères, huit fonctions.</span></span></button>
       <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'c_grille'})}><span class="tx"><span class="n">Mon jeu est-il utile, utilisable, acceptable ?</span><span class="d">Une grille à remplir avant le test en classe, puis après.</span></span></button>
+      <button class="rubrique" style="--c:#0a7f96" type="button" ${go({page: 'c_apres'})}><span class="tx"><span class="n">Après la classe : observer l’effet</span><span class="d">Ce que vous chercherez à observer, et les traces qui le montrent.</span></span></button>
     </div>`,
+
+  c_decider: () => `
+    <h1 class="titre" style="--c:#c2571a">Décider avant de demander</h1>
+    <p class="chapo">L’essentiel se joue avant et après la demande à l’IA. Quatre questions cadrent chaque transformation ou chaque création.</p>
+    <ol class="pas">
+      <li><div class="c"><h3>Pourquoi ?</h3><p>L’intention propre à cette transformation : quel besoin de vos élèves sert-elle ?</p></div></li>
+      <li><div class="c"><h3>Ce que je décide</h3><p>Ce qui ne bouge pas : l’objectif et les critères de réussite. Ce qui peut varier : le guidage, la quantité, la complexité, le contexte. Cette décision vous appartient.</p></div></li>
+      <li><div class="c"><h3>Ce que je demande</h3><p>La demande elle-même : le contexte, la tâche précise, la forme attendue. Une phrase soignée suffit souvent.</p></div></li>
+      <li><div class="c"><h3>Ce que je contrôle</h3><p>Le risque propre à ce que vous avez demandé : perdre l’objectif en simplifiant, souffler la réponse en aidant, décorer sans faire apprendre. Et une question pour toutes : cette transformation était-elle nécessaire ?</p></div></li>
+    </ol>
+    <h2>Partir du problème, pas de la forme</h2>
+    <p>Partir de la forme expose à confondre nouveauté et amélioration. Partir du problème oriente la même envie vers l’apprentissage.</p>
+    <ul class="puces">
+      <li><b>Transformer en jeu ?</b> Risque : un jeu amusant mais peu aligné. Partez plutôt du problème : vos élèves s’engagent peu ; quel défi ou quel rôle soutiendrait l’activité ?</li>
+      <li><b>Rendre la fiche plus originale ?</b> Risque : surcharge, perte de lisibilité. Partez plutôt du problème : la tâche est trop mécanique ; comment provoquer justification et verbalisation ?</li>
+      <li><b>Passer au numérique ?</b> Risque : un écran sans valeur ajoutée. Partez plutôt du problème : faut-il un retour rapide ou une collaboration ? Quel outil apporte cette fonction ?</li>
+      <li><b>Ajouter des images ?</b> Risque : un décor qui n’aide pas à comprendre. Partez plutôt du problème : un obstacle de compréhension appelle-t-il un schéma, un exemple ?</li>
+      <li><b>Créer un escape game ?</b> Risque : une activité lourde, parfois superficielle. Partez plutôt du problème : un besoin d’enquête ou de résolution progressive justifie-t-il ce format ?</li>
+    </ul>
+    <p class="note">Une transformation n’est pas une obligation : parfois, la meilleure décision consiste à ne rien modifier, ou à ne changer qu’un seul élément.</p>
+    <div class="rang"><button class="btn second" type="button" ${go({page: 'ameliorer'})}>Faire analyser ou transformer une fiche</button><button class="btn second" type="button" ${go({page: 'hesite'})}>Créer une nouvelle ressource</button></div>`,
+
+  c_apres: () => `
+    <h1 class="titre" style="--c:#0a7f96">Après la classe : observer l’effet</h1>
+    <p class="chapo">Une ressource se juge aussi en classe. Prévoyez dès la conception ce que vous chercherez à observer, et la trace qui le rendra visible, sans présumer du résultat.</p>
+    <ul class="puces">
+      <li><b>Engagement.</b> À observer : persévérance, implication dans les rôles ou les défis. Traces : observation, productions terminées.</li>
+      <li><b>Compréhension.</b> À observer : réponses mieux justifiées, capacité à expliquer. Traces : billet de sortie, mini-quiz, explication orale.</li>
+      <li><b>Autonomie.</b> À observer : moins de demandes d’aide immédiate, autocorrection pertinente. Traces : traces d’autocorrection, tableau de suivi.</li>
+      <li><b>Verbalisation.</b> À observer : échanges sur les stratégies, vocabulaire de la discipline. Traces : notes d’observation, critères de discussion.</li>
+      <li><b>Différenciation.</b> À observer : tous les élèves entrent dans la tâche et progressent. Traces : parcours réalisés, aides utilisées.</li>
+      <li><b>Transfert.</b> À observer : la notion utilisée dans une situation nouvelle. Traces : tâche ouverte, production finale.</li>
+      <li><b>Régulation.</b> À observer : obstacles repérés, ajustements pour la suite. Traces : grille d’observation, erreurs fréquentes relevées.</li>
+      <li><b>Mémorisation.</b> À observer : rappel correct après quelques jours, réutilisation spontanée. Traces : mini-quiz différé, cartes de rappel.</li>
+    </ul>
+    <p class="note">Ces repères orientent le regard : ils se lisent au conditionnel, sans note ni mesure. Ensuite, ajustez : retirer, remplacer, adapter. Dites à l’IA ce que vous avez observé : elle propose des modifications ciblées, sans changer l’objectif.</p>
+    <div class="rang"><button class="btn second" type="button" ${go({page: 'c_grille'})}>Mon jeu est-il utile, utilisable, acceptable ?</button></div>`,
 
   c_regles: () => `
     <h1 class="titre" style="--c:#2a9d8f">Des règles du jeu qui font travailler tous les élèves</h1>
@@ -523,8 +570,18 @@ const VUES = {
       <li><b>Forme de la réponse.</b> Écrire, entourer, relier, manipuler puis dessiner, ou expliquer oralement.</li>
       <li><b>Organisation.</b> Seul, en binôme d’entraide, ou en petit groupe avec l’enseignant·e.</li>
       <li><b>Trame stable.</b> Toujours la même mise en page : objectif, exemple, exercices gradués, défi.</li>
+      <li><b>Un encadré « Si je bloque, je… ».</b> Deux ou trois stratégies dans l’ordre : relire la consigne et l’exemple, prendre une aide, demander à un·e camarade, puis à vous. À expliquer en classe et à reprendre lors de la mise en commun.</li>
     </ul>
     <p class="note">Une fiche identique pour tous, avec des aides en libre accès, ne désigne personne comme « différent ». Le libre choix a une limite : certains élèves choisissent toujours trop facile ou trop difficile, et il faut alors orienter leur point de départ.</p>
+    <h2>Adapter selon l’obstacle, pas selon une étiquette</h2>
+    <ul class="puces">
+      <li><b>Lecture.</b> Consigne courte, une action par phrase, consigne lue à voix haute ou illustrée, mots difficiles expliqués.</li>
+      <li><b>Mémoire de travail.</b> Une étape à la fois, données visibles pendant toute la tâche, exemple résolu en tête.</li>
+      <li><b>Planification.</b> Étapes numérotées, case « je vérifie » après chaque étape, temps indicatif.</li>
+    </ul>
+    <p>Décrivez à l’IA un besoin de la tâche (« des élèves encore fragiles en lecture »), jamais un élève : ni nom, ni diagnostic. La notion travaillée reste la même pour tous.</p>
+    <h2>Classe multi-âges</h2>
+    <p>Un seul matériel, avec une entrée par degré ou par niveau : par exemple une collection jusqu’à 5 ou jusqu’à 10, des images seules ou des images et des mots. Aucun repère de degré n’est visible pour les élèves, et un moment commun réunit toute la classe. Sur la fiche d’un modèle, cochez « Classe multi-âges » : la demande à l’IA le précise.</p>
     <div class="rang"><button class="btn second" type="button" ${go({page: 'fiche', code: 'J15'})}>Voir les cartes d’aide graduée</button></div>
     <p class="source">Forget, A. (2018). Penser la différenciation pédagogique. Carnets des sciences de l’éducation, Université de Genève.</p>`,
 
@@ -541,6 +598,7 @@ const VUES = {
     <div class="rang"><button class="btn second" type="button" ${go({page: 'c_exemple'})}>Lire l’exemple commenté</button><button class="btn second" type="button" id="seqExemple">Reprendre l’exemple : les fractions</button><button class="btn second" type="button" id="seqVide">Recommencer à vide</button><button class="btn second" type="button" ${go({page: 'c_ecosysteme'})}>Qu’est-ce qu’un écosystème de ressources ?</button></div>
     <section class="groupe"><h2>1. L’objectif</h2><div class="bloc" style="max-width:46em">
       <label for="sDegre">Degré<select id="sDegre"><option value="">Choisir…</option>${DEGRES.map(d => `<option ${P.degre === d ? 'selected' : ''}>${d}</option>`).join('')}</select></label>
+      ${champMulti('sMulti', 'sDegre2')}
       <label for="sDisc">Discipline<input id="sDisc" value="${esc(P.disc)}" placeholder="par exemple : mathématiques" autocomplete="off"></label>
       <label for="sObj">Objectif d’apprentissage, en une phrase<input id="sObj" value="${esc(Q.objectif)}" placeholder="par exemple : comparer des fractions simples" autocomplete="off"></label>
       <label for="sInd">Ce qui montrera la réussite (facultatif)<input id="sInd" value="${esc(Q.indices || '')}" placeholder="par exemple : l’élève range trois fractions et explique son rangement" autocomplete="off"></label></div></section>
@@ -673,7 +731,7 @@ const VUES = {
     <div class="bloc fort" style="max-width:46em"><h2>Analyser une fiche / ressource</h2>
       <p>Demandez à l’IA de réaliser une analyse de votre document en le joignant à la conversation (fichier ou photo, sans donnée d’élève).</p>
       <p>En utilisant le prompt ci-dessous, l’IA vous remet un bref rapport (ce qu’elle comprend de votre fiche, ce qui fonctionne et les possibilités d’amélioration).</p>
-      <p>Vérifiez si l’IA a bien compris votre document et corrigez-la si besoin ; dites-lui aussi ce que vous observez avec vos élèves.</p>
+      <p>Vérifiez si l’IA a bien compris votre document, en particulier les nombres et les consignes lus sur une photo, et corrigez-la si besoin ; dites-lui aussi ce que vous observez avec vos élèves.</p>
       ${boite('prompt', '', 'Copier le prompt', '11.5em')}</div>
     <div class="bloc fort" style="max-width:46em"><h2>Transformer une fiche / ressource que vous utilisez déjà</h2>
       <p>Si vous souhaitez faire évoluer la fiche, vous pouvez coller ce prompt à la suite dans la même conversation (cochez la possibilité retenue).</p>
@@ -724,8 +782,9 @@ function demandeAmel2() {
 function demande() {
   const v = (x, vide) => x && x.trim() ? x.trim() : vide, it = S.page === 'fiche' ? item(S.code) : null;
   const lg = !jeunes() ? '' : P.lignes === 'simples' ? 'Zones d\'écriture : lignes simples.\n' : P.lignes === 'romandes' ? 'Zones d\'écriture : lignes d\'écriture romandes.\n' : '';
-  const pn = ['1P', '2P'].includes(P.degre) && !(it && it.fam === 'jeu') ? 'En-tête : pas de ligne « Prénom » ni « Date » ; mes élèves écrivent leur prénom au dos de la feuille.\nMes élèves ne lisent pas encore : aucune consigne écrite pour eux, mais un exemple déjà fait en tête de la fiche.\n' : '';
-  const tete = `Degré : ${v(P.degre, '[à compléter]')}\nDiscipline : ${v(P.disc, '[à compléter]')}\nNotion à travailler : ${v(P.notion, '[à compléter]')}\n${pn}${lg}${avecConsignes() && P.picto === 'oui' ? 'Consignes : place devant chaque consigne le pictogramme de la banque d\'icônes qui correspond à son verbe, le même pour le même verbe. Je joins la banque d\'icônes.\n' : ''}${avecEtoiles() && P.etoiles === 'oui' ? 'Difficulté : repère chaque exercice ou chaque carte par une à trois étoiles, de la tâche la plus simple à la plus difficile.\n' : ''}${enCouleur() && P.teinte ? `Impression : en couleur, teinte « ${P.teinte} » (option couleur de la bibliothèque).\n` : ''}`;
+  const nl = degres().filter(d => ['1P', '2P'].includes(d)).length, jeu = it && it.fam === 'jeu';
+  const pn = jeu || !nl ? '' : nl === degres().length ? 'En-tête : pas de ligne « Prénom » ni « Date » ; mes élèves écrivent leur prénom au dos de la feuille.\nMes élèves ne lisent pas encore : aucune consigne écrite pour eux, mais un exemple déjà fait en tête de la fiche.\n' : 'Une partie de mes élèves ne lit pas encore : pour eux, des consignes à l\'oral ou en pictogrammes, et un exemple déjà fait en tête de la fiche.\n';
+  const tete = `Degré : ${degreL('[à compléter]')}\n${multiL()}Discipline : ${v(P.disc, '[à compléter]')}\nNotion à travailler : ${v(P.notion, '[à compléter]')}\n${pn}${lg}${avecConsignes() && P.picto === 'oui' ? 'Consignes : place devant chaque consigne le pictogramme de la banque d\'icônes qui correspond à son verbe, le même pour le même verbe. Je joins la banque d\'icônes.\n' : ''}${avecEtoiles() && P.etoiles === 'oui' ? 'Difficulté : repère chaque exercice ou chaque carte par une à trois étoiles, de la tâche la plus simple à la plus difficile.\n' : ''}${enCouleur() && P.teinte ? `Impression : en couleur, teinte « ${P.teinte} » (option couleur de la bibliothèque).\n` : ''}`;
   const fin = `${joints()}${outilL()}\n${finV()}`;
   if (S.page === 'ameliorer') {
     return `Voici une fiche que j'utilise avec mes élèves (fichier joint).\nAnalyse-la et rédige un bref rapport, en quelques points :\n– ce que tu en comprends (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document) ;\n– ce qui fonctionne ;\n– les possibilités d'amélioration, numérotées.\nTermine en demandant de confirmer ou de corriger ta lecture.\nSuis la Bibliothèque IA 1 jointe.`;
@@ -750,6 +809,8 @@ function brancher() {
     const sp = $('#picto'); if (sp) sp.addEventListener('change', e => { P.picto = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); const np = $('#notePicto'); if (np) np.hidden = P.picto !== 'oui'; });
     const se = $('#etoiles'); if (se) se.addEventListener('change', e => { P.etoiles = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} pr.value = demande(); });
     const so = $('#outil'); if (so) so.addEventListener('change', e => { P.outil = e.target.value; garderP(); pr.value = demande(); });
+    const sm = $('#multi'); if (sm) sm.addEventListener('change', e => { P.multi = e.target.checked ? 'oui' : ''; garderP(); rendre(); const m = $('#multi'); if (m) m.focus(); });
+    const s2 = $('#degre2'); if (s2) s2.addEventListener('change', e => { P.degre2 = e.target.value; garderP(); rendre(); const d = $('#degre2'); if (d) d.focus(); });
     [['#besoin', 'besoin'], ['#indices', 'indices'], ['#contraintes', 'contraintes'], ['#ress', 'ress']].forEach(([sel, k]) => { const el = $(sel); if (el) el.addEventListener('input', e => { P[k] = e.target.value; garderP(); pr.value = demande(); }); });
     const p2 = $('#prompt2'), maj2 = () => { if (p2) { p2.value = demandeAmel2(); p2.style.height = 'auto'; p2.style.height = (p2.scrollHeight + 4) + 'px'; } };
     maj2();
@@ -771,6 +832,8 @@ function brancher() {
     $('#seqVide').onclick = () => { Q = {objectif: '', etapes: [{c: '', nom: '', fn: '', vers: ''}, {c: '', nom: '', fn: '', vers: ''}]}; gardeQ(); rendre(); };
     $('#sObj').addEventListener('input', e => { Q.objectif = e.target.value; gardeQ(); maj(); });
     $('#sInd').addEventListener('input', e => { Q.indices = e.target.value; gardeQ(); maj(); });
+    const sm2 = $('#sMulti'); if (sm2) sm2.addEventListener('change', e => { P.multi = e.target.checked ? 'oui' : ''; garderP(); rendre(); const m = $('#sMulti'); if (m) m.focus(); });
+    const sd2 = $('#sDegre2'); if (sd2) sd2.addEventListener('change', e => { P.degre2 = e.target.value; garderP(); maj(); });
     [['#sDegre', 'degre', 'change'], ['#sDisc', 'disc', 'input']].forEach(([s, k, ev]) => $(s).addEventListener(ev, e => { P[k] = e.target.value; try { localStorage.setItem('guide-demande', JSON.stringify(P)); } catch (x) {} maj(); }));
     $('#copierSeq').onclick = () => copierTexte(ps, $('#statutSeq'), 'Copié. Collez ce prompt dans votre conversation.');
   }

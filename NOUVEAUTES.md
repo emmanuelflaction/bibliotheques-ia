@@ -1,5 +1,13 @@
 # Nouveautés
 
+## Édition du 22 novembre 2026
+
+- Classe multi-âges : dans les formulaires du guide (ressources et séquence), une case « Classe multi-âges » et un second degré ou niveau de programme ; la demande à l'IA le précise. Bibliothèque IA 1, règle MP-D-05 : un seul matériel commun, une entrée par degré ou par niveau, aucun repère de degré visible pour les élèves, objectif du plan d'études de chaque degré et moment commun dans la partie enseignant·e. Bibliothèque IA 2 : raisonnement et exemples.
+- Analyse d'une ressource (Bibliothèque IA 1, § 0.6) : lire avant d'interpréter (signaler ce qui n'a pas pu être lu sur une photo, ne rien corriger en silence), distinguer l'observé du supposé, formuler un choix didactique possible comme une question, admettre qu'aucune transformation ne soit nécessaire. Annexe I-B : bloc « Contenu didactique » (alignement, prérequis, progression, structure des tâches, erreurs probables, données superflues, biais, réponses). Guide : vérifier en particulier les nombres et les consignes lus sur une photo.
+- Bibliothèque IA 1 : encadré « Si je bloque, je… » (MP-D-06) ; matériel avec une solution de rechange ; corrigé avec toutes les réponses acceptables quand la tâche en admet plusieurs ; pour un jeu, ce qui fait apprendre et une mise en commun dans la partie enseignant·e.
+- Bibliothèque IA 2 : adapter selon l'obstacle (lecture, mémoire de travail, planification) et non selon une étiquette ; nouvelle section « Décider avant de demander, observer après la classe » (quatre temps d'une demande, partir du problème, profondeur d'une transformation, effets, observations et traces).
+- Guide, Conseils : deux pages nouvelles, « Décider avant de demander » et « Après la classe : observer l'effet » ; page « Différencier » complétée (encadré « Si je bloque », obstacles, classes multi-âges).
+
 ## 21 novembre 2026 (analyser, puis transformer une ressource)
 
 - Guide, page « Faire analyser ou transformer une fiche » (auparavant « Améliorer une ressource ») : deux temps séparés. « Analyser une fiche / ressource » : l'IA remet un bref rapport (ce qu'elle comprend du document, ce qui fonctionne, possibilités d'amélioration numérotées) et demande de confirmer ou de corriger sa lecture. « Transformer votre fiche / ressource (facultatif) » : l'enseignant·e coche la possibilité retenue et colle un second texte.

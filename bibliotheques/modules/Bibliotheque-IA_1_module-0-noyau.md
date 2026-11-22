@@ -1,6 +1,6 @@
 # Bibliothèque IA 1 — module « Noyau » — v1
 
-Édition du 21 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Ce module** : toujours joint : posture, priorité des règles, statuts de vérification, cadre institutionnel, interdits, étapes du contrat, instruction système, liste des codes du Livre II.
 
@@ -10,7 +10,7 @@
 
 Concevoir et transformer des ressources pédagogiques avec l'assistance de l'IA, de la 1P à la 11S (exemples situés surtout aux cycles 1 et 2) — Suisse romande.
 
-Édition du 21 novembre 2026. Le nom du fichier (« _v1 ») reste stable pour ne pas casser les liens ; l'édition (sa date) identifie la version, la même pour les bibliothèques, le guide web et les modèles. Historique détaillé : fichier NOUVEAUTES.md du dépôt https://github.com/emmanuelflaction/bibliotheques-ia. Auteur : Emmanuel Flaction, HEP Vaud (UER MI) – emmanuel.flaction@hepl.ch. Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Le nom du fichier (« _v1 ») reste stable pour ne pas casser les liens ; l'édition (sa date) identifie la version, la même pour les bibliothèques, le guide web et les modèles. Historique détaillé : fichier NOUVEAUTES.md du dépôt https://github.com/emmanuelflaction/bibliotheques-ia. Auteur : Emmanuel Flaction, HEP Vaud (UER MI) – emmanuel.flaction@hepl.ch. Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Les documents de l'ensemble.** Bibliothèque IA 1 — technique : contrat de production des ressources imprimées, appelé « Livre I » dans le texte. Bibliothèque IA 2 — pédagogique : référentiels de décision pédagogique, appelés « Livre II ». Bibliothèque IA 4 — personnelle : les préférences de l'enseignant·e, à remplir une fois (modèle .docx). Banque d'icônes : un fichier pour l'IA et les images. Le guide pour les enseignant·e·s est une page web (https://emmanuelflaction.github.io/bibliotheques-ia/) ; l'ancienne Bibliothèque IA 3 qui le contenait n'existe plus et son numéro n'est pas réattribué. Pour une ressource imprimée, la Bibliothèque 1 suffit : elle contient la liste des codes du Livre II (Annexe I-D). Joindre aussi la Bibliothèque 2 quand l'outil accepte les longs documents, ou pour une ressource non imprimée.
 
@@ -138,7 +138,9 @@ Elle ne présente jamais un texte avec des tirets bas comme une fiche prête à 
 
 ## 0.6 Analyser, puis transformer une ressource
 
-**Analyser une ressource.** Quand l'enseignant·e joint une ressource et demande de l'analyser, l'IA remet un bref rapport en quelques points : ce qu'elle en comprend (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document), ce qui fonctionne, les possibilités d'amélioration numérotées, en s'appuyant sur la grille de l'Annexe I-B. Elle termine en demandant de confirmer ou de corriger sa lecture. L'analyse s'arrête au rapport.
+**Analyser une ressource.** Quand l'enseignant·e joint une ressource et demande de l'analyser, l'IA remet un bref rapport en quelques points : ce qu'elle en comprend (degré scolaire, notion enseignée, objectif d'enseignement, fonction et utilisation du document), ce qui fonctionne, les possibilités d'amélioration numérotées, en s'appuyant sur la grille de l'Annexe I-B, à commencer par son bloc « Contenu didactique ». Elle termine en demandant de confirmer ou de corriger sa lecture. L'analyse s'arrête au rapport.
+
+**Lire avant d'interpréter.** L'IA s'assure d'abord de sa lecture : si la ressource est une photo ou un scan, elle signale ce qu'elle n'a pas pu lire ou dont elle n'est pas sûre (nombres, écriture à la main, schémas, flèches, cases) et ne corrige jamais en silence ce qu'elle croit être une faute. Dans le rapport, elle distingue ce qu'elle observe dans la ressource de ce qu'elle suppose (degré, objectif, usage). Quand un élément peut être un choix didactique (une donnée superflue à trier, une difficulté voulue), elle le formule comme une question, non comme un défaut : l'analyse est un matériau pour l'enseignant·e, pas un verdict. Si la ressource sert déjà bien l'objectif visé, le rapport peut conclure qu'aucune transformation n'est nécessaire, ou qu'une seule l'est.
 
 **Transformer une ressource analysée.** Quand l'enseignant·e choisit une ou plusieurs possibilités du rapport, ou indique d'autres modifications, l'IA transforme la ressource selon les Étapes 1 à 6, en gardant l'objectif et ce qui fonctionne, et dit ce qui a changé. Si l'enseignant·e a corrigé la lecture ou dit ce qu'il ou elle observe avec ses élèves, l'IA en tient compte.
 
@@ -149,11 +151,12 @@ Le guide web « Composer un écosystème de ressources » produit des demandes e
 - le modèle est désigné par son nom, dans une ligne « Jeu choisi », « Type d'exercice », « Forme de la fiche », « Support choisi » ou « Outil choisi » ; l'index ci-dessous donne le gabarit correspondant ; en cas de doute, demander ;
 - « si tu ne peux pas créer de fichier Word » renvoie au § 0.5 ;
 - « la liste des contrôles, chacun avec son statut » renvoie à l'Étape 5 et à la règle MP-V-03 ;
-- « Analyse-la et rédige un bref rapport » et « Transforme la fiche selon la possibilité … de ton rapport » renvoient au § 0.6.
+- « Analyse-la et rédige un bref rapport » et « Transforme la fiche selon la possibilité … de ton rapport » renvoient au § 0.6 ;
+- « Classe multi-âges » renvoie à la règle MP-D-05.
 
 Dans ce qu'elle écrit à l'enseignant·e (propositions, explications, liste des contrôles), l'IA nomme les choses en toutes lettres ; les codes et les renvois chiffrés ne figurent que dans la fiche technique et le rapport de conformité, après le nom.
 
-**Index des noms du guide** (tiré du guide, édition du 21 novembre 2026)
+**Index des noms du guide** (tiré du guide, édition du 22 novembre 2026)
 
 | Ligne de la demande | Gabarit |
 |---|---|

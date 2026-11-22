@@ -1,6 +1,6 @@
 # Bibliothèque IA 1 — module « Jeux » — v1
 
-Édition du 21 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale et de sections de la Bibliothèque IA 2 par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale et de sections de la Bibliothèque IA 2 par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Ce module** : jeux imprimés : gabarits J, règles communes aux jeux, planches, contrôles des appariements, coopération.
 
@@ -734,13 +734,13 @@ L'IA DEVRAIT créer des styles de paragraphe nommés et les utiliser pour **chaq
 
 La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet ordre :
 
-1. **En bref** : objectif, indices de réussite, moment de la séquence, durée, matériel.
+1. **En bref** : objectif, indices de réussite, moment de la séquence, durée, matériel, avec une solution de rechange pour ce qui pourrait manquer (par exemple, sans dé : la roue de tirage J20 ; sans jetons : des cases à cocher).
 2. **Choix pédagogiques** : codes F, P, MF, G mobilisés, en une ligne chacun.
 3. **Ancrage PER** : texte consulté et date, ou **[À VÉRIFIER dans le PER]** ; constat d'adéquation (§ 1.2).
 4. **Hypothèses annoncées** (§ 1.1).
 5. **Déroulement conseillé** (par exemple lancement oral 5 min, travail 20 min, mise en commun 5 min).
-6. **Différenciation** : dispositif (MP-D-02), attribution, extension éventuelle.
-7. **Corrigé expliqué** : réponse et « Pourquoi » pour chaque item.
+6. **Différenciation** : dispositif (MP-D-02), attribution, extension éventuelle ; pour une classe multi-âges, l'entrée de chaque degré ou niveau (MP-D-05).
+7. **Corrigé expliqué** : réponse et « Pourquoi » pour chaque item ; quand la tâche admet plusieurs réponses, toutes les réponses acceptables (l'unicité reste exigée pour les jeux d'appariement, MP-J-01).
 8. **Barème indicatif** ou grille formative sans note.
 9. **Erreurs typiques** : erreur → hypothèse → rétroaction actionnable → tâche de reprise.
 10. **Ticket de sortie et décision** (MF44) : résultat → suite proposée.
@@ -750,6 +750,8 @@ La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet or
 **Pour un jeu (GF-F)**, la partie enseignant·e ajoute :
 
 - dans « En bref », un **tableau d'impression** : page, contenu, quantité, papier, découpe ; Sous le tableau, des **astuces pratiques** : faire lancer le dé dans une boîte ou un couvercle (ou dé en mousse, tapis de feutrine) ; cacher la réponse des cartes question-réponse (pochette, rabat, carte tenue par le camarade qui interroge) ; un sablier par groupe ; un sachet étiqueté par jeu, avec la règle et le corrigé ; un essai recto-verso sur une seule feuille ; le jeu laissé en libre accès après la séance.
+- dans « En bref », **ce qui fait apprendre** dans ce jeu, en une ou deux phrases : le mécanisme qui fait travailler l'objectif (rappel actif, retour immédiat, nombre de réponses par élève et par partie, verbalisation), et ce qui ferait perdre l'apprentissage (attente, hasard dominant, réponse visible) ;
+- dans « Déroulement conseillé », une **mise en commun** après la partie : ce qu'on a appris, les erreurs fréquentes, la règle ou la procédure à retenir ;
 - dans « Corrigé expliqué », la **solution du jeu** (ordre de la boucle, paires ou familles), avec un « Pourquoi » pour chaque pièce ;
 - dans « Différenciation », les **variantes de jeu** : solo, à trois, mélange des lots ; Pour tout jeu de parcours ou de compétition, proposer aussi une **variante coopérative**, fondée sur l'interdépendance positive et la responsabilité individuelle (Johnson & Johnson, 2009) : un seul pion pour le groupe, contre le sablier ou contre un pion adverse qui avance seul ; un but commun chiffré (tous les pions arrivés en moins de dix tours, vingt cartes réussies) ; des rôles tournants (J13) ; l'aide qui rapporte (si l'explication d'un camarade permet de répondre, les deux avancent) ; l'erreur sans recul (le groupe explique, puis l'élève rejoue) ; des binômes par pion ; un bilan de fin de partie (« qu'est-ce qui nous a aidés ? »).
 - dans le rapport de conformité, les contrôles **V11 à V13** (et V14 si le fichier est produit par du code ; V15 à V19 selon le gabarit ; V20 et V21 toujours).
@@ -981,7 +983,7 @@ Une réduction progressive est possible au cours du cycle.
 | MP-E-11 | Lacune dans une phrase : réservée à 1-2 mots ; nombre de tirets bas calculé selon la police et la taille (table 2.1). | DOIT |
 | MP-C-06 | Symboles (☐, ★, ◐) : vérifier leur rendu ; préférer des mots dans des cellules et des cases dessinées (cellules vides bordées). | DEVRAIT |
 | MP-S-01 | Un rôle, un style de paragraphe nommé (ou une mise en forme directe strictement identique). | DEVRAIT |
-| MP-D-01 à MP-D-04 | Différenciation sans étiquette évaluative, dispositifs, budget par version, attribution (voir § 3.6). | DOIT / DEVRAIT |
+| MP-D-01 à MP-D-06 | Différenciation sans étiquette évaluative, dispositifs, budget par version, attribution, classe multi-âges, encadré « Si je bloque » (voir § 3.6). | DOIT / DEVRAIT / PEUT |
 | MP-V-01 | Contrôle sur le rendu imprimé (V1-V10 et V20 ; V11 à V19 selon le cas ; V21) avant livraison, ou déclaration « Rendu non contrôlé » avec la liste des contrôles. | DOIT |
 | MP-V-02 | Rapport de conformité livré avec la fiche. | DOIT |
 | MP-O-12 | En-tête obligatoire dans cet ordre : Prénom et Date tout en haut (première ligne) ; titre centré avec un espace avant et après (≥ 12 pt) ; objectif en langage élève (une phrase à la première personne, sans étiquette « Mon objectif : » ; révision du 2.11.2026). Recette R7. Jeunes élèves : pas de ligne Prénom et Date (MP-O-03). | DOIT |
@@ -1051,6 +1053,31 @@ La différenciation peut porter sur les contenus, les processus, les productions
 
 Une fiche identique pour tous, avec des aides en libre accès, ne désigne personne comme « différent ». Le libre choix a une limite : certains élèves choisissent toujours trop facile ou trop difficile, et il faut alors orienter leur point de départ.
 
+**Adapter selon l'obstacle, pas selon une étiquette**
+
+Une adaptation part d'un obstacle observé dans la tâche, non d'un diagnostic ni d'une catégorie d'élèves. Trois obstacles fréquents, et des réponses qui gardent la notion intacte :
+
+- Lecture : consigne courte, une action par phrase, consigne lue à voix haute ou illustrée, mots difficiles expliqués.
+- Mémoire de travail : une étape à la fois, données visibles pendant toute la tâche, exemple résolu en tête, moins d'éléments à retenir en même temps.
+- Planification : étapes numérotées, case « je vérifie » après chaque étape, temps indicatif.
+
+La demande décrit un besoin de la tâche (« des élèves encore fragiles en lecture ») ; l'IA ne reçoit ni nom, ni diagnostic, ni historique d'élève, et l'aide reste en libre accès pour toute la classe.
+
+**« Si je bloque, je… »**
+
+Un encadré court sur les fiches de travail autonome rend visible une stratégie de régulation : relire la consigne et l'exemple, utiliser une aide en libre accès, demander à un·e camarade, puis seulement à l'enseignant·e (Bibliothèque IA 1, MP-D-06). Il soutient la métacognition (F43) s'il est expliqué en classe et repris lors de la mise en commun ; affiché sans être travaillé, il reste un décor.
+
+**Classe multi-âges**
+
+Deux degrés dans la même classe sont la règle en 1P-2P ; la situation se présente aussi à d'autres degrés, dans les petits établissements ou dans les classes spécialisées qui travaillent avec des programmes adaptés. Plutôt que deux ressources séparées, un matériel commun avec une entrée par degré ou par niveau permet de travailler ensemble (Bibliothèque IA 1, MP-D-05) :
+
+- même jeu, deux lots : collection jusqu'à 5 ou jusqu'à 10, images seules ou images et mots ;
+- même fiche, deux parcours : tâche de base et prolongement, sans repère de degré visible ;
+- même activité, des rôles qui tournent : manipuler, expliquer, vérifier ; le tutorat entre âges reste un choix de l'enseignant·e ;
+- un moment commun pour toute la classe : lancement et mise en commun, chacun·e avec son entrée.
+
+L'objectif du plan d'études est indiqué pour chaque degré ou niveau ; la ressource ne désigne aucun élève par son âge ou par son niveau.
+
 **Montrer que les élèves ont appris**
 
 - Trois ou quatre questions identiques avant et après l'activité.
@@ -1068,4 +1095,4 @@ Maitre, J.-P. (2020). *La théorie de la charge cognitive*. Centre de soutien à
 
 Tricot, A., et al. (2003). Utilité, utilisabilité, acceptabilité : interpréter les relations entre trois dimensions de l'évaluation des EIAH. Dans *Environnements informatiques pour l'apprentissage humain* (Strasbourg).
 
-Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ, 2023 ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
+Statut des repères ajoutés le 22.11.2026 (adapter selon l'obstacle, « Si je bloque, je… », classe multi-âges) : propositions de conception de l'auteur, sans référence propre. Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ, 2023 ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.

@@ -1,6 +1,6 @@
 # Bibliothèque IA 1 — module « Différenciation et accessibilité » — v1
 
-Édition du 21 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale et de sections de la Bibliothèque IA 2 par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale et de sections de la Bibliothèque IA 2 par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Ce module** : différenciation sur la fiche, statut de lecture, non-lecteurs, repères de différenciation et de coopération.
 
@@ -26,6 +26,8 @@ Le statut non-lecteur / lecteur change le fonctionnement de toute la fiche.
 | MP-D-02 | Deux dispositifs possibles : **parcours sur la même fiche** (items a-c, a-d, a-e ; aide-mémoire pour un parcours) ou **versions parallèles** (mêmes exercices, mêmes phrases et mêmes lettres d'items ; seuls l'étayage et l'étendue changent), ce qui permet une correction commune et un changement de version en cours de route. Autour d'une **fiche unique**, sans tripler la fiche (leviers : contenus, processus, productions, structures ; Forget, 2018) : difficulté croissante, chacun choisissant son point de départ avec un repère neutre ou, sur demande, des étoiles de difficulté (MP-D-01) ; noyau commun en haut de la fiche et prolongements facultatifs en bas ; aides détachées en libre accès, réutilisables d'une fiche à l'autre (J15) ; quantité plutôt qu'objectif (« au moins quatre exercices sur huit, dont le numéro 5 ») ; forme de la réponse au choix (écrire, entourer, relier, manipuler puis dessiner, expliquer oralement) ; organisation (seul, binôme d'entraide, petit groupe avec l'enseignant·e) ; trame stable (objectif, exemple, exercices gradués, défi). Si un élève choisit toujours trop facile ou trop difficile, l'enseignant·e oriente son point de départ. | DEVRAIT |
 | MP-D-03 | Chaque version ou parcours respecte son propre budget de page (Étape 2). | DOIT |
 | MP-D-04 | Les modalités d'attribution (diagnostic court, choix accompagné) et la consigne « une version décrit un besoin du moment, pas un niveau d'élève » figurent dans la partie enseignant·e. | DEVRAIT |
+| MP-D-05 | **Classe multi-âges** (deux degrés, ou deux niveaux de programme, dans la même classe : très fréquente en 1P-2P, possible à tous les degrés, notamment dans les petits établissements et les classes spécialisées). Un seul matériel commun, avec une entrée par degré ou par niveau : par exemple une collection jusqu'à 5 ou jusqu'à 10, des images ou des mots, moins ou plus de cartes, une tâche de base et un prolongement. Aucun repère de degré ou de niveau n'est visible pour les élèves (MP-D-01) ; les entrées se distinguent par le contenu ou par un repère neutre. Dès qu'un des degrés ne lit pas encore, les consignes sont prévues à l'oral ou en pictogrammes. La partie enseignant·e indique quelle entrée convient à quel degré ou niveau, l'objectif du plan d'études de chacun (§ 1.2) et un moment commun (lancement, mise en commun). L'IA ne demande et n'utilise aucune information sur des élèves : elle part des degrés ou des niveaux annoncés. | DOIT |
+| MP-D-06 | **Encadré « Si je bloque »**, sur demande ou pour un travail autonome (atelier, plan de travail, devoir) : deux ou trois stratégies dans l'ordre (relire la consigne et l'exemple, utiliser une aide en libre accès, demander à un·e camarade), puis le moment où demander à l'enseignant·e ; formulé en « je », avec pictogrammes si les élèves lisent peu ; jamais la réponse. | PEUT |
 
 
 # EXTRAITS DE LA BIBLIOTHÈQUE IA 2
@@ -81,6 +83,31 @@ La différenciation peut porter sur les contenus, les processus, les productions
 
 Une fiche identique pour tous, avec des aides en libre accès, ne désigne personne comme « différent ». Le libre choix a une limite : certains élèves choisissent toujours trop facile ou trop difficile, et il faut alors orienter leur point de départ.
 
+**Adapter selon l'obstacle, pas selon une étiquette**
+
+Une adaptation part d'un obstacle observé dans la tâche, non d'un diagnostic ni d'une catégorie d'élèves. Trois obstacles fréquents, et des réponses qui gardent la notion intacte :
+
+- Lecture : consigne courte, une action par phrase, consigne lue à voix haute ou illustrée, mots difficiles expliqués.
+- Mémoire de travail : une étape à la fois, données visibles pendant toute la tâche, exemple résolu en tête, moins d'éléments à retenir en même temps.
+- Planification : étapes numérotées, case « je vérifie » après chaque étape, temps indicatif.
+
+La demande décrit un besoin de la tâche (« des élèves encore fragiles en lecture ») ; l'IA ne reçoit ni nom, ni diagnostic, ni historique d'élève, et l'aide reste en libre accès pour toute la classe.
+
+**« Si je bloque, je… »**
+
+Un encadré court sur les fiches de travail autonome rend visible une stratégie de régulation : relire la consigne et l'exemple, utiliser une aide en libre accès, demander à un·e camarade, puis seulement à l'enseignant·e (Bibliothèque IA 1, MP-D-06). Il soutient la métacognition (F43) s'il est expliqué en classe et repris lors de la mise en commun ; affiché sans être travaillé, il reste un décor.
+
+**Classe multi-âges**
+
+Deux degrés dans la même classe sont la règle en 1P-2P ; la situation se présente aussi à d'autres degrés, dans les petits établissements ou dans les classes spécialisées qui travaillent avec des programmes adaptés. Plutôt que deux ressources séparées, un matériel commun avec une entrée par degré ou par niveau permet de travailler ensemble (Bibliothèque IA 1, MP-D-05) :
+
+- même jeu, deux lots : collection jusqu'à 5 ou jusqu'à 10, images seules ou images et mots ;
+- même fiche, deux parcours : tâche de base et prolongement, sans repère de degré visible ;
+- même activité, des rôles qui tournent : manipuler, expliquer, vérifier ; le tutorat entre âges reste un choix de l'enseignant·e ;
+- un moment commun pour toute la classe : lancement et mise en commun, chacun·e avec son entrée.
+
+L'objectif du plan d'études est indiqué pour chaque degré ou niveau ; la ressource ne désigne aucun élève par son âge ou par son niveau.
+
 **Montrer que les élèves ont appris**
 
 - Trois ou quatre questions identiques avant et après l'activité.
@@ -98,7 +125,7 @@ Maitre, J.-P. (2020). *La théorie de la charge cognitive*. Centre de soutien à
 
 Tricot, A., et al. (2003). Utilité, utilisabilité, acceptabilité : interpréter les relations entre trois dimensions de l'évaluation des EIAH. Dans *Environnements informatiques pour l'apprentissage humain* (Strasbourg).
 
-Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ, 2023 ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
+Statut des repères ajoutés le 22.11.2026 (adapter selon l'obstacle, « Si je bloque, je… », classe multi-âges) : propositions de conception de l'auteur, sans référence propre. Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ, 2023 ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
 
 ## Gamification, styles d’apprentissage et différenciation
 

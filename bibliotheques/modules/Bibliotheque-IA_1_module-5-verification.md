@@ -1,6 +1,6 @@
 # Bibliothèque IA 1 — module « Vérification et livraison » — v1
 
-Édition du 21 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale et de sections de la Bibliothèque IA 2 par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Ce module** : contrôles sur le rendu, grille de relecture, rapport de conformité, partie enseignant·e, repli sans Word.
 
@@ -26,13 +26,13 @@ Elle ne présente jamais un texte avec des tirets bas comme une fiche prête à 
 
 La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet ordre :
 
-1. **En bref** : objectif, indices de réussite, moment de la séquence, durée, matériel.
+1. **En bref** : objectif, indices de réussite, moment de la séquence, durée, matériel, avec une solution de rechange pour ce qui pourrait manquer (par exemple, sans dé : la roue de tirage J20 ; sans jetons : des cases à cocher).
 2. **Choix pédagogiques** : codes F, P, MF, G mobilisés, en une ligne chacun.
 3. **Ancrage PER** : texte consulté et date, ou **[À VÉRIFIER dans le PER]** ; constat d'adéquation (§ 1.2).
 4. **Hypothèses annoncées** (§ 1.1).
 5. **Déroulement conseillé** (par exemple lancement oral 5 min, travail 20 min, mise en commun 5 min).
-6. **Différenciation** : dispositif (MP-D-02), attribution, extension éventuelle.
-7. **Corrigé expliqué** : réponse et « Pourquoi » pour chaque item.
+6. **Différenciation** : dispositif (MP-D-02), attribution, extension éventuelle ; pour une classe multi-âges, l'entrée de chaque degré ou niveau (MP-D-05).
+7. **Corrigé expliqué** : réponse et « Pourquoi » pour chaque item ; quand la tâche admet plusieurs réponses, toutes les réponses acceptables (l'unicité reste exigée pour les jeux d'appariement, MP-J-01).
 8. **Barème indicatif** ou grille formative sans note.
 9. **Erreurs typiques** : erreur → hypothèse → rétroaction actionnable → tâche de reprise.
 10. **Ticket de sortie et décision** (MF44) : résultat → suite proposée.
@@ -42,6 +42,8 @@ La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet or
 **Pour un jeu (GF-F)**, la partie enseignant·e ajoute :
 
 - dans « En bref », un **tableau d'impression** : page, contenu, quantité, papier, découpe ; Sous le tableau, des **astuces pratiques** : faire lancer le dé dans une boîte ou un couvercle (ou dé en mousse, tapis de feutrine) ; cacher la réponse des cartes question-réponse (pochette, rabat, carte tenue par le camarade qui interroge) ; un sablier par groupe ; un sachet étiqueté par jeu, avec la règle et le corrigé ; un essai recto-verso sur une seule feuille ; le jeu laissé en libre accès après la séance.
+- dans « En bref », **ce qui fait apprendre** dans ce jeu, en une ou deux phrases : le mécanisme qui fait travailler l'objectif (rappel actif, retour immédiat, nombre de réponses par élève et par partie, verbalisation), et ce qui ferait perdre l'apprentissage (attente, hasard dominant, réponse visible) ;
+- dans « Déroulement conseillé », une **mise en commun** après la partie : ce qu'on a appris, les erreurs fréquentes, la règle ou la procédure à retenir ;
 - dans « Corrigé expliqué », la **solution du jeu** (ordre de la boucle, paires ou familles), avec un « Pourquoi » pour chaque pièce ;
 - dans « Différenciation », les **variantes de jeu** : solo, à trois, mélange des lots ; Pour tout jeu de parcours ou de compétition, proposer aussi une **variante coopérative**, fondée sur l'interdépendance positive et la responsabilité individuelle (Johnson & Johnson, 2009) : un seul pion pour le groupe, contre le sablier ou contre un pion adverse qui avance seul ; un but commun chiffré (tous les pions arrivés en moins de dix tours, vingt cartes réussies) ; des rôles tournants (J13) ; l'aide qui rapporte (si l'explication d'un camarade permet de répondre, les deux avancent) ; l'erreur sans recul (le groupe explique, puis l'élève rejoue) ; des binômes par pion ; un bilan de fin de partie (« qu'est-ce qui nous a aidés ? »).
 - dans le rapport de conformité, les contrôles **V11 à V13** (et V14 si le fichier est produit par du code ; V15 à V19 selon le gabarit ; V20 et V21 toujours).
@@ -100,7 +102,7 @@ V1 à V10 et V12 se contrôlent sur le PDF ou l'aperçu ; V11 sur les données d
 | 8 | Lacunes calibrées (R2) et cohérentes avec la réponse attendue ? | MP-E-11, MP-CO-07 |
 | 9 | 3-5 exercices courts ou 1-2 longs par page ; au plus 4 éléments principaux par exercice ? | MP-O-04, MP-CI-02 |
 | 10 | Exemple résolu pour toute tâche nouvelle ; aides placées au-dessus de l'exercice ; pré-training ≤ ¼ de page ? | MP-CC-04, MP-CC-06, MP-PT |
-| 11 | Différenciation sans étiquette évaluative ; chaque version dans son budget ? | MP-D-01, MP-D-03 |
+| 11 | Différenciation sans étiquette évaluative ; chaque version dans son budget ; en classe multi-âges, une entrée par degré ou niveau, sans repère visible ? | MP-D-01, MP-D-03, MP-D-05 |
 | 12 | Partie enseignant·e séparée et complète (structure § 4.3) ? | Étape 4 |
 | 13 | Contrôle visuel V1-V10 effectué (ou impossibilité déclarée) ; V20 (page pleine) et V21 (cohérence didactique) ; pour un jeu, V11 à V13 ; pour un fichier produit par du code, V14 ? | MP-V-01, MP-O-14 |
 | 14 | En-tête conforme : Prénom et Date en première ligne, titre centré entre deux espaces, objectif en langage élève sans étiquette ? | MP-O-12, R7 |
@@ -134,7 +136,18 @@ Puis : **Écarts assumés** (du plus important au plus mineur, avec leur justifi
 
 À utiliser pour auditer une fiche existante (prompt G) ou transformer une fiche d'une autre source (prompt B). Chaque écart constaté est référencé par son identifiant.
 
-#### Rendu imprimé (à faire en premier, sur le PDF)
+#### Contenu didactique (en premier pour analyser une ressource existante, § 0.6)
+- Objectif probable et alignement : chaque item fait-il travailler cet objectif ? Les écarts sont signalés, item par item.
+- Prérequis implicites : ce que la ressource suppose acquis sans le dire.
+- Progression : ordre des items, sauts de difficulté, étapes intermédiaires qui manquent.
+- Structure des tâches : types de problèmes ou d'exercices présents (par exemple une ou deux étapes, recherche du tout ou d'une partie) et leur variété.
+- Erreurs probables et obstacles prévisibles pour les élèves du degré.
+- Données superflues, pièges, difficultés : les signaler et demander s'il s'agit d'un choix didactique.
+- Biais possibles : contextes, prénoms, références culturelles ou sociales ; stéréotypes.
+- Réponses et corrigé : présence, exactitude ; une seule réponse ou plusieurs réponses acceptables.
+- Usage prévu : moment de la séquence, travail individuel ou collectif, part d'autonomie.
+
+#### Rendu imprimé (à faire en premier pour un fichier produit, sur le PDF)
 - Contrôle visuel V1-V10 (§ 5.2) : pages, coupures, nombre réel de lignes, longueur des lacunes, tailles, symboles, bords, absence de la partie enseignant·e, ordre de l'en-tête, orthographe.
 - Budget de page de la fiche technique cohérent avec le rendu (MP-O-11) ; aucune page élève remplie partiellement (MP-O-14, V20).
 - Cohérence didactique : graphème présent dans chaque mot, réponses d'énigme calculées, cases de réussite vides, zone de réponse pour chaque question, partie enseignant·e des jeux et des dictées (V21).
@@ -218,3 +231,61 @@ Puis : **Écarts assumés** (du plus important au plus mineur, avec leur justifi
 |---|---|---|---|
 
 Le relevé est présenté **du plus grave au plus mineur**, en commençant par les écarts aux règles DOIT, puis DEVRAIT.
+
+
+# EXTRAITS DE LA BIBLIOTHÈQUE IA 2
+
+# PARTIE 10 — DÉPLOIEMENT PROGRESSIF ET RÉFÉRENCES
+
+## Décider avant de demander, observer après la classe
+
+Ces repères servent quand l'enseignant·e transforme ou crée une ressource. Ils complètent la procédure de conception (Partie 8) : l'IA s'y réfère pour rappeler ce qui n'a pas été décidé, sans décider à la place de l'enseignant·e.
+
+**Les quatre temps d'une demande**
+
+1. Pourquoi : l'intention propre à cette transformation, et le besoin qu'elle sert.
+2. Ce que je décide : ce qui ne change pas (objectif, critères de réussite) et ce qui peut varier (guidage, quantité, complexité, contexte).
+3. Ce que je demande : le contexte, la tâche précise, la forme attendue.
+4. Ce que je contrôle : le risque propre à cette transformation (perdre l'objectif en simplifiant, souffler la réponse en aidant, décorer sans faire apprendre), et si la transformation était nécessaire.
+
+Les deux premiers temps appartiennent à l'enseignant·e. L'IA peut les rendre explicites et poser une question si une information indispensable manque.
+
+**Partir du problème, pas de la forme**
+
+| Départ par la forme | Risque | Départ par le problème |
+|---|---|---|
+| Transformer en jeu | Amusant mais peu aligné | Les élèves s'engagent peu : quel défi ou quel rôle soutient l'activité ? |
+| Rendre plus original | Surcharge, perte de lisibilité | La tâche est trop mécanique : comment provoquer justification et verbalisation ? |
+| Numériser la fiche | Numérique sans valeur ajoutée | Besoin de retour rapide ou de collaboration : quel outil apporte une fonction utile ? |
+| Ajouter des images | Décor sans aide à la compréhension | Un obstacle de compréhension appelle-t-il un schéma, un exemple ? |
+| Créer un escape game | Activité lourde, parfois superficielle | Un besoin d'enquête ou de résolution progressive justifie-t-il ce format ? |
+
+**Profondeur d'une transformation**
+
+| Niveau | Type | Effet sur l'activité |
+|---|---|---|
+| 1. Surface | Mise en page, reformulation, clarification | Améliore la lisibilité, change peu la nature de la tâche |
+| 2. Adaptation | Différenciation, aides progressives, version accessible | Répond à des besoins réels, soutient l'équité d'accès |
+| 3. Outillage | Autocorrection, cartes d'aide, grilles, plan de travail | Modifie les conditions de travail, libère l'enseignant·e pour observer |
+| 4. Socialisation | Tutorat, débat, correction croisée, production collective | Fait des interactions un levier d'apprentissage |
+| 5. Reconfiguration | Fiche → enquête, exercice → situation-problème, réponse → production | Transforme la nature cognitive ou sociale de l'activité |
+| 6. Dispositif | Parcours articulé (aides, autoévaluation, corrigés, ajustements) | Forte valeur, mais exige contrôle et faisabilité |
+
+L'échelle décrit, elle ne hiérarchise pas : le bon niveau est celui qui répond au problème identifié, dans les contraintes de la classe.
+
+**Après la classe : effet recherché, observations, traces**
+
+| Effet recherché | Ce qu'on chercherait à observer | Traces envisageables |
+|---|---|---|
+| Engagement | Persévérance, implication dans les rôles ou les défis | Observation, productions terminées |
+| Compréhension | Réponses mieux justifiées, capacité à expliquer | Billet de sortie, mini-quiz, explication orale |
+| Autonomie | Moins de demandes d'aide immédiate, autocorrection pertinente | Traces d'autocorrection, tableau de suivi |
+| Verbalisation | Échanges sur les stratégies, vocabulaire disciplinaire | Notes d'observation, critères de discussion |
+| Différenciation effective | Tous les élèves entrent dans la tâche et progressent | Parcours réalisés, aides utilisées |
+| Transfert | Usage de la notion dans une situation nouvelle | Tâche ouverte, production finale |
+| Régulation | Obstacles repérés, ajustements pour la suite | Grille enseignant·e, erreurs-types |
+| Mémorisation | Rappel correct après un délai, réutilisation spontanée | Mini-quiz différé, cartes de rappel, autotest |
+
+Ces catégories orientent le regard ; elles se lisent au conditionnel (ce que l'on chercherait à observer) et ne prescrivent ni note ni mesure. L'IA peut proposer, dans la partie enseignant·e, l'effet visé, une observation et une trace ; elle ne présume jamais du résultat.
+
+Statut : propositions de conception de l'auteur (22.11.2026), reprises de son travail sur la transformation des ressources ; sans référence propre dans cette section.

@@ -1,6 +1,6 @@
 # Bibliothèque IA 1 — module « Fiches » — v1
 
-Édition du 21 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
+Édition du 22 novembre 2026. Extrait généré automatiquement de la Bibliothèque IA 1 intégrale par le script outils/modules.py ; ne pas modifier ce fichier : modifier la bibliothèque intégrale, puis relancer le script. Auteur : Emmanuel Flaction, HEP Vaud (UER MI). Licence : CC BY-NC-SA 4.0. Ce référentiel n'est pas une publication officielle de la HEP Vaud.
 
 > **Ce module** : fiches, documents et affiches : budget de page, gabarits G, GF et SP, recettes, règles de mise en page.
 
@@ -500,6 +500,8 @@ Les fiches ajoutées en v7.2 sont présentées sous une forme condensée : **Usa
 | MP-D-02 | Deux dispositifs possibles : **parcours sur la même fiche** (items a-c, a-d, a-e ; aide-mémoire pour un parcours) ou **versions parallèles** (mêmes exercices, mêmes phrases et mêmes lettres d'items ; seuls l'étayage et l'étendue changent), ce qui permet une correction commune et un changement de version en cours de route. Autour d'une **fiche unique**, sans tripler la fiche (leviers : contenus, processus, productions, structures ; Forget, 2018) : difficulté croissante, chacun choisissant son point de départ avec un repère neutre ou, sur demande, des étoiles de difficulté (MP-D-01) ; noyau commun en haut de la fiche et prolongements facultatifs en bas ; aides détachées en libre accès, réutilisables d'une fiche à l'autre (J15) ; quantité plutôt qu'objectif (« au moins quatre exercices sur huit, dont le numéro 5 ») ; forme de la réponse au choix (écrire, entourer, relier, manipuler puis dessiner, expliquer oralement) ; organisation (seul, binôme d'entraide, petit groupe avec l'enseignant·e) ; trame stable (objectif, exemple, exercices gradués, défi). Si un élève choisit toujours trop facile ou trop difficile, l'enseignant·e oriente son point de départ. | DEVRAIT |
 | MP-D-03 | Chaque version ou parcours respecte son propre budget de page (Étape 2). | DOIT |
 | MP-D-04 | Les modalités d'attribution (diagnostic court, choix accompagné) et la consigne « une version décrit un besoin du moment, pas un niveau d'élève » figurent dans la partie enseignant·e. | DEVRAIT |
+| MP-D-05 | **Classe multi-âges** (deux degrés, ou deux niveaux de programme, dans la même classe : très fréquente en 1P-2P, possible à tous les degrés, notamment dans les petits établissements et les classes spécialisées). Un seul matériel commun, avec une entrée par degré ou par niveau : par exemple une collection jusqu'à 5 ou jusqu'à 10, des images ou des mots, moins ou plus de cartes, une tâche de base et un prolongement. Aucun repère de degré ou de niveau n'est visible pour les élèves (MP-D-01) ; les entrées se distinguent par le contenu ou par un repère neutre. Dès qu'un des degrés ne lit pas encore, les consignes sont prévues à l'oral ou en pictogrammes. La partie enseignant·e indique quelle entrée convient à quel degré ou niveau, l'objectif du plan d'études de chacun (§ 1.2) et un moment commun (lancement, mise en commun). L'IA ne demande et n'utilise aucune information sur des élèves : elle part des degrés ou des niveaux annoncés. | DOIT |
+| MP-D-06 | **Encadré « Si je bloque »**, sur demande ou pour un travail autonome (atelier, plan de travail, devoir) : deux ou trois stratégies dans l'ordre (relire la consigne et l'exemple, utiliser une aide en libre accès, demander à un·e camarade), puis le moment où demander à l'enseignant·e ; formulé en « je », avec pictogrammes si les élèves lisent peu ; jamais la réponse. | PEUT |
 
 ## 3.9 Catalogue des outils d'étayage permanents (SP1 à SP13, v7.2)
 
@@ -748,13 +750,13 @@ Le repère discret de version (♣ ♦ ♠, MP-D-01) se place en en-tête de pag
 
 La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet ordre :
 
-1. **En bref** : objectif, indices de réussite, moment de la séquence, durée, matériel.
+1. **En bref** : objectif, indices de réussite, moment de la séquence, durée, matériel, avec une solution de rechange pour ce qui pourrait manquer (par exemple, sans dé : la roue de tirage J20 ; sans jetons : des cases à cocher).
 2. **Choix pédagogiques** : codes F, P, MF, G mobilisés, en une ligne chacun.
 3. **Ancrage PER** : texte consulté et date, ou **[À VÉRIFIER dans le PER]** ; constat d'adéquation (§ 1.2).
 4. **Hypothèses annoncées** (§ 1.1).
 5. **Déroulement conseillé** (par exemple lancement oral 5 min, travail 20 min, mise en commun 5 min).
-6. **Différenciation** : dispositif (MP-D-02), attribution, extension éventuelle.
-7. **Corrigé expliqué** : réponse et « Pourquoi » pour chaque item.
+6. **Différenciation** : dispositif (MP-D-02), attribution, extension éventuelle ; pour une classe multi-âges, l'entrée de chaque degré ou niveau (MP-D-05).
+7. **Corrigé expliqué** : réponse et « Pourquoi » pour chaque item ; quand la tâche admet plusieurs réponses, toutes les réponses acceptables (l'unicité reste exigée pour les jeux d'appariement, MP-J-01).
 8. **Barème indicatif** ou grille formative sans note.
 9. **Erreurs typiques** : erreur → hypothèse → rétroaction actionnable → tâche de reprise.
 10. **Ticket de sortie et décision** (MF44) : résultat → suite proposée.
@@ -764,6 +766,8 @@ La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet or
 **Pour un jeu (GF-F)**, la partie enseignant·e ajoute :
 
 - dans « En bref », un **tableau d'impression** : page, contenu, quantité, papier, découpe ; Sous le tableau, des **astuces pratiques** : faire lancer le dé dans une boîte ou un couvercle (ou dé en mousse, tapis de feutrine) ; cacher la réponse des cartes question-réponse (pochette, rabat, carte tenue par le camarade qui interroge) ; un sablier par groupe ; un sachet étiqueté par jeu, avec la règle et le corrigé ; un essai recto-verso sur une seule feuille ; le jeu laissé en libre accès après la séance.
+- dans « En bref », **ce qui fait apprendre** dans ce jeu, en une ou deux phrases : le mécanisme qui fait travailler l'objectif (rappel actif, retour immédiat, nombre de réponses par élève et par partie, verbalisation), et ce qui ferait perdre l'apprentissage (attente, hasard dominant, réponse visible) ;
+- dans « Déroulement conseillé », une **mise en commun** après la partie : ce qu'on a appris, les erreurs fréquentes, la règle ou la procédure à retenir ;
 - dans « Corrigé expliqué », la **solution du jeu** (ordre de la boucle, paires ou familles), avec un « Pourquoi » pour chaque pièce ;
 - dans « Différenciation », les **variantes de jeu** : solo, à trois, mélange des lots ; Pour tout jeu de parcours ou de compétition, proposer aussi une **variante coopérative**, fondée sur l'interdépendance positive et la responsabilité individuelle (Johnson & Johnson, 2009) : un seul pion pour le groupe, contre le sablier ou contre un pion adverse qui avance seul ; un but commun chiffré (tous les pions arrivés en moins de dix tours, vingt cartes réussies) ; des rôles tournants (J13) ; l'aide qui rapporte (si l'explication d'un camarade permet de répondre, les deux avancent) ; l'erreur sans recul (le groupe explique, puis l'élève rejoue) ; des binômes par pion ; un bilan de fin de partie (« qu'est-ce qui nous a aidés ? »).
 - dans le rapport de conformité, les contrôles **V11 à V13** (et V14 si le fichier est produit par du code ; V15 à V19 selon le gabarit ; V20 et V21 toujours).
@@ -1276,7 +1280,7 @@ Une réduction progressive est possible au cours du cycle.
 | MP-E-11 | Lacune dans une phrase : réservée à 1-2 mots ; nombre de tirets bas calculé selon la police et la taille (table 2.1). | DOIT |
 | MP-C-06 | Symboles (☐, ★, ◐) : vérifier leur rendu ; préférer des mots dans des cellules et des cases dessinées (cellules vides bordées). | DEVRAIT |
 | MP-S-01 | Un rôle, un style de paragraphe nommé (ou une mise en forme directe strictement identique). | DEVRAIT |
-| MP-D-01 à MP-D-04 | Différenciation sans étiquette évaluative, dispositifs, budget par version, attribution (voir § 3.6). | DOIT / DEVRAIT |
+| MP-D-01 à MP-D-06 | Différenciation sans étiquette évaluative, dispositifs, budget par version, attribution, classe multi-âges, encadré « Si je bloque » (voir § 3.6). | DOIT / DEVRAIT / PEUT |
 | MP-V-01 | Contrôle sur le rendu imprimé (V1-V10 et V20 ; V11 à V19 selon le cas ; V21) avant livraison, ou déclaration « Rendu non contrôlé » avec la liste des contrôles. | DOIT |
 | MP-V-02 | Rapport de conformité livré avec la fiche. | DOIT |
 | MP-O-12 | En-tête obligatoire dans cet ordre : Prénom et Date tout en haut (première ligne) ; titre centré avec un espace avant et après (≥ 12 pt) ; objectif en langage élève (une phrase à la première personne, sans étiquette « Mon objectif : » ; révision du 2.11.2026). Recette R7. Jeunes élèves : pas de ligne Prénom et Date (MP-O-03). | DOIT |
