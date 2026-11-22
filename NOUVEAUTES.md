@@ -1,5 +1,10 @@
 # Nouveautés
 
+## 22 novembre 2026 (typographie du guide)
+
+- Guide, espaces insécables posées à l'affichage, sur le texte seulement (jamais dans les balises, ni dans les textes à copier pour l'IA) : avant « · », « – », « — », « / », « & » et « → » ; de part et d'autre de « ↔ », « × », « + » et « = » ; entre un nombre et le mot qui suit (« 8 cartons », « 9 mm ») ; entre un mot et le chiffre seul qui le suit (« Bibliothèque IA 1 »). Les textes affichés après coup (critères de la séquence, bilan de la grille, message de copie, menu) suivent la même règle.
+- Contrôle (outil test_navigateur.py) : 260 pages par largeur (vues, catégories, fiches avec leurs tranches d'âge et l'onglet « Sans IA »), à 1280, 1024 et 390 px ; aucun caractère seul en début ou en fin de ligne, aucun débordement, aucune erreur JavaScript, aucune espace insécable dans les textes destinés à l'IA.
+
 ## Édition du 22 novembre 2026
 
 - Classe multi-âges : dans les formulaires du guide (ressources et séquence), une case « Classe multi-âges » et un second degré ou niveau de programme ; la demande à l'IA le précise. Bibliothèque IA 1, règle MP-D-05 : un seul matériel commun, une entrée par degré ou par niveau, aucun repère de degré visible pour les élèves, objectif du plan d'études de chaque degré et moment commun dans la partie enseignant·e. Bibliothèque IA 2 : raisonnement et exemples.
