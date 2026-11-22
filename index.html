@@ -143,10 +143,18 @@ body { border-top: 0; }
 .menu { background: var(--hero); color: #fff; box-shadow: 0 4px 14px rgba(6, 30, 38, .25); position: sticky; top: 0; z-index: 5; }
 .menu .dans { max-width: 1120px; margin: 0 auto; padding: 10px 20px 0; display: flex; flex-direction: column; gap: 6px; }
 .menu .marque { color: #fff; font-size: 1rem; padding: 4px 0; }
-.menu ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; overflow-x: auto; }
-.menu li button { background: none; border: 0; color: #dff1f5; padding: 11px 11px 13px; font-size: .93rem; cursor: pointer; white-space: nowrap; border-bottom: 6px solid transparent; border-radius: 10px 10px 0 0; }
+.menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 2px; }
+
+.menu li button { background: none; border: 0; color: #dff1f5; padding: 11px 10px 13px; font-size: .93rem; cursor: pointer; white-space: nowrap; border-bottom: 6px solid transparent; border-radius: 10px 10px 0 0; }
 .menu li button:hover { background: rgba(255, 255, 255, .12); color: #fff; }
+.menu li.apart { margin-left: 14px; }
+.sousmenu { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.sousmenu button { background: var(--papier); border: 2px solid var(--trait); border-radius: 999px; padding: 6px 16px; font-size: .95rem; cursor: pointer; color: var(--encre); }
+.sousmenu button:hover { border-color: var(--accent); }
+.sousmenu button[aria-current="page"] { background: var(--surligneur); border-color: var(--surligneur); font-weight: 700; color: #1c2530; }
 .menu li button[aria-current="page"] { background: var(--fond); color: var(--encre); font-weight: 700; border-bottom-color: var(--surligneur); }
+@media (max-width: 1100px) { .menu li button { padding: 10px 7px 12px; font-size: .9rem; } .menu li.apart { margin-left: 6px; } }
+@media (max-width: 760px) { .menu { position: static; } .menu .dans { padding-bottom: 8px; } .menu ul { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 6px; } .menu li button { width: 100%; text-align: left; padding: 6px 10px; font-size: .9rem; border-radius: 8px; border-bottom-width: 3px; } .menu li.apart { margin-left: 0; } }
 .page { padding-top: 28px; }
 .rubriques { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 24px; }
 .rubrique { display: flex; flex-direction: column; gap: 8px; text-align: left; border: 2px solid var(--trait); border-left: 14px solid var(--c); border-radius: 18px; padding: 24px 26px; cursor: pointer;
@@ -250,11 +258,18 @@ const RUB = [
   {id: 'supports', n: 'Supports et affiches', m: 'Supports', c: '#0a7f96', v: 'G26', d: 'Calendrier, horaire, journal de classe, affiches, sous-main, aides de table.'},
   {id: 'sequence', n: 'Composer une séquence', m: 'Séquence', c: '#e4572e', d: 'Relier plusieurs ressources autour d’un objectif : chacune a sa fonction, et ce que produit l’une sert à la suivante.'},
   {id: 'icones', n: 'Icônes', c: '#4c9f38', d: 'Pictogrammes de consignes, mains, dés, émotions, à insérer dans vos fiches.'},
-  {id: 'conseils', n: 'Conseils', c: '#d6457f', d: 'Règles du jeu, coopération, différenciation, vérifications avant de tester en classe.'},
+  {id: 'conseils', n: 'Repères pédagogiques', c: '#d6457f', d: 'Décider avant de demander, vérifier, règles du jeu, coopération, différenciation, après la classe.'},
   {id: 'mode', n: 'Mode d’emploi', c: '#5d6f7b', d: 'Préparer l’IA, vérifier, imprimer, ou travailler sans IA.'},
   {id: 'apropos', n: 'À propos', c: '#0a5f70', d: 'L’auteur, comment participer, les nouveautés.'}
 ];
 const rub = id => RUB.find(r => r.id === id);
+const NOM_REPERES = 'Repères pédagogiques';   // nom provisoire, à confirmer
+const MENU = [['ameliorer', 'Transformer'], ['hesite', 'Créer'], ['sequence', 'Composer une séquence'], ['modeles', 'Modèles'], ['conseils', NOM_REPERES], ['mode', 'Mode d’emploi'], ['apropos', 'À propos']];
+const CATALOGUES = ['jeux', 'exercices', 'formes', 'supports', 'icones'];
+const VERIF = [
+  ['Utilité', 'La ressource fait-elle apprendre ce qui est visé ?', ['La ressource fait travailler l’objectif que vous visiez, avec la même exigence.', 'Ce que vous avez demandé n’a pas d’effet indésirable : par exemple, les aides ne donnent pas la réponse, le jeu fait travailler la notion et pas seulement le hasard.', 'La nouvelle version apporte quelque chose que votre ressource d’origine n’apportait pas.', 'Les faits et l’orthographe sont justes.', 'Les calculs et le corrigé sont justes : refaites-les vous-même.', 'Les réponses attendues sont celles que vous voulez : une seule quand la tâche l’exige (dominos, appariements), plusieurs quand elle les admet, et le corrigé les donne toutes.', 'Aucune forme fautive n’est imprimée, sauf l’analyse d’erreurs que vous avez demandée (dès la 5P) : chaque erreur y est barrée, corrigée et expliquée.', 'Le vocabulaire est celui de vos moyens d’enseignement et du plan d’études.']],
+  ['Utilisabilité', 'Vos élèves peuvent-ils s’en servir sans difficulté ?', ['Un·e élève comprend la consigne sans votre aide.', 'Pour les élèves qui ne lisent pas encore, la consigne est prévue à l’oral ou en pictogrammes.', 'Les textes tiennent dans leurs cases et aucun mot n’est coupé.', 'La taille des textes et des cases convient à vos élèves.']],
+  ['Acceptabilité', 'La ressource convient-elle à vos élèves, à votre classe et à votre école ?', ['Aucun nom d’élève ni aucune donnée personnelle n’apparaît.', 'Aucun élève n’est désigné comme « différent » par le document qu’il reçoit.', 'Les contextes, les prénoms et les images évitent les stéréotypes.', 'Le temps de préparation (impression, découpe, plastification) est raisonnable pour l’usage prévu.']]];
 const GRILLE = {"Utile : fait-il apprendre ce qui est visé ?": ["L’objectif d’apprentissage est formulé en une phrase et relié au plan d’études.", "Chaque carte ou chaque case fait travailler cet objectif, sans tâche décorative.", "Le temps passé à apprendre est plus long que le temps passé à attendre ou à gérer le matériel.", "Tous les élèves du groupe répondent, pas seulement celui dont c’est le tour.", "L’erreur est exploitée : vérification, explication, nouvelle tentative.", "Je dispose d’un moyen de savoir ce que les élèves ont appris (fiche de suivi, questions avant et après).", "Les contenus ont été relus : réponses exactes, questions sans ambiguïté, orthographe."], "Utilisable : peut-on s’en servir sans difficulté ?": ["Une marche à suivre écrite accompagne le jeu : but, matériel, tour de jeu, erreur, fin de partie.", "Un élève peut expliquer la règle à un camarade après une partie modèle.", "Les textes sont lisibles à la distance d’utilisation ; la mise en page est la même sur toutes les cartes.", "Les images sont de style homogène et sans détail inutile.", "La réponse n’est pas visible par celui qui doit la trouver ; un corrigé est disponible.", "Le matériel est solide, facile à distribuer et à ranger, et le dé ne s’échappe pas.", "La taille des groupes et la durée d’une partie sont définies.", "Des niveaux ou des variantes permettent à chacun de réussir et de progresser."], "Acceptable : a-t-on envie et la possibilité de l’utiliser ?": ["Les élèves ont envie d’y rejouer ; je leur ai demandé leur avis.", "La règle favorise l’entraide et ne met personne en échec devant les autres.", "Aucun élève n’est désigné comme « différent » par le matériel qu’il reçoit.", "Le niveau sonore et l’organisation sont compatibles avec la classe et les classes voisines.", "Le temps de préparation est raisonnable par rapport au nombre d’utilisations prévues.", "Un·e collègue pourrait reprendre le jeu sans mes explications.", "Les images sont libres de droits ou leurs sources sont citées ; aucune donnée d’élève n’apparaît."]};
 const FONCTIONS = [['presenter', 'Présenter une information'], ['exercer', 'Faire s’exercer'], ['enseigner', 'Enseigner pas à pas, avec un retour'], ['motiver', 'Motiver par le jeu'], ['explorer', 'Faire explorer'], ['manipuler', 'Faire manipuler et observer'], ['construire', 'Faire construire'], ['echanger', 'Faire échanger entre élèves']];
 const fonction = k => (FONCTIONS.find(f => f[0] === k) || ['', ''])[1];
@@ -317,7 +332,7 @@ const couleur = it => it.rub === 'jeux' ? COUL[it.cat] : rub(it.rub).c;
 const aDoc = it => it.fo.length && it.fo[0].f;
 const rubriqueCourante = () => { const p = S.page;
   if (p === 'fiche') { const it = item(S.code); return it ? it.rub : 'accueil'; }
-  return ({cat: 'jeux', preparer: 'mode', verifier: 'mode', imprimer: 'mode', sansia: 'mode', hesite: 'accueil', ameliorer: 'accueil', c_exemple: 'sequence', c_regles: 'conseils', c_cooperer: 'conseils', c_differencier: 'conseils', c_grille: 'conseils', c_ecosysteme: 'conseils', c_decider: 'conseils', c_apres: 'conseils'})[p] || p; };
+  return ({cat: 'jeux', preparer: 'mode', verifier: 'conseils', imprimer: 'mode', sansia: 'mode', hesite: 'hesite', ameliorer: 'ameliorer', c_exemple: 'sequence', c_regles: 'conseils', c_cooperer: 'conseils', c_differencier: 'conseils', c_grille: 'conseils', c_ecosysteme: 'conseils', c_decider: 'conseils', c_apres: 'conseils'})[p] || p; };
 
 function naviguer(o) {
   Object.assign(S, o);
@@ -328,14 +343,16 @@ function parent() {
   const p = S.page, it = p === 'fiche' ? item(S.code) : null;
   if (it) return it.rub === 'jeux' ? {page: 'cat', cat: it.cat} : {page: it.rub};
   if (p === 'cat') return {page: 'jeux'};
-  if (['preparer', 'verifier', 'imprimer', 'sansia'].includes(p)) return {page: 'mode'};
+  if (['preparer', 'imprimer', 'sansia'].includes(p)) return {page: 'mode'};
+  if (p === 'verifier') return {page: 'conseils'};
+  if (CATALOGUES.includes(p)) return {page: 'modeles'};
   if (p === 'c_exemple') return {page: 'sequence'};
   if (p.startsWith('c_')) return {page: 'conseils'};
   return {page: 'accueil'};
 }
 function menu() {
-  const cur = rubriqueCourante();
-  $('#menu').innerHTML = RUB.map(r => `<li><button type="button" ${cur === r.id ? 'aria-current="page"' : ''} ${go({page: r.id, code: null})}>${r.m || r.n}</button></li>`).join('');
+  const r = rubriqueCourante(), cur = CATALOGUES.includes(r) ? 'modeles' : r;
+  $('#menu').innerHTML = MENU.map(([id, n]) => `<li${id === 'modeles' ? ' class="apart"' : ''}><button type="button" ${cur === id ? 'aria-current="page"' : ''} ${go({page: id, code: null, cat: null})}>${n}</button></li>`).join('');
 }
 const retour = () => `<div><button class="retour" type="button" ${go(parent())}>← Retour</button></div>`;
 const jeunes = () => degres().some(d => tranche(d) === 0) && !(S.page === 'fiche' && item(S.code) && item(S.code).fam === 'jeu');
@@ -388,19 +405,23 @@ const lienFichier = (d, f, page, texte) => D.local
 const VUES = {
   accueil: () => `
     <div class="hero"><div class="txt"><h1>Composer un écosystème de ressources pour votre classe</h1>
-      <p class="chapo">Des jeux, des fiches et des supports à imprimer, de la 1P à la 11S. Choisissez un modèle : une IA le remplit avec vos contenus, ou vous l’imprimez tel quel. Reliez ensuite plusieurs ressources en une séquence.</p>
+      <p class="chapo">Des jeux, des fiches et des supports à imprimer, de la 1P à la 11S. Transformez une ressource que vous utilisez déjà, créez-en une nouvelle avec une IA, composez une séquence de ressources reliées, ou partez d’un modèle prêt à l’emploi.</p>
       <div class="confettis" aria-hidden="true">${COUL.concat('#0a7f96').map(c => `<i style="background:${c}"></i>`).join('')}</div></div>
       <div class="pile" aria-hidden="true">${['J18', 'GF-L', 'J28'].map(c => `<img src="${vign(c)}" alt="">`).join('')}</div></div>
     <h2>Que souhaitez-vous faire ?</h2>
     <div class="entrees">
-      <button class="entree" style="--c:#c2571a" type="button" ${go({page: 'ameliorer', code: null})}><span class="n">Faire analyser ou transformer une fiche</span><span class="d">L’IA analyse une fiche ou une ressource que vous utilisez déjà et vous remet un bref rapport ; vous décidez ensuite si vous la faites évoluer.</span></button>
-      <button class="entree" style="--c:#e9a100" type="button" ${go({page: 'hesite', code: null})}><span class="n">Créer une nouvelle ressource</span><span class="d">Partez de ce que vos élèves doivent apprendre : l’IA compare deux ou trois formats et attend votre choix.</span></button>
+      <button class="entree" style="--c:#c2571a" type="button" ${go({page: 'ameliorer', code: null})}><span class="n">Transformer une ressource</span><span class="d">L’IA analyse une fiche ou une ressource que vous utilisez déjà et vous remet un bref rapport ; vous décidez ensuite si vous la faites évoluer.</span></button>
+      <button class="entree" style="--c:#e9a100" type="button" ${go({page: 'hesite', code: null})}><span class="n">Créer une ressource</span><span class="d">Partez de ce que vos élèves doivent apprendre : l’IA compare deux ou trois formats et attend votre choix.</span></button>
       <button class="entree" style="--c:#e4572e" type="button" ${go({page: 'sequence', code: null})}><span class="n">Composer une séquence</span><span class="d">Relier plusieurs ressources : chacune a sa fonction, et ce que l’une produit sert à la suivante.</span></button>
-      <button class="entree" style="--c:#2a9d8f" type="button" data-defile="explorer"><span class="n">Explorer les modèles</span><span class="d">Jeux, fiches, supports et icônes : consulter, télécharger, imprimer, avec ou sans IA.</span></button></div>
-    <h2 id="explorer" tabindex="-1">Explorer les modèles</h2>
-    <div class="rubriques">${RUB.slice(1).map(r => { const n = r.id === 'icones' ? D.icones.reduce((a, g) => a + g.l.length, 0) + ' icônes' : r.id === 'mode' || r.id === 'apropos' || r.id === 'conseils' || r.id === 'sequence' ? '' : D.items.filter(i => i.rub === r.id).length + ' modèles';
-      const v = r.id === 'icones' ? `<span class="ics" aria-hidden="true">${D.icones[3].l.slice(0, 4).map(i => `<img src="${i.u}" alt="">`).join('')}</span>` : r.v ? `<img class="vg" src="${vign(r.v)}" alt="">` : '';
-      return `<button class="rubrique" style="--c:${r.c}" type="button" ${go({page: r.id})}><span class="tx"><span class="n">${r.n}</span><span class="d">${r.d}</span>${n ? `<span class="nb">${n}</span>` : ''}</span>${v}</button>`; }).join('')}
+      <button class="entree" style="--c:#2a9d8f" type="button" ${go({page: 'modeles', code: null})}><span class="n">Modèles</span><span class="d">Jeux, exercices, fiches, supports et icônes : consulter, télécharger, imprimer, avec ou sans IA.</span></button></div>
+    <p class="note">Première fois ? <button class="lien" type="button" ${go({page: 'preparer'})}>Préparez votre IA</button>. Pour concevoir et vérifier : <button class="lien" type="button" ${go({page: 'conseils'})}>${NOM_REPERES}</button>.</p>`,
+
+  modeles: () => `
+    <h1 class="titre" style="--c:#2a9d8f">Modèles</h1>
+    <p class="chapo">Jeux, exercices, fiches, supports et icônes : consultez-les, téléchargez-les, imprimez-les tels quels ou faites-les remplir par une IA avec vos contenus.</p>
+    <div class="rubriques">${CATALOGUES.map(id => { const r = rub(id), n = id === 'icones' ? D.icones.reduce((a, g) => a + g.l.length, 0) + ' icônes' : D.items.filter(i => i.rub === id).length + ' modèles';
+      const v = id === 'icones' ? `<span class="ics" aria-hidden="true">${D.icones[3].l.slice(0, 4).map(i => `<img src="${i.u}" alt="">`).join('')}</span>` : r.v ? `<img class="vg" src="${vign(r.v)}" alt="">` : '';
+      return `<button class="rubrique" style="--c:${r.c}" type="button" ${go({page: id})}><span class="tx"><span class="n">${r.n}</span><span class="d">${r.d}</span><span class="nb">${n}</span></span>${v}</button>`; }).join('')}
       </div>`,
 
   jeux: () => `
@@ -430,10 +451,10 @@ const VUES = {
   mode: () => `
     <h1 class="titre" style="--c:${rub('mode').c}">Mode d’emploi</h1>
     <div class="rubriques">
-      <button class="rubrique" style="--c:#0a5f70" type="button" ${go({page: 'preparer'})}><span class="tx"><span class="n">1. Préparer l’IA</span><span class="d">Le fichier à joindre au début de chaque conversation.</span></span></button>
-      <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'verifier'})}><span class="tx"><span class="n">2. Vérifier</span><span class="d">Six points à contrôler dans ce que l’IA a produit.</span></span></button>
-      <button class="rubrique" style="--c:#4c9f38" type="button" ${go({page: 'imprimer'})}><span class="tx"><span class="n">3. Imprimer et découper</span><span class="d">Réglages d’impression, papier, découpe.</span></span></button>
+      <button class="rubrique" style="--c:#0a5f70" type="button" ${go({page: 'preparer'})}><span class="tx"><span class="n">Préparer l’IA</span><span class="d">Le fichier à joindre au début de chaque conversation.</span></span></button>
+      <button class="rubrique" style="--c:#4c9f38" type="button" ${go({page: 'imprimer'})}><span class="tx"><span class="n">Imprimer et découper</span><span class="d">Réglages d’impression, papier, découpe.</span></span></button>
       <button class="rubrique" style="--c:#c2571a" type="button" ${go({page: 'sansia'})}><span class="tx"><span class="n">Travailler sans IA</span><span class="d">Modèles Word à remplir, planches prêtes et compléments à imprimer.</span></span></button>
+      <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'verifier'})}><span class="tx"><span class="n">Vérifier ce que l’IA a produit</span><span class="d">Dans les ${NOM_REPERES.toLowerCase()} : utilité, utilisabilité, acceptabilité.</span></span></button>
     </div>`,
 
   apropos: () => `
@@ -463,10 +484,11 @@ const VUES = {
         .map(([d, t]) => `<div><h3>${d}</h3><p>${t}</p></div>`).join('')}</div>`,
 
   conseils: () => `
-    <h1 class="titre" style="--c:${rub('conseils').c}">Conseils</h1>
+    <h1 class="titre" style="--c:${rub('conseils').c}">${NOM_REPERES}</h1>
     <p class="chapo">Des repères pour qu’un jeu, une fiche ou une séquence fasse vraiment apprendre.</p>
     <div class="rubriques">
       <button class="rubrique" style="--c:#c2571a" type="button" ${go({page: 'c_decider'})}><span class="tx"><span class="n">Décider avant de demander</span><span class="d">Quatre questions avant chaque demande, et partir du problème plutôt que de la forme.</span></span></button>
+      <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'verifier'})}><span class="tx"><span class="n">Vérifier ce que l’IA a produit</span><span class="d">Utilité, utilisabilité, acceptabilité : ce qu’il faut contrôler avant d’imprimer.</span></span></button>
       <button class="rubrique" style="--c:#2a9d8f" type="button" ${go({page: 'c_regles'})}><span class="tx"><span class="n">Des règles du jeu qui font travailler tous les élèves</span><span class="d">La marche à suivre en cinq questions, et des astuces pratiques.</span></span></button>
       <button class="rubrique" style="--c:#3a7bd5" type="button" ${go({page: 'c_cooperer'})}><span class="tx"><span class="n">Passer de la compétition à la coopération</span><span class="d">Changer la condition de victoire.</span></span></button>
       <button class="rubrique" style="--c:#8e5bd0" type="button" ${go({page: 'c_differencier'})}><span class="tx"><span class="n">Différencier sans faire trois versions</span><span class="d">Des leviers autour d’une fiche unique, les obstacles à lever, les classes multi-âges.</span></span></button>
@@ -741,11 +763,10 @@ const VUES = {
     <p class="note">Avant votre première demande, <button class="lien" type="button" ${go({page: 'preparer'})}>préparez votre IA</button>.</p>`,
 
   verifier: () => `
-    <h1 class="titre">Vérifiez ce que l’IA a produit</h1>
-    <p class="chapo">L’IA se trompe parfois. Relisez tout avant d’imprimer pour la classe.</p>
-    <ul class="coches">${['Les faits, les calculs et l’orthographe sont justes.', 'Chaque question a une seule réponse possible.', 'Aucune forme fautive n’est imprimée, sauf l’analyse d’erreurs que vous avez demandée (dès la 5P) : chaque erreur y est barrée, corrigée et expliquée.',
-      'Les textes tiennent dans leurs cases et aucun mot n’est coupé.', 'La taille des textes convient à vos élèves.', 'Aucun nom d’élève n’apparaît.', 'L’IA a dit ce qu’elle a vérifié elle-même et ce qui reste à vérifier.']
-      .map((t, i) => `<li><label for="v${i}"><input type="checkbox" id="v${i}">${t}</label></li>`).join('')}</ul>
+    <h1 class="titre" style="--c:#e9a100">Vérifiez ce que l’IA a produit</h1>
+    <p class="chapo">L’IA se trompe parfois. Relisez tout avant d’imprimer pour la classe. Commencez par lire ce que l’IA dit avoir vérifié elle-même, et ce qui reste à vérifier.</p>
+    ${VERIF.map(([t, q, l], g) => `<section class="groupe"><h2>${t}</h2><p class="chapo">${q}</p><ul class="coches">${l.map((x, i) => `<li><label for="v${g}_${i}"><input type="checkbox" id="v${g}_${i}">${x}</label></li>`).join('')}</ul></section>`).join('')}
+    <p class="note">Pour un jeu, la grille <button class="lien" type="button" ${go({page: 'c_grille'})}>« Mon jeu est-il utile, utilisable, acceptable ? »</button> va plus loin.</p>
     <p class="note">Quelque chose ne va pas ? Dites-le à l’IA dans la même conversation : elle corrige et vous redonne le document.</p>
     <div class="rang"><button class="btn" type="button" ${go({page: 'imprimer'})}>Ensuite : imprimer →</button></div>`,
 
@@ -849,7 +870,8 @@ function brancher() {
 function rendre() {
   menu();
   const corps = (VUES[S.page] || VUES.accueil)();
-  $('#vue').innerHTML = typo((S.page === 'accueil' ? '' : retour()) + corps);
+  const rc = rubriqueCourante(), sous = CATALOGUES.includes(rc) ? `<nav class="sousmenu" aria-label="Modèles">${CATALOGUES.map(id => `<button type="button" ${rc === id ? 'aria-current="page"' : ''} ${go({page: id, code: null, cat: null})}>${rub(id).m || rub(id).n}</button>`).join('')}</nav>` : '';
+  $('#vue').innerHTML = typo((S.page === 'accueil' ? '' : sous + retour()) + corps);
   brancher();
 }
 document.addEventListener('click', e => { const b = e.target.closest('[data-go]'); if (b) naviguer(JSON.parse(b.dataset.go)); });
