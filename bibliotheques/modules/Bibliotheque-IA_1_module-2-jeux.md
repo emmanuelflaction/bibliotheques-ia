@@ -196,7 +196,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J4 — Cartes de rappel recto-verso (MF18) (non testé)
 
 - **Usage** : rappel actif, seul·e ou en duo : la question au recto, la réponse au verso ; reprises espacées (MF18, P14).
-- **Fait apprendre si** l'élève répond avant de retourner la carte, par écrit quand l'orthographe compte, et reprend plus tard les cartes ratées. **N'apprend rien si** on lit le recto puis le verso, sans chercher la réponse. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** l'élève répond avant de retourner la carte, par écrit ou en épelant quand l'orthographe compte, et reprend plus tard les cartes ratées. **N'apprend rien si** on lit le recto puis le verso, sans chercher la réponse. (À reprendre dans « En bref », § 4.3.)
 - **Pièce** : carte de 9,3 × 6,6 cm (révision du 19.11.2026, MP-J-11 ; auparavant 8 × 5 cm) ; recto : la question ; verso : la réponse.
 - **Disposition** : planche recto de 2 × 4 cartes (18,6 × 26,4 cm), repères de coupe au bord de la feuille (MP-J-12), puis planche verso dont les deux colonnes sont inversées, pour une impression recto-verso sur le bord long. Sans recto-verso : carte pliée en deux (question et réponse côte à côte).
 - **Zone de réponse** : aucune ; l'élève répond oralement ou sur une ardoise, puis retourne la carte.
@@ -229,7 +229,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J6 — Dé à monter (révision du 19.11.2026 : grand ou petit ; rendu contrôlé, montage non réalisé)
 
 - **Usage** : tirage au hasard d'un élément (pronom, nombre, consigne) pour un jeu ou un entraînement.
-- **Fait apprendre si** le tirage désigne une tâche (conjuguer avec le pronom tiré, calculer avec le nombre tiré) que chaque élève réalise. **N'apprend rien si** le dé décide seul de qui avance ou de qui gagne. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** le tirage désigne une tâche (conjuguer avec le pronom tiré, calculer avec le nombre tiré) que chaque élève réalise, par écrit ou en épelant quand l'orthographe compte. **N'apprend rien si** le dé décide seul de qui avance ou de qui gagne. (À reprendre dans « En bref », § 4.3.)
 - **Pièce** : patron de cube en croix, avec sept languettes de collage ; deux formats : **J6-a, grand dé** : faces de 6 cm, un dé par page ; **J6-b, petit dé** : faces de 4,2 cm, deux dés identiques par page. Une information par face, centrée, en gras : 48 pt sur le grand dé, 30 pt sur le petit, jamais moins de 14 pt. (Auparavant : faces de 4 cm, puis de 5,5 cm.)
 - **Disposition** : grand dé : croix de 3 faces en largeur et 4 en hauteur (18 × 24,9 cm avec la languette du haut) ; petit dé : deux patrons couchés, l'un sous l'autre (17,5 × 12,6 cm chacun). Les languettes des côtés se logent dans les angles libres de la croix. Contour à découper en pointillés (MP-J-05), plis en trait fin ; patron découpé aux ciseaux, donc sans repères de coupe (exception à MP-J-12) ; mention dans la marge du haut.
 - **Zone de réponse** : aucune.
@@ -242,7 +242,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J7 — Loto (testé sur rendu)
 
 - **Usage** : réactiver un répertoire : on entend ou on lit, on couvre (TR33, BDRP-D1).
-- **Fait apprendre si** il faut calculer, conjuguer ou traduire ce qu'on entend avant de couvrir. **N'apprend rien si** il suffit de reconnaître une forme identique à celle annoncée. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** il faut calculer, conjuguer ou traduire ce qu'on entend avant de couvrir ; si deux formes se prononcent de la même façon (chante, chantent), l'appel donne la question (ils + chanter), jamais la forme. **N'apprend rien si** il suffit de reconnaître une forme identique à celle annoncée. (À reprendre dans « En bref », § 4.3.)
 - **Pièce** : carton de 7,5 × 5 cm, à 6 cases de 2,5 cm ; 8 cartons par planche. Cartes d'appel de 5 × 2,5 cm. Depuis le 19.11.2026 (MP-J-11, MP-J-12) : carton de 9,3 × 6,6 cm, à 6 cases de 3,1 × 3,3 cm, 2 × 4 cartons par planche ; cartes d'appel de 6,2 × 3,3 cm, 3 × 8 par planche ; repères de coupe au bord de la feuille ; dimensions calculées, non rendues.
 - **Items** : 12 éléments, chacun sur 4 cartons (calculé : 8 × 6 / 12).
 - **Hauteur** : 0,9 + 4 × 5 = 20,9 cm (calculé ; 20,0 cm de tracé mesurés). Depuis le 19.11.2026 : 4 × 6,6 = 26,4 cm (calculé).
@@ -292,7 +292,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J11 — Roue à fenêtre et rabat (testé sur rendu)
 
 - **Usage** : contenu cyclique, correction immédiate (TR32, BDRP-C2). L'élève lit la question dans la fenêtre, répond, soulève le rabat.
-- **Fait apprendre si** l'élève répond, à voix haute ou par écrit, avant de soulever le rabat, et note les questions ratées pour y revenir. **N'apprend rien si** on soulève le rabat avant de répondre. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** l'élève répond avant de soulever le rabat, par écrit ou en épelant quand l'orthographe compte, et note les questions ratées pour y revenir. **N'apprend rien si** on soulève le rabat avant de répondre. (À reprendre dans « En bref », § 4.3.)
 - **Pièce** : deux disques de 11 cm. Dessous : six secteurs de 60°, question à 45 mm du centre, réponse à 28 mm. Dessus : fenêtre de 39 à 52 mm, rabat de 18 à 36 mm, charnière en trait fin à 18 mm ; ouverture de 54°.
 - **Disposition** : les deux disques sur une page (dessin de 16 × 24 cm) ; attache parisienne au centre. **Écart déclaré** : 24 cm de haut, au-delà du budget de 22 cm, dans la hauteur utile de 24,7 cm.
 - **Items** : 6 paires ; à 14 pt, la réponse tient en 23 mm (calculé).
@@ -325,7 +325,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J14 — Cartes d'erreurs (testé sur rendu)
 
 - **Usage** : analyser une erreur de calcul ou de raisonnement (TR29, P04).
-- **Fait apprendre si** l'élève explique l'erreur, la corrige et dit comment l'éviter, sur une notion déjà enseignée. **N'apprend rien si** on se contente de montrer « ce qui est faux ». (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** l'élève explique l'erreur, la corrige par écrit et dit comment l'éviter, sur une notion déjà enseignée. **N'apprend rien si** on se contente de montrer « ce qui est faux ». (À reprendre dans « En bref », § 4.3.)
 - **Pièce** : carte de 8 × 10 cm : auteur·e fictif·ve, résolution, consigne. Verso : ce qui s'est passé, calcul juste. Depuis le 19.11.2026 (MP-J-11, MP-J-12) : carte de 9,3 × 13,2 cm, 2 × 2 par planche ; repères de coupe au bord de la feuille ; dimensions calculées, non rendues.
 - **Recette** : R14, R12.
 - **Contrôles** : V12, V13 ; corrigé recalculé par programme ; V21 : nombres et procédure adaptés à la progression du degré (MP-P-09) ; le verso nomme l'erreur de procédure (par exemple « a écrit 13 à côté du 3, sans faire de retenue »).
@@ -369,7 +369,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J18 — Serpents et échelles (19.11.2026 ; rendu contrôlé, non testé en classe)
 
 - **Usage** : entraînement varié sur un parcours, quand on veut des retournements de situation ; les défis sont tirés sur des cartes, comme pour J5.
-- **Fait apprendre si** c'est la réponse à la carte qui fait monter ou évite de descendre, et l'autre joueur répond aussi. **N'apprend rien si** le dé seul décide des montées et des descentes. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** c'est la réponse à la carte qui fait monter ou évite de descendre, et l'autre joueur répond aussi, par écrit ou en épelant quand l'orthographe compte. **N'apprend rien si** le dé seul décide des montées et des descentes. (À reprendre dans « En bref », § 4.3.)
 - **Principe** : cases numérotées en lacets, du Départ (en bas à gauche) à l'Arrivée (en haut). Au pied d'une échelle, l'élève tire une carte : s'il répond juste, il monte. Sur la tête d'un serpent, il tire une carte : s'il se trompe, il redescend jusqu'à la queue. **La réponse décide, pas le dé seul.**
 - **Pièce** : plateau d'une page, dessiné (R11, fonction `serpents_echelles`) : cases en damier gris clair et blanc, numéro en gras dans le coin de la case ; échelles à deux montants et barreaux ; serpents au corps gris ondulant, tête ronde. 5P-8P : 6 × 8 = 48 cases de 3,0 cm au moins, 3 échelles et 3 serpents.
 - **Disposition** : A4 portrait, toute la surface utile (MP-J-11) ; rien à découper ; échelles et serpents tirés au sort par la fonction (paramètre `graine`), sans croisement ni extrémité commune, ou imposés (paramètre `liens`) ; dé, roue J20 et pions : matériel de classe.
@@ -398,7 +398,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J20 — Roue de tirage (19.11.2026 ; rendu contrôlé, non testé en classe)
 
 - **Usage** : tirage au sort sans dé ni montage : un pronom, un nombre, une consigne, une catégorie de cartes ; remplace le dé J6 quand il faut plus de six issues ou une préparation immédiate.
-- **Fait apprendre si** le tirage désigne une tâche (pronom, nombre, consigne) que chaque élève réalise. **N'apprend rien si** faire tourner la roue prend plus de temps que répondre. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** le tirage désigne une tâche (pronom, nombre, consigne) que chaque élève réalise, par écrit ou en épelant quand l'orthographe compte. **N'apprend rien si** faire tourner la roue prend plus de temps que répondre. (À reprendre dans « En bref », § 4.3.)
 - **Principe** : l'élève pose un trombone au centre de la roue, le tient avec la pointe d'un crayon et le fait tourner d'une pichenette ; le secteur où il s'arrête donne le tirage.
 - **Pièce** : roue d'une page, dessinée (R11, fonction `roue_tirage`) : disque de 18,2 cm à double filet, 3 à 12 secteurs égaux, alternés blanc et gris clair quand leur nombre est pair, texte en gras (24 pt, réduit si besoin, jamais moins de 10 pt) ; sous la roue, vingt cases « Mes tirages » pour noter.
 - **Disposition** : A4 portrait, toute la surface utile (MP-J-11) ; rien à découper ; trombone et crayon : matériel de classe.
@@ -450,7 +450,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J24 — Cocotte en papier (20.11.2026 ; rendu contrôlé, non testé en classe)
 
 - **Usage** : se poser des défis à deux (calcul mental, conjugaison, vocabulaire) ; l'élève qui tient la cocotte lit la question et vérifie la réponse.
-- **Fait apprendre si** celui qui tient la cocotte lit la question, attend la réponse, puis la vérifie sous le volet. **N'apprend rien si** on soulève le volet avant de répondre. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** celui qui tient la cocotte lit la question, attend la réponse, écrite ou épelée quand l'orthographe compte, puis la vérifie sous le volet. **N'apprend rien si** on soulève le volet avant de répondre. (À reprendre dans « En bref », § 4.3.)
 - **Principe** : un carré à plier. Quatre mots à l'extérieur, huit nombres sur les volets, huit défis sous les volets : la question sur le volet, la réponse en gras dessous.
 - **Pièce** : carré de 18,6 cm (R11, fonction `cocotte`) ; traits de pliage fins ; sous le carré, la règle du pliage en quatre étapes et la règle du jeu.
 - **Items** : 4 mots courts, 8 nombres ou textes courts, 8 couples question-réponse ; une seule réponse par question (MP-J-01).
@@ -474,7 +474,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J26 — Mémo-fiches en éventail (20.11.2026 ; rendu contrôlé, non testé en classe)
 
 - **Usage** : réviser une série (tables, conjugaisons, mots-outils, formules) ; les fiches se consultent une à une, réunies par une attache.
-- **Fait apprendre si** l'élève cache la réponse, la dit ou l'écrit, puis vérifie, fiche après fiche, sur plusieurs jours. **N'apprend rien si** on relit les fiches sans chercher les réponses. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** l'élève cache la réponse, la dit, ou l'écrit quand l'orthographe compte, puis vérifie, fiche après fiche, sur plusieurs jours. **N'apprend rien si** on relit les fiches sans chercher les réponses. (À reprendre dans « En bref », § 4.3.)
 - **Pièce** : fiche haute de 13,2 cm, large de 6,2 cm, 4,65 cm ou 3,7 cm selon la tranche d'âge ; titre sur bandeau gris, lignes centrées, rond marquant le trou de l'attache en bas.
 - **Disposition** : deux rangées de 3, 4 ou 5 fiches sur toute la surface utile (MP-J-11) ; repères de coupe (MP-J-12).
 - **Items** : 6, 8 ou 10 fiches par planche ; 5 à 12 lignes par fiche ; un titre par fiche.
@@ -498,7 +498,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J28 — Plateau à camemberts (20.11.2026 ; rendu contrôlé, non testé en classe)
 
 - **Usage** : réviser plusieurs domaines ou plusieurs chapitres dans une même partie ; quiz à six catégories, sur le principe d'un jeu de questions connu, dont le nom commercial n'est pas repris.
-- **Fait apprendre si** les questions portent sur les notions de la période, tout le groupe répond, et la durée de la partie est fixée. **N'apprend rien si** les questions sont sans lien avec ce qui a été enseigné, ou la partie s'étire sans fin. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** les questions portent sur les notions de la période, tout le groupe répond, par écrit ou en épelant quand l'orthographe compte, et la durée de la partie est fixée. **N'apprend rien si** les questions sont sans lien avec ce qui a été enseigné, ou la partie s'étire sans fin. (À reprendre dans « En bref », § 4.3.)
 - **Principe** : une roue à six rayons. Chaque case porte le symbole d'une catégorie : l'élève y répond à une question de cette catégorie. Au bout de chaque rayon, une grande case (grise, ou teintée en couleur) : une réponse juste y fait gagner la part de la catégorie, que l'élève colorie dans son camembert. Six parts : retour au centre et dernière question.
 - **Pièce** : plateau d'une page (R11, fonction `plateau_camemberts`) : roue de 18 cm, couronne et rayons de cases, centre « Départ, Arrivée » ; sous la roue, la légende (symbole et nom de chaque catégorie) et quatre camemberts de score.
 - **Catégories** : six, distinguées par un **symbole** (disque, triangle, carré, losange, étoile, croix), jamais par la seule couleur (MP-C-05) ; noms courts, au choix de l'enseignant·e.
@@ -559,7 +559,7 @@ Les gabarits J décrivent les **pièces imprimées** d'un jeu (dominos, cartes, 
 ### J33 — Petits chevaux (20.11.2026 ; rendu contrôlé, non testé en classe)
 
 - **Usage** : entraînement sur cartes-défis dans un jeu de parcours connu des élèves ; deux à quatre joueurs.
-- **Fait apprendre si** c'est la réponse juste qui fait sortir et avancer les pions, et l'autre joueur répond aussi. **N'apprend rien si** le 6 et les captures décident de la partie. (À reprendre dans « En bref », § 4.3.)
+- **Fait apprendre si** c'est la réponse juste qui fait sortir et avancer les pions, et l'autre joueur répond aussi, par écrit ou en épelant quand l'orthographe compte. **N'apprend rien si** le 6 et les captures décident de la partie. (À reprendre dans « En bref », § 4.3.)
 - **Principe** : piste de 52 cases en croix, quatre écuries, quatre échelles de cinq marches vers le centre. Un 6 **et** une réponse juste font sortir un pion ; sur l'échelle, une réponse juste par marche. Un pion rejoint par un adversaire retourne à l'écurie.
 - **Pièce** : plateau d'une page (R11, fonction `petits_chevaux`) : cases de 1,24 cm ; joueurs distingués par un **symbole** (disque, triangle, carré, étoile), jamais par la couleur seule (MP-C-05) ; règle en trois phrases sous le plateau.
 - **Matériel** : seize pions de 1 cm au plus (MP-J-10 : jetons de classe ou pions découpés), un dé, des cartes-défis à dos neutre (modèle J5).
@@ -1054,7 +1054,7 @@ Le triptyque utilité, utilisabilité, acceptabilité (Tricot et al., 2003) donn
 - Utilisable : une marche à suivre écrite accompagne le jeu et dit aussi qui commence, comment disposer le matériel, qui vérifie et ce que fait celui qui s'est trompé ; un élève peut expliquer la règle après une partie modèle ; les textes se lisent à la distance d'utilisation et la mise en page est la même sur toutes les cartes ; les images sont de style homogène ; la réponse n'est pas visible par celui qui doit la trouver et un corrigé est disponible ; le matériel est solide, facile à distribuer et à ranger ; la taille des groupes et la durée d'une partie sont définies ; des niveaux ou des variantes permettent à chacun de réussir.
 - Acceptable : les élèves ont envie de rejouer ; la règle favorise l'entraide et ne met personne en échec devant les autres ; aucun élève n'est désigné comme « différent » par le matériel qu'il reçoit ; le niveau sonore et l'organisation conviennent à la classe ; les rôles, les situations et les récompenses véhiculent des valeurs compatibles avec celles de l'école (pas de rôle de voleur pour s'exercer à la soustraction) ; le temps de préparation reste raisonnable, et le matériel sobre (pages, couleur, plastification) et réutilisable ; un·e collègue pourrait reprendre le jeu sans explications ; les images sont libres de droits ou sourcées, et aucune donnée d'élève n'apparaît.
 
-**Un jeu pour apprendre, pas pour occuper**
+**Un jeu pour apprendre, pas seulement pour s'occuper ou s'amuser**
 
 Un jeu prend du temps de classe : préparation, explication, partie, rangement. Il vaut ce temps s'il fait apprendre au moins autant qu'une autre activité de même durée (fiche, travail à l'ardoise). Ce qui compte n'est pas la durée de l'activité, mais le temps pendant lequel l'élève travaille réellement la notion, avec réussite : le temps d'apprentissage scolaire (*academic learning time*, Berliner, 1990).
 
