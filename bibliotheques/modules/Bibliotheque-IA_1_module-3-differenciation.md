@@ -42,9 +42,22 @@ Ces repères complètent les règles de la Bibliothèque IA 1 (MP-J-07, MP-D-02,
 
 Le triptyque utilité, utilisabilité, acceptabilité (Tricot et al., 2003) donne trois questions : la ressource fait-elle apprendre ce qui est visé ? Est-elle facile à utiliser ? Les élèves et l'enseignant·e ont-ils envie de s'en servir, et le peuvent-ils dans leur contexte ? L'acceptabilité (ce que les utilisateurs pensent de la ressource) ne se confond pas avec l'accessibilité (la possibilité d'y accéder). La mise en page réduit la charge extrinsèque, celle qui vient de la présentation ; la charge intrinsèque dépend du contenu lui-même (Maitre, 2020).
 
-- Utile : l'objectif d'apprentissage tient en une phrase et se relie au plan d'études ; chaque carte ou chaque case fait travailler cet objectif, sans tâche décorative ; le temps passé à apprendre dépasse le temps passé à attendre ou à gérer le matériel ; tous les élèves du groupe répondent ; l'erreur est exploitée (vérification, explication, nouvelle tentative) ; un moyen permet de savoir ce que les élèves ont appris ; les contenus sont relus.
-- Utilisable : une marche à suivre écrite accompagne le jeu ; un élève peut expliquer la règle après une partie modèle ; les textes se lisent à la distance d'utilisation et la mise en page est la même sur toutes les cartes ; les images sont de style homogène ; la réponse n'est pas visible par celui qui doit la trouver et un corrigé est disponible ; le matériel est solide, facile à distribuer et à ranger ; la taille des groupes et la durée d'une partie sont définies ; des niveaux ou des variantes permettent à chacun de réussir.
-- Acceptable : les élèves ont envie de rejouer ; la règle favorise l'entraide et ne met personne en échec devant les autres ; aucun élève n'est désigné comme « différent » par le matériel qu'il reçoit ; le niveau sonore et l'organisation conviennent à la classe ; le temps de préparation reste raisonnable ; un·e collègue pourrait reprendre le jeu sans explications ; les images sont libres de droits ou sourcées, et aucune donnée d'élève n'apparaît.
+- Utile : l'objectif d'apprentissage tient en une phrase et se relie au plan d'études ; chaque carte ou chaque case fait travailler cet objectif, sans tâche décorative ; le temps passé à apprendre dépasse le temps passé à attendre ou à gérer le matériel ; tous les élèves du groupe répondent ; quand l'exactitude ne s'entend pas (orthographe, accords), la réponse est écrite ou épelée ; l'erreur est exploitée (vérification, explication, nouvelle tentative) ; un moyen permet de savoir ce que les élèves ont appris ; les contenus sont relus.
+- Utilisable : une marche à suivre écrite accompagne le jeu et dit aussi qui commence, comment disposer le matériel, qui vérifie et ce que fait celui qui s'est trompé ; un élève peut expliquer la règle après une partie modèle ; les textes se lisent à la distance d'utilisation et la mise en page est la même sur toutes les cartes ; les images sont de style homogène ; la réponse n'est pas visible par celui qui doit la trouver et un corrigé est disponible ; le matériel est solide, facile à distribuer et à ranger ; la taille des groupes et la durée d'une partie sont définies ; des niveaux ou des variantes permettent à chacun de réussir.
+- Acceptable : les élèves ont envie de rejouer ; la règle favorise l'entraide et ne met personne en échec devant les autres ; aucun élève n'est désigné comme « différent » par le matériel qu'il reçoit ; le niveau sonore et l'organisation conviennent à la classe ; les rôles, les situations et les récompenses véhiculent des valeurs compatibles avec celles de l'école (pas de rôle de voleur pour s'exercer à la soustraction) ; le temps de préparation reste raisonnable, et le matériel sobre (pages, couleur, plastification) et réutilisable ; un·e collègue pourrait reprendre le jeu sans explications ; les images sont libres de droits ou sourcées, et aucune donnée d'élève n'apparaît.
+
+**Un jeu pour apprendre, pas pour occuper**
+
+Un jeu prend du temps de classe : préparation, explication, partie, rangement. Il vaut ce temps s'il fait apprendre au moins autant qu'une autre activité de même durée (fiche, travail à l'ardoise). Ce qui compte n'est pas la durée de l'activité, mais le temps pendant lequel l'élève travaille réellement la notion, avec réussite : le temps d'apprentissage scolaire (*academic learning time*, Berliner, 1990).
+
+- Compter les réponses : combien de fois chaque élève répond-il en une partie, et combien de temps attend-il ? Si tout le groupe répond à chaque question, chacun travaille à chaque tour.
+- Compter la mise en route (distribuer, expliquer, ranger) : une règle déjà connue, reprise avec d'autres contenus, la réduit.
+- Compter la préparation : elle se rentabilise si le jeu sert plusieurs fois, à plusieurs groupes ou d'une année à l'autre.
+- Comparer : si une fiche ou dix minutes d'ardoise font travailler la notion aussi bien et plus vite, les préférer ; garder le jeu pour ce qu'il apporte en plus (répéter sans lassitude, échanger, se corriger tout de suite).
+- Pour tous, pas seulement pour ceux qui ont fini : réservé aux plus rapides, le jeu entraîne surtout ceux qui en ont le moins besoin.
+- Pour s'exercer et se rappeler une notion déjà travaillée, par des reprises espacées : se tester et espacer les reprises comptent parmi les techniques d'apprentissage les mieux étayées (Dunlosky et al., 2013). Le jeu ne remplace pas l'enseignement de la notion.
+
+Chaque jeu de la Bibliothèque IA 1 porte une ligne « Fait apprendre si… / N'apprend rien si… » ; l'IA la reprend dans la partie enseignant·e.
 
 **Des règles du jeu qui font travailler tous les élèves**
 
@@ -55,6 +68,8 @@ Un jeu remis sans mode d'emploi laisse chaque groupe inventer ses règles. Une m
 - Un vérificateur ou une vérificatrice dispose du corrigé et change à chaque tour.
 - Assez de cartes pour éviter les répétitions, numérotées et rangées par lots.
 - Une partie modèle jouée devant la classe, et un but annoncé avant de jouer : « à la fin, vous saurez… ».
+
+La règle précise aussi ce qui, sinon, se négocie à chaque partie : qui commence ; la disposition du matériel au départ (pioche face cachée, cartes étalées, domino de départ posé au centre) ; qui vérifie, et avec quoi ; ce que fait l'élève qui s'est trompé (il lit la bonne réponse, la redit ou la récrit ; la carte repart sous la pioche) ; ce qu'on peut consulter pendant la partie ; la conduite en cas de désaccord. Quand l'exactitude ne s'entend pas (orthographe, homophones, accords : *il chante*, *ils chantent*), la réponse est écrite ou épelée, pas seulement dite (Bibliothèque IA 1, MP-J-07).
 
 **De la compétition à la coopération**
 
@@ -117,7 +132,11 @@ L'objectif du plan d'études est indiqué pour chaque degré ou niveau ; la ress
 
 **Références de cette section**
 
+Berliner, D. C. (1990). What's all the fuss about instructional time? In M. Ben-Peretz & R. Bromme (Eds.), *The nature of time in schools: Theoretical concepts, practitioner perceptions*. Teachers College Press.
+
 Centre de transfert pour la réussite éducative du Québec. (2023, août). *Approche coopérative : les premiers pas vers la rétroaction par les pairs* [Fiche pratique]. https://www.ctreq.qc.ca/wp-content/uploads/2023/10/CTREQ-D232-Preparation-a-la-REPAIR-Guide-14x85-44329-V9.pdf#page=1
+
+Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. *Psychological Science in the Public Interest*, 14(1), 4-58. https://doi.org/10.1177/1529100612453266
 
 Forget, A. (2018). *Penser la différenciation pédagogique* (Carnets des sciences de l'éducation). Université de Genève. https://unige.ch/fapse/editions/index.php/download_file/view/544/492
 
@@ -126,6 +145,8 @@ Maitre, J.-P. (2020). *La théorie de la charge cognitive*. Centre de soutien à
 Tricot, A., et al. (2003). Utilité, utilisabilité, acceptabilité : interpréter les relations entre trois dimensions de l'évaluation des EIAH. Dans *Environnements informatiques pour l'apprentissage humain* (Strasbourg).
 
 Statut des repères ajoutés le 22.11.2026 (adapter selon l'obstacle, « Si je bloque, je… », classe multi-âges) : propositions de conception de l'auteur, sans référence propre. Statut : existence des références citées vérifiée le 21.11.2026 (CTREQ, 2023 ; Forget, 2018 ; Johnson & Johnson, 2009 ; Maitre, 2020 ; Tricot et al., 2003 ; Bastien & Scapin, 1993, rapport INRIA RT-0156) ; les repères pratiques (astuces, variantes de règles) sont issus de l'enseignement de l'auteur et restent des inférences de conception, non testées à large échelle.
+
+Statut des repères ajoutés le 22.11.2026, suite (un jeu pour apprendre, précision de la règle, réponse écrite ou épelée, valeurs véhiculées, sobriété) : propositions de conception de l'auteur. Berliner (1990) : ouvrage, éditeurs, éditeur commercial et définition du temps d'apprentissage scolaire vérifiés le 22.11.2026 ; pages du chapitre non vérifiées. Dunlosky et al. (2013) : référence et conclusion (rappel actif et reprises espacées jugés les plus utiles) vérifiées le 22.11.2026.
 
 ## Gamification, styles d’apprentissage et différenciation
 

@@ -42,7 +42,7 @@ La partie enseignant·e est un fichier séparé. Elle DOIT contenir, dans cet or
 **Pour un jeu (GF-F)**, la partie enseignant·e ajoute :
 
 - dans « En bref », un **tableau d'impression** : page, contenu, quantité, papier, découpe ; Sous le tableau, des **astuces pratiques** : faire lancer le dé dans une boîte ou un couvercle (ou dé en mousse, tapis de feutrine) ; cacher la réponse des cartes question-réponse (pochette, rabat, carte tenue par le camarade qui interroge) ; un sablier par groupe ; un sachet étiqueté par jeu, avec la règle et le corrigé ; un essai recto-verso sur une seule feuille ; le jeu laissé en libre accès après la séance.
-- dans « En bref », **ce qui fait apprendre** dans ce jeu, en une ou deux phrases : le mécanisme qui fait travailler l'objectif (rappel actif, retour immédiat, nombre de réponses par élève et par partie, verbalisation), et ce qui ferait perdre l'apprentissage (attente, hasard dominant, réponse visible) ;
+- dans « En bref », **ce qui fait apprendre** dans ce jeu, en une ou deux phrases, en partant de la ligne « Fait apprendre si… / N'apprend rien si… » de sa section : le mécanisme qui fait travailler l'objectif (rappel actif, retour immédiat, nombre de réponses par élève et par partie, verbalisation), et ce qui ferait perdre l'apprentissage (attente, hasard dominant, réponse visible) ;
 - dans « Déroulement conseillé », une **mise en commun** après la partie : ce qu'on a appris, les erreurs fréquentes, la règle ou la procédure à retenir ;
 - dans « Corrigé expliqué », la **solution du jeu** (ordre de la boucle, paires ou familles), avec un « Pourquoi » pour chaque pièce ;
 - dans « Différenciation », les **variantes de jeu** : solo, à trois, mélange des lots ; Pour tout jeu de parcours ou de compétition, proposer aussi une **variante coopérative**, fondée sur l'interdépendance positive et la responsabilité individuelle (Johnson & Johnson, 2009) : un seul pion pour le groupe, contre le sablier ou contre un pion adverse qui avance seul ; un but commun chiffré (tous les pions arrivés en moins de dix tours, vingt cartes réussies) ; des rôles tournants (J13) ; l'aide qui rapporte (si l'explication d'un camarade permet de répondre, les deux avancent) ; l'erreur sans recul (le groupe explique, puis l'élève rejoue) ; des binômes par pion ; un bilan de fin de partie (« qu'est-ce qui nous a aidés ? »).
@@ -107,7 +107,8 @@ V1 à V10 et V12 se contrôlent sur le PDF ou l'aperçu ; V11 sur les données d
 | 13 | Contrôle visuel V1-V10 effectué (ou impossibilité déclarée) ; V20 (page pleine) et V21 (cohérence didactique) ; pour un jeu, V11 à V13 ; pour un fichier produit par du code, V14 ? | MP-V-01, MP-O-14 |
 | 14 | En-tête conforme : Prénom et Date en première ligne, titre centré entre deux espaces, objectif en langage élève sans étiquette ? | MP-O-12, R7 |
 | 15 | Aucune forme écrite fautive ou inexistante montrée à l'élève, y compris dans les exercices de jugement, hors analyse d'erreurs demandée et conforme aux quatre conditions du § 3.7 ? | MP-CC-11, X-13 |
-| 16 | Jeu : une seule pièce correcte par question, aucun indice non visé, ordre mélangé, autocorrection intégrée, règle en étapes avec un exemple hors lot, modalité adaptée à la notion, cases d'accueil plus grandes que les pièces mobiles ? | MP-J-01 à MP-J-08, MP-J-10, X-15 à X-17 |
+| 16 | Jeu : une seule pièce correcte par question, aucun indice non visé, ordre mélangé, autocorrection intégrée, règle en étapes avec un exemple hors lot, qui dit qui commence, la disposition, qui vérifie et ce que fait l'élève qui s'est trompé ; réponse écrite ou épelée quand l'exactitude ne s'entend pas ; modalité adaptée à la notion, cases d'accueil plus grandes que les pièces mobiles ? | MP-J-01 à MP-J-08, MP-J-10, X-15 à X-17 |
+| 17 | Contextes, rôles et récompenses sans stéréotype et compatibles avec les valeurs de l'école (pas de rôle de voleur pour s'exercer à la soustraction) ; matériel sobre : pas plus de pages, de couleur ni de plastification que l'apprentissage n'en demande ? | Annexe I-B |
 
 La grille détaillée (audit ou transformation d'une fiche existante) figure en Annexe I-B.
 
@@ -143,9 +144,10 @@ Puis : **Écarts assumés** (du plus important au plus mineur, avec leur justifi
 - Structure des tâches : types de problèmes ou d'exercices présents (par exemple une ou deux étapes, recherche du tout ou d'une partie) et leur variété.
 - Erreurs probables et obstacles prévisibles pour les élèves du degré.
 - Données superflues, pièges, difficultés : les signaler et demander s'il s'agit d'un choix didactique.
-- Biais possibles : contextes, prénoms, références culturelles ou sociales ; stéréotypes.
+- Biais possibles et valeurs véhiculées : contextes, prénoms, références culturelles ou sociales ; stéréotypes ; situations, rôles ou récompenses contraires aux valeurs de l'école (par exemple, jouer les voleurs pour s'exercer à la soustraction).
 - Réponses et corrigé : présence, exactitude ; une seule réponse ou plusieurs réponses acceptables.
 - Usage prévu : moment de la séquence, travail individuel ou collectif, part d'autonomie.
+- Sobriété : nombre de pages, couleur et plastification proportionnés à l'usage ; matériel réutilisable.
 
 #### Rendu imprimé (à faire en premier pour un fichier produit, sur le PDF)
 - Contrôle visuel V1-V10 (§ 5.2) : pages, coupures, nombre réel de lignes, longueur des lacunes, tailles, symboles, bords, absence de la partie enseignant·e, ordre de l'en-tête, orthographe.
@@ -246,7 +248,7 @@ Ces repères servent quand l'enseignant·e transforme ou crée une ressource. Il
 1. Pourquoi : l'intention propre à cette transformation, et le besoin qu'elle sert.
 2. Ce que je décide : ce qui ne change pas (objectif, critères de réussite) et ce qui peut varier (guidage, quantité, complexité, contexte).
 3. Ce que je demande : le contexte, la tâche précise, la forme attendue.
-4. Ce que je contrôle : le risque propre à cette transformation (perdre l'objectif en simplifiant, souffler la réponse en aidant, décorer sans faire apprendre), et si la transformation était nécessaire.
+4. Ce que je contrôle : le risque propre à cette transformation (perdre l'objectif en simplifiant, souffler la réponse en aidant, décorer sans faire apprendre), si la transformation était nécessaire, et si l'IA l'était : une ressource existante convenait-elle ? Chaque demande consomme de l'énergie ; quelques échanges ciblés valent mieux qu'une série de régénérations.
 
 Les deux premiers temps appartiennent à l'enseignant·e. L'IA peut les rendre explicites et poser une question si une information indispensable manque.
 

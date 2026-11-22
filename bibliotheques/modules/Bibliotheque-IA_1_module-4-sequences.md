@@ -340,7 +340,7 @@ Ces repères servent quand l'enseignant·e transforme ou crée une ressource. Il
 1. Pourquoi : l'intention propre à cette transformation, et le besoin qu'elle sert.
 2. Ce que je décide : ce qui ne change pas (objectif, critères de réussite) et ce qui peut varier (guidage, quantité, complexité, contexte).
 3. Ce que je demande : le contexte, la tâche précise, la forme attendue.
-4. Ce que je contrôle : le risque propre à cette transformation (perdre l'objectif en simplifiant, souffler la réponse en aidant, décorer sans faire apprendre), et si la transformation était nécessaire.
+4. Ce que je contrôle : le risque propre à cette transformation (perdre l'objectif en simplifiant, souffler la réponse en aidant, décorer sans faire apprendre), si la transformation était nécessaire, et si l'IA l'était : une ressource existante convenait-elle ? Chaque demande consomme de l'énergie ; quelques échanges ciblés valent mieux qu'une série de régénérations.
 
 Les deux premiers temps appartiennent à l'enseignant·e. L'IA peut les rendre explicites et poser une question si une information indispensable manque.
 
