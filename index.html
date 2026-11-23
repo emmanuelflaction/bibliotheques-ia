@@ -541,7 +541,7 @@ const VUES = {
     <h1 class="titre" style="--c:${rub('conseils').c}">${NOM_REPERES}</h1>
     <p class="chapo">Les difficultés que l’on rencontre en préparant un jeu, une fiche ou une séquence, et des réponses concrètes pour que vos élèves apprennent vraiment.</p>
     <div class="rubriques">
-      <button class="rubrique" style="--c:#c2571a" type="button" ${go({page: 'c_decider'})}><span class="tx"><span class="n">Parce que c’est ludique ou nouveau, les élèves apprendraient mieux ? Transformer une ressource pour résoudre un problème ou répondre à un besoin</span><span class="d">Une forme nouvelle ou ludique ne fait pas apprendre à elle seule. Six besoins et les transformations qui y répondent, cinq temps pour les mener, et parfois ne rien changer.</span></span></button>
+      <button class="rubrique" style="--c:#c2571a" type="button" ${go({page: 'c_decider'})}><span class="tx"><span class="n">Parce que c’est ludique ou nouveau, les élèves apprendraient mieux ?</span><span class="d">Transformer une ressource pour résoudre un problème ou répondre à un besoin.</span></span></button>
       <button class="rubrique" style="--c:#e9a100" type="button" ${go({page: 'verifier'})}><span class="tx"><span class="n">Repérer les erreurs de l’IA qui peuvent passer inaperçues !</span><span class="d">Avant d’utiliser une ressource produite par l’IA (ou même de l’imprimer !), la vérifier absolument ! L’IA commet généralement peu d’erreurs orthographiques, etc., mais des erreurs parfois aussi importantes que subtiles…</span></span></button>
       <button class="rubrique" style="--c:#2a9d8f" type="button" ${go({page: 'c_jeu'})}><span class="tx"><span class="n">Un jeu pour apprendre, pas seulement pour s’occuper ou s’amuser</span><span class="d">Le temps de jeu en vaut-il la peine ? Ce qui fait apprendre en jouant, pour qui et à quel moment.</span></span></button>
       <button class="rubrique" style="--c:#3a7bd5" type="button" ${go({page: 'c_regles'})}><span class="tx"><span class="n">Des règles du jeu qui font travailler (tous) les élèves !</span><span class="d">Un élève joue, trois attendent ? Chaque groupe invente sa règle ? Ce que la marche à suivre doit préciser, et des astuces pratiques.</span></span></button>
@@ -553,7 +553,8 @@ const VUES = {
     </div>`,
 
   c_decider: () => `
-    <h1 class="titre" style="--c:#c2571a">Parce que c’est ludique ou nouveau, les élèves apprendraient mieux ? Transformer une ressource pour résoudre un problème ou répondre à un besoin</h1>
+    <h1 class="titre" style="--c:#c2571a">Parce que c’est ludique ou nouveau, les élèves apprendraient mieux ?</h1>
+    <p class="acc">Transformer une ressource pour résoudre un problème ou répondre à un besoin.</p>
     <p class="chapo">Un jeu, des couleurs, un format numérique : la nouveauté donne envie, mais elle ne fait pas apprendre à elle seule. Une transformation se justifie par un problème observé en classe ou par un besoin de vos élèves. Parfois, la meilleure décision consiste à ne rien modifier, ou à ne changer qu’un seul élément.</p>
     <h2>Partir du problème, pas de la forme</h2>
     <p style="max-width:42em">Partir de la forme expose à confondre nouveauté et amélioration. Partir du problème oriente la même envie vers l’apprentissage.</p>
